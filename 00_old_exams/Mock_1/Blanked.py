@@ -19,14 +19,11 @@ Constraints
 
 Sample tests
 Input
-
 132
-
 123
 
 Output
-
- 132
+132
 
 Input
 
