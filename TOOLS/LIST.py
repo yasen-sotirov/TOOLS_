@@ -118,9 +118,9 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 
 
 "ПЪЛНЕНЕ НА ЛИСТ"
-# number_of_wagon = int(input())
-# train = [0] * number_of_wagon
-# print(train)
+number_of_wagon = int(input())
+train = [0] * number_of_wagon
+print(train)
 
 
 "НА КОЙ ИНДЕКС СЕ НАМИРА (нещо)"
