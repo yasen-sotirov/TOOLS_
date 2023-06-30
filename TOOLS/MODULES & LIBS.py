@@ -35,6 +35,10 @@
                                         # да се дописват на ръка в requirements.txt
 
 
+"ПРОСЛЕДЯВАНЕ КАКВО Е ИМПОРТНАТО"
+# ctrl + click върху imported_modul
+# print(imported_modul.element_from_module)
+
 "ИНСТАЛИРА НЕОБХОДИМИТЕ ЗА ПРОЕКТА БИБЛИОТЕКИТЕ, КАТО ГИ ВЗЕМА ОТ ФАЙЛА"
 # в терминала
 # pip install -r requirements.txt
