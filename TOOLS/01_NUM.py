@@ -1,7 +1,7 @@
 "NUMBERS"  #
 
 num_1, num_2, num_3 = 1, 2, 3
-
+num_4, num_5, num_6 = 10, 2.5, 123
 
 "ЦЕЛОЧИСЛЕНО ДЕЛЕН"     # колко пъти делим без остатък
 # print(7 // 2)   # 3
@@ -19,17 +19,6 @@ num_1, num_2, num_3 = 1, 2, 3
 # print(min(num_1, num_2, num_3))
 # print(max(num_1, num_2, num_3))
 
-# damage = int(input("дай точки вреда (кръвта е 100): "))
-# print(f"кръв: {max(100 - damage, 0)}")
-
-
-"JOIN"
-# Input
-# 0 3 9 3 2
-
-# print(''.join(input().split()))
-
-
 
 "MAX/MIN SIZE"
 # import sys
@@ -37,25 +26,26 @@ num_1, num_2, num_3 = 1, 2, 3
 # print(-sys.maxsize)
 
 
-"ФОРМАТИРА СТОЙНОСТТА НА ПРОМЕНЛИВА"
-# num_as_float = num_3 / num_2
-# print("{:.3f}".format(num_as_float))
-
-
 "СЛАГА ЗАПЕТАЯ МЕЖДУ НУЛИТЕ НА ГОЛЕМИ ЧИСЛА"
 # num = 1000000
 # print(f"{num:,}")
 
 
-"ЗАКРЪГЛЯ"
+"ЗАКРЪГЛЯ СЛЕД ЗАПЕТАЯТА"
 # num = 3.1415926
+# print(f'{num:.2f}')
 # print(f'{num:+.2f}')
-# print(round(num, 1))
+# print(round(num, 3))
+
+"ЗАКРЪГЛЯ FLOAT РЕЗУЛТАТ СЛЕД ЗАПЕТАЯТА"
+# num_as_float = num_3 / num_2
+# print("{:.5f}".format(num_as_float))
 
 
 "СЛАГА НУЛИ ПРЕД ЧИСЛОТО"
-# num = 4
-# print(f"{num:03d}")
+# print(f"{num_3:03d}")
+# print(f"{num_4:03d}")
+# print(f"{num_6:03d}")
 
 
 "ПРЕОБРАЗУВА В ПРОЦЕНТИ"
@@ -68,25 +58,6 @@ num_1, num_2, num_3 = 1, 2, 3
 # number = 1.618
 # print(ceil(number))
 # print(floor(number))
-
-
-"МАП"
-# def double_num(number):
-#     if number % 2 == 0:
-#         return number * 2
-#
-# num_list = [1, 2, 3, 4, 5, 6, 7, 8]
-# result = map(double_num, num_list)
-# print(list(result))
-
-
-"CONTINUE"      # АКО ВЛЕЗЕ В IF ЩЕ ПРОПУСНЕ ОПЕРАЦИЯТА
-# i = 0
-# while i < 9:
-#     i += 1
-#     if i == 3:
-#         continue
-#     print(i)
 
 
 "ЧАСОВЕ И МИНУТИ"
@@ -102,4 +73,19 @@ num_1, num_2, num_3 = 1, 2, 3
 # h = minutes // 60
 # m = minutes % 60
 # print(f'{h}:{m:02d} ч')
+
+
+"ПРОСТО ЧИСЛО"
+# number = int(input())
+# flag = False
+#
+# for i in range(2, number):
+#     if (number % i) == 0:
+#         flag = True
+#         break
+#
+# if flag:
+#     print(number, "is not a prime number")
+# else:
+#     print(number, "is a prime number")
 

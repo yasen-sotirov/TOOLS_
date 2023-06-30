@@ -178,3 +178,25 @@
 #     final_list.append(temp(i))
 #
 # print(final_list)
+
+
+
+
+
+"МАП"
+# def double_num(number):
+#     if number % 2 == 0:
+#         return number * 2
+#
+# num_list = [1, 2, 3, 4, 5, 6, 7, 8]
+# result = map(double_num, num_list)
+# print(list(result))
+
+
+"CONTINUE"      # АКО ВЛЕЗЕ В IF ЩЕ ПРОПУСНЕ ОПЕРАЦИЯТА
+# i = 0
+# while i < 9:
+#     i += 1
+#     if i == 3:
+#         continue
+#     print(i)
