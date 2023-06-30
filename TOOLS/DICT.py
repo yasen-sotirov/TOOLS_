@@ -7,6 +7,7 @@ classes = {'1A': ["Ines", "Georgi", "Pesho"], '1B': ["Ivan", "Tosho", "Maria"]} 
 students = {'№1': {'name': 'Pesho', 'ages': 12}, '№2': {'name': 'Ivan', 'ages': 11}}
 my_dict = {'a': 25, 'b': "Pesho", 2: 33}
 num_dict = {'a': 1, 'b': 2, 'c': 3}
+num_dict_2 = {1: 6, 2: 5, 3: 14}
 letter_dict = {'A': 4, 'C': 3, 'B': 1, 'D': 2}
 names_ages = {"Ines": 27,
               "Georgi": 43,
@@ -236,3 +237,7 @@ names_ages = {"Ines": 27,
 #         crafted_gifts[key] += 1
 # print(crafted_gifts)
 
+
+"ДАВА НАЙ-ГОЛЯМАТА СТОЙНОСТ"
+print(max(num_dict_2.keys()))
+print(max(num_dict_2.values()))

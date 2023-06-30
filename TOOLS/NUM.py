@@ -3,6 +3,17 @@
 num_1, num_2, num_3 = 1, 2, 3
 
 
+"ЦЕЛОЧИСЛЕНО ДЕЛЕН"     # колко пъти делим без остатък
+# print(7 // 2)   # 3
+# print(12 // 3)  # 4
+# print(13 // 3)  # 4
+
+
+"МОДУЛНО ДЕЛЕНЕ"    # остатъкът от целочисленото делене
+# print(7 % 2)    # 1
+# print(12 % 3)   # 0
+# print(13 % 3)   # 1
+
 
 "НАЙ-МАЛКО, НАЙ-ГОЛЯМО"
 # print(min(num_1, num_2, num_3))
@@ -10,6 +21,14 @@ num_1, num_2, num_3 = 1, 2, 3
 
 # damage = int(input("дай точки вреда (кръвта е 100): "))
 # print(f"кръв: {max(100 - damage, 0)}")
+
+
+"JOIN"
+# Input
+# 0 3 9 3 2
+
+# print(''.join(input().split()))
+
 
 
 "MAX/MIN SIZE"
@@ -68,3 +87,19 @@ num_1, num_2, num_3 = 1, 2, 3
 #     if i == 3:
 #         continue
 #     print(i)
+
+
+"ЧАСОВЕ И МИНУТИ"
+# hour = int(input())
+# minutes = int(input())
+# hour += minutes // 60
+# minutes %= 60
+# if hour > 23:
+#     hour = 0
+# print(f'{hour}:{minutes:02d} ч')
+
+# minutes = int(input())
+# h = minutes // 60
+# m = minutes % 60
+# print(f'{h}:{m:02d} ч')
+
