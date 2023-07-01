@@ -40,7 +40,6 @@ txt_6 = "123 abc"
 # print(concatenate("Soft", "UNI", "Is", "Grate", "!", UNI="Uni", Grate="Great"))
 
 
-
 "ПРЕМАХВА ЕЛЕМЕНТ ОТ НАЧАЛОТО И/ИЛИ КРАЯ НА ТЕКСТА"
 # print(("   I like bananas   ").strip())
 # print(("----I like bananas!!").strip("-!"))
@@ -106,7 +105,6 @@ txt_6 = "123 abc"
 # print(f'{text:.^20}')
 
 
-
 "ЕВАЛЮИРА СТРИНГА ДО ЧИСЛА"
 # print(eval(f"2, 4, 5"))
 
@@ -115,6 +113,31 @@ txt_6 = "123 abc"
 #     return reduce(lambda x, y: eval(f"{x} {sign} {y}"), args)
 # print(operate("+", 1, 2, 3))
 
+
 "БРОЙ ЗНАЦИТЕ"
 # from string import punctuation
 # print(len([el for el in txt if el in punctuation]))
+
+
+"ПОПЪЛВАНЕ НА ТЕМПЛЕИТ"     # стар подход
+# template = 'Country": {}, Capital: {} '
+# print(template.format('Bulgaria', 'Sofia'))
+# print(template.format('UK', 'London'))
+
+
+"ПАРСВАНЕ НА СТРИНГ"    # превръщане на стринга в число
+# str_1 = "12"
+# str_2 = "5.6"
+# parsed_str_1 = int(str_1)
+# parsed_str_2 = float(str_2)
+# print(parsed_str_1 + parsed_str_2)
+
+# print(float('12'))
+# print(float('1.2'))
+
+
+"КОНКАТЕНАЦИЯ"
+# print("1" + "2" + " " + "Жоро")
+
+
+

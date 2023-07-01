@@ -20,7 +20,7 @@ num_4, num_5, num_6 = 10, 2.5, 123
 # print(max(num_1, num_2, num_3))
 
 
-"MAX/MIN SIZE"
+"MAX/MIN SIZE ЧИСЛО"
 # import sys
 # print(sys.maxsize)
 # print(-sys.maxsize)
@@ -31,33 +31,31 @@ num_4, num_5, num_6 = 10, 2.5, 123
 # print(f"{num:,}")
 
 
-"ЗАКРЪГЛЯ СЛЕД ЗАПЕТАЯТА"
-# num = 3.1415926
-# print(f'{num:.2f}')
-# print(f'{num:+.2f}')
-# print(round(num, 3))
-
 "ЗАКРЪГЛЯ FLOAT РЕЗУЛТАТ СЛЕД ЗАПЕТАЯТА"
 # num_as_float = num_3 / num_2
-# print("{:.5f}".format(num_as_float))
+# print("{:.5f}".format(num_as_float))    # 1.50000
+# num = 3.1415926
+# print(f'{num:.2f}')     # 3.14
+# print(f'{num:+.2f}')    # +3.14
+# print(round(num, 3))    # 3.142
 
 
 "СЛАГА НУЛИ ПРЕД ЧИСЛОТО"
-# print(f"{num_3:03d}")
-# print(f"{num_4:03d}")
-# print(f"{num_6:03d}")
+# print(f"{num_3:03d}")   # 003
+# print(f"{num_4:03d}")   # 010
+# print(f"{num_6:03d}")   # 123
 
 
 "ПРЕОБРАЗУВА В ПРОЦЕНТИ"
 # num = 0.35
-# print(f"{num:.2%}")
+# print(f"{num:.2%}") # 35.00%
 
 
 "ЗАКРЪГЛЯВА НАГОРЕ, НАДОУ"
 # from math import ceil, floor
 # number = 1.618
-# print(ceil(number))
-# print(floor(number))
+# print(ceil(number))     # 2
+# print(floor(number))    # 1
 
 
 "ЧАСОВЕ И МИНУТИ"

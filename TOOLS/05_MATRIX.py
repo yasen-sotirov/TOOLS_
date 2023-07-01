@@ -6,14 +6,21 @@ list_2d = [
     [7, 8, 9]
 ]
 
+"СЪЗДАВАНЕ НА МАТРИЦА"
+# rows = 3
+# cols = 5
+# for r in range(rows):
+#     for element_in_current_row in range(cols):
+#         print("*", end=" ")
+#     print()
 
-"ПЪЛНЕНЕ НА ЛИСТА"
-"""
-3
-2 4 6
-8 10 12
-14 16 18
-"""
+
+"ПЪЛНЕНЕ НА МАТРИЦАТА"
+# 3
+# 2 4 6
+# 8 10 12
+# 14 16 18
+
 # matrix = []
 # row_number = int(input())
 # for _ in range(row_number):
