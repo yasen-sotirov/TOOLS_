@@ -27,26 +27,28 @@ Output
 CCC
 """
 
-# string = input()
-# max_string = []
-# counter = 0
-#
-# for index in range(len(string)):
-#     current_str = ''
-#     is_sequence = False
-#
-#     current_str += string[index]        # добавям първата буква
-#     current_letter = string[index]      # проверявам дали е равна на следвщата
-#     next_letter = string[index + 1]
-#
-#     if current_letter == next_letter:   # аkо е равна добавям следвщата
-#         current_str += string[index + 1]
-#         is_sequence = True                 # има ли съвпадение
-#     else:
-#         if len(current_str) > 0:                # ако не е равна, махам последната буква от сринга
-#             current_str = current_str[:-2]
-#
-#     if is_sequence:                        # ако има съвпадение
-#         max_string.append(current_str)     # добавям стринга към списъка
+string = input()
+# ней–голям елемент
+max_block = ""
+# работен блок
+temp_block = ""
 
+# обхождам стринга елемент по елемент
+for el in string:
+    # ако елемента е равен на последния елемент в работния блок
+    if el == temp_block[-1:]:
+        # добавям елемента към работния блок
+        temp_block += el
+    else:
+        # ако са различни проверявам дали работния блок е по-голям от най-големия блок
+        if len(temp_block) > len(max_block):
+            # ако е по-голпм приравнявам най-големия на работния
+            max_block = temp_block
+        # и започвам да пълня нанов работния блок с последния различен елемент
+        temp_block = el
 
+# проверявам дали последния блок е по-голям
+if len(temp_block) > len(max_block):
+    max_block = temp_block
+
+print(max_block)

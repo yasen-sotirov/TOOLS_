@@ -59,31 +59,34 @@ num_4, num_5, num_6 = 10, 2.5, 123
 
 
 "ЧАСОВЕ И МИНУТИ"
-# hour = int(input())
-# minutes = int(input())
-# hour += minutes // 60
-# minutes %= 60
-# if hour > 23:
-#     hour = 0
-# print(f'{hour}:{minutes:02d} ч')
+hour = int(input())
+minutes = int(input())
+hour += minutes // 60
+minutes %= 60
+if hour > 23:
+    hour = 0
+print(f'{hour}:{minutes:02d} ч')
 
-# minutes = int(input())
-# h = minutes // 60
-# m = minutes % 60
-# print(f'{h}:{m:02d} ч')
+minutes = int(input())
+h = minutes // 60
+m = minutes % 60
+print(f'{h}:{m:02d} ч')
 
 
 "ПРОСТО ЧИСЛО"
-# number = int(input())
-# flag = False
-#
-# for i in range(2, number):
-#     if (number % i) == 0:
-#         flag = True
-#         break
-#
-# if flag:
-#     print(number, "is not a prime number")
-# else:
-#     print(number, "is a prime number")
+number = int(input())
+is_dividable = False
+
+for i in range(2, number):
+    if (number % i) == 0:
+        is_dividable = True
+        break
+
+if is_dividable:
+    print(number, "is not a prime number")
+else:
+    print(number, "is a prime number")
+
+
+
 

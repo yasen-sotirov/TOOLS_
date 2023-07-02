@@ -60,14 +60,6 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 # print(data)
 
 
-"sliceing - ПРОЧИТА ЛИСТА ОТ ИНДЕКС ДО ИНДЕКС СЪС СТЪПКА"      # като слайснг-а на стринг
-# edited = mix_list[2:5:2]
-# print(edited)
-# print(mix_list[4])
-# print(mix_list[-2])
-# print(mix_list[::-1])   # чете листа на обратно
-
-
 "НАЙ-МАЛКО И НАЙ-ГОЛЯМО ЧИСЛО"
 # print(min(number_list))
 # print(max(number_list))
@@ -118,9 +110,9 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 
 
 "ПЪЛНЕНЕ НА ЛИСТ"
-number_of_wagon = int(input())
-train = [0] * number_of_wagon
-print(train)
+# number_of_wagon = int(input())
+# train = [0] * number_of_wagon
+# print(train)
 
 
 "НА КОЙ ИНДЕКС СЕ НАМИРА (нещо)"
@@ -277,9 +269,15 @@ print(train)
 
 
 "ЕДНАКВИ ЛИ СА"              # връща дали всичк в итеръбъла са еднакви
-print(all(number_list_2))
+# print(all(number_list_2))
 # print(all([isinstance(x, int) for x in number_list_2]))
 # print(all([isinstance(x, str) for x in letters_list]))
 # print(all([isinstance(x, str) for x in mix_list]))
-#
 
+
+"С КОЛКО ИЗЛИЗАМ ОТ ЛИСТА"
+# array = [0, 1, 2, 3, 4, 5]
+# position = 4
+# size = 3
+# new_position = (position + size) % len(array)
+# print(new_position)

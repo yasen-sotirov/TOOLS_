@@ -53,3 +53,18 @@ list_2d = [
 # list_2d[1][1] = 11      # промяна на елемент
 # print(list_2d)
 
+
+"СЪЗДАВАНЕ НА ПРАЗНА МАТРИЦА С РАЗМЕР n"
+# n = int(input())
+# matrix = [[0] * n for _ in range(n)]
+# print(matrix)
+
+# matrix = []
+# for _ in range(n):
+#     matrix.append([0] * n)
+# print(matrix)
+
+
+"ПРИНТИРАНЕ НА МАТРИЦА"
+# for row in list_2d:
+#     print(" ".join(str(el) for el in row))

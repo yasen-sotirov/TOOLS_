@@ -140,4 +140,11 @@ txt_6 = "123 abc"
 # print("1" + "2" + " " + "Жоро")
 
 
+"SLICEING - ЧЕТЕ ПО ИНДЕКС СЪС СТЪПКА"  # работи с LIST също
+
+mix_list = "123456789"
+# print(mix_list[2:5:2])      # 35
+# print(mix_list[-2])         # 8
+# print(mix_list[::-1])       # 987654321
+# print(mix_list[-1:])        # 9
 
