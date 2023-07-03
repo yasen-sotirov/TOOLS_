@@ -4,10 +4,15 @@
 number_list = [1, 4, 3, 8, 6, 2, 7, 6.59, 2.32]
 number_list_2 = [4, 8, 2, 6, 9]
 
+# expresion = израз, който произвежда някаква стойност
+# изразът се „композира“
 
 # print([el ** 2 for el in number_list if el % 2 == 0])
 #
 # print(["even" if el % 2 == 0 else "odd" for el in number_list])
+
+# всеки път когато не три трябва резултата от компрехеншъна, най-вероятно ти трябва for loop
+
 
 
 
@@ -20,10 +25,12 @@ number_list_2 = [4, 8, 2, 6, 9]
 # print([item for item in number_list if item in number_list_2])
 
 
-"ДАВА СТОЙНОСТИ НА ПРОМЕНЛИВИТЕ ОТ ЛИСТ"
+"СОРТИРА ЛИСТА"
 # data = ["5", "Sofia"]
 # digit = [int(x) if x.isdigit() else x for x in data]
 # print(digit)
+
+# print([x * 2 for x in number_list if x % 2 == 0])
 
 
 "ВСИЧКИ ЛИ СА ЕДНАКВИ"              # връща дали всичк в листа са еднакви
@@ -49,3 +56,14 @@ number_list_2 = [4, 8, 2, 6, 9]
 
 "ИМА ЛИ ГЛАВНА БУКВА"
 # is_uppercase_presented = any([True for char in value if char.isupper()])
+
+
+
+# all_users = [('pesho', 'qwe345!'), ('gosho', 'passwOrd1'), ('penka', '1a2b3c4d')]
+# print([(user, password) for (user, password) in all_users if len(password) >= 8 and any(digit.islower() for digit in password) and any(digit.isupper() for digit in password) and any(digit.isnumeric() for digit in password)])
+
+
+"ВРЪЩА ЕЛЕМЕНТИ ЗАПОЧВАЩИ С (нещо)"
+letters_list = ['cat', 'dog', 'mouse', 'dolphin']
+print(list([item for item in letters_list if item.startswith("d")]))
+# ['dog', 'dolphin']

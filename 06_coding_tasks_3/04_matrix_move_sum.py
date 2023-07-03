@@ -67,6 +67,19 @@ Input
 
 Output
 61
+
+
+Input
+5
+1 2 3 4 5
+3 6 5 3 2
+5 6 7 3 5
+5 3 5 2 3
+7 2 6 3 4
+2 3 -4 -2
+
+Output
+17
 """
 
 
@@ -79,6 +92,7 @@ for _ in range(rows):
 coordinates = [int(x) for x in input().split()]
 couples = []
 temp = []
+sum_list = []
 
 for idx in range(0, len(coordinates), 2):
     temp.append(coordinates[idx])
@@ -106,9 +120,18 @@ for current_couple in couples:
         for idx in range(0, col_coord + 1):
             counter += matrix[row_coord][idx]
     else:
-        for idx in range(len(matrix[0]), col_coord, - 1):
+        for idx in range(len(matrix[0]) - 1, col_coord, - 1):
             counter += matrix[row_coord][idx]
 
+    if col > 0:
+        for idx in range(0, row_coord):
+            counter += matrix[idx][col_coord]
+    else:
+        for idx in range(rows - 1, row_coord - 1, - 1):
+            result = matrix[idx][col_coord]
+            counter += result
+    sum_list.append(counter)
 
-print(couples)
+
+print(max(sum_list))
 

@@ -1,5 +1,8 @@
 "LOOP   WHILE, FOR"  # ЦИКЛИ
 
+# for loop - expresion
+# expresion = израз, който произвежда някаква стойност
+# statemant = if/else  не връща стойност
 
 "BREAK"     # приключи цикъла при допълнително условие
 # i = 10

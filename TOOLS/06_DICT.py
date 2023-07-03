@@ -239,5 +239,10 @@ names_ages = {"Ines": 27,
 
 
 "ДАВА НАЙ-ГОЛЯМАТА СТОЙНОСТ"
-print(max(num_dict_2.keys()))
-print(max(num_dict_2.values()))
+# print(max(num_dict_2.keys()))
+# print(max(num_dict_2.values()))
+
+
+"ОБЕДИНЯВА ДВА РЕЧНИКА"
+# num_dict_2.update(num_dict)
+# print(num_dict_2)

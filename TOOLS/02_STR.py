@@ -1,4 +1,6 @@
-"""STRING"""    # колекция, низ от символи, които могат да бъдат обходени
+"""STRING"""    #
+# низ от символи, които могат да бъдат обходени
+# immutable = не се променя
 import re
 
 txt = "I like bananas!!"
@@ -7,6 +9,7 @@ txt_3 = "123456"
 txt_4 = "1 2 3 4 5 6"
 txt_5 = "123abc"
 txt_6 = "123 abc"
+
 
 
 "ПРЕВРЪЩА STR В ЛИСТ ОТ ЧИСЛА"
@@ -26,7 +29,7 @@ txt_6 = "123 abc"
 # print(list(map(int, list_of_strings)))        # мап-ване
 
 
-"ЗАМЕНЯ ЕЛЕМЕНТ"
+"ЗАМЕНЯ ЕЛЕМЕНТ"    # връща копие на стринга, самия стринг не се променя
 # edited = txt.replace("bananas", "apples apples apples")
 # print(edited)
 # print(edited.replace("apples", "", 1))     # премахва всичките или брой съвпадения
@@ -142,9 +145,16 @@ txt_6 = "123 abc"
 
 "SLICEING - ЧЕТЕ ПО ИНДЕКС СЪС СТЪПКА"  # работи с LIST също
 
-mix_list = "123456789"
+# mix_list = "123456789"
 # print(mix_list[2:5:2])      # 35
 # print(mix_list[-2])         # 8
 # print(mix_list[::-1])       # 987654321
 # print(mix_list[-1:])        # 9
+
+
+"РАЗОПАКОВА СТРИНКА"
+# commands = "bg:sofia:varna:burgas"
+# commands, *data = commands.split(":")
+# print(commands)
+# print(data)
 

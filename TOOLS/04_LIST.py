@@ -4,10 +4,10 @@
                 # mutable - променлив
 
 mix_list = [1, 3, 2, "a", "b", 4, 88, 2, 2]
-number_list = [1, 4, 3, 8, 6, 2, 7, 6.59, 2.32]
+number_list = [1, 4, 3, 8, 6.59, 2.32]
 number_list_2 = [10, 20, 30, 40, 50, 60]
 number_list_3 = [1, 2, 3, 4, 5]
-letters_list = ["cat", "dog", "mouse", "hello", 'world']
+letters_list = ["cat", "dog", "mouse", 'world']
 nested_list = [[1, 2, 3], [4, 5, 6]]
 
 "ДОБАВЯ НОВИ ЕЛЕМЕНТИ В ЛИСТА"
@@ -16,48 +16,61 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 # mix_list.append(-int(2) * 2)
 # print(mix_list)
 
+# [1, 3, 2, 'a', 'b', 4, 88, 2, 2]
+# [1, 3, 2, 'a', 'b', 4, 88, 2, 2, 'new_var', -4]
+
 
 "ДОБАВЯ КЪМ СЪЩ ЕЛЕМЕНТИ В ЛИСТА"
-# print(number_list)
+# # [1, 4, 3, 8, 6, 2, 7, 6.59, 2.32]
 # number_list[0] += 100
-# print(number_list)
-
-# print(letters_list)
+# # [101, 4, 3, 8, 6, 2, 7, 6.59, 2.32]
+#
+# # ['cat', 'dog', 'mouse', 'hello', 'world']
 # letters_list[0] += '_MO'
-# print(letters_list)
+# # ['cat_MO', 'dog', 'mouse', 'hello', 'world']
 
 
 "ЗАМЕНЯ СЪЩ ЕЛЕМЕНТИ В ЛИСТА"
-# print(letters_list)
+# # ['cat', 'dog', 'mouse', 'hello', 'world']
 # letters_list[0] = "TOM"
-# print(letters_list)
+# # ['TOM', 'dog', 'mouse', 'hello', 'world']
 
 
-"ОБЕДИНЯВА ДВА ЛИСТА"       #или само един string
-# print(number_list)
-# number_list.extend(letters_list)
-# print(number_list)
+"ОБЕДИНЯВА ДВА ЛИСТА"       # или само един string
+# list_1 = [1, 2, 3]
+# list_2 = ['cat', 'dog', 'mouse']
+# list_1.extend(list_2)
+# print(list_1)
+# # [1, 2, 3, 'cat', 'dog', 'mouse']
 #
-# print(number_list + letters_list)
+# print(list_2 + list_2)
+# # ['cat', 'dog', 'mouse', 'cat', 'dog', 'mouse']
 
 
-"ОБЕДИНЯВА ЛИСТА В STRING"            # само за str;  *number_list за int
-# print('-'.join(letters_list))       # винаги връща лист
-# print(' '.join(letters_list))       # при "" все едно конкатенираме текста
-# print('\n'.join(letters_list))      # печати всеки елемент на нов ред
-
-# print(", ".join([str(x) for x in number_list]))     # ако са числа
+"ОБЕДИНЯВА ЛИСТА В STRING"       # само за str;  *number_list за int
+# print('-'.join(letters_list))
+# # cat-dog-mouse-hello-world
+#
+# print(' '.join(letters_list))
+# # със " " все едно конкатенираме текста
+#
+# print('\n'.join(letters_list))
+# # печати всеки елемент на нов ред
+#
+# # [1, 4, 3, 8, 6, 2, 7, 6.59, 2.32]
+# print(", ".join([str(x) for x in number_list]))
+# # ако са числа
+# # 1, 4, 3, 8, 6, 2, 7, 6.59, 2.32
 
 
 "РАЗОПАКОВА ЛИСТА"      # вместо " ".join(), защото той работи само с str
-# print(number_list)
-# print(*number_list)
-# print(*number_list, sep=", ")
+# num_list = [1, 4, 3]
+# print(*num_list)
+# # 1 4 3
+#
+# print(*num_list, sep=", ")
+# # 1, 4, 3
 
-# commands = "bg:sofia:varna:burgas"
-# commands, *data = commands.split(":")
-# print(commands)
-# print(data)
 
 
 "НАЙ-МАЛКО И НАЙ-ГОЛЯМО ЧИСЛО"
@@ -66,81 +79,101 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 
 
 "РАЗМЕСТВАНЕ В ЛИСТА"
-# letters_list[1], letters_list[0] = letters_list[0], letters_list[1]     # swapping
-# print(letters_list)
+# nums = [10, 20]
+# nums[0], nums[1] = nums[1], nums[0]
+# print(nums)     # [20, 10]
+
 
 
 "ТРИЕ / ВАДИ ПО ИНДЕКС (или последния) СИМВОЛ ОТ ЛИСТА"
+# [1, 3, 2, 'a', 'b', 4, 88, 2, 2]
 # char = mix_list.pop(-3)
-# print(mix_list)
-# print(char)
+# print(mix_list) # [1, 3, 2, 'a', 'b', 4, 2, 2]
+# print(char)     # 88
 
 
-"ИЗВЕЖДА ЕЛЕМЕНТ ОТ ЛИСТА"      # броя на променливите трябва да отговаря на дължината на листа
+"ИЗВЕЖДА ЕЛЕМЕНТ ОТ ЛИСТА"
+# броя на променливите трябва да отговаря на дължината на листа
 # num_1, num_2, num_3, num_4, num_5 = number_list_3
 # print(num_1)
 # print(num_5)
 
 
-"ПРЕМАХВА ЕЛЕМЕНТ/И В ЛИСТА (от ляво на дясно) "
-# print(mix_list)
-# mix_list.remove(2)      # ако елемента го няма връща грешка
-# print(mix_list)
-
+"ПРЕМАХВА ЕЛЕМЕНТ/И В ЛИСТА (от ляво на дясно)"
+# # ако елемента го няма връща грешка
+# # [1, 3, 2, 'a', 'b', 4, 88, 2, 2]
+# mix_list.remove(2)
+# # [1, 3, 'a', 'b', 4, 88, 2, 2]
+#
 # while "dog" in letters_list:
 #     letters_list.remove("dog")
 # print(letters_list)
 
 
 "ТРИЕ ЕЛЕМЕНТ ПО ИНДЕКС"
-# print(mix_list)
+# # [1, 3, 2, 'a', 'b', 4, 88, 2, 2]
 # del mix_list[1]
-# print(mix_list)
+# # [1, 2, 'a', 'b', 4, 88, 2, 2]
+#
+# del mix_list[1:5]
+# # [1, 'a', 'b', 4, 88, 2, 2]
+
 
 
 "СУМИРА ЛИСТА"
 # print(sum(number_list))
+# # 39.910000000000004
+#
 # print("{:.2f}".format(sum(number_list)))
+# # 39.91
 
 
 
 "ВМЪКВА (нещо) ПО ИНДЕКС"
+# [1, 3, 2, 'a', 'b', 4, 88, 2, 2]
 # mix_list.insert(3, "Pesho")
-# print(mix_list)
+# [1, 3, 2, 'Pesho', 'a', 'b', 4, 88, 2, 2]
 
 
 "ПЪЛНЕНЕ НА ЛИСТ"
-# number_of_wagon = int(input())
+# number_of_wagon = 5
 # train = [0] * number_of_wagon
-# print(train)
+# [0, 0, 0, 0, 0]
 
 
 "НА КОЙ ИНДЕКС СЕ НАМИРА (нещо)"
+# [1, 3, 2, 'a', 'b', 4, 88, 2, 2]
 # number = mix_list.index('b')
-# print(number)
+# print(number)   # 4
 
 
-"БРОЙ КОЛКО (неща) ИМА В ЛИСТА"
-# print(letters_list.count('o'))
-# print(mix_list.count("b"))
+"БРОЙ КОЛКО (спец. неща) ИМА В ЛИСТА"
+# не работи със стрингове
+# list_nums = [1, 2, 1, 5, 1, 6]
+# print(list_nums.count(1))      # 3
 
 
-"ДАВА ИНДЕКС И ЕЛЕМЕНТА, КОЙТО Е ТАМ"
+"ДАВА ЕЛЕМЕНТА И ИНДЕКСА НА КОЙТО СЕ НАМИРА"
+# # [1, 3, 2, 'a', 'b', 4, 88, 2, 2]
 # for index, letter in enumerate(mix_list):
-#     print(index, letter)
+#     print(index, letter, sep='-', end=', ')
+#     # 0 - 1, 1 - 3, 2 - 2, 3 - a, 4 - b, 5 - 4, 6 - 88, 7 - 2, 8 - 2,
 
 
 
-"КОПИРА ЛИСТА"          # и работим върху копието, оригинала се запазва
+"КОПИРА ЛИСТА"
+# и работим върху копието, оригинала се запазва
 # second_list = mix_list.copy()
 # second_list.append(1000)
 # print(mix_list)
 # print(f'second list: {second_list}')
+# second list: [1, 3, 2, 'a', 'b', 4, 88, 2, 2, 1000]
 
 
-"С КАКВО ЗАПОЧВА"
-# print(list([item for item in letters_list if item.startswith("d")]))
-
+"ВРЪЩА ЕЛЕМЕНТИ ЗАПОЧВАЩИ С (нещо)"
+# words = ['cat', 'dog', 'mouse', 'dolphin']
+# print(list([x for x in words if x.startswith("d")]))
+# ['dog', 'dolphin']
 
 "ТЪРСЕНЕ В ЛИСТ"
 # if 'a' in mix_list:
@@ -148,22 +181,22 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 
 
 "СОРТИРА СЪЩ. ЛИСТ"
+# # ['cat', 'dog', 'mouse', 'hello', 'world']
+#
 # letters_list.sort()
 # print(letters_list)
-
-# number_list.sort()
-# print(number_list)
-
-# letters_list.sort(reverse=True) # обръщане на реда
+# # ['cat', 'dog', 'hello', 'mouse', 'world']
+#
+# letters_list.sort(reverse=True)
+# print(letters_list)
+# # ['world', 'mouse', 'hello', 'dog', 'cat']
 
 
 "ПРАВИ НОВ ЛИСТ И СОРТИРА НЕГО"
-# print(letters_list)
-# print(sorted(letters_list))
-
 # name_list = ["Ali", 'Marry', 'Kim', 'Teddy', 'Monika', 'John']
 # sorted_list = sorted(name_list, key=lambda item: (-len(item), item))
 # print(sorted_list)
+# ['Monika', 'Marry', 'Teddy', 'John', 'Ali', 'Kim']
 
 
 "ОБРЪЩА ЛИСТА ОТЗАНД НАПРЕД"
@@ -172,107 +205,116 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 
 
 "ПРОМЕНЯ ЕЛЕМЕНТИ ВЪВ ВЛОЖЕНИЯ СПИСЪК"
-# print(nested_list)
+# [[1, 2, 3], [4, 5, 6]]
 # nested_list[0][1] = 222
-# print(nested_list)
+# [[1, 222, 3], [4, 5, 6]]
 
 
 "КОПИРАНЕ НА ВЛОЖЕН СПИСЪК"
 # from copy import deepcopy
+# # [[1, 2, 3], [4, 5, 6]]
 # nested_list_2 = deepcopy(nested_list)
-
+# # [[1, 2, 3], [4, 5, 6]]
 
 
 "ОБХОЖДА ЛИСТА ПО ЕЛЕМЕНТ И ПО ИНДЕКС - итерира"
-# for element in mix_list:      # показва елементите в листа
-#     print(element)
-
-# for index in range(0, len(mix_list)):       # показва индексите на листа
-#     print(index)
-
-# for index in range(0, len(mix_list) - 2):     # извиква елемент по индекса му
+# # показва индексите на листа
+# for index in range(0, len(mix_list)):
+#     print(index, end=", ")
+#     # 0, 1, 2, 3, 4, 5, 6, 7, 8,
+#
+# # извиква елемент по индекса му
+# for index in range(0, len(mix_list) - 5):
 #     print(mix_list[index], end=', ')
+#     # 1, 3, 2, a,
 
 
-"ПРЕМАХВА ПОВТАРЯЩИТЕ СЕ ЕЛЕМЕНТИ ОТ ЛИСТА - SET"   # разбърква елементите
-# print(list(set(mix_list)))
-
-
-"СРЕДНА СТОЙНОСТ"
+"СРЕДНА СТОЙНОСТ НА ЛИСТА"
 # from statistics import mean
-# print(f"средна стойност на листа {mean(number_list):.2f}")
+# print(f"средна стойност: {mean(number_list):.2f}")
+# # средна стойност: 4.43
 
 
-"ФИЛТЪР - елементите, който дават True"
+"ФИЛТЪР - елементите, които дават True"
+# letters = ['a', 'e', 'i', 'o', 'u']
+#
 # def only_vowel(variable):
-# 	letters = ['a', 'e', 'i', 'o', 'u']
-# 	return variable in letters
-# sequence = ['a', 'g', 'e', 'e', 'j', 'u', 'k', 's', 'o', 'p', 'r', 'a']
+#     return variable in letters
+#
+# sequence = ['a', 'g', 'e', 'e', 'u', 'k', 'p' 'a']
 # print(list(filter(only_vowel, sequence)))
-
+# # ['a', 'e', 'e', 'u']
+#
+# # [1, 4, 3, 8, 6, 2, 7, 6.59, 2.32]
 # print(list(filter(lambda x: x % 2 == 0, number_list)))
-
+# # [4, 8, 6, 2]
+#
+# # ['cat', 'dog', 'mouse', 'hello', 'world']
 # print(list(filter(lambda x: len(x) >= 4, letters_list)))
+# # ['mouse', 'hello', 'world']
+
 
 
 "MAP - работи с итерируеми обекти"
+# # ['cat', 'dog', 'mouse', 'hello', 'world']
 # print(list(map(len, letters_list)))
+# # [3, 3, 5, 5, 5]
 
+# # [1, 4, 3, 8, 6.59, 2.32]
+# print(number_list)
 # def cubed_num(digit):
 #     return digit ** 2
 # print(list(map(cubed_num, number_list)))
+# # [1, 16, 9, 64, 43.4281, 5.3824]
 
-# print(list(map(lambda num: num ** 2, number_list)))
-
-# print(list(map(lambda x, y: x*y, number_list_2, number_list_3)))
-
+# # ['cat', 'dog', 'mouse', 'world']
 # print(list(map(str.upper, letters_list)))
+# # ['CAT', 'DOG', 'MOUSE', 'WORLD']
 
+# # [1, 4, 3, 8, 6.59, 2.32]
 # print(list(map(float, number_list)))
+# # [1.0, 4.0, 3.0, 8.0, 6.59, 2.32]
 
-# measurement = [
-#     {'length': 2.5, 'width': 2},
-#     {'length': 3, 'width': 6},
-#     {'length': 5, 'width': 4},
-# ]
-# print(list(map(lambda x: x.get('length', 0) * x.get('width', 0), measurement)))
+
 
 "ИЗПРАЗВА ЛИСТА"
 # clear_list = mix_list.clear()
 # print(clear_list)
 
 
-"WHILE"
-# while letters_list:
-#     current_element = letters_list[0]
-#     letters_list.remove(current_element)
-#     print(letters_list)
+
+"ОБРЪЩА ЛИСТА"
+# или слайсинг letters_list[::-1]
+
+# прави нова колекция, която е обърната
+# print(list(reversed(letters_list)))
+
+# обръща оригиналната колекция
+# print(letters_list.reverse())
 
 
-"ОБРЪЩА ЛИСТА"                      # или слайсинг result = letters_list[::-1]
-# print(letters_list)
-# print(list(reversed(letters_list)))     # прави нова колекция, която е обърната
-#
-#
-# letters_list.reverse()      # метод, който обръща оригиналната колекция
-# print(letters_list)
-
-
-"BOOLEAN IN"            # ако го има в листа връща True
+"BOOLEAN с IN ОПЕРАТОРА"            # ако го има в листа връща True
 # boolean = 5 in number_list_3
-# print(boolean)
+# print(boolean)  # True
+#
 # print(6 in number_list_3)
+# # False
 
 
 "ГЕНЕРИРА ЛИСТ C RANGE ОТ ЧИСЛА"
-# print(list(range(1, 10 + 1)))
+# print(list(range(1, 8 + 1, 2)))
+# [1, 3, 5, 7]
 
 
-"ЕДНАКВИ ЛИ СА"              # връща дали всичк в итеръбъла са еднакви
-# print(all(number_list_2))
+"ЕДНАКВИ ЛИ СА"
+# връща дали всичк в итеръбъла са еднакви
+
+# [10, 20, 30, 40, 50, 60]
 # print(all([isinstance(x, int) for x in number_list_2]))
-# print(all([isinstance(x, str) for x in letters_list]))
-# print(all([isinstance(x, str) for x in mix_list]))
+# True
+
+# print([isinstance(x, int) for x in number_list_2])
+# [True, True, True, True, True, True]
 
 
 "С КОЛКО ИЗЛИЗАМ ОТ ЛИСТА"
@@ -280,4 +322,6 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 # position = 4
 # size = 3
 # new_position = (position + size) % len(array)
-# print(new_position)
+# print(new_position)     # 1
+
+
