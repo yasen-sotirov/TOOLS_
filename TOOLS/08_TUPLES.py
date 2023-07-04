@@ -68,3 +68,26 @@ t_4 = (("a", 5), ("b", 3), ("c", 1))
 #     print(f"{key} - {value}")
 
 
+
+"DEMO"
+
+colors = ('red', 'green', 'yellow', 'yellow')
+
+# tuple is a collection, similar to a list
+# duplicates are allowed:
+print(len(colors))
+
+# order is maintained:
+print(colors[0])
+print(colors[3])
+
+# can check for specific element
+print('yellow' in colors)
+
+# can check for index
+print(colors.index('yellow'))
+
+# print(colors.index('blue')) # will throw an error
+
+# unlike lists, tuples cannot be changed - not adding/removing or updating
+

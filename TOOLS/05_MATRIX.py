@@ -68,3 +68,12 @@ list_2d = [
 "ПРИНТИРАНЕ НА МАТРИЦА"
 # for row in list_2d:
 #     print(" ".join(str(el) for el in row))
+
+
+"ОБХОЖДАНЕ НАД ДИАГОНАЛА"
+# total_sum = 0
+# for row in range(len(list_2d)):
+#     for col in range(len(list_2d)):
+#         if col > row:
+#             total_sum += list_2d[row][col]
+# print(total_sum)

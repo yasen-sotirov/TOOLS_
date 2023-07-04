@@ -119,3 +119,31 @@ set_3 = {3, 4}
 
 "ПРЕМАХВА ПОВТАРЯЩИТЕ СЕ ЕЛЕМЕНТИ ОТ ЛИСТА - SET"   # разбърква елементите
 # print(list(set(mix_list)))
+
+
+"DEMO"
+# declare a set
+countries = {'Argentina', 'Bulgaria', 'Congo'}
+
+# set elements cannot be individually accessed or updated
+# you can loop through all elements
+for c in countries:
+    print(c)
+
+# you can check if an item is present or not
+
+print('Congo' in countries)
+print('Denmark' in countries)
+
+# you can add new elements
+
+countries.add('Denmark')
+countries.add('Congo')  # no effect
+
+# you can remove elements
+
+countries.remove('Argentina')
+# countries.remove('Argentina') # will throw KeyError
+
+countries.discard('Congo')
+countries.discard('Congo')  # will do nothing

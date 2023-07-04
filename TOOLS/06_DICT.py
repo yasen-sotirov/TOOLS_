@@ -246,3 +246,47 @@ names_ages = {"Ines": 27,
 "ОБЕДИНЯВА ДВА РЕЧНИКА"
 # num_dict_2.update(num_dict)
 # print(num_dict_2)
+
+
+
+
+
+"DEMO"
+# define a dict = { 'key': 'value' }
+phonebook = {
+    'Alice': '081231938',
+    'Bob': '078712312',
+    'Charlie': '081200912'
+}
+
+# access value by key
+print(phonebook['Alice'])
+print(phonebook.get('Alice'))
+
+# Throws error if key does not exist
+# print(phonebook['alice'])
+
+# check if key exists
+print('Alice' in phonebook)
+
+# change existing value
+phonebook['Alice'] = '033333123'
+
+# add new value
+phonebook['Donn'] = '089787123'
+
+# get number of key:value pairs
+print(len(phonebook))
+
+# get a collection of all keys in the dict
+keys = phonebook.keys()  # also has .values()
+for key in keys:
+    print(key)
+
+
+
+# deletes a key:value pair
+phonebook.pop('Alice') # will return 081231938
+# del phonebook['Alice'] # returns nothing
+
+print(len(keys))  # the keys collection is also implicitly updated

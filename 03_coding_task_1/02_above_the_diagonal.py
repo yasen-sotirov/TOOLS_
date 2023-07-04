@@ -35,17 +35,33 @@ The main diagonal is 1 4 16 64, so the sum of the numbers above it:
 2 + 4 + 8 + 8 + 16 + 32 = 70.
 """
 
-matrix_size = int(input())
+size = int(input())
 matrix = []
-counter = 1
+row_start = 1
 
-for row in range(matrix_size):
-    sub_matrix = []
-    for col in range(matrix_size):
-        row_el = counter * 2
-        sub_matrix.append(row_el)
-    counter *= 2
-    print()
+# за всеки зададен ред от матрицата правим нов ред
+for _ in range(size):
+    # този нов ред е празен
+    row = []
+    # всяка колона започва от зададения роу–стар който се променя
+    col = row_start
+    # итерирам през всяка колона
+    for _ in range(size):
+        # и добавям колоната
+        row.append(col)
+        # редактирам колоната
+        col *= 2
+    # готовият ред го добавям към матрицата
+    matrix.append(row)
+    # редактирам старта на реда
+    row_start *= 2
 
-print(matrix)
+# обхождане на матрицата
+total_sum = 0
+# итерирам през индексите
+for row in range(size):
+    for col in range(size):
+        if col > row:
+            total_sum += matrix[row][col]
 
+print(total_sum)

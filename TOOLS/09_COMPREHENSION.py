@@ -67,3 +67,75 @@ number_list_2 = [4, 8, 2, 6, 9]
 letters_list = ['cat', 'dog', 'mouse', 'dolphin']
 print(list([item for item in letters_list if item.startswith("d")]))
 # ['dog', 'dolphin']
+
+
+
+
+
+
+"DEMO LIST COMPREHENSIONS"
+
+# double all numbers
+original = [1, 2, 3, 4]
+doubled = [n * 2 for n in original]
+print(original)
+print(doubled)
+
+# parse a list of strings
+strings = ["11", "12", "13"]
+integers = [int(n) for n in strings]
+print(strings)
+print(integers)
+
+# or when you read from the console
+integers = [int(n) for n in input().split(' ')]
+print(integers)
+
+# add a 'filtering' condition
+evens = [n for n in integers if n % 2 == 0]
+print(evens)
+
+pizzas = {
+    'pepperoni': 12.5,
+    'sicilian': 17.0,
+    'margheritta': 8.5
+}
+
+# try the alternative (list declaration + for loop + if condition approach)
+
+cheap_pizzas = [name.capitalize() for name, price in pizzas.items() if price < 15.0]
+print(cheap_pizzas)
+
+# the same syntax also applies for sets
+# [x for x in ...] - list comprehension
+# {x for x in ...} - set comprehension
+
+
+
+
+"DEMO DICT COMPREHENSIONS"
+
+word = 'Hello, Telerik Academy!'
+
+# dictionary comprehension
+occurrences = {letter: word.count(letter) for letter in word}
+
+for k, v in occurrences.items():
+    print(f'{k} = {v}')
+
+
+def avg(items):
+    return sum(items) / len(items)
+
+
+student_scores = {
+    'Gosho': [4, 3, 2, 2, 4, 2],
+    'Pesho': [3, 3, 2, 4, 5, 4],
+    'Tosho': [6, 2, 6, 3, 2]
+}
+
+graduating_students = {
+    name: avg(scores) for name, scores in student_scores.items() if avg(scores) > 3.0
+}
+
+print(graduating_students)

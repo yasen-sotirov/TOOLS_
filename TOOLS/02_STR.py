@@ -152,7 +152,7 @@ txt_6 = "123 abc"
 # print(mix_list[-1:])        # 9
 
 
-"РАЗОПАКОВА СТРИНКА"
+"РАЗОПАКОВА СТРИНГА"
 # commands = "bg:sofia:varna:burgas"
 # commands, *data = commands.split(":")
 # print(commands)
