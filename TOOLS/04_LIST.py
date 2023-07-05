@@ -325,3 +325,45 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 # print(new_position)     # 1
 
 
+
+
+
+
+"""COMPREHENSIONS"""
+"""COMPREHENSIONS"""
+"""COMPREHENSIONS"""
+
+
+
+"ОБХОЖДА ЛИСТА И ПРЕВРЪЩА ЕЛЕМЕНТИТЕ"
+# print(number_list)
+# print([str(el) for el in number_list])
+
+
+"ОБХОЖДА ЛИСТА И СРАВНЯВА ДАЛИ ГИ ИМА В ДРУГИЯ ЛИСТ"
+# print([item for item in number_list if item in number_list_2])
+
+
+"СОРТИРА ЛИСТА"
+# data = ["5", "Sofia"]
+# digit = [int(x) if x.isdigit() else x for x in data]
+# print(digit)
+
+# print([x * 2 for x in number_list if x % 2 == 0])
+
+
+"ВСИЧКИ ЛИ СА ЕДНАКВИ"              # връща дали всичк в листа са еднакви
+# # print(all(number_list_2))
+# print(all([isinstance(x, int) for x in number_list_2]))
+# print(all([isinstance(x, str) for x in letters_list]))
+# print(all([isinstance(x, str) for x in mix_list]))
+
+
+"САМО ЕДНО ДА Е ВЯРНО"
+# print(any([True, False, False]))
+
+
+"ВРЪЩА ЕЛЕМЕНТИ ЗАПОЧВАЩИ С (нещо)"
+# letters = ['cat', 'dog', 'mouse', 'dolphin']
+# print(list([item for item in letters if item.startswith("d")]))
+# # ['dog', 'dolphin']

@@ -16,32 +16,7 @@ number_list_2 = [4, 8, 2, 6, 9]
 
 
 
-"ОБХОЖДА ЛИСТА И ПРЕВРЪЩА ЕЛЕМЕНТИТЕ"
-# print(number_list)
-# print([str(el) for el in number_list])
 
-
-"ОБХОЖДА ЛИСТА И СРАВНЯВА ДАЛИ ГИ ИМА В ДРУГИЯ ЛИСТ"
-# print([item for item in number_list if item in number_list_2])
-
-
-"СОРТИРА ЛИСТА"
-# data = ["5", "Sofia"]
-# digit = [int(x) if x.isdigit() else x for x in data]
-# print(digit)
-
-# print([x * 2 for x in number_list if x % 2 == 0])
-
-
-"ВСИЧКИ ЛИ СА ЕДНАКВИ"              # връща дали всичк в листа са еднакви
-# # print(all(number_list_2))
-# print(all([isinstance(x, int) for x in number_list_2]))
-# print(all([isinstance(x, str) for x in letters_list]))
-# print(all([isinstance(x, str) for x in mix_list]))
-
-
-"САМО ЕДНО ДА Е ВЯРНО"
-# print(any([True, False, False]))
 
 
 "F-STRING COMPREHENSION"
@@ -57,16 +32,10 @@ number_list_2 = [4, 8, 2, 6, 9]
 "ИМА ЛИ ГЛАВНА БУКВА"
 # is_uppercase_presented = any([True for char in value if char.isupper()])
 
-
-
 # all_users = [('pesho', 'qwe345!'), ('gosho', 'passwOrd1'), ('penka', '1a2b3c4d')]
 # print([(user, password) for (user, password) in all_users if len(password) >= 8 and any(digit.islower() for digit in password) and any(digit.isupper() for digit in password) and any(digit.isnumeric() for digit in password)])
 
 
-"ВРЪЩА ЕЛЕМЕНТИ ЗАПОЧВАЩИ С (нещо)"
-letters_list = ['cat', 'dog', 'mouse', 'dolphin']
-print(list([item for item in letters_list if item.startswith("d")]))
-# ['dog', 'dolphin']
 
 
 
