@@ -1,55 +1,38 @@
-def is_border(position, row_p, col_p):
-    flag = False
-    if row_p == 0 or row_p == rows - 1:
-        flag = True
-    if col_p == 0 or col_p == cols - 1:
-        flag = True
-    return flag
+"""
+Bounce
+
+You are given numbers N and M.
+They form a matrix of the powers of 2.
+
+Example: N = 3, M = 4
+
+1 2 4 8
+2 4 8 16
+4 8 16 32
+
+Starting from the top left corner of the matrix,
+Go with diagonal moves, until you hit a wall.
+When a wall is hit, change direction. You do this, until the direction cannot be changed, i.e. you hit a corner.
+
+Example:
+If you have the above matrix, the path will be: 1 4 16 16 4 4 4
+"""
 
 
-def direction():
-    pass
+rows, cols = map(int, input().split())
+total = 1
+r, c, r_delta, c_delta = 1, 1, 1, 1
 
+while r >= 0 and c >= 0 and r < rows and c < cols:
+    total += 2 ** (r + c)
 
-rows, cols = [int(x) for x in input().split()]
-matrix = []
-row_start = 1
+    if r == 0 or r == rows - 1:
+        r_delta = -r_delta
 
-for r in range(rows):
-    row_input = []
-    col_start = row_start
-    for c in range(cols):
-        row_input.append(col_start)
-        col_start = col_start * 2
-    row_start = row_start * 2
-    matrix.append(row_input)
+    elif c == 0 or c == cols - 1:
+        c_delta = -c_delta
 
-path = []
-row_position = 0
-col_position = 0
+    r += r_delta
+    c += c_delta
 
-while True:
-
-    direction = [1, 1]
-    next_position = [0, 0]
-    next_position[0] = row_position + direction[0]
-    next_position[1] = col_position + direction[1]
-    value_on_position = matrix[next_position[0]][next_position[1]]
-    path.append(value_on_position)
-    break
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(total)

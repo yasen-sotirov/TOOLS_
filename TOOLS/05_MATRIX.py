@@ -69,6 +69,10 @@ list_2d = [
 # for row in list_2d:
 #     print(" ".join(str(el) for el in row))
 
+lst = [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
+for x, y, z in lst:
+    print(f"x {x} : y {y} : z {z}")
+
 
 "ОБХОЖДАНЕ НАД ДИАГОНАЛА"
 # total_sum = 0

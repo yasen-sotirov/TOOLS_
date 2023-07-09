@@ -33,44 +33,49 @@ Input
 
 Output
 5 2 5 5 9
+
+
+Input
+5 3
+6 2 4 2 2
+8 3 3
+
+Output
+4 6 7 2 2
+
+Input
+3 5
+8 3 3
+6 2 4 2 2
+
+Output
+4 6 7 2 2
 """
 
-num_1, num_2 = [int(x) for x in input().split()]
-result_num = []
-in_mind = 0
 
+num_1_length, num_2_length = [int(x) for x in input().split()]
 first_num = [int(x) for x in input().split()]
 second_num = [int(x) for x in input().split()]
 
-if num_1 == num_2:
-    index = 0
-    for el in range(num_1):
-        sum_num = first_num[index] + second_num[index]
-        digit_1 = sum_num // 10
-        digit_2 = sum_num % 10
+# проверка за разлика в дължината на листовете, за да не гръмне по индекс
+difference = num_1_length - num_2_length
 
-        result_num.append(digit_2 + in_mind)
-        index += 1
-        in_mind = digit_1
+# добавям необходимите нули, за да изравни
+if difference < 0:
+    add = [0] * abs(difference)
+    first_num += add
 
-else:
-    for el in range(min(num_1, num_2)):
-        sum_num = first_num[0] + second_num[0]
-        digit_1 = sum_num // 10
-        digit_2 = sum_num % 10
+elif difference > 0:
+    add = [0] * difference
+    second_num += add
 
-        result_num.append(digit_2 + in_mind)
-        del first_num[0]
-        del second_num[0]
-        in_mind = digit_1
 
-# for el in max(first_num, second_num):
-#     sum_num = el + in_mind
-#     digit_1 = sum_num // 10
-#     digit_2 = sum_num % 10
+in_mind = 0
 
-    # result_num.append(digit_2 + in_mind)
-    # in_mind = digit_1
+# няма значение кой списък, защото те са изравнени като дължина
+for index in range(len(first_num)):
+    result = first_num[index] + second_num[index] + in_mind
+    # редуцира до единици
+    print(result % 10, end=' ')
 
-result_num = [str(x) for x in result_num]
-print(' '.join(result_num))
+    in_mind = 1 if result > 9 else 0

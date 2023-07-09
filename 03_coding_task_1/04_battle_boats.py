@@ -126,58 +126,75 @@ Missed
 """
 
 
-def count_result(bord_name):
-    counter = 0
-    for row in bord_name:
-        for el in row:
-            if el == 1:
-                counter += 1
-    return counter
+def read_player_board(rows):
+    player = []
+    for _ in range(rows):
+        player.append(input().split())
+    return player
 
 
-row_num, col_num = [int(x) for x in input().split(" ")]
-
-bord_p1 = []
-for row in range(row_num):
-    bord_p1.append([int(el) for el in input().split()])
-
-bord_p2 = []
-for row in range(row_num - row_num):
-    col_cord = ([int(el) for el in input().split()])
-    for el in col_cord:
-        el = el - col_num
-
-command = input()
-player_turn = 0
-
-while command != "END":
-    coordinates = command.split(" ")
-    row_cord = int(coordinates[1])
-    col_cord = int(coordinates[2])
-
-    if player_turn % 2 == 0:
-        if bord_p2[row_cord][col_cord] == 1:
-            bord_p2[row_cord][col_cord] = 2
-            print("Booom")
-        elif bord_p2[row_cord][col_cord] == 0:
-            print('Missed')
-        else:
-            print("You already shot there!")
-        player_turn += 1
-
-    else:
-        if bord_p1[row_cord][col_cord] == 1:
-            bord_p1[row_cord][col_cord] = 2
-            print("Booom")
-        elif bord_p1[row_cord][col_cord] == 0:
-            print('Missed')
-        else:
-            print("You already shot there!")
-        player_turn += 1
-
+def read_coordinates():
+    commands_list = []
     command = input()
 
-result_p1 = count_result(bord_p1)
-result_p2 = count_result(bord_p2)
+    while command != 'END':
+        r, c = map(int, command.split()[1:])  # skip the pointless 'Shoot'
+        commands_list.append([r, c])
+        command = input()
+    return commands_list
 
-print(f"{result_p1}:{result_p2}")
+
+def shoot_coord(player, row, col):
+    if player[row][col] == '0':
+        player[row][col] = 'x'
+        return 'Missed'
+
+    elif player[row][col] == '1':
+        player[row][col] = 'x'
+        return 'Booom'
+    else:
+        return 'You already shot there!'
+
+
+def count_survived_boats(player):
+    total = 0
+    for row in player:
+        total += row.count('1')
+    return total
+
+
+# приравнявам ред и колона към инт
+rows, cols = map(int, input().split())
+
+# чете дъската на играч 1
+player_1 = read_player_board(rows)
+
+# чете дъската на играч 2
+player_2 = read_player_board(rows)
+
+# прочита кординатите от инпута и маха shoot
+coordinates = read_coordinates()
+
+# проверява кой играч е на ред
+player_1_turn = True
+
+# преминавам през зададените координати за стрелба
+# за всяка двойка координат от списъка:
+for row, col in coordinates:
+
+    # координатите на играч 1 са наобратно
+    if player_1_turn:
+        row, col = -row - 1, -col - 1  # Player two coords are reversed for no reason
+        print(shoot_coord(player_2, row, col))
+    else:
+        print(shoot_coord(player_1, row, col))
+
+    # прехвърля на следващия играч. това е съкратен вариант
+    # иначе след всеки играч трябва да се пише T/F
+    player_1_turn = not player_1_turn
+
+# брой оцелелите кораби
+p_1_result = count_survived_boats(player_1)
+p_2_result = count_survived_boats(player_2)
+
+print(f'{p_1_result}:{p_2_result}')

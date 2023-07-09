@@ -82,10 +82,10 @@ names_ages = {"Ines": 27,
 
 
 "ИЗВИКВАНЕ VALUE ПО ИНДЕКС"
-# # {'1A': ['Ines', 'Pesho'], '1B': ['Ivan', 'Maria']}
-# names = classes['1A']
-# print(names[0])         # Ines
-# print(names[0][0:2])    # In
+# {'1A': ['Ines', 'Pesho'], '1B': ['Ivan', 'Maria']}
+names = classes['1A']
+print(names[0])         # Ines
+print(names[0][0:2])    # In
 
 
 "ИЗВИКВАНЕ VALUE ПО КЛЮЧ"

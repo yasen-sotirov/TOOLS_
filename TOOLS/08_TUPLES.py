@@ -28,6 +28,11 @@ t_4 = (("a", 5), ("b", 3), ("c", 1))
 #     print(x)
 
 
+"ТЪРСИ В ТЮПЪЛА"
+# print("pesho" in t_1)   # False
+# print("Gosho" in t_1)   # True
+
+
 "ДЪЛЖИНА НА ТЮПЪЛА"
 # print(t_3)
 # print(len(t_3))
@@ -68,26 +73,53 @@ t_4 = (("a", 5), ("b", 3), ("c", 1))
 #     print(f"{key} - {value}")
 
 
+"ДАЛИ Е SUBTUPLE OT ДРУГ TUPLE"
+# def contains_subtuple(sub_tuple, the_tuple):
+#     if len(sub_tuple) > len(the_tuple):
+#         return False
+#     else:
+#         for index in range(len(the_tuple) - len(sub_tuple) + 1):
+#             if the_tuple[index:index + len(sub_tuple)] == sub_tuple:
+#                 return True
+#     return False
+#
+#
+# print(contains_subtuple((2, 3), (1, 2, 3)))     # True
+# print(contains_subtuple((1, 3), (1, 2, 3)))     # False
 
-"DEMO"
 
-colors = ('red', 'green', 'yellow', 'yellow')
+"КАКВО Е KET WORD АРГУМЕНТ"
 
-# tuple is a collection, similar to a list
-# duplicates are allowed:
-print(len(colors))
+"linear parameter"
+# параметъра става keyword = достига се само чрез равно
+# def func(*, x, y):      # прави следващия параметър linear parameter
+#     return x, y
+# print(func(x=5, y=6))
 
-# order is maintained:
-print(colors[0])
-print(colors[3])
 
-# can check for specific element
-print('yellow' in colors)
+# def func(x, /, y):      # прави един параметър преди него linear parameter
+#     return x, y
+# print(func(5, y=6))
 
-# can check for index
-print(colors.index('yellow'))
 
-# print(colors.index('blue')) # will throw an error
+# k = {9: "wer"}
 
-# unlike lists, tuples cannot be changed - not adding/removing or updating
+
+# y = [1, 2, 3]
+# def fn():
+#     y.extend([3, 4, 5])
+# fn()
+# print(y)
+
+
+# tup = (1, 2, 3)
+# tup += (3, 4, 5)
+# print(tup)
+#
+# tup = (1)
+# print(type(tup))
+
+a = {(1,): ['p', 2]}
+print(a)
+
 

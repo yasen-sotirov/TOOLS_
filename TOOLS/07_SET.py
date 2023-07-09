@@ -1,11 +1,12 @@
-"SET {} "       # IMmutable - НЕпроменлив, въпреки че може да добавяме нови елементи
+"SET {} "   # IMmutable - НЕпроменлив, може да добавяме нови елементи
             # само уникални елементи
             # не подрежда елементите!
 
 set_1 = {1, 2, 3, 4}
 set_2 = {3, 4, 5, 6}
 set_3 = {3, 4}
-
+set_4 = {'Argentina', 'Bulgaria', 'Congo'}
+set_5 = {"1", "2", "3", "4"}
 
 
 "СЪЗДАВАНЕ SET"
@@ -13,10 +14,17 @@ set_3 = {3, 4}
 # a = {}             # питона го мисли за дикшанъри
 
 
-"ДОБАВЯ ЕЛЕМЕНТИ"
-# print(set_1)
-# set_1.add(12)
-# print(set_1)
+"ИТЕРИРА ХАОТИЧНО СТРИНГОВЕТЕ"
+# for el in set_1:
+#     print(el, end=" ")
+# print()
+#
+# for el in set_4:
+#     print(el, end=" ")
+# print()
+#
+# for el in set_5:
+#     print(el, end=" ")
 
 
 "ДОБАВЯ ЕЛЕМЕНТИ"
@@ -29,13 +37,23 @@ set_3 = {3, 4}
 # print(len(set_1))
 
 
-"ПРЕМАХВА КОНКРЕТЕН ЕЛЕМЕНТИ - гърми ако ел го няма"
+"ТРИЕ ЕЛЕМЕНТ НА ИНДЕКС - гърми ако ел го няма"
 # print(set_1)
 # set_1.remove(3)
 # print(set_1)
 
 
-"ПРЕМАХВА КОНКРЕТЕН ЕЛЕМЕНТИ - НЕ гърми ако ел го няма"
+"ТРИЕ КОНКРЕТЕН ЕЛЕМЕНТ"
+# set_4.remove("Congo")
+# print(set_4)
+
+
+"ТЪРСИ КОНКРЕТЕН ЕЛЕМЕНТ"
+# print("Congo" in set_4)     # True
+# print(2 in set_4)           # False
+
+
+"ТРИЕ КОНКРЕТЕН ЕЛЕМЕНТИ - НЕ гърми ако ел го няма"
 # print(set_1)
 # set_1.discard(3)
 # print(set_1)
@@ -45,11 +63,12 @@ set_3 = {3, 4}
 # print(set_2)
 
 
-"ПРЕМАХВА ПСОЛЕДНИЯ ЕЛЕМЕНТ" # !! АМА КОЙ ТОЧНО??
-# print(set_1)
+"ТРИЕ ПЪРВИЯ ЕЛЕМЕНТ И ГО ПАЗИ"
+# # {1, 2, 3, 4}
 # set_1.pop()
-# set_1.pop()
-# print(set_1)
+# # {2, 3, 4}
+# print(set_1.pop())
+# # 2
 
 
 "ДАВА ЕЛЕМЕНТИТЕ, КОИТО ГИ НЯМА ВЪВ ВТОРИЯ СЕТ"     # Difference
@@ -80,7 +99,7 @@ set_3 = {3, 4}
 # print(set_1.union(set_2))
 
 
-"ВСИЧКИ ЕЛЕМЕНТИ НА ЕДИНИ ИМА ЛИ ГИ В ДРУГИЯ"   # Subset
+"ВСИЧКИ ЕЛЕМЕНТИ НА ЕДИНИЯ ИМА ЛИ ГИ В ДРУГИЯ"   # Subset
 # print(set_2)
 # print(set_3)
 # print(set_2 > set_3)        # всички елементи на set_3 има ли ги в set_2
@@ -96,7 +115,9 @@ set_3 = {3, 4}
 # print(set_comprehension)
 # print(set(nums))            # или на кратко
 
+
 "СОРТИРАНЕ - превръща в лист и сортира"
+# print(set_1)
 # set_1.add(-2)
 # set_1.add(-12)
 # set_1.add(-1)
@@ -105,7 +126,7 @@ set_3 = {3, 4}
 
 
 "ГЕНЕРИРА SET C RANGE ОТ ЧИСЛА"
-# print(set(range(1, 10 + 1)))
+# print(set(range(1, 12, 2)))
 
 
 "НЕПРОМЕНЛИВ СЕТ"       # сет, който не можем да променяме
@@ -121,29 +142,3 @@ set_3 = {3, 4}
 # print(list(set(mix_list)))
 
 
-"DEMO"
-# declare a set
-countries = {'Argentina', 'Bulgaria', 'Congo'}
-
-# set elements cannot be individually accessed or updated
-# you can loop through all elements
-for c in countries:
-    print(c)
-
-# you can check if an item is present or not
-
-print('Congo' in countries)
-print('Denmark' in countries)
-
-# you can add new elements
-
-countries.add('Denmark')
-countries.add('Congo')  # no effect
-
-# you can remove elements
-
-countries.remove('Argentina')
-# countries.remove('Argentina') # will throw KeyError
-
-countries.discard('Congo')
-countries.discard('Congo')  # will do nothing

@@ -3,6 +3,16 @@
 num_1, num_2, num_3 = 1, 2, 3
 num_4, num_5, num_6 = 10, 2.5, 123
 
+
+"ЧЕТЕНЕ ОТ INPUT C MAP"
+# rows, cols = map(int, input().split())
+# print(type(rows))
+
+# cmd = 'shoot 2 3'
+# row, col = map(int, cmd.split()[1:])
+# print(f"row: {row}, col: {col}")
+
+
 "ЦЕЛОЧИСЛЕНО ДЕЛЕН"     # колко пъти делим без остатък
 # print(7 // 2)   # 3
 # print(12 // 3)  # 4
@@ -59,34 +69,42 @@ num_4, num_5, num_6 = 10, 2.5, 123
 
 
 "ЧАСОВЕ И МИНУТИ"
-hour = int(input())
-minutes = int(input())
-hour += minutes // 60
-minutes %= 60
-if hour > 23:
-    hour = 0
-print(f'{hour}:{minutes:02d} ч')
-
-minutes = int(input())
-h = minutes // 60
-m = minutes % 60
-print(f'{h}:{m:02d} ч')
+# hour = int(input())
+# minutes = int(input())
+# hour += minutes // 60
+# minutes %= 60
+# if hour > 23:
+#     hour = 0
+# print(f'{hour}:{minutes:02d} ч')
+#
+# minutes = int(input())
+# h = minutes // 60
+# m = minutes % 60
+# print(f'{h}:{m:02d} ч')
 
 
 "ПРОСТО ЧИСЛО"
-number = int(input())
-is_dividable = False
-
-for i in range(2, number):
-    if (number % i) == 0:
-        is_dividable = True
-        break
-
-if is_dividable:
-    print(number, "is not a prime number")
-else:
-    print(number, "is a prime number")
-
-
+# number = int(input())
+# is_dividable = False
+#
+# for i in range(2, number):
+#     if (number % i) == 0:
+#         is_dividable = True
+#         break
+#
+# if is_dividable:
+#     print(number, "is not a prime number")
+# else:
+#     print(number, "is a prime number")
 
 
+"""COMPREHENSION"""
+"""COMPREHENSION"""
+"""COMPREHENSION"""
+
+# x, y = 7, 8
+# result = x + y
+# leftover = 1 if result > 9 else 0
+# print(leftover)
+
+# rows, cols = map(int, input().split())
