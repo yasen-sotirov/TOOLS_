@@ -1,8 +1,12 @@
 "ФУНКЦИИ"       # за да приключи функцията трябва да имаме return
                 # задължителните, наименованите, args, kwargs
                 # променлива, която е дефинирана във функция не е видима извън нея
+                # лекция с Инес Иванова  https://softuni.bg/trainings/resources/video/61350/video-09-june-2021-ines-ivanova-python-fundamentals-may-2021/3368
 
-
+# Параметъ = променливите, с които работи функцията
+# Аргумент = променливите, които подаваме на функцията
+# позиционни аргументи - ненаименовани аргументи
+# теория   https://www.tutorialaicsip.com/cs-xii-qna/working-with-functions-class-12/
 
 "ОПАКОВАНЕ В ЛИСТ *ARGS"        # поема неограничен брой аргументи и ги опакова в масив
 # def print_nums_funct(*args):
@@ -15,8 +19,24 @@
 # print_nums_funct(nums_1, nums_2, nums_3)
 
 
+"TYPE HINTS / ANNOTATIONS"
+# var_1: int  - функцията изисква фиксиран тип данни
+# -> какво връща вункцията
+# def sub_num(a: int, b: int) -> int:
+#     return a / b
+#
+# print(sub_num(10, 5))
+# print(sub_num(10, 5.5))
+
+# def funct(a: int, b: int) -> list[str]:
+#     pass
+
+
+
+
 
 "РАЗОПАКОВАНЕ НА ЛИСТ"
+# разопакова листа и го подава на функцията
 # def print_nums(a, b, c):
 #     print(a, b, c)
 # nums = [1, 2, 3]
@@ -91,13 +111,6 @@
 # print(concatenate("Soft", "UNI", "Is", "Grate", "!"))
 
 
-
-"FUNCTIONS"  # лекция с Инес Иванова  https://softuni.bg/trainings/resources/video/61350/video-09-june-2021-ines-ivanova-python-fundamentals-may-2021/3368
-
-# Параметъ = променливите, с които работи функцията
-# Аргумент = променливите, които подаваме на функцията
-# позиционни аргументи - ненаименовани аргументи
-# позиционни аргументи - „param_1 = 25“   по четимо е
 
 "ПОКАЗBА ДОКУМЕНТАЦИШТА ЗА ДАДЕНА ФУНКЦИШ"
 # def example_func():

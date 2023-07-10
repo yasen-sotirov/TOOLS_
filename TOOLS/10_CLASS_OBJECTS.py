@@ -9,24 +9,28 @@
 # __init__ конструктор на класа
 # self. към него се закача името на инстанцията (обекта)
 # не е добре да се добавят или премахват атрибути извън класа
-
+# не е добра практика да се добавят мютъбал обекти като параметри в __init__ функцията
 
 class Books:
-    market = "Bookstore"        # атрибут на класа, глобален за целия клас. всички инстанции ще го ползват
-    min_price = 5                            # достъпват се през името на класа, не през self
+    market = "Bookstore"        # атрибут на класа, действа на целия клас. всички инстанции ще го ползват
+    min_price = 5               # достъпват се през името на класа, не през self
+    num_of_books = 0
 
-    def __init__(self, title, author, price, type_book="paper book"):  # конструктор
-        self.title = str(title)        # „атрибут/пропърти/variable“ - дефинира характеристиките на класа
-        self.author = author           # атрибут на инстанцията, само тя си го ползва
+    # състояние
+    def __init__(self, title, author, price, type_book="paper book"):  # конструктор / initialiser
+        self.title = str(title)         # „атрибут/пропърти/variable“ - дефинира характеристиките на класа
+        self.author: str = author       # атрибут на инстанцията, само тя си го ползва
         self.price = float(price)
-        self.type = type_book          # default parameter
-        self.notes = []
+        self.type = type_book           # default parameter
+        self.notes: list = []           # hint че очаква лист
         self.is_rented: bool = False
+        Books.num_of_books += 1         # при всяко инстанциране (създаване) на обект ще добавя 1
 
-    def change_price(self, new_price):      # „метод“ дефинира действията на класа, променя атрибутите
+    # поведение
+    def change_price(self, new_price):      # „метод“ дефинира действията на
         self.price = new_price              # чрез self достъпваме proprety-та на класа
                                             # метод на класа, поведение на обекта
-
+    # работи само върху инстанцията
     def __str__(self):                      # директно принтира обекта
         return f"заглавие: '{self.title}'\n" \
                f"автор: '{self.author.first_name}'\n" \
@@ -78,16 +82,19 @@ class Author:       # примерен клас използван в основ
             raise ValueError(f"The price must be min {cls.min_price}")
 
 
+# инстанция / обект
 author_1 = Author("Уолтър", "Айзъксън", 'заглавие 1', 'заглавие 2', 'заглавие 3')
 author_2 = Author("Иван", "Иванов")
 author_3 = Author("Джо", "Малкия")
 print(author_3.first_name)
 
+# инстанция / обект
 book_1 = Books("Стив Джобс", author_1, 35)             # инстанция на класа
 book_1.notes.append(["note 1", "note 2"])
 book_2 = Books("Егото", author_2, 18.50, "e-book")     # инстанция на класа
 book_5 = Books("Notebook", None, 2)
 print(book_5.price)
+print(Books.num_of_books)
 
 
 "РАБОТА С ИНСТАНС АТРИБУТИ"

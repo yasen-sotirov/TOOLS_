@@ -83,9 +83,9 @@ names_ages = {"Ines": 27,
 
 "ИЗВИКВАНЕ VALUE ПО ИНДЕКС"
 # {'1A': ['Ines', 'Pesho'], '1B': ['Ivan', 'Maria']}
-names = classes['1A']
-print(names[0])         # Ines
-print(names[0][0:2])    # In
+# names = classes['1A']
+# print(names[0])         # Ines
+# print(names[0][0:2])    # In
 
 
 "ИЗВИКВАНЕ VALUE ПО КЛЮЧ"
@@ -184,6 +184,18 @@ print(names[0][0:2])    # In
 # print(my_dict)
 
 
+"ОТ ЕДИН СПИСЪК С DEFAULT"
+# keys = ['key1', 'key2', 'key3']
+# default_value = 'def_val'
+# from_dict = dict.fromkeys(keys, default_value)
+# # key1: def_val, key2: def_val, key3: def_val
+
+"ОТ ЕДИН ЛИСТ С К, V"
+data = [1, 'a', 2, 'b', 3, 'c']
+dict_comp = {data[i]: data[i + 1] for i in range(0, len(data), 2)}
+
+
+
 "ДАВА БРОЙКАТА НА KEY"
 # print(len(my_dict))
 
@@ -228,6 +240,19 @@ print(names[0][0:2])    # In
 # # True
 
 
+"ЗАМЕНЯ IF statemant"
+# storage = {
+#     "onion": [5, 1.20],
+#     "patato": [10, 0.95],
+#     "tomato": [8, 2.40],
+#     "pepper": [6, 1.45]
+# }
+# you_want = input()
+# for product in storage.keys():
+#     if you_want == product:
+#         print(f"We have {product}, {storage[product][0]} kg, {storage[product][1]} lv.")
+
+
 "ВРЪЩА КЛЮЧ ПО ОПРЕДЕЛЕН ДИАПАЗОН"
 # score = int(input(f"give me the score between 100 and 499: "))
 # gift_list = {
@@ -238,12 +263,14 @@ print(names[0][0:2])    # In
 # }
 # crafted_gifts = {}
 #
+# # обхождаме всяка възможност в списъка
 # for key in gift_list:
 #     if gift_list[key](score) is not None:
 #         if key not in crafted_gifts:
 #             crafted_gifts[key] = 0
 #         crafted_gifts[key] += 1
 # print(crafted_gifts)
+
 
 
 "ДАВА НАЙ-ГОЛЯМАТА СТОЙНОСТ"
@@ -256,8 +283,10 @@ print(names[0][0:2])    # In
 # print(num_dict_2)
 
 
-
-
+""
+# a = {(1, 2): (1, 2), (1, 3): "ard"}
+# for key, value in a.items():
+#     print(f"{key}: {value}")
 
 
 """ COMPREHENSION"""

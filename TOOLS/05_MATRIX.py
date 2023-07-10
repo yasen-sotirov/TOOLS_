@@ -1,4 +1,6 @@
-"MATRIX"  #матрици
+"MATRIX"    # матрици
+            # най-важна библиотека за матрици NumPy
+
 
 list_2d = [
     [1, 2, 3],
@@ -69,9 +71,25 @@ list_2d = [
 # for row in list_2d:
 #     print(" ".join(str(el) for el in row))
 
-lst = [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
-for x, y, z in lst:
-    print(f"x {x} : y {y} : z {z}")
+
+# lst = [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
+# for x, y, z in lst:
+#     print(f"x {x} : y {y} : z {z}")
+
+
+# counter = 0
+# for row in range(3):
+#     for col in range(3):
+#         print(counter, end=" ")
+#         counter += 1
+#     counter -= 2
+#     print()
+#
+# 0 1 2
+# 1 2 3
+# 2 3 4
+
+
 
 
 "ОБХОЖДАНЕ НАД ДИАГОНАЛА"
