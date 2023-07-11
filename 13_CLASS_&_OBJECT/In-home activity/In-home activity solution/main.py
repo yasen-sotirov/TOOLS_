@@ -1,4 +1,3 @@
-
 from forum_post import ForumPost
 
 
