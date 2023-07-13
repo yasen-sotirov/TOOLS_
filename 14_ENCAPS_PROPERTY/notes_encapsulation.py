@@ -22,21 +22,17 @@ class Car:
 
     @model.setter   #
     def model(self, value):
+        if type(value) != str:
+            raise ValueError("Must be string")
+        # if str(value) != value:
+        #     raise  ValueError("Must be string")
         # валидация през сетъра
         # if not isinstance(value, str):
         #     raise ValueError("Must be string")
-
-        if type(value) != str:
-            raise ValueError("Must be string")
-
-        # if str(value) != value:
-        #     raise  ValueError("Must be string")
-
         self._model = value
-        # return self.model
 
 
-    @property   # bez setyr
+    @property   # без setter
     def extras(self):
         return self._extras
 
@@ -58,7 +54,7 @@ print(car_1 == car_2)   # False
 print(car_1.model == car_2.model)   # True
 
 
-# PROPERY
+# PROPER
 # ползваме ги за да контролираме какво подаваме към външните програми
 # getter - правим го за да вземем информация
 # setter - правим го за да я променя. не може да го имаме самостоятелно без getter
