@@ -38,5 +38,5 @@ class Product_Should(unittest.TestCase):
         product = Product(VALID_NAME, VALID_BRAND, VALID_PRICE, VALID_GENDER)
 
         # Act & Assert
-        self.assertEqual(EXPECTED_OUTPUT ,product.to_string())
+        self.assertEqual(EXPECTED_OUTPUT, product.to_string())
        

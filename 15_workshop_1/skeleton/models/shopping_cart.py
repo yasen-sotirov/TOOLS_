@@ -1,19 +1,26 @@
 class ShoppingCart:
     def __init__(self):
-        raise NotImplementedError()
+        self._products = []
 
     @property
     def products(self):
-        raise NotImplementedError()
+        return ShoppingCart.products
 
     def add_product(self, product):
-        raise NotImplementedError()
+       self._products.append(product)
 
     def remove_product(self, product):
-        raise NotImplementedError()
+        if product in self._products:
+            self._products.remove(product)
 
     def contains_product(self, product):
-        raise NotImplementedError()
+        return self._products
 
     def total_price(self):
-        raise NotImplementedError()
+        total_price = 0
+        for current_product in self._products:
+            total_price += current_product.price
+        return total_price
+
+
+

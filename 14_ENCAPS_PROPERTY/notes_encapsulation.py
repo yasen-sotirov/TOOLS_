@@ -31,7 +31,6 @@ class Car:
         #     raise ValueError("Must be string")
         self._model = value
 
-
     @property   # без setter
     def extras(self):
         return self._extras
@@ -43,15 +42,15 @@ class Car:
 
 # обект които има state  и behavior
 # hints  - само подсказка, не са реална валидация и няма да вдигне грешка ако не ги изпълним
-car_1 = Car(6, "Zafira", 250, ["tuning"])
+car_1 = Car(6, "Volga", 250, ["tuning"])
 car_2 = Car(6, "Zafira", 250, [])
 print(f"Model: {car_1.model} with {car_1.seats} seats and {car_1.horse_power} hp")
 
 car_1.upgrade(150)      # презаписваме state в атрибута
 print(f"Model: {car_1.model} with {car_1.seats} seats and {car_1.horse_power} hp")
 
-print(car_1 == car_2)   # False
-print(car_1.model == car_2.model)   # True
+# print(car_1 == car_2)   # False
+# print(car_1.model == car_2.model)   # True
 
 
 # PROPER
@@ -73,3 +72,8 @@ car_1.model = "Niva"
 # май са само syntax sugar
 
 # getter без setter e read-only вади инфо, което не може да се променя
+
+if "Vloga" in Car.model:
+    print(True)
+else:
+    print(False)
