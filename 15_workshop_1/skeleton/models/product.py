@@ -1,5 +1,4 @@
 class Product:
-    all_products = []
 
     def __init__(self, name: str, brand: str, price: float, gender: str):
         if len(name) < 3 or len(name) > 10:
@@ -15,7 +14,6 @@ class Product:
         # в отделен файл проверява зададения пол
         self._gender = gender
         # добавя новосъздадения обект към листа на класа
-        Product.all_products.append(self)
 
 # име на продукта
     @property       # връща името на продукта по сигурен начин

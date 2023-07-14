@@ -5,54 +5,57 @@ from models.shopping_cart import ShoppingCart
 
 
 class ApplicationData:
+
     def __init__(self):
-        self._products = []
-        self._categories = []
-        # self.ShopingCart
+        self._products: list[Product] = []
+        self._categories: list = []
+        self._shopping_cart = ShoppingCart()
 
     @property
     def products(self):
-        return models.product.Product.all_products
+        return tuple(self._products)
 
     @property
     def categories(self):
-        return models.category.Category.all_categories
+        return tuple(self._categories)
 
     @property
     def shopping_cart(self) -> ShoppingCart:
-        raise NotImplementedError()
+        return self._shopping_cart
 
     def find_product_by_name(self, name) -> Product:
-        for obj in models.product.Product.all_products:
-            if name == obj:
+        for obj in self.products:
+            if name == obj.name:
                 return obj
         raise ValueError(f"404: The product {name} can't be found.")
 
     def find_category_by_name(self, name) -> Category:
-        for obj in models.category.Category.all_categories:
-            if name == obj:
-                return models.category.Category.all_categories[name]
+        for obj in self.categories:
+            if name == obj.name:
+                return obj
         raise ValueError(f"404: The category {name} can't be found.")
 
     def create_category(self, name) -> None:
-        if len(models.category.Category.all_categories) > 0:
-            for el in models.category.Category.all_categories:
+        if len(self.categories) > 0:
+            for el in self.categories:
                 if el.name == name:
                     raise ValueError(f"The category with name {name} already exist.")
-        models.category.Category.name.setter(name)
+        self._categories.append(Category(name))
 
     def create_product(self, name, brand, price, gender) -> None:
-        # би трябвало да създаден нов обект със зададените аргументи
-        models.product.Product(name, brand, price, gender)
+        if self.product_exists(name):
+            raise ValueError("The product exist")
+        self._products.append(Product(name, brand, price, gender))
 
     def category_exists(self, name) -> bool:
-        for obj in models.category.Category.all_categories:
-            if name == obj:
-                return True
-            raise False
+        # for obj in self.categories:
+        #     if name == obj.name:
+        #         return True
+        # return False
+        return any(category.name == name for category in self.categories)
 
     def product_exists(self, name) -> bool:
-        for obj in models.product.Product.all_products:
+        for obj in self.products:
             if name == obj.name:
                 return True
-            return False
+        return False

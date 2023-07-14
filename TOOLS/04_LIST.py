@@ -46,6 +46,18 @@ print(list(a))
 # # ['TOM', 'dog', 'mouse', 'hello', 'world']
 
 
+
+
+categories = [
+    Category('a'),
+    Category('b'),
+    Category('c')
+]
+
+
+cat_1: list[Category] = []
+
+
 "ОБЕДИНЯВА ДВА ЛИСТА"       # или само един string
 # list_1 = [1, 2, 3]
 # list_2 = ['cat', 'dog', 'mouse']

@@ -1,5 +1,4 @@
 class Category:
-    all_categories = []
 
     def __init__(self, name):
         if len(name) < 2 or len(name) > 15:
@@ -7,7 +6,6 @@ class Category:
 
         self._name = name
         self._products_in_category = []
-        Category.all_categories.append(self)
 
     @property
     def name(self):

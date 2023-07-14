@@ -1,5 +1,4 @@
 import unittest
-
 from core.application_data import ApplicationData
 from models.shopping_cart import ShoppingCart
 import category_test
