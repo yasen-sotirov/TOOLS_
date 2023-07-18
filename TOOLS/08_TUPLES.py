@@ -119,7 +119,11 @@ t_4 = (("a", 5), ("b", 3), ("c", 1))
 # tup = (1)
 # print(type(tup))
 
-a = {(1,): ['p', 2]}
-print(a)
+# a = {(1,): ['p', 2]}
+# print(a)
 
 
+x = ["a", "b", "c"]
+lst = ', '.join(x)
+
+print(lst)

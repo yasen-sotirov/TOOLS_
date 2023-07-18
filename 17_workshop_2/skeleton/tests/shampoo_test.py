@@ -50,5 +50,5 @@ class Shampoo_Should(unittest.TestCase):
         shampoo = Shampoo(VALID_NAME, VALID_BRAND, VALID_PRICE, VALID_GENDER, VALID_USAGE_TYPE, VALID_MILLILITERS)
 
         # Act & Assert
-        self.assertEqual(EXPECTED_OUTPUT ,shampoo.to_string())
+        self.assertEqual(EXPECTED_OUTPUT, shampoo.to_string())
        

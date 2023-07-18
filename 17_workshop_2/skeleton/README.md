@@ -75,7 +75,7 @@ You are given unit tests to keep track of your progress.
 - Look at the **models** folder and think about how to reuse functionality from Product class.
 - In the `__init__`, pass the required fields to the super constructor and initialize those specific for the derived classes 
 - Make sure validations are correct.
-- Implement all the necessary properties. `Leave the to_string()` method for later.
+- Implement all the necessary properties. Leave the `to_string()` method for later.
 
 
 2. Implement `CreateShampooCommand` and `CreateToothpasteCommand`.

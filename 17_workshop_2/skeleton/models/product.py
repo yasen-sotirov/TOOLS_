@@ -13,7 +13,6 @@ class Product:
     def name(self, value):
         if len(value) < 3 or len(value) > 10:
             raise ValueError('Name should be between 3 and 10 symbols.')
-
         self._name = value
 
     @property
@@ -24,7 +23,6 @@ class Product:
     def brand(self, value):
         if len(value) < 2 or len(value) > 10:
             raise ValueError('Brand should be between 2 and 10 symbols.')
-
         self._brand = value
 
     @property
@@ -33,9 +31,8 @@ class Product:
 
     @price.setter
     def price(self, value):
-        if value < 0:
+        if float(value) < 0:
             raise ValueError('Price should not be negative.')
-
         self._price = value
 
     @property

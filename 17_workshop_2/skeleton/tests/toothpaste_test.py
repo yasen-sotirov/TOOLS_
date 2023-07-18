@@ -41,5 +41,5 @@ class Toothpaste_Should(unittest.TestCase):
         toothpaste = Toothpaste(VALID_NAME, VALID_BRAND, VALID_PRICE, VALID_GENDER, TEST_INGREDIENTS)
 
         # Act & Assert
-        self.assertEqual(EXPECTED_OUTPUT ,toothpaste.to_string())
+        self.assertEqual(EXPECTED_OUTPUT, toothpaste.to_string())
        
