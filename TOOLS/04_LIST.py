@@ -46,8 +46,6 @@ print(list(a))
 # # ['TOM', 'dog', 'mouse', 'hello', 'world']
 
 
-
-
 categories = [
     Category('a'),
     Category('b'),
