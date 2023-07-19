@@ -10,19 +10,15 @@ engine = Engine(cmd_factory)
 engine.start()
 
 
-# CreateShampoo MyMan Trashy 10.99 Men 1000 Every_Day
-# CreateToothpaste White Expensive 10.99 Men calcium,fluorid
-# CreateCategory Shampoos
-# CreateCategory Toothpastes
-# AddToCategory Shampoos MyMan
-# AddToCategory Toothpastes White
-# AddToShoppingCart MyMan
-# AddToShoppingCart White
-# ShowCategory Shampoos
-# ShowCategory Toothpastes
+# CreateCream MyWoman OhGood 9.99 Women vanilla
+# CreateCategory Creams
+# AddToCategory Cream MyWoman
+# AddToShoppingCart MyWoman
+# ShowCategory Cream
 # TotalPrice
-# RemoveFromCategory Shampoos MyMan
-# ShowCategory Shampoos
-# RemoveFromShoppingCart MyMan
+# RemoveFromCategory Cream MyWoman
+# ShowCategory MyWoman
+# RemoveFromShoppingCart MyWoman
 # TotalPrice
 # End
+

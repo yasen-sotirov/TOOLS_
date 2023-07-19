@@ -102,7 +102,7 @@ names_ages = {"Ines": 27,
 # print(classes['1A'][1])
 # # Pesho
 #
-# print(students['№1']['name'])
+# print(models['№1']['name'])
 # # Pesho
 
 

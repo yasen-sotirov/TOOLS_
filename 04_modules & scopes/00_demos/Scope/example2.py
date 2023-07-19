@@ -1,5 +1,5 @@
 # scope resolution example 
-# Ask students - what will the console output be
+# Ask models - what will the console output be
 # Discuss why
 
 x = 2

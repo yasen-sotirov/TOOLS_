@@ -3,6 +3,7 @@ from models.product import Product
 from models.shampoo import Shampoo
 from models.shopping_cart import ShoppingCart
 from models.toothpaste import Toothpaste
+from models.cream import Cream
 
 
 class ApplicationData:
@@ -54,6 +55,13 @@ class ApplicationData:
         new_toothpaste = Toothpaste(name, brand, price, gender, ingredients)
         self._products.append(new_toothpaste)
         return new_toothpaste
+
+    def create_cream(self, name, brand, price, gender, scent):
+        if self.product_exists(name):
+            raise ValueError(f'The cream {name} already exists!')
+        new_cream = Cream(name, brand, price, gender, scent)
+        self._products.append(new_cream)
+        return new_cream
 
     def category_exists(self, name) -> bool:
         return name in [c.name for c in self._categories]

@@ -1,5 +1,5 @@
 # Scope resolution example 
-# Ask students - which function call will throw an error  
+# Ask models - which function call will throw an error
 # a) both
 # b) only first
 # c) neither one 

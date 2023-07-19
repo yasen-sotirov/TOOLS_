@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="02bd56ef-6299-4c3c-a291-116bcd762700" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/00_notes_abstract.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/skeleton/issue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/skeleton/task.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../17_workshop_2/skeleton.rar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../17_workshop_2/skeleton/commands/create_cream.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../17_workshop_2/skeleton/models/cream.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../17_workshop_2/skeleton/models/scent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Composition/car.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Composition/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Multiple Inheritance/account.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Multiple Inheritance/can_deposit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Multiple Inheritance/can_transfer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Multiple Inheritance/can_withdraw.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Multiple Inheritance/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Multiple Inheritance/premium_account.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curses.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grade.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../skeleton/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../skeleton/board.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../skeleton/board_item.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../skeleton/event_log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../skeleton/issue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../skeleton/item_status.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../skeleton/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../skeleton/task.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../skeleton/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04_modules &amp; scopes/00_demos/Scope/example1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../04_modules &amp; scopes/00_demos/Scope/example1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04_modules &amp; scopes/00_demos/Scope/example2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../04_modules &amp; scopes/00_demos/Scope/example2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04_modules &amp; scopes/00_demos/Scope/example3.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../04_modules &amp; scopes/00_demos/Scope/example3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10_DICT/lab/04_students.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../10_DICT/lab/04_students.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13_CLASS_&amp;_OBJECT/notes_classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../13_CLASS_&amp;_OBJECT/notes_classes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../16_inheritance/00_notes_inheritance.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../16_inheritance/Demos/01. Inheritance/customer_support.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/Demos/01. Inheritance/customer_support.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../16_inheritance/Demos/01. Inheritance/employee.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/Demos/01. Inheritance/employee.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../16_inheritance/Demos/01. Inheritance/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/Demos/01. Inheritance/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../16_inheritance/Demos/01. Inheritance/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/Demos/01. Inheritance/manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../16_inheritance/Demos/02. Polymorphism/customer_support.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/Demos/02. Polymorphism/customer_support.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../16_inheritance/Demos/02. Polymorphism/employee.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/Demos/02. Polymorphism/employee.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../16_inheritance/Demos/02. Polymorphism/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/Demos/02. Polymorphism/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../16_inheritance/Demos/02. Polymorphism/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/Demos/02. Polymorphism/manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../16_inheritance/Demos/03. Duck Typing/duck_typing.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/Demos/03. Duck Typing/duck_typing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../16_inheritance/Demos/03. Duck Typing/magic_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/Demos/03. Duck Typing/magic_methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../16_inheritance/skeleton/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/skeleton/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../16_inheritance/skeleton/board.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/skeleton/board.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../16_inheritance/skeleton/board_item.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/skeleton/board_item.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../16_inheritance/skeleton/event_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/skeleton/event_log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../16_inheritance/skeleton/item_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/skeleton/item_status.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../16_inheritance/skeleton/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_INHERIT_POLYMORF_ABSTRACT/skeleton/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../16_inheritance/skeleton/task.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../17_workshop_2/skeleton/core/application_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../17_workshop_2/skeleton/core/application_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../17_workshop_2/skeleton/core/command_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../17_workshop_2/skeleton/core/command_factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../17_workshop_2/skeleton/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../17_workshop_2/skeleton/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../17_workshop_2/skeleton/models/toothpaste.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../17_workshop_2/skeleton/models/toothpaste.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TOOLS/06_DICT.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../TOOLS/06_DICT.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2SnUgOXwDyByjKA7VGoF4SQKyuq" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="models" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="02bd56ef-6299-4c3c-a291-116bcd762700" name="Changes" comment="" />
+      <created>1689781948150</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689781948150</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

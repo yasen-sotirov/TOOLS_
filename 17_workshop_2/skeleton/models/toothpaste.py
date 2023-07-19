@@ -6,9 +6,20 @@ class Toothpaste(Product):
         super().__init__(name, brand, price, gender)
         self.ingredients = ingredients
 
+    @property
+    def ingredients(self):
+        return tuple(self._ingredients)
+
+    @ingredients.setter
+    def ingredients(self, value):
+        self._ingredients = value
+
+        # self.ingredients = ingredients[0]
+        # self.igr = self.ingredients.split(',')
+    #
+    # @property
+    # def ingredient(self):
+    #     return self._ingredients
+
     def to_string(self):
         return f"{Product.to_string(self)}\n #Ingredients: [{', '.join(self.ingredients)}]"
-
-
-tooth_1 = Toothpaste("White", "Expensive", 10.99, "Men",  "calcium, fluorid")
-print(tooth_1.to_string())
