@@ -1,5 +1,6 @@
 from board import Board
 from board_item import BoardItem
+from item_status import ItemStatus
 
 
 class User:
@@ -9,7 +10,8 @@ class User:
             raise ValueError(f"The username already exist!")
         self._username = username
         self.email = email
-        self.assigned_tasks = assigned_tasks
+        self._assigned_tasks: list[ItemStatus] = []
+        self._capacity = 0
 
     @property
     def username(self):
@@ -25,9 +27,27 @@ class User:
             raise ValueError("The email address must have '@'!")
         self.email = new_email
 
-    def advance_task_status(self, task):
-        prev = self._status
-        self._status = ItemStatus.next(self._status)
-        self._log_status_change(prev, self._status)
+    @property
+    def assigned_tasks(self):
+        return self._assigned_tasks
+
+    @property
+    def capacity(self):
+        return self.capacity
+
+    @capacity.setter
+    def capacity(self, value):
+        self.capacity = 3
+
+    def advance_task_status(BoardItem, advanced):
+        pass
+
+    def receive_task(self):
+        pass
+
+    def remove_task(self):
+        pass
+
+
 
 
