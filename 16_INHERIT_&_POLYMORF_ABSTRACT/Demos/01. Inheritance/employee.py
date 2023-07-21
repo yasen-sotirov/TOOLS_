@@ -9,3 +9,4 @@ class Employee:
 
     def internal_info(self):
         return f'{self.public_info()}, Salary: {self.salary}'
+
