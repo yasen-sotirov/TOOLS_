@@ -14,7 +14,6 @@ class ApplicationData:
         for group in self._test_groups:
             if group.id == id:
                 return group
-
         return None
 
     def find_test(self, id: int):
@@ -22,7 +21,6 @@ class ApplicationData:
             for test in group.tests:
                 if test.id == id:
                     return test
-
         return None
 
     def add_group(self, group: TestGroup):

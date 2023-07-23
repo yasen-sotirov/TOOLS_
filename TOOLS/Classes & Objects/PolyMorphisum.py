@@ -1,7 +1,7 @@
 """
 ПОЛИМОРФИЗЪМ
     в наследника надграждаме поведението на базовия клас
-    т.е добавяме и / или редактираме наследените методи и атрибути
+    т.е редактираме / пренаписваме наследените методи и атрибути
 
 """
 
@@ -11,6 +11,7 @@ class Employee:
         self.full_name = full_name
         self.department = department
         self.salary = salary
+
 
     def public_info(self):
         return f'{self.full_name}, Department: {self.department}'
@@ -29,7 +30,7 @@ class Manager(Employee):
         self.employees_list.append(employee)
 
     @property
-    def count_employee(self):
+    def count_employee(self):       # динамично калкулирано пропърти - изчислява се динамично спрямо момеента на извикване
         return len(self.employees_list)
 
 
@@ -51,12 +52,12 @@ manager = Manager('John Smith', 2000, 'Quality Control')
 customer_support = CustomerSupport('Gregory House', 2000, 'Quality Control', 'gregory@qc.company', '071238123')
 
 # inherited attributes and methods
-print(manager.public_info())
-print(manager.internal_info())
-print(manager.salary)
-print(customer_support.public_info())
-print(customer_support.internal_info())
-print(customer_support.salary)
+# print(manager.public_info())
+# print(manager.internal_info())
+# print(manager.salary)
+# print(customer_support.public_info())
+# print(customer_support.internal_info())
+# print(customer_support.salary)
 
 # Manager-only attributes and methods
 manager.add_employee(employee)
