@@ -8,7 +8,7 @@ class Engine:
 
     def start(self):
         output = []
-        while True:
+        while True: 
             try:
                 input_line = input()
                 if input_line.lower() == 'end':
