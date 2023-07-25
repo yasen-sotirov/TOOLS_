@@ -1,0 +1,28 @@
+
+
+
+Car Dealership
+
+
+USERS
+     collection = [Vehicles]
+
+     GetVehicle
+     
+     AddVehicle
+     RemoveVehicle
+     
+     AddComment
+     RemoveComment
+
+
+
+Car
+     collection = [comments]
+
+Motorcycle
+     collection = [comments]
+
+Truck
+     collection = [comments]
+
