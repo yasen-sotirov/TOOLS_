@@ -34,11 +34,3 @@ class CommandFactory:
             return RemoveVehicleCommand(self._app_data)
 
         raise ValueError('Invalid command name')
-    
-
-
-class Abc:
-    def __init__(self) -> None:
-        
-        
-    

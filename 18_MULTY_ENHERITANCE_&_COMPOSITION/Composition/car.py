@@ -26,7 +26,9 @@ class Car:
             wheel.rotate()
         self.steering_wheel.turn()
 
-# car = Car()
-# car.drive()
+car_1 = Car()
+# car_1.drive()
+car_1.()
+
 
 

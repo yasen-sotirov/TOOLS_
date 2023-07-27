@@ -15,7 +15,7 @@ class Motorcycle_Should(unittest.TestCase):
         self.assertEqual(td.VALID_MODEL, motorcycle.model)
         self.assertEqual(td.VALID_PRICE, motorcycle.price)
         self.assertEqual(td.VALID_CATEGORY, motorcycle.category)
-        self.assertEqual(2, motorcycle.wheels)
+        self.assertEqual(2, motorcycle.wheels_count)
         self.assertIsInstance(motorcycle.comments, tuple)
 
     def test_init_raiseError_makeTooShort(self):

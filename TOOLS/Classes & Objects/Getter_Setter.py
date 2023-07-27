@@ -7,9 +7,12 @@ class Employee:
         self.salary = salary    # стойността вече се взема от setter -a
 
 
+
     @property       # READ-ONLY с проверка
     def name(self):
-        return self._name
+        return self._name   # затова и двете са с "_"
+
+
 
 
     @property           # стойността вече се взема от setter -a
@@ -21,6 +24,8 @@ class Employee:
         if value < 0:
             raise ValueError("salary cant be negative")
         self._salary = value
+
+
 
 
 a = 5

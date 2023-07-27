@@ -192,7 +192,7 @@ text = "Hello, I'm @22 yeas old, and you are @26 years old, not the @136. " \
         Ford Ford Ford5 PFord
         
         
-„ ^[]“ МАЧВА ВСИЧКО БЕЗ НЕЩОТО в []
+„ [^..........]“ МАЧВА ВСИЧКО БЕЗ НЕЩОТО в []
         
         
 „ $ “ МАЧВА АКО РЕДА ЗАВЪРШВА С ВАЛИДЕН REGEX

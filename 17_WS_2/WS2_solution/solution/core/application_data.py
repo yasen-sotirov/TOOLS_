@@ -44,6 +44,7 @@ class ApplicationData:
         category = Category(name)
         self._categories.append(category)
 
+
     def create_shampoo(self, name, brand, price, gender, usage_type, milliliters) -> Shampoo:
         if self.product_exists(name):
             raise ValueError(f'Product {name} already exists!')
@@ -52,6 +53,7 @@ class ApplicationData:
         self._products.append(shampoo)
 
         return shampoo
+
 
     def create_toothpaste(self, name, brand, price, gender, ingredients) -> Toothpaste:
         if self.product_exists(name):
