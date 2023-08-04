@@ -5,125 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04ed0a14-15d0-4d44-8767-9727863617ca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/.idea/solution.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/.vscode/settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/commands/add_to_category.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/commands/add_to_shopping_cart.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/commands/create_category.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/commands/create_shampoo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/commands/create_toothpaste.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/commands/remove_from_category.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/commands/remove_from_shopping_cart.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/commands/show_category.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/commands/total_price.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/commands/validation_helpers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/core/application_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/core/command_factory.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/core/engine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/models/category.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/models/gender.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/models/product.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/models/shampoo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/models/shopping_cart.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/models/toothpaste.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/models/usage_type.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/tests/app_data_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/tests/category_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/tests/create_shampoo_command_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/tests/create_toothpaste_command_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/tests/shampoo_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/tests/shopping_cart_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../17_WS_2/WS2_solution/solution/tests/toothpaste_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/.idea/WS3_solution.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/commands/add_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/commands/add_test_group.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/commands/add_test_run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/commands/base/base_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/commands/remove_group.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/commands/test_report.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/commands/view_group.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/commands/view_system.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/core/application_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/core/command_factory.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/core/engine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/core/models_factory.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/models/constants/test_result.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/models/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/models/test_group.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WS3_solution/models/test_run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/19_WS3_skeleton.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/add_test_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/add_test_group_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/add_test_run_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/base/base_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/remove_group_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/test_report_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/view_group_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/view_system_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/application_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/command_factory.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/engine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/constants/test_result.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/test_group.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/test_run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../19_WS3_skeleton.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TOOLS/Classes &amp; Objects/Getter_Setter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/Telerik_course.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/Telerik_course.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../14_ENCAPS_PROPERTY/notes_encapsulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../TOOLS/Classes &amp; Objects/Encapsulation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../17_WS_2/skeleton.rar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/.idea/19_WS3_skeleton.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/app_map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/commands/add_test_command.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/commands/add_test_group_command.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/commands/add_test_run_command.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/commands/base/base_command.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/commands/remove_group_command.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/commands/test_report_command.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/commands/view_group_command.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/commands/view_system_command.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/core/application_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/core/command_factory.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/core/engine.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/models/constants/test_result.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/models/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/models/test_group.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../19_WS3_skeleton/models/test_run.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TOOLS/10_CLASS_OBJECTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../TOOLS/Classes &amp; Objects/00_CLASS_OBJECTS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20 Formal WS 4 Car/WS4.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,13 +33,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Telerik/Telerik_course_python",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Telerik/Telerik_course_python&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Telerik\Telerik_course_python\19_WS3_skeleton\commands" />

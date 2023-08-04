@@ -24,6 +24,7 @@ class TestGroup:
         return tuple(self._tests)
 
     def add_test(self, test: Test):
+        # проверява в списъка с тестове дали това ИД го има
         if not any(t.id == test.id for t in self.tests):
             self._tests.append(test)
 
