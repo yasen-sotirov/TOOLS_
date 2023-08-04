@@ -41,8 +41,12 @@ class Books:
                f"магазин: {Books.market}"
 
     @staticmethod  # име на декоратора
-    def clean():  # статичен метод - самостоятелна независима функция в класа, не ползва self-a
-        return 'Cleaning books'  # добра практика е да се извиква от класа, не от инстанцията(обекта)
+    # независима от класа функция
+    # не ползва класа или инстанцийте, може да живее сама
+    # вика се през името на класа
+    def clean():
+        return 'Cleaning books'
+
 
     @classmethod  # class/factory метод - създава нова инстанция на класа и променя един или всички параметри
     def promotion(cls, title, author, price, type_book="paper book"):  # зарежда всички атрибути на __init__

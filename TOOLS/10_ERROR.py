@@ -1,43 +1,67 @@
-"ERROR HANDALING" #
+"ERROR HANDALING"   #
+# избягваме да ползваме if-else
 
 
 
-"ВРЪЩА ДОПЪЛНИТЕЛНО СЪОБЩЕНИЕ"      # към съществуващ клас грешки
-# b = 0
-# if b == 0:
-#     raise IndexError("Ни стаа! Грешка!")
+"TRY-EXCEPT БЛОК"
+    # ако обработим с try-except, програмата не спира
+    # и понеже имаме цикъл, ще ни попита пак
+# while True:      
+#     try:
+#         x = int(input("First number: "))
+#         y = int(input("Second number: "))
+#         print(y / y)
+#         break
+#     except ValueError:
+#         print("This is not a real number :(")
+#     except ZeroDivisionError:
+#         print("Second number can't be zero")
+    
+#     # изпълнява се винаги
+#     finally:
+#         print("Final clause")   
+    
 
 
-"НОВ КЛАС ГРЕШКА"
-# class No_enough_BEER():
-#     pass
-# b = 0
-# if b == 0:
-#     raise No_enough_BEER()
+"MULTIPLE EXCEPTION"
+# обработва множество грешки по един и същи начин
+# while True:
+#     try:
+#         x = int(input("First number: "))
+#         y = int(input("Second number: "))
+#         print(y / y)
+#         break
+#     except (ValueError, ZeroDivisionError):
+#         print("Invalid input :(")
+        
 
 
 
-"ЗА НЯКОЛКО ВИДА ГРЕШКИ TRY EXEPT"      # влиза в except ако грешката се случи в кода м/у try и except
+
+
+"ПОДРОБНО РАЗПИСВАНЕ НА ГРЕШКАТА"
+# try:
+#     x = int("abc")
+# except ValueError:
+#     print("Invalid input.")
+#     print()
 
 # try:
-#     x = int(input("Pleace, enter a number 1: "))
-#     y = int(input("Pleace, enter a number 2: "))
-#     print(x/y)
+#     x = int("abc")
+# except ValueError as err:
+#     print("Could not convert to integer. Reason:", err)
 
-# except ValueError:
-#     print("Oops! That was no valid number.")
 
-# # except ZeroDivisionError:
-# #     print("Oops! Second number can not be zero.")
 
-# finally:
-#     print("Final clause")   
 
-# # или за по-кратко
-# # except (ValueError, ZeroDivisionError):
-# #     print("Oops! Try again...")
+"СОБСТВЕН КЛАС ГРЕШКА"
+# class No_enough_BEER(Exception): 
+#     # ако сложим (exception) можем да добави и описание на грешката 
+#     pass    # това е достатъчно
+# b = 0
+# if b == 0:
+#     raise No_enough_BEER("Трябва да купиш още бира")
 
-# print("Good bye")
 
 
 
@@ -52,13 +76,35 @@
 
 
 "ВДИГНАТАТА ГРЕШКА СЕ ИЗВЛАЧВА ОТ КЪДЕТО Е ВДИГНАТА ДО EXCEPT БЛОКА"
-try:
-    a = 5
-    if a > 1:
-        if a > 2:
-            if a > 3:
-                raise ValueError("Num is greater than 3")
+# try:
+#     a = 5
+#     if a > 1:
+#         if a > 2:
+#             if a > 3:
+#                 raise ValueError("Num is greater than 3")
             
-except Exception as error:
-    print(error.args[0])
-    print(error.args)
+# except Exception as error:
+#     print(error.args[0])
+#     print(error.args)
+
+
+
+"ВРЪЩА ДОПЪЛНИТЕЛНО СЪОБЩЕНИЕ"      
+# към съществуващ клас грешки
+# b = 0
+# if b == 0:
+#     raise IndexError("Ни стаа! Грешка!")
+
+
+
+"try - except - else"
+# ако try сработи логиката се продължава от else:
+# while True:
+#     try:
+#         x = int(input("First number: "))
+#         y = int(input("Second number: "))
+#     except (ValueError, ZeroDivisionError):
+#         print("Invalid input :(")
+#     else:
+#         print(y / y)
+#         break
