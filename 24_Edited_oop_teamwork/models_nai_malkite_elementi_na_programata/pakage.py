@@ -5,8 +5,8 @@ class Package:
                  package_id: int,
                  start_location:str,
                  end_location:str,
-                 weight: int,
-                 customer_id: int):
+                 weight,
+                 customer_id):
 
         self.package_id = package_id
         self.start_location = start_location

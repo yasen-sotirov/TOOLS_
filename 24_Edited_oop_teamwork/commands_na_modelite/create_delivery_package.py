@@ -1,7 +1,8 @@
 from core.app_data import ApplicationData
 from commands_na_modelite.base_command.base_command_class import BaseCommand
 from core.validation_params_methoods import validation_param_count
-
+from models_nai_malkite_elementi_na_programata.customer import Customer
+from models_nai_malkite_elementi_na_programata.pakage import Package
 
 class CreateDeliveryPackage(BaseCommand):
     unique_package_id = 2001    # брояч съхраняващ ID -та
@@ -14,7 +15,58 @@ class CreateDeliveryPackage(BaseCommand):
         validation_param_count(params, 7)
 
     def execute(self):
-        print("=== The delivery package is created ===")
+        start_location = self.params[0]
+        end_location = self.params[1]
+        weight = self.params[2]
+        customer_first_name = self.params[3]
+        customer_last_name = self.params[4]
+        customer_email = self.params[5]
+        customer_phone = self.params[6]
+        # дата на подаване
+        # час на подаване
+
+        # създава новo ID
+        CreateDeliveryPackage.unique_package_id += 1
+
+        # присвоява създаденото ИД
+        customer_id = self.unique_customer_id
+
+        # създава нов клиент
+        new_customer = Customer(customer_id, customer_first_name, customer_last_name, customer_email, customer_phone)
+
+        # създава новo ID
+        CreateDeliveryPackage.unique_customer_id +=1
+
+        # присвоява създаденото ИД
+        package_id = self.unique_package_id
+
+        # създава нова пратка
+        new_package = Package(package_id, start_location, end_location, weight, customer_id)
+
+        # подава новосъздаденият обект към метода на app_data
+        output = self.app_data.add_package_to_system(new_package)
+
+        # връща новосъздаденият обект към app_data
+        return output
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

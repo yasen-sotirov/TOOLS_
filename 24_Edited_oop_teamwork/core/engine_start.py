@@ -17,6 +17,7 @@ class Engine:
         # събира всички команди
         output_list: list[str] = []
         while True:
+            # въведи дата и час
             input_line = input()
             if input_line.lower() == "end":
                 break
@@ -28,6 +29,9 @@ class Engine:
             # създадената команда я изпълнява
             # съхранява командата в списъка
             output_list.append(command.execute())
+
+        # показва всички въведени команди
+        print("\n".join(output_list))
 
 
 
