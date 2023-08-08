@@ -1,7 +1,9 @@
 from core.app_data import ApplicationData
 from core.command_factory import CommandFactory
 from core.engine_start import Engine
+from screens.welcome_screen import welcome_screen
 
+from core.date_time import DateTime
 # Сглабя отделните класове и подава на engine
 
 app_data = ApplicationData()
@@ -11,7 +13,11 @@ app_data = ApplicationData()
 
 cmd_factory = CommandFactory(app_data)
 engine = Engine(cmd_factory)
+date_time = DateTime(engine)
+date_time.set_program_start_time()
 
+
+print(welcome_screen)
 engine.start()
 
 

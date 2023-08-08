@@ -3,6 +3,8 @@ from commands_na_modelite.base_command.base_command_class import BaseCommand
 from core.validation_params_methoods import validation_param_count
 from models_nai_malkite_elementi_na_programata.customer import Customer
 from models_nai_malkite_elementi_na_programata.pakage import Package
+from core.date_time import DateTime
+
 
 class CreateDeliveryPackage(BaseCommand):
     unique_package_id = 2001    # брояч съхраняващ ID -та
@@ -12,7 +14,7 @@ class CreateDeliveryPackage(BaseCommand):
         super().__init__(params, app_data)
 
         # импортиран метод от модул validation_params_method
-        validation_param_count(params, 7)
+        validation_param_count(params, 8)
 
     def execute(self):
         start_location = self.params[0]
@@ -22,8 +24,8 @@ class CreateDeliveryPackage(BaseCommand):
         customer_last_name = self.params[4]
         customer_email = self.params[5]
         customer_phone = self.params[6]
-        # дата на подаване
-        # час на подаване
+        time_stamp = self.params[7]
+
 
         # създава новo ID
         CreateDeliveryPackage.unique_package_id += 1
@@ -39,6 +41,8 @@ class CreateDeliveryPackage(BaseCommand):
 
         # присвоява създаденото ИД
         package_id = self.unique_package_id
+
+        time_stamp = time_stamp
 
         # създава нова пратка
         new_package = Package(package_id, start_location, end_location, weight, customer_id)
