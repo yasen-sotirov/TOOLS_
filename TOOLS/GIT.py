@@ -28,7 +28,7 @@ git config --global init.default branch main
 clear
 
 # Премахва фаил/папка от репото и не я траква повече
-git rm -r --cached folder_name
+git rm -r --cached "folder_name"
 
 # Прави ново Репозитори
 git init
@@ -46,11 +46,16 @@ git add .
 git restore --staged file_name
 
 # Commit - snapshot на всички файлове към момента
-git commit -a -m Message
+git commit -a -m "Message in quotes"
 
+# Трие файл
+git rm "file_name"
 
+# Rename move from old to new file name
+git rm "old_file_name" "new_file_name"
 
-
+# Проверка на всички commit
+git log
 
 
 
