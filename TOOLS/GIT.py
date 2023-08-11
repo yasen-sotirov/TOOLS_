@@ -57,9 +57,8 @@ git rm "old_file_name" "new_file_name"
 # Проверка на всички commit
 git log
 
-
-
-
+# Pull от репото
+git pull
 
 
 
