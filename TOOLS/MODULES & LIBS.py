@@ -32,8 +32,7 @@
 # в терминала
 # pip freeze > requirements.txt         # слага го във venf
                                         # хубаво е новите библиотеки, които инсталираме,
-                                        # да се дописват на ръка в requirements.txt
-
+                                      # да се дописват на ръка в requirements.txt
 
 "ПРОСЛЕДЯВАНЕ КАКВО Е ИМПОРТНАТО"
 # ctrl + click върху imported_modul

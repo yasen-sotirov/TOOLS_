@@ -19,18 +19,17 @@
 
 
 "РАЗЛИКА В ДНИ МЕЖДУ ДВЕ ДАТИ"
-from datetime import datetime
-
-
-str_dt1 = '20/10/2021 09:15'
-str_dt2 = '20/02/2022 04:25'
-
-dt1 = datetime.strptime(str_dt1, "%d/%m/%Y %H:%M")
-dt2 = datetime.strptime(str_dt2, "%d/%m/%Y %H:%M")
-
-delta = dt2 - dt1
-print(f'Difference is {delta.days} days')
-
+# from datetime import datetime
+#
+# str_dt1 = '20/10/2021 09:15'
+# str_dt2 = '20/02/2022 04:25'
+#
+# dt1 = datetime.strptime(str_dt1, "%d/%m/%Y %H:%M")
+# dt2 = datetime.strptime(str_dt2, "%d/%m/%Y %H:%M")
+#
+# delta = dt2 - dt1
+# print(f'Difference is {delta.days} days')
+#
 
 
 

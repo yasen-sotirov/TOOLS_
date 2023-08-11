@@ -18,17 +18,40 @@ git config --global user.name
 git config --global user.email
 
 # Логва друг човек
-git config --global user.name "Yasen Sotirov"
+git config --global user.name Yasen Sotirov
 git config --global user.email ia.sotirov@gmail.com
 
 # Създаване на default branch
 git config --global init.default branch main
 
-# Чисти терминала
+# Чисти терминала - само за gitbash, не работи в pycharm terminal
 clear
 
 # Премахва фаил/папка от репото и не я траква повече
-git rm -r --cached "folder_name"
+git rm -r --cached folder_name
+
+# Прави ново Репозитори
+git init
+
+# Проверка статус
+git status
+
+# Траква отново всички файлове
+git add --all
+
+# качва в staging-а
+git add .
+
+# сваля от staging-a
+git restore --staged file_name
+
+# Commit - snapshot на всички файлове към момента
+git commit -a -m Message
+
+
+
+
+
 
 
 
