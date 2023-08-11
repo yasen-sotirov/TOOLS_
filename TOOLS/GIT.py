@@ -62,8 +62,6 @@ git pull
 
 
 
-
-
 "GIT"  # https://docs.github.com/en/get-started/using-git/about-git
 # https://www.youtube.com/watch?v=SWYqp7iY_Tc&ab_channel=TraversyMedia
 # оновен курс
