@@ -155,3 +155,4 @@ cython_debug/
 *.zip
 23_WS4_Unit_test/WS 4 Solution/.idea/vcs.xml
 .idea/workspace.xml
+.idea/misc.xml
