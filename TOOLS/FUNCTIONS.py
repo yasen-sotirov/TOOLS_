@@ -8,6 +8,8 @@
 # позиционни аргументи - ненаименовани аргументи
 # теория   https://www.tutorialaicsip.com/cs-xii-qna/working-with-functions-class-12/
 
+
+
 "ОПАКОВАНЕ В ЛИСТ *ARGS"        # поема неограничен брой аргументи и ги опакова в масив
 # def print_nums_funct(*args):
 #     for el in args:
@@ -17,6 +19,7 @@
 # nums_2 = 2
 # nums_3 = 3
 # print_nums_funct(nums_1, nums_2, nums_3)
+
 
 
 "TYPE HINTS / ANNOTATIONS"
@@ -30,7 +33,6 @@
 
 # def funct(a: int, b: int) -> list[str]:
 #     pass
-
 
 
 
@@ -206,7 +208,8 @@
 # print(list(result))
 
 
-"CONTINUE"      # АКО ВЛЕЗЕ В IF ЩЕ ПРОПУСНЕ ОПЕРАЦИЯТА
+
+"CONTINUE"  # АКО ВЛЕЗЕ В IF ЩЕ ПРОПУСНЕ НАСТОЯЩИЯ ЦИКЪЛ
 # i = 0
 # while i < 9:
 #     i += 1
@@ -215,8 +218,19 @@
 #     print(i)
 
 
-"ФУНКЦИЯ ОТ СТРИНГ"
 
-expression = "(5+2*4)/2"
-result = eval(expression)
-print(result)
+"BREAK"  # АКО ВЛЕЗЕ В IF ЩЕ ПРЕКЪСНЕ ЦЕЛИЯ WHILE
+# i = 0
+# while i < 9:
+#     i += 1
+#     if i == 3:
+#         break
+#     print(i)
+
+
+
+
+"ФУНКЦИЯ ОТ СТРИНГ"
+# expression = "(5+2*4)/2"
+# result = eval(expression)
+# print(result)

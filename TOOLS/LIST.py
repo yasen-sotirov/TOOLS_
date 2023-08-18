@@ -46,14 +46,14 @@ print(list(a))
 # # ['TOM', 'dog', 'mouse', 'hello', 'world']
 
 
-categories = [
-    Category('a'),
-    Category('b'),
-    Category('c')
-]
-
-
-cat_1: list[Category] = []
+# categories = [
+#     Category('a'),
+#     Category('b'),
+#     Category('c')
+# ]
+#
+#
+# cat_1: list[Category] = []
 
 
 "ОБЕДИНЯВА ДВА ЛИСТА"       # или само един string
@@ -65,6 +65,7 @@ cat_1: list[Category] = []
 #
 # print(list_2 + list_2)
 # # ['cat', 'dog', 'mouse', 'cat', 'dog', 'mouse']
+
 
 
 "ОБЕДИНЯВА ЛИСТА В STRING"       # само за str;  *number_list за int
@@ -83,10 +84,12 @@ cat_1: list[Category] = []
 # # 1, 4, 3, 8, 6, 2, 7, 6.59, 2.32
 
 
+
 "ОБХОЖДА ВЛОЖЕН СПИСЪК"
 # lst = [[1, 1], [2, 2], [3, 3]]
 # for x, y in lst:
 #     print(f"x {x} : y {y}")
+
 
 
 "РАЗОПАКОВА ЛИСТА"      # вместо " ".join(), защото той работи само с str
@@ -104,6 +107,7 @@ cat_1: list[Category] = []
 # print(max(number_list))
 
 
+
 "РАЗМЕСТВАНЕ В ЛИСТА"
 # nums = [10, 20]
 # nums[0], nums[1] = nums[1], nums[0]
@@ -118,11 +122,13 @@ cat_1: list[Category] = []
 # print(char)     # 88
 
 
+
 "ИЗВЕЖДА ЕЛЕМЕНТ ОТ ЛИСТА"
 # броя на променливите трябва да отговаря на дължината на листа
 # num_1, num_2, num_3, num_4, num_5 = number_list_3
 # print(num_1)
 # print(num_5)
+
 
 
 "ПРЕМАХВА ЕЛЕМЕНТ/И В ЛИСТА (от ляво на дясно)"
@@ -134,6 +140,7 @@ cat_1: list[Category] = []
 # while "dog" in letters_list:
 #     letters_list.remove("dog")
 # print(letters_list)
+
 
 
 "ТРИЕ ЕЛЕМЕНТ ПО ИНДЕКС"
@@ -159,6 +166,7 @@ cat_1: list[Category] = []
 # [1, 3, 2, 'a', 'b', 4, 88, 2, 2]
 # mix_list.insert(3, "Pesho")
 # [1, 3, 2, 'Pesho', 'a', 'b', 4, 88, 2, 2]
+
 
 
 "ПЪЛНЕНЕ НА ЛИСТ"
@@ -201,6 +209,7 @@ cat_1: list[Category] = []
 # print(list([x for x in words if x.startswith("d")]))
 # ['dog', 'dolphin']
 
+
 "ТЪРСЕНЕ В ЛИСТ"
 # if 'a' in mix_list:
 #     print('ok')
@@ -230,10 +239,12 @@ cat_1: list[Category] = []
 # print(mix_list)
 
 
+
 "ПРОМЕНЯ ЕЛЕМЕНТИ ВЪВ ВЛОЖЕНИЯ СПИСЪК"
 # [[1, 2, 3], [4, 5, 6]]
 # nested_list[0][1] = 222
 # [[1, 222, 3], [4, 5, 6]]
+
 
 
 "КОПИРАНЕ НА ВЛОЖЕН СПИСЪК"
@@ -259,6 +270,7 @@ cat_1: list[Category] = []
 # from statistics import mean
 # print(f"средна стойност: {mean(number_list):.2f}")
 # # средна стойност: 4.43
+
 
 
 "ФИЛТЪР - елементите, които дават True"
@@ -303,6 +315,7 @@ cat_1: list[Category] = []
 
 # x, y = map(int, input().split())
 # print(f"{type(x)} {x}, {type(y)} {y}")
+
 
 
 "ИЗПРАЗВА ЛИСТА"
@@ -395,3 +408,5 @@ cat_1: list[Category] = []
 # letters = ['cat', 'dog', 'mouse', 'dolphin']
 # print(list([item for item in letters if item.startswith("d")]))
 # # ['dog', 'dolphin']
+
+

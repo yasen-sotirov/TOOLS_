@@ -47,28 +47,70 @@
         
 
 
+"ПРОВЕРКА ЗА ПОВЕЧЕ ОТ ЕДНА ГРЕШКИ"
+param = int(input())
+try:
+    if param == 0:
+        raise ValueError("Параметърът не може да бъде 0.")
+    elif param == -1:
+        raise ValueError("Параметърът не може да бъде -1.")
+    else:
+        result = 10 / param
+        print(result)
+except ValueError as ve:
+    print(f"Възникна грешка: {ve}")
+except ZeroDivisionError:
+    print("Деление на нула не е позволено.")
+
+"""
+def process_data(param):
+    try:
+        if param == 0:
+            raise ValueError("Параметърът не може да бъде 0.")
+        elif param == -1:
+            raise ValueError("Параметърът не може да бъде -1.")
+        else:
+            result = 10 / param
+            return result
+    except ValueError as ve:
+        print(f"Възникна грешка: {ve}")
+    except ZeroDivisionError:
+        print("Деление на нула не е позволено.")
+
+# Тестване на функцията
+try:
+    value = int(input("Въведете параметър: "))
+    result = process_data(value)
+    print("Резултатът е:", result)
+except ValueError:
+    print("Невалиден вход.")
+except Exception as e:
+    print(f"Неочаквана грешка: {e}")
+"""
+
+
 
 
 "MULTIPLE EXCEPTION"
-class IntError(Exception):
-    pass
-class StrError(Exception):
-    pass
-class FloatError(Exception):
-    pass
-
-try:
-    x = input("x = ")
-    if isinstance(x, int):
-        raise IntError("Int")
-    if isinstance(x, str):
-        raise StrError("Str")
-    if isinstance(x, float):
-        raise FloatError("Float")
-
-except IntError:
-    print("===")
-
+# class IntError(Exception):
+#     pass
+# class StrError(Exception):
+#     pass
+# class FloatError(Exception):
+#     pass
+#
+# try:
+#     x = input("x = ")
+#     if isinstance(x, int):
+#         raise IntError("Int")
+#     if isinstance(x, str):
+#         raise StrError("Str")
+#     if isinstance(x, float):
+#         raise FloatError("Float")
+#
+# except IntError:
+#     print("===")
+#
 
 
 

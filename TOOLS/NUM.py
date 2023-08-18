@@ -99,6 +99,11 @@ num_4, num_5, num_6 = 10, 2.5, 123
 #     print(number, "is a prime number")
 
 
+"ПОСЛЕДНОТО ЧИСЛО ОТ RANGE()"
+# range_list = range(50, 81)
+# print(range_list[len(range_list) - 1])
+
+
 
 """COMPREHENSION"""
 """COMPREHENSION"""
@@ -110,3 +115,4 @@ num_4, num_5, num_6 = 10, 2.5, 123
 # print(leftover)
 
 # rows, cols = map(int, input().split())
+
