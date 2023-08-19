@@ -7,13 +7,13 @@ class LinkedList:
         # проверява дали листа е празен
         if nodes_list is not None:
             #  създава първия възел  с първия елемент на списъка
-            current_node = Node(data=nodes_list.pop(0))
+            current_node = Node(value=nodes_list.pop(0))
             # закача главата към първия възел
             self.head = current_node
             # итерира през списъка и навързва останалите елементи
             for el in nodes_list:
                 # създава нова инстанция и връзва текущия възел към нея
-                current_node.next = Node(data=el)
+                current_node.next = Node(value=el)
                 # настоящ е вече следващият елемент
                 current_node = current_node.next
         self.tail = current_node
@@ -23,19 +23,19 @@ class LinkedList:
         node = self.head
         nodes = []
         while nodes is not None:
-            nodes.append(node.data)
+            nodes.append(node.value)
             node = node.next
         nodes.append(None)
         return "->".join(nodes)
 
 
 class Node:
-    def __init__(self, data):
-        self.data = data
+    def __init__(self, value):
+        self.value = value
         self.next = None
 
     def __repr__(self):
-        return self.data
+        return self.value
 
 
 llist = LinkedList(["a", "b", "c", "d", "e", "f"])

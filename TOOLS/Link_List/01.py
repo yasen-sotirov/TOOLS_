@@ -25,19 +25,19 @@ class LinkedList:
         node = self.head
         nodes = []
         while nodes is not None:
-            nodes.append(node.data)
+            nodes.append(node.value)
             node = node.next
         nodes.append(None)
         return "->".join(nodes)
 
 
 class Node:
-    def __init__(self, data):
-        self.data = data
+    def __init__(self, value):
+        self.value = value
         self.next = None
 
     def __repr__(self):
-        return self.data
+        return self.value
 
 
 
