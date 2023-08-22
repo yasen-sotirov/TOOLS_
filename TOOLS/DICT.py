@@ -91,7 +91,7 @@ names_ages = {"Ines": 27,
 
 
 "ИЗВИКВАНЕ VALUE ПО КЛЮЧ"
-# # гарми ако ключа го няма!
+# # гърми ако ключа го няма!
 # print(my_dict["b"])
 #
 # # НЕ гарми ако ключа го няма
@@ -198,8 +198,8 @@ names_ages = {"Ines": 27,
 # # key1: def_val, key2: def_val, key3: def_val
 
 "ОТ ЕДИН ЛИСТ С К, V"
-data = [1, 'a', 2, 'b', 3, 'c']
-dict_comp = {data[i]: data[i + 1] for i in range(0, len(data), 2)}
+# data = [1, 'a', 2, 'b', 3, 'c']
+# dict_comp = {data[i]: data[i + 1] for i in range(0, len(data), 2)}
 
 
 
