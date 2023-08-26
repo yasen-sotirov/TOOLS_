@@ -20,7 +20,7 @@ names_ages = {"Ines": 27,
 "ДОБАВЯНЕ В РЕЧНИКА"
 # my_dict["eyes color"] = "green"
 # print(my_dict)
-#
+
 # # при валю списък
 # # дава ни достъп до вложения лист
 # names = classes["1A"]
@@ -195,7 +195,8 @@ names_ages = {"Ines": 27,
 # keys = ['key1', 'key2', 'key3']
 # default_value = 'def_val'
 # from_dict = dict.fromkeys(keys, default_value)
-# # key1: def_val, key2: def_val, key3: def_val
+
+
 
 "ОТ ЕДИН ЛИСТ С К, V"
 # data = [1, 'a', 2, 'b', 3, 'c']
@@ -317,6 +318,39 @@ names_ages = {"Ines": 27,
 #     if value % 2 == 0:
 #         even_years[key] = value
 # print(even_years)
+
+
+
+"ИЗОМОРФНИ СТРИНГОВЕ"
+# def are_isomorphic(str_1: str, str_2: str) -> bool:
+#     if len(str_1) != len(str_2):
+#         return False
+#
+#     dictionary = {}
+#     for i in range(len(str_1)):
+#         el_1, el_2 = str_1[i], str_2[i]
+#
+#         # Проверява дали ключа вече го има
+#         if el_1 in dictionary.keys():
+#
+#             # ако го има, проверява дали е равен на вече зададената стойност
+#             if dictionary[el_1] != el_2:
+#                 # ако не отговаря, значи преди сме въвели друга комбинация
+#                 return False
+#         else:
+#             # Проверяваме дали текущия символ от str_2 не е вече закачен към друг ключ
+#             if el_2 in dictionary.values():
+#                 return False
+#
+#             # ако и тук го няма, го създаваме
+#             dictionary[el_1] = el_2
+#     return True
+
+# s1, s2 = 'theeyes', 'theysee'
+# s1, s2 = 'theeyes', '1233435'
+# s1, s2 = 'theeyes', '1234533'
+# print(are_isomorphic(s1, s2))
+
 
 
 

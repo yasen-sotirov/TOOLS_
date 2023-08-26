@@ -21,8 +21,8 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 
 
 "LIST ФУНКЦИЯ"
-a = "012abv"
-print(list(a))
+# a = "012abv"
+# print(list(a))
 # ['0', '1', '2', 'a', 'b', 'v']
 
 "ДОБАВЯ ЕЛЕМЕНТИ КЪМ ЛИСТА"
@@ -116,10 +116,11 @@ print(list(a))
 
 
 "ТРИЕ / ВАДИ ПО ИНДЕКС (или последния) СИМВОЛ ОТ ЛИСТА"
-# [1, 3, 2, 'a', 'b', 4, 88, 2, 2]
-# char = mix_list.pop(-3)
-# print(mix_list) # [1, 3, 2, 'a', 'b', 4, 2, 2]
-# print(char)     # 88
+print(mix_list)
+char = mix_list.pop(-3)
+char_2 = mix_list.pop(0)
+print(mix_list)
+print(char)
 
 
 
@@ -217,7 +218,6 @@ print(list(a))
 
 "СОРТИРА СЪЩ. ЛИСТ"
 # # ['cat', 'dog', 'mouse', 'hello', 'world']
-#
 # letters_list.sort()
 # print(letters_list)
 # # ['cat', 'dog', 'hello', 'mouse', 'world']
@@ -228,9 +228,9 @@ print(list(a))
 
 
 "ПРАВИ НОВ ЛИСТ И СОРТИРА НЕГО"
-# name_list = ["Ali", 'Marry', 'Kim', 'Teddy', 'Monika', 'John']
-# sorted_list = sorted(name_list, key=lambda item: (-len(item), item))
-# print(sorted_list)
+name_list = ["Ali", 'Marry', 'Kim', 'Teddy', 'Monika', 'John']
+sorted_list = sorted(name_list, key=lambda item: (-len(item), item))
+print(sorted_list)
 # ['Monika', 'Marry', 'Teddy', 'John', 'Ali', 'Kim']
 
 

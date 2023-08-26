@@ -27,6 +27,4 @@
 #
 # # print(object_2)
 # print(object_2.param_3.sum_param)
-#
-#
-#
+

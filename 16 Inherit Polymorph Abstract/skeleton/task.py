@@ -32,5 +32,5 @@ class Task(BoardItem):
 task = Task('Test the application flow', 'Steven', add_days_to_now(2))
 print(task.title)      # Test the application flow
 print(task.due_date)   # 2022-03-18
-print(task.status)     # Todo
+print(task.status)
 print(task.assignee)   # Steven

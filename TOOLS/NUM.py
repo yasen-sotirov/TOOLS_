@@ -35,12 +35,12 @@ num_4, num_5, num_6 = 10, 2.5, 123
 
 
 "ЗАКРЪГЛЯ FLOAT РЕЗУЛТАТ СЛЕД ЗАПЕТАЯТА"
-# num_as_float = num_3 / num_2
-# print("{:.5f}".format(num_as_float))    # 1.50000
-# num = 3.1415926
-# print(f'{num:.2f}')     # 3.14
-# print(f'{num:+.2f}')    # +3.14
-# print(round(num, 3))    # 3.142
+num_as_float = num_3 / num_2
+print("{:.5f}".format(num_as_float))    # 1.50000
+num = 3.1415926
+print(f'{num:.2f}')     # 3.14
+print(f'{num:+.2f}')    # +3.14
+print(round(num, 3))    # 3.142
 
 
 "СЛАГА НУЛИ ПРЕД ЧИСЛОТО"

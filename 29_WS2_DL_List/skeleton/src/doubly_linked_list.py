@@ -52,7 +52,8 @@ class DoublyLinkedList:
 
 
 
-    def insert_after(self, node, value):
+    def insert_after(self, target_node, value):
+        new_node = LinkedListNode(value)
         if self.count == 0:
             raise ValueError
 
@@ -60,17 +61,17 @@ class DoublyLinkedList:
         temp_tail = self.tail
         old_count = self.count
 
-        if  self.tail.value == value:
-            temp_tail.next = node
-            node.prev = temp_tail
-            self._tail = node
+        if  self.tail.value == target_node.value:
+            temp_tail.next = target_node
+            target_node.prev = temp_tail
+            self._tail = target_node
 
         while temp_head.next is not None:
             if temp_head.value == value:
-                node.next = temp_head.next
-                temp_head.next = node
-                node.prev = temp_head
-                self._tail = node
+                target_node.next = temp_head.next
+                temp_head.next = target_node
+                target_node.prev = temp_head
+                self._tail = target_node
                 self._count += 1
             temp_head = temp_head.next
 
