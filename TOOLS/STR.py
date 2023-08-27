@@ -126,6 +126,7 @@ txt_6 = "123 abc"
 "БРОЙ ЗНАЦИТЕ"
 # from string import punctuation
 # print(len([el for el in txt if el in punctuation]))
+# print(len("absdefghijk"))
 
 
 "ПОПЪЛВАНЕ НА ТЕМПЛЕИТ"     # стар подход
