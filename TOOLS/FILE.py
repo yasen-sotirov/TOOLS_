@@ -1,37 +1,94 @@
+"FILE HANDLING"    # РАБОТА С ПАПКИ И ФАЙЛОВЕ
+# https://pynative.com/python-list-files-in-a-directory/
 import os
 
+" === ПЪТЕКА === "
 
-"FILE HANDLING"
+"АБСОЛЮТЕН и РЕЛАТИВЕН ПЪТ"
+# абсолютният започва от началото
+# path_abs = "D:\Telerik\Telerik_course_python"
+# print(os.path.isabs(path_abs))
 
-# ===== РАБОТА С ПАПКИ И ФАЙЛОВЕ =====
-# ====================================
+# релативният
+# path_rel = "TOOLS\Classes_Objects"
+
+
+"ОТ РЕЛАТИВЕН В АБСОЛЮТЕН"
+
+
+
+
+
+
+"ОТ АБСОЛЮТЕН В РЕЛАТИВЕН"
+# path_absolut = "D:\Telerik\Telerik_course_python\TOOLS\Classes_Objects"
+# print(os.path.relpath(path_rel, "Telerik_course_python"))
+
+
+"СЪЗДАВАНЕ НА ПЪТЕКА"
+# по принцип Windows ползва (\) за пътя "C:\windows\user\hello.txt"
+# в python (\) се използва за escape. Mоже да избегнем този проблем кат:
+#   изписвам пътя с (\) - path = "C:/windows/user/hello.txt"
+#   използвам row string - path = r"C:\windows\user\hello.txt"
+
+
+"ДОБАВЯ КЪМ ПЪТЕКАТА"
+# path_1 = "D:\Telerik\Telerik_course_python"
+# path_2 = "TOOLS\Classes_Objects"
+# path = os.path.join(path_1, path_2)
+# print(os.listdir(path))
+
+
+"ПРОВЕРЯВА ДАЛИ ПЪТЕКАТА СЪЩЕСТВУВА"
+# path_pro = "D:\Telerik\Telerik_course_python"
+# print(os.path.exists(path_pro))
+
+
+"ОТ ПЪТЕКА В ЛИСТ"
+# path = os.getcwd()
+# print(os.path.exists(path))
+# print(os.path.split(path))
+
+
+"ПОКАЗВА ФАЙЛОВЕ В ПОДДИРЕКТОРИИ"
+# rec_dir = os.getcwd()
+# print(list(os.walk(rec_dir, "")))
+
+
+
+
+" === ДИРЕКТОРИЯ === "
+
+"ПРОВЕРЯВА ДАЛИ ИМА ФАЙЛ/ПАПКА В ДИРЕКТОРИЯ"
+# print(os.path.isdir("demo_folder/test/test_2"))
+# print(os.path.isfile("demo_folder/test/demo_file.txt"))
+
 
 
 "СЪЗДАВА ПАПКА"
 # directory = "demo_folder"
-# parent_dir = "D:\Telerik\TOOLS"
+# parent_dir = "D:\Telerik\TOOLS"   # създава пътека
 # path = os.path.join(parent_dir, directory)
 # os.mkdir(path)
+# # или за по на кратко
 # os.mkdir("demo_folder/test/test_2")
-
-# в горната папка
+#
+# # в горната папка
 # os.mkdir("../test_folder")
 
 
-"ERROR ПРИ СЪЩЕСТВУВАЩА ПАПКА"
-# try:
-#     os.mkdir("demo_folder")
-# except OSError as err:
-#     print(err)
 
+"ТЕКУЩАТА РАБОТНА ДИРЕКТОРИЯ"
+# print(os.getcwd())
+# os.chdir('../')
+# print(os.getcwd())
 
-"ПОКАЗВА ТЕКУЩАТА РАБОТНА ДИРЕКТОРИЯ"
-# print(os.getcwdu())
 
 
 "ПОКАЗВА ЕЛЕМЕНТИТЕ В ТЕКУЩАТА ПАПКА"
 # връща списък
 # print(os.listdir("demo_folder/test"))
+
 
 
 "ТРИЕ ПАПКА / ФАЙЛ"
@@ -42,9 +99,7 @@ import os
 # os.remove("demo_folder/test/test_2/demo_file.txt")
 
 
-"ПРОВЕРЯВА ДАЛИ ИМА ФАЙЛ/ПАПКА В ДИРЕКТОРИЯ"
-# print(os.path.isdir("demo_folder/test/test_2"))
-# print(os.path.isfile("demo_folder/test/demo_file.txt"))
+
 
 
 
@@ -105,7 +160,8 @@ import os
 
 
 
-
-
-
-
+"ERROR ПРИ СЪЩЕСТВУВАЩА ПАПКА"
+# try:
+#     os.mkdir("demo_folder")
+# except OSError as err:
+#     print(err)

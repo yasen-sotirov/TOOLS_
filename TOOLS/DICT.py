@@ -209,6 +209,17 @@ names_ages = {"Ines": 27,
 
 
 "ТЪРСЕНЕ В РЕЧНИК"
+# directions = {
+#     "left": (0, -1),
+#     "right": (0, 1),
+#     "up": (-1, 0),
+#     "down": (1, 0)}
+#
+# def get_direction(move):
+#     if move in directions:
+#         return directions[move]
+# print(get_direction("left"))
+
 # # търси в ключа
 # print("a" in num_dict)  # True
 # print("f" in num_dict)  # False
