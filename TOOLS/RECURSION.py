@@ -3,6 +3,11 @@
 
 
 
+"ПРОМЕНЯ БРОЯ РЕКУРСИИ"
+# import sys
+# sys.setrecursionlimit(10000)
+
+
 "ФАКТОРИЕЛ"
 """
 n! = n * (n - 1) * (n - 2) * (n - 3) * ... * 1
@@ -163,22 +168,22 @@ deliver_present(child)
 
 
 "ЛАБИРИНТ"      # рекурсия с 4 разклоненя
-# lab = [
-#     [1, 0, 0, 0, 0],
-#     [1, 1, 1, 0, 0],
-#     [0, 0, 1, 0, 0],
-#     [0, 1, 1, 0, 0]
-# ]
-#
-# rows = len(lab)
-# cols = len(lab[0])
-#
-# # 0,0  1,0  1,1  1,2  2,2  3,2  3,1
-#
-# for r in range(rows):
-#     for c in range(cols):
-#         if lab[r][c] == 1:
-#             print(r,c)
+lab = [
+    [1, 0, 0, 0, 0],
+    [1, 1, 1, 0, 0],
+    [0, 0, 1, 0, 0],
+    [0, 1, 1, 0, 0]
+]
+
+rows = len(lab)
+cols = len(lab[0])
+
+# 0,0  1,0  1,1  1,2  2,2  3,2  3,1
+
+for r in range(rows):
+    for c in range(cols):
+        if lab[r][c] == 1:
+            print(r,c)
 
 
 
@@ -314,6 +319,7 @@ Fibonacci number, with n=0 representing the start of the sequence.
 # num = int(input())
 # print(fibonacci(num))
 # =======================================
+
 # def fib(n, memo={0: 0, 1: 1, 2: 1}):
 #     if n in memo:
 #         return memo[n]

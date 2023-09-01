@@ -41,9 +41,6 @@ a3{cd2{a}f}ef
 acdaafcdaafcdaafef
 """
 
-# a3{cd2{a}f}ef
-# input_str = input()
-
 def recursion(sequence, multiplier):
     letters = ""
 
@@ -62,24 +59,8 @@ def recursion(sequence, multiplier):
             letters *= multiplier
             return letters
 
-input_str = "a3{cd2{abc}f}ef"
+input_str = input()
 print(recursion(input_str, 1))
-
-
-
-
-# def flatten(lst):
-#     output = []
-#     # проверява дали елемента е число или списък
-#     for el in lst:
-#         if isinstance(el, int):
-#             output.append(el)
-#         else:
-#             output.extend(flatten(el))
-#     return output
-#
-# values = [1, [2, [[[3, [4, [5, [6]]]], 7], 8], 9]]
-# print(flatten(values))
 
 
 

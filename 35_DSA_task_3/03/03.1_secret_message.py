@@ -41,8 +41,6 @@ a3{cd2{a}f}ef
 acdaafcdaafcdaafef
 """
 
-# a3{cd2{a}f}ef
-# input_str = input()
 
 def recursion(sequence, multiplier):
     multiplier = 1
@@ -50,6 +48,8 @@ def recursion(sequence, multiplier):
     open_ind = 0
     close_ind = 0
     edited_sequence = ""
+
+
 
     for index, el in enumerate(sequence):
         if el.isnumeric():
@@ -66,13 +66,13 @@ def recursion(sequence, multiplier):
             letters *= multiplier
             edited_sequence = sequence[0:open_ind - 1] + letters + sequence[close_ind+1:]
 
-            if not "{" in edited_sequence:
-                return edited_sequence
-            else:
-                recursion(edited_sequence, multiplier)
+            recursion(edited_sequence, multiplier)
+
+        if not "}" in edited_sequence:
+            return edited_sequence
 
 
-input_str = "a3{cd2{abc}f}ef"
+input_str = input()
 print(recursion(input_str, 1))
 
 
