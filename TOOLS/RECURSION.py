@@ -34,21 +34,21 @@ n! = n * (n - 1) * (n - 2) * (n - 3) * ... * 1
 
 
 "МНОЖЕСТВЕНА РЕКУРСИЯ  - ЕЛФИ И ДОСТАВКИ"
-# def deliver_present(kids_list):
-#     if len(kids_list) == 1:
-#         print(f"Deliver present to: {kids_list[0]}")
-#     else:
-#         mid = len(kids_list) // 2
-#         first_half = kids_list[:mid]
-#         second_half = kids_list[mid:]
-#
-#         # елф едно
-#         deliver_present(first_half)
-#         # елф две
-#         deliver_present(second_half)
-#
-# child = ["Ivan", "Pesho", "Tosho", "Gosho", "Ginka", "Stamat", "Gertruda", "Kalinka"]
-# deliver_present(child)
+def deliver_present(kids_list):
+    if len(kids_list) == 1:
+        print(f"Deliver present to: {kids_list[0]}")
+    else:
+        mid = len(kids_list) // 2
+        first_half = kids_list[:mid]
+        second_half = kids_list[mid:]
+
+        # елф едно
+        deliver_present(first_half)
+        # елф две
+        deliver_present(second_half)
+
+child = ["Ivan", "Pesho", "Tosho", "Gosho", "Ginka", "Stamat", "Gertruda", "Kalinka"]
+deliver_present(child)
 
 
 
@@ -77,15 +77,54 @@ n! = n * (n - 1) * (n - 2) * (n - 3) * ... * 1
 
 
 "STRING REVERSE"
-# "abcdef" -> "fedcba"
+"""
+ози код представлява функция, която обръща подаден низ използвайки рекурсия. Да разгледаме как работи по стъпки:
+
+    Функцията reverse_recursive(string) приема низ като входен аргумент.
+    Първо проверява дали низът string е празен (дъно на рекурсията). Ако е празен, тя връща празен низ '', терминирайки изпълнението на рекурсията.
+    В противен случай (когато низът string не е празен), тя взима последния символ от низа чрез string[-1] и го записва в променливата last.
+    След това връща конкатенацията на last (последния символ) с рекурсивното извикване на същата функция, но със срязан низ без последния символ: reverse_recursive(string[:-1]).
+    Така рекурсията продължава, като се връщат символите в обратен ред, като последния символ на първата рекурсивна стъпка става първи в резултата, втория става втори и така нататък.
+    Рекурсията продължава докато низът стане празен, като всяка стъпка добавя последния символ към текущия резултат.
+
+Примерно изпълнение с низа "abc":
+
+    string не е празен, затова премахваме последния символ и го записваме в last (last = 'c').
+
+    Връщаме 'c' + reverse_recursive('ab').
+
+    Рекурсия за 'ab':
+
+        string не е празен, затова премахваме последния символ и го записваме в last (last = 'b').
+
+        Връщаме 'b' + reverse_recursive('a').
+
+        Рекурсия за 'a':
+
+            string не е празен, затова премахваме последния символ и го записваме в last (last = 'a').
+
+            Връщаме 'a' + reverse_recursive('').
+
+            Рекурсия за '':
+                string е празен, връщаме празен низ ''.
+
+        В рекурсията за 'a' получаваме резултат 'a' + '', което е просто 'a'.
+
+    В рекурсията за 'ab' получаваме резултат 'b' + 'a', което е 'ba'.
+
+В рекурсията за 'abc' получаваме резултат 'c' + 'ba', което е 'cba'.
+
+Така се получава желаният обратен низ 'cba' за входния низ 'abc'.
+"""
 # def reverse_recursive(string):
 #     if string == "":
 #         return ''
 #
-#     last = string[-1]
-#     return  last + reverse_recursive(string[:-1])
+#     last_el_list = string[-1]
+#     return  last_el_list + reverse_recursive(string[:-1])
 #
-# reverse_recursive("abc")
+# print(reverse_recursive("abc"))
+
 # 'abcd' -> 'dcba'
 # 'd' + 'cba'
 #       // 'c' + 'ba'
@@ -107,19 +146,18 @@ n! = n * (n - 1) * (n - 2) * (n - 3) * ... * 1
 
 
 "FLATTEN ИЗРАВНЯВАНЕ" # рекурсия с разклонения
-# values = [1, [2, [[[3, [4, [5, [6]]]], 7], 8], 9]]
-#
 # def flatten(lst):
 #     output = []
-#     for x in lst:
-#         if isinstance(x, int):
-#             output.append(x)
+#     # проверява дали елемента е число или списък
+#     for el in lst:
+#         if isinstance(el, int):
+#             output.append(el)
 #         else:
-#             output.extend(flatten(x))
+#             output.extend(flatten(el))
 #     return output
 #
-# values2 = flatten(values)
-# print(values2)
+# values = [1, [2, [[[3, [4, [5, [6]]]], 7], 8], 9]]
+# print(flatten(values))
 
 
 

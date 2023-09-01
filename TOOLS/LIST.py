@@ -93,12 +93,12 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 
 
 "РАЗОПАКОВА ЛИСТА"      # вместо " ".join(), защото той работи само с str
-# num_list = [1, 4, 3]
-# print(*num_list)
-# # 1 4 3
-#
-# print(*num_list, sep=", ")
-# # 1, 4, 3
+num_list = [1, 4, 3]
+print(*num_list)
+# 1 4 3
+
+print(*num_list, sep=", ")
+# 1, 4, 3
 
 
 
@@ -116,12 +116,12 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 
 
 "ТРИЕ / ВАДИ ПО ИНДЕКС (или последния) СИМВОЛ ОТ ЛИСТА"
-print(mix_list)
-char = mix_list.pop(-3)
-char_2 = mix_list.pop(0)
-print(mix_list)
-print(char)
-
+# print(mix_list)
+# char = mix_list.pop(-3)
+# char_2 = mix_list.pop(0)
+# print(mix_list)
+# print(char)
+#
 
 
 "ИЗВЕЖДА ЕЛЕМЕНТ ОТ ЛИСТА"
@@ -177,7 +177,6 @@ print(char)
 
 
 "НА КОЙ ИНДЕКС СЕ НАМИРА (нещо)"
-# [1, 3, 2, 'a', 'b', 4, 88, 2, 2]
 # number = mix_list.index('b')
 # print(number)   # 4
 

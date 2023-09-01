@@ -48,17 +48,64 @@ Output
 9999
 """
 
-def variations(length, str_1, str_2):
-    output_list = []
-    if el == "":
-        return ""
+def variations(string, symbols, length):
+    # това което се променя в условието е дължината на възможната комбинация
+    # затова връзвам дъното към нея
+    if length == 0:
+        variations_list.append(string)
+        return
+
+    for element in symbols:
+        variations(string + element, symbols, length - 1)
 
 
 
-    return
+variations_list = []
+var_len = int(input())
+el_1, el_2 = input().split()
+variations("", el_1 + el_2, var_len)
+
+variations_list.sort()
+
+for el in variations_list:
+    print(el)
 
 
-str_length = int(input())
-str1, str2 = input().split()
-print(variations(str_length, str1, str2))
+
+
+# ========================================
+# РЕШЕНИЕ ОТ САЙТА
+n = int(input())
+# sorting the two letters leads to generating sorted variations
+# it's better to sort two letters than 2^n strings
+a, b = sorted(input().split())
+
+def variations(s):
+    if len(s) == n:
+        print(s)
+    else:
+        variations(s + a)
+        variations(s + b)
+
+variations('')
+
+
+
+
+# ========================================
+# РЕШЕНИЕ ОТ ЕДО
+# вариациите са = 2^len
+"""
+max_len = int(input())
+a, b = sorted(input().split())
+
+def variations(string=""):
+    if len(string) == max_len:
+        print(string)
+    else:
+        variations(string + a)
+        variations(string + b)
+
+variations()
+"""
 

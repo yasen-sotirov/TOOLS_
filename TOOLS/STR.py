@@ -44,6 +44,15 @@ txt_6 = "123 abc"
 # print(concatenate("Soft", "UNI", "Is", "Grate", "!", UNI="Uni", Grate="Great"))
 
 
+
+"ПРЕМАХВА ЕЛЕМЕНТ n БРОЙ ПЪТИ"
+# text = "Hello$ Python3$"
+# string = text.replace("$", "", 1)
+# print (string)
+
+
+
+
 "ПРЕМАХВА ЕЛЕМЕНТ ОТ НАЧАЛОТО И/ИЛИ КРАЯ НА ТЕКСТА"
 # print(("   I like bananas   ").strip())
 # print(("----I like bananas!!").strip("-!"))

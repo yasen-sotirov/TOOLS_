@@ -21,6 +21,20 @@
 # print_nums_funct(nums_1, nums_2, nums_3)
 
 
+"РАЗОПАКОВАНЕ НА ЛИСТ"
+# разопакова листа и го подава на функцията
+# def print_nums(a, b, c):
+#     print(a, b, c)
+# nums = [1, 2, 3]
+# print_nums(*nums)
+
+# def even_odd(*args):
+#     *numbers, command = args
+#     party = 0 if command == "even" else 1
+#     return [el for el in numbers if el % 2 == party]
+# print(even_odd(1, 2, 3, 4, 5, 6, "even"))
+
+
 
 "TYPE HINTS / ANNOTATIONS"
 # var_1: int  - функцията изисква фиксиран тип данни
@@ -34,21 +48,6 @@
 # def funct(a: int, b: int) -> list[str]:
 #     pass
 
-
-
-
-"РАЗОПАКОВАНЕ НА ЛИСТ"
-# разопакова листа и го подава на функцията
-# def print_nums(a, b, c):
-#     print(a, b, c)
-# nums = [1, 2, 3]
-# print_nums(*nums)
-
-# def even_odd(*args):
-#     *numbers, command = args
-#     party = 0 if command == "even" else 1
-#     return [el for el in numbers if el % 2 == party]
-# print(even_odd(1, 2, 3, 4, 5, 6, "even"))
 
 
 

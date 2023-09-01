@@ -232,3 +232,20 @@ text = "Hello, I'm @22 yeas old, and you are @26 years old, not the @136. " \
    
 
 """
+
+
+
+def cipher_func(secret_code, cipher):
+    cipher_map = {}
+    cipher_mapping = re.findall(r'([A-Z])(\d+)', cipher)
+    for letter, digit in cipher_mapping:
+        cipher_map[digit] = letter
+    return cipher_map
+
+secret_code = input()
+cipher = input()
+
+print(cipher_func(secret_code, cipher))
+
+# 1122
+# A1B12C11D2
