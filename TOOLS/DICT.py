@@ -237,7 +237,7 @@ names_ages = {"Ines": 27,
 
 
 "ВРЪЩА СПИСЪК С ТЮПЪЛИ"
-# print(num_dict.items())
+print(num_dict.items())
 
 
 "ЗАМЕНЯ ЕЛЕМЕНТИ "

@@ -151,39 +151,40 @@ deliver_present(child)
 
 
 "FLATTEN ИЗРАВНЯВАНЕ" # рекурсия с разклонения
-# def flatten(lst):
-#     output = []
-#     # проверява дали елемента е число или списък
-#     for el in lst:
-#         if isinstance(el, int):
-#             output.append(el)
-#         else:
-#             output.extend(flatten(el))
-#     return output
-#
-# values = [1, [2, [[[3, [4, [5, [6]]]], 7], 8], 9]]
-# print(flatten(values))
+def flatten(lst):
+    output = []
+    # проверява дали елемента е число или списък
+    for el in lst:
+        if isinstance(el, int):
+            output.append(el)
+        else:
+            # ако е събсписък разширява текущия списък с резултата от вложения списък
+            output.extend(flatten(el))
+    return output
+
+values = [1, 2, [[[3, [4, [5, [6]]]], 7], 8, 9]]
+print(flatten(values))
 
 
 
 
 "ЛАБИРИНТ"      # рекурсия с 4 разклоненя
-lab = [
-    [1, 0, 0, 0, 0],
-    [1, 1, 1, 0, 0],
-    [0, 0, 1, 0, 0],
-    [0, 1, 1, 0, 0]
-]
-
-rows = len(lab)
-cols = len(lab[0])
-
-# 0,0  1,0  1,1  1,2  2,2  3,2  3,1
-
-for r in range(rows):
-    for c in range(cols):
-        if lab[r][c] == 1:
-            print(r,c)
+# lab = [
+#     [1, 0, 0, 0, 0],
+#     [1, 1, 1, 0, 0],
+#     [0, 0, 1, 0, 0],
+#     [0, 1, 1, 0, 0]
+# ]
+#
+# rows = len(lab)
+# cols = len(lab[0])
+#
+# # 0,0  1,0  1,1  1,2  2,2  3,2  3,1
+#
+# for r in range(rows):
+#     for c in range(cols):
+#         if lab[r][c] == 1:
+#             print(r,c)
 
 
 
