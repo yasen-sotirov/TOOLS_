@@ -93,12 +93,16 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 
 
 "РАЗОПАКОВА ЛИСТА"      # вместо " ".join(), защото той работи само с str
-num_list = [1, 4, 3]
-print(*num_list)
-# 1 4 3
-
-print(*num_list, sep=", ")
-# 1, 4, 3
+# num_list = [1, 4, 3]
+# print(*num_list)
+# # 1 4 3
+#
+# print(*num_list, sep=", ")
+# # 1, 4, 3
+#
+# first, *rest = num_list
+# print(first)
+# print(rest)
 
 
 

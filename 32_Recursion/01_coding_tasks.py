@@ -1,4 +1,4 @@
-# === 1
+# === 1      5! = 5*4*3*2*1 = 120
 # def factorial_rec(num):
 #     if num <= 1:
 #         return 1
@@ -34,6 +34,7 @@
 # print(fibonacci(num))
 
 
+
 # === 4 Bunny ears 2
 # def bunny_ears(bunny):
 #     if bunny == 0:
@@ -46,6 +47,7 @@
 # print(bunny_ears(data))
 
 
+
 # === 5 Triangle
 # def triangle_of_blocks(rows):
 #     if rows == 0:
@@ -56,6 +58,7 @@
 #
 # data = int(input())
 # print(triangle_of_blocks(data))
+
 
 
 # === 6 Sum Digits
@@ -169,21 +172,21 @@ xhixhix
 # Given a string, compute recursively (no loops) a new string
 # where all appearances of "pi" have been replaced by "3.14".
 
-# def change_pi(string):
-#     if len(string) < 2:
-#         return string
-#
-#     # ако стрингът от инд 0 до инд 2 ексклузив е = pi
-#     if string[:2] == "pi":
-#         # върни 3,14 + остатъка от стринга [от 2 вкл.: нататък]
-#         return "3.14" + change_pi(string[2:])
-#     else:
-#         # ако не е, върни стр на инд.0 + стр от инд.1 нататък
-#         # тук преминава на следващия елемент от стринга
-#         return string[0] + change_pi(string[1:])
-#
-# data = input()
-# print(change_pi(data))
+def change_pi(string):
+    if len(string) < 2:
+        return string
+
+    # ако стрингът от инд 0 до инд 2 ексклузив е = pi
+    if string[:2] == "pi":
+        # върни 3,14 + остатъка от стринга [от 2 вкл.: нататък]
+        return "3.14" + change_pi(string[2:])
+    else:
+        # ако не е, върни стр на инд.0 + стр от инд.1 нататък
+        # тук преминава на следващия елемент от стринга
+        return string[0] + change_pi(string[1:])
+
+data = input()
+print(change_pi(data))
 
 
 

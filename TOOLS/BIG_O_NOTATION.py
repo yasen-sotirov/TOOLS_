@@ -1,6 +1,20 @@
 """
 https://www.geeksforgeeks.org/time-complexities-of-different-data-structures/
 
+Growth rates illustrated
+
+	        n=1	    n=2	    n=4	    n=8	    n=16	n=32
+O(1)	    1	    1	    1	    1	    1	    1
+О(log n)	0	    1	    2	    3	    4	    5
+О(n)	    1	    2	    4	    8	    16	    32
+О(n*log n)	0	    2	    8	    24	    64	    160
+О(n2)	    1	    4	    16	    64	    256	    1024
+О(n3),	    1	    8	    64	    512	    4 096	32 768
+О(2n)	    2	    4	    16	    235	    65 536	4 294 967 296
+
+
+
+
 WORST CASE TIME COMPLEXITY
 
 Data structure	        Access	    Search	    Insertion	Deletion

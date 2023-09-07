@@ -39,21 +39,21 @@ n! = n * (n - 1) * (n - 2) * (n - 3) * ... * 1
 
 
 "МНОЖЕСТВЕНА РЕКУРСИЯ  - ЕЛФИ И ДОСТАВКИ"
-def deliver_present(kids_list):
-    if len(kids_list) == 1:
-        print(f"Deliver present to: {kids_list[0]}")
-    else:
-        mid = len(kids_list) // 2
-        first_half = kids_list[:mid]
-        second_half = kids_list[mid:]
-
-        # елф едно
-        deliver_present(first_half)
-        # елф две
-        deliver_present(second_half)
-
-child = ["Ivan", "Pesho", "Tosho", "Gosho", "Ginka", "Stamat", "Gertruda", "Kalinka"]
-deliver_present(child)
+# def deliver_present(kids_list):
+#     if len(kids_list) == 1:
+#         print(f"Deliver present to: {kids_list[0]}")
+#     else:
+#         mid = len(kids_list) // 2
+#         first_half = kids_list[:mid]
+#         second_half = kids_list[mid:]
+#
+#         # елф едно
+#         deliver_present(first_half)
+#         # елф две
+#         deliver_present(second_half)
+#
+# child = ["Ivan", "Pesho", "Tosho", "Gosho", "Ginka", "Stamat", "Gertruda", "Kalinka"]
+# deliver_present(child)
 
 
 
@@ -210,10 +210,10 @@ print(flatten(values))
 # https://learn.telerikacademy.com/mod/page/view.php?id=50290
 
 # def fibonacci_m(n, memo={}):
-#     base cases
 #     if n == 0:
 #         return 0
 #     elif n == 1:
+#         return 0
 #
 #     if n in memo:
 #         return memo[n]
@@ -222,7 +222,7 @@ print(flatten(values))
 #
 #     memo[n] = nth_fibo
 #     return nth_fibo
-#
+
 # print(fibonacci_m(5))
 
 
@@ -367,6 +367,8 @@ blocks in such a triangle with the given number of rows."""
 #         return 0
 #     if rows == 1:
 #         return 1
+#     # бр на блоковете == № на реда
+#     # на дъното към броя блокове на реда ще добави 0
 #     return rows + triangle_of_blocks(rows - 1)
 #
 # data = int(input())
@@ -415,17 +417,17 @@ as a digit, so for example 717 yields 2. (no loops).
 Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), 
 while divide (/) by 10 removes the rightmost digit (126 / 10 is 12).
 """
-# def count_occurrences(number):
-#     if number == 0:
+# def count_occurrences(num):
+#     if num == "":
 #         return 0
 #
-#     elif number % 10 == 7:
-#         return 1 + count_occurrences(number // 10)
-#     else:
-#         return count_occurrences(number // 10)
+#     if num[0] == "7":
+#         # 1 ще я добави към резултата, който в дъното ще е 0
+#         return 1 + count_occurrences(num[1:])
+#     return count_occurrences(num[1:])
 #
-# num = int(input())
-# print(count_occurrences(num))
+# n = input()
+# print(count_occurrences(n))
 # =========================================
 # def count_sevens(n):
 #     head, *tail = n
@@ -483,6 +485,22 @@ while divide (/) by 10 removes the rightmost digit (126 / 10 is 12).
 """
 Given base and n that are both 1 or more, compute recursively (no loops)
 the value of base to the n power, so powerN(3, 2) is 9 (3 squared).
+
+Например, ако въведете base = 2 и power = 3, функцията power_n ще се извика по следния начин:
+
+    power_n(2, 3) -> не е базов случай, затова извикваме power_n(2, 2)
+    power_n(2, 2) -> не е базов случай, затова извикваме power_n(2, 1)
+    power_n(2, 1) -> не е базов случай, затова извикваме power_n(2, 0)
+    power_n(2, 0) -> това е базовият случай, връща 1
+
+След това рекурсията се разгръща обратно:
+
+    power_n(2, 0) връща 1.
+    power_n(2, 1) изчислява 2 * 1 и връща 2.
+    power_n(2, 2) изчислява 2 * 2 и връща 4.
+    power_n(2, 3) изчислява 2 * 4 и връща 8.
+
+Така функцията намира резултата от 2 на трета степен, който е 8, и го извежда на екрана.
 """
 # def power_n(base, power):
 #     if power == 0:
