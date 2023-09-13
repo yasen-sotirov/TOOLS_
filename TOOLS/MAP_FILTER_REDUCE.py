@@ -111,3 +111,31 @@ print(reduce(lambda w1, w2: w2 if len(w1) > len(w2) else w2, long_list))
 # 4. Reverse a string. Hint: A string is just a list of characters.
 # To use reduce on a string, you can spread it a list like this: [...'apple'].reduce(...
 
+
+
+from functools import reduce
+
+number_list = [1, 2, 4, 5, 6, 11, 9, 8]
+
+def get_even(num):
+    return num % 2 == 0
+
+result = list(filter(get_even, number_list))
+print(result)
+
+
+result_lambda = list(filter(lambda num: num % 2 == 0, number_list))
+print(result_lambda)
+
+
+line = ["abc", "1", "2.5", "5"]
+numbers = list(filter(lambda num: num.isnumeric(), line))
+
+# само int   num.isdgit()
+# numbers.isallnum()
+# number.isdecimal()
+# numbers.is digit
+# number.
+
+
+print(reduce(lambda x, y: x + y, number_list))

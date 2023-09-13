@@ -1,8 +1,8 @@
-def reverse(str):
-    if len(str) <= 1:
-        return str
+def reverse(string):
+    if len(string) <= 1:
+        return string
 
-    return f'{reverse(str[1:])}{str[0]}'
+    return reverse(string[1:]) + string[0]
 
 
 print(reverse('Recursion ftw!'))

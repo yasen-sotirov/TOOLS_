@@ -1,8 +1,6 @@
-"LOOP   WHILE, FOR"  # ЦИКЛИ
+"LOOPS: WHILE, FOR"  # ЦИКЛИ
 
-# for loop - expresion
-# expresion = израз, който произвежда някаква стойност
-# statemant = if/else  не връща стойност
+
 
 "BREAK"     # приключи цикъла при допълнително условие
 # i = 10
@@ -66,15 +64,12 @@
 #         print("Hidden letter is before your letter")
 
 
-x = 0
-sequence = ''
-while x <= 5:
-    sequence += str(x) + " "
-    x += 1
-print(sequence)
-
-
-
+# x = 0
+# sequence = ''
+# while x <= 5:
+#     sequence += str(x) + " "
+#     x += 1
+# print(sequence)
 
 
 

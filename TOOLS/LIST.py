@@ -137,14 +137,14 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 
 
 "ПРЕМАХВА ЕЛЕМЕНТ/И В ЛИСТА (от ляво на дясно)"
-# # ако елемента го няма връща грешка
-# # [1, 3, 2, 'a', 'b', 4, 88, 2, 2]
-# mix_list.remove(2)
-# # [1, 3, 'a', 'b', 4, 88, 2, 2]
-#
-# while "dog" in letters_list:
-#     letters_list.remove("dog")
-# print(letters_list)
+# ако елемента го няма връща грешка
+# [1, 3, 2, 'a', 'b', 4, 88, 2, 2]
+mix_list.remove(2)
+# [1, 3, 'a', 'b', 4, 88, 2, 2]
+
+while "dog" in letters_list:
+    letters_list.remove("dog")
+print(letters_list)
 
 
 

@@ -1,6 +1,6 @@
 """
 4. Write a function that returns the letter which occurs more often
-than another letter in a text. Use the function from the previous exercise.
+than another letter in a text. Use the function from the previous Recursion.
 
 x = stronger_letter('abca', 'a', 'b') # x = 'a'
 x = stronger_letter('abbca', 'c', 'b') # x = 'b'

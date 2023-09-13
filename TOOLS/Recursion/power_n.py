@@ -17,17 +17,19 @@ compute recursively (no loops) the value of base to the n power,
     power_n(2, 0) връща 1.
     power_n(2, 1) изчислява 2 * 1 и връща 2.
     power_n(2, 2) изчислява 2 * 2 и връща 4.
-    power_n(2, 3) изчислява 2 * 4 и връща 8.
+    power_n(2, 4) изчислява 2 * 4 и връща 8.
 
 Така функцията намира резултата от 2 на трета степен, който е 8, и го извежда на екрана.
 """
 
 
-def power_n(base, power):
-    if power == 0:
+def power_n(_base, _power):
+    if _power == 0:
         return 1
 
-    return base * power_n(base, power - 1)
+    # умножава резултата (2 * дъното) Power брой пъти
+    bottom = power_n(_base, _power - 1)
+    return _base * bottom
 
 
 base = int(input())

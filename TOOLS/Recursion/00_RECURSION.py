@@ -39,21 +39,21 @@ n! = n * (n - 1) * (n - 2) * (n - 3) * ... * 1
 
 
 "МНОЖЕСТВЕНА РЕКУРСИЯ  - ЕЛФИ И ДОСТАВКИ"
-# def deliver_present(kids_list):
-#     if len(kids_list) == 1:
-#         print(f"Deliver present to: {kids_list[0]}")
-#     else:
-#         mid = len(kids_list) // 2
-#         first_half = kids_list[:mid]
-#         second_half = kids_list[mid:]
-#
-#         # елф едно
-#         deliver_present(first_half)
-#         # елф две
-#         deliver_present(second_half)
-#
-# child = ["Ivan", "Pesho", "Tosho", "Gosho", "Ginka", "Stamat", "Gertruda", "Kalinka"]
-# deliver_present(child)
+def deliver_present(kids_list):
+    if len(kids_list) == 1:
+        print(f"Deliver present to: {kids_list[0]}")
+    else:
+        mid = len(kids_list) // 2
+        first_half = kids_list[:mid]
+        second_half = kids_list[mid:]
+
+        # елф едно
+        deliver_present(first_half)
+        # елф две
+        deliver_present(second_half)
+
+child = ["Ivan", "Pesho", "Tosho", "Gosho", "Ginka", "Stamat", "Gertruda", "Kalinka"]
+deliver_present(child)
 
 
 

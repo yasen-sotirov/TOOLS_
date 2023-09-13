@@ -1,30 +1,45 @@
 rows, cols = map(int, input().split())
+matrix = []
+island_dict = {}
 
-matrix = [[None] + input().split() + [None] for _ in range(rows)]
-
-none_row = [[None] * (cols + 2)]
-
-matrix = none_row + matrix + none_row
-
-dirs = ((-1, 0), (1, 0), (0, -1), (0, 1))
+for row in range(rows):
+    matrix.append([int(el) for el in input()])
 
 
-def explore(x, y, val):
-    matrix[x][y] = None
+visited = {(row, col): {(row, col)} for row in range(rows) for col in range(cols) if matrix[row][col]}
 
-    return 1 + sum(explore(x + dx, y + dy, val)
+for (row, col) in list(visited):
+    for next_r, next_c in [(row + 1, col), (row, col + 1)]:
 
-                   for dx, dy in dirs
+        if (next_r, next_c) not in visited:
+            continue
 
-                   if matrix[x + dx][y + dy] == val)
+        if visited[row, col] == visited[next_r, next_c]:
+            continue  # skip already merged
+
+        visited[row, col].update(visited[next_r, next_c])  # Merge set of positions
+        for (last_r, last_c) in visited[next_r, next_c]:
+            visited[last_r, last_c] = visited[row, col]  # Propagate merged set to all
 
 
-best = max(explore(r, c, matrix[r][c])
+final = sorted(list(set(map(len, visited.values()))), reverse=True)
+for el in final:
+    print(el)
 
-           for r in range(rows)
 
-           for c in range(cols)
 
-           if matrix[r][c] is not None)
 
-print(best)
+
+# 5 10
+# 1000000010
+# 1111000011
+# 1000000000
+# 1100001000
+# 1000011100
+
+
+# 4 4
+# 0000
+# 0110
+# 0110
+# 0000
