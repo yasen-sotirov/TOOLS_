@@ -2,6 +2,8 @@
 
 ## Database Design - Create a database model for a car rental system
 
+https://www.vertabelo.com/blog/how-to-create-a-database-model-from-scratch/
+
 You might have rented a car on your last vacation. You reserved your car online, and then picked it up from its designated location after paying all the previously-agreed charges. Once you were done, you returned it to the agency and perhaps paid some additional fees. 
 
 Did you ever think about the system that makes all these things happen?
