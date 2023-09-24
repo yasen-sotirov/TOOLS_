@@ -2,7 +2,12 @@
 
 
 """
-ФИЛТРИ
+ФИЛТРИ / ОПЕРАТОРИ
+
+    IN ОПЕРАТОР
+        WHERE departments.Name in ("Sales", "Finance")
+    
+    
     LIKE
         % - не се интересува колко елемента има преди/след него
         WHERE FirstName like "SA%"  
@@ -18,7 +23,7 @@
     
     
     ДИАПАЗОН / ТОЧНИ ЧИСЛА
-        WHERE salary between 2000 and 3000;
+        WHERE salary between 2000 and 3000          - инклузив
         WHERE Salary >= 20000 and salary <= 30000;
         WHERE Salary in (25000, 14000, 12500, 23600);
     
@@ -41,13 +46,41 @@
 
 
 
-НАМАПВАНЕ       1:51Ч
--- Write a SQL query to find all employees whose MiddleName is the same as the first letter of their town.
-SELECT e.firstname, e.MiddleName, t.name FROM employees e
-INNER JOIN addresses a on e.AddressID = a.AddressID
-INNER JOIN towns t on a.TownID = t.townID 
-WHERE e.MiddleName = left(t.name, 1);
 
+ОБЕДИНЯВАНЕ НА ТАБЛИЦИ
+    JOIN (INNER JOIN) - ако не е NULL
+        SELECT firstname, lastname, o.customer_id   # префикс: при повтаряне на колоните се уточнява от коя таблица ги селектираме 
+        FROM orders as o JOIN customers as c        # обединява таблиците order и customers
+        ON o.customer_id = c.customer_id            # където id-то им съвпада
+
+    FULL JOIN - връща всички данни от двете таблици, дои тези с NULL
+    LEFT JOIN - връща всички от таблица 1 и тези от таблица 2 дето са без NULL
+    RIGHT JOIN - връща таблица 1 без тези с NULL и цялата таблица 2
+
+
+
+ОБЕДИНЯВА ТАБЛИЦИ В ЛИСТ
+    UNION - връща само уникалните елементи
+    UNION ALL - връща всички елементи
+    
+    SELECT name FROM departments
+    UNION ALL
+    SELECT name FROM towns;
+
+
+
+NULL
+    АКО НЕ Е НИЩО
+        WHERE manager_id IS NOT NULL
+    
+    ЗАМЕНЯ ЕЛЕМЕНТ АКО Е NULL
+        coalesce(middle_name, "")   - от много изброени елементи заменя първия NULL
+        ifnull(middle_name, "")     - заменя само един елемент
+        
+    ИЗПУСКА РЕДА, АКО Е NULL
+        coalesce(middlename, " ")
+    
+ 
 
 ЗАКРЪГЛЯНЕ  слага се елиас, иначе round(...) ще се появи в името на колоната
     SELECT round(salary, 2) as salary
@@ -56,11 +89,6 @@ WHERE e.MiddleName = left(t.name, 1);
 СОРТИРА
     WHERE salary > 5000 ORDER BY salary         - възходящо или  asc;
     WHERE salary > 5000 ORDER BY salary desc    - низходящо
-
-
-ЗАМЕНЯ ЕЛЕМЕНТ АКО Е NULL
-    coalesce(middle_name, "") - от много изброени елементи заменя първия NULL
-    ifnull(middle_name, "")  - заменя само един елемент
     
     
 ОБЕДИНЯВА КОЛОНИ В ЕДНА
@@ -80,6 +108,13 @@ WHERE e.MiddleName = left(t.name, 1);
 УСЛОВИЕ
     SELECT IF(middle is NULL, concat(first, " ", last), concat(first, " ", middle, " ", last)
 
+
+ДАТА и ЧАС ФОРМАТИРАНЕ
+    SELECT year(e.HireDate), month(e.HireDate)
+
+
+
+===== ТЕОРИЯ =====
 
 ВИДОВЕ БАЗИ ДАННИ 
     NoSQL - не работи с SQL езика, съвсем различна бира
