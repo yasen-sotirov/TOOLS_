@@ -413,3 +413,13 @@ print(sorted_list)
 # # ['dog', 'dolphin']
 
 
+"СЛЕДВАЩ ЕЛЕМЕНТ"   # накрая е дефоутен параметър. Принтва се, когато достигне края на листа
+# mylist = iter(["apple", "banana", "cherry"])
+# x = next(mylist, "end of list")
+# print(x)
+# x = next(mylist, "end of list")
+# print(x)
+# x = next(mylist, "end of list")
+# print(x)
+# x = next(mylist, "end of list")
+# print(x)
