@@ -20,7 +20,7 @@ A binary search tree (BST), is a node-based data structure in which each node ha
 
 ## Binary search tree example:
 
-![picture](images/bst.png)
+![bst.png](..%2Fimages%2Fbst.png)
 
 ## Binary search tree practical use-cases:
 

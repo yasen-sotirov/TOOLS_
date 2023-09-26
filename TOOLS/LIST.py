@@ -110,6 +110,10 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 # print(min(number_list))
 # print(max(number_list))
 
+# empty_lst = []
+# print(max(empty_lst, default=None))
+# print(min(empty_lst, default=None))
+
 
 
 "РАЗМЕСТВАНЕ В ЛИСТА"
@@ -139,12 +143,12 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 "ПРЕМАХВА ЕЛЕМЕНТ/И В ЛИСТА (от ляво на дясно)"
 # ако елемента го няма връща грешка
 # [1, 3, 2, 'a', 'b', 4, 88, 2, 2]
-mix_list.remove(2)
-# [1, 3, 'a', 'b', 4, 88, 2, 2]
-
-while "dog" in letters_list:
-    letters_list.remove("dog")
-print(letters_list)
+# mix_list.remove(2)
+# # [1, 3, 'a', 'b', 4, 88, 2, 2]
+#
+# while "dog" in letters_list:
+#     letters_list.remove("dog")
+# print(letters_list)
 
 
 
@@ -231,9 +235,9 @@ print(letters_list)
 
 
 "ПРАВИ НОВ ЛИСТ И СОРТИРА НЕГО"
-name_list = ["Ali", 'Marry', 'Kim', 'Teddy', 'Monika', 'John']
-sorted_list = sorted(name_list, key=lambda item: (-len(item), item))
-print(sorted_list)
+# name_list = ["Ali", 'Marry', 'Kim', 'Teddy', 'Monika', 'John']
+# sorted_list = sorted(name_list, key=lambda item: (-len(item), item))
+# print(sorted_list)
 # ['Monika', 'Marry', 'Teddy', 'John', 'Ali', 'Kim']
 
 
@@ -413,3 +417,13 @@ print(sorted_list)
 # # ['dog', 'dolphin']
 
 
+"СЛЕДВАЩ ЕЛЕМЕНТ"   # накрая е дефоутен параметър. Принтва се, когато достигне края на листа
+# mylist = iter(["apple", "banana", "cherry"])
+# x = next(mylist, "end of list")
+# print(x)
+# x = next(mylist, "end of list")
+# print(x)
+# x = next(mylist, "end of list")
+# print(x)
+# x = next(mylist, "end of list")
+# print(x)

@@ -48,3 +48,7 @@
 # print(count_elevens(input().split(',')[int(input()):]))
 # 1,2,11,12,11
 # 0
+
+# print("a" in "abc")
+# print("aa" in "abc")
+# print("cba" in "abc")

@@ -165,6 +165,13 @@ txt_6 = "123 abc"
 # print("1" + "2" + " " + "Жоро")
 
 
+"ПОДРЕЖДА БУКВИТЕ В СТРИНГА"    # сортира по азбучен ред
+print("".join(sorted("teacher")))
+print("".join(sorted("heracte")))
+print("".join(sorted("heracte", reverse=True)))
+
+
+
 "SLICING - ЧЕТЕ ПО ИНДЕКС СЪС СТЪПКА"  # работи с LIST също
 
 # mix_list = "123456789"
