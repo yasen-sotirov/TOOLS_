@@ -4,7 +4,7 @@ import uvicorn
 
 # https://fastapi.tiangolo.com/tutorial/
 
-app = FastAPI(name="In-Class Activity", debug=True)
+app = FastAPI(title="In-Class Activity", description="Telerik Academy homework", debug=True)
 
 @app.get("/")
 async def root():
