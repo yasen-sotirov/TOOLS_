@@ -2,6 +2,9 @@
 # работи с класа, а не с инстанциите
 # може да прави инстанции от същият клас
 # вграден декоратор
+# @something syntax in Python is called a "decorator"
+
+
 
 # https://www.geeksforgeeks.org/class-method-vs-static-method-python/
 

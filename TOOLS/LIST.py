@@ -409,7 +409,7 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 
 "САМО ЕДНО ДА Е ВЯРНО"
 # print(any([True, False, False]))
-
+print(all([True, True, True, False]))
 
 "ВРЪЩА ЕЛЕМЕНТИ ЗАПОЧВАЩИ С (нещо)"
 # letters = ['cat', 'dog', 'mouse', 'dolphin']
