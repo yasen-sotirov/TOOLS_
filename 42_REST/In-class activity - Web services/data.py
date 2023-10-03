@@ -1,11 +1,18 @@
 from pydantic import BaseModel
 from datetime import date
 
-class Product(BaseModel):   # Model продукти
-    id: int | None
+class Product(BaseModel):
+    id: int | None = None
     name: str
     description: str
     price: float
+
+class Order(BaseModel):
+    id: int | None = None
+    customer: str
+    product_ids: list[int]
+    delivery_date: date
+
 
 
 products = [
@@ -14,13 +21,6 @@ products = [
     Product(id=3, name='Smartphone', description='6.55" HD+, 5G', price = 1349.90),
     Product(id=4, name='Keyboard', description='Full-size Layout, Mechanical', price = 99.00),
 ]
-
-
-class Order(BaseModel):     # Model поръчки
-    id: int |None
-    customer: str
-    products_ids: list[int]
-    delivery_date: date
 
 
 orders = [
@@ -37,3 +37,5 @@ orders = [
         delivery_date=date(2023, 8, 4)
     )
 ]
+
+
