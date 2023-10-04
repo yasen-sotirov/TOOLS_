@@ -96,6 +96,22 @@ NULL
     concat_ws(" ", first, middle, last) - подобно на   ' '.join()
 
 
+GROUP BY
+    SELECT column_name(s)
+    FROM table_name
+    WHERE condition
+    GROUP BY column_name(s)
+    ORDER BY column_name(s); 
+
+
+HAVING Syntax
+    SELECT column_name(s)
+    FROM table_name
+    WHERE condition
+    GROUP BY column_name(s)
+    HAVING condition;
+
+
 ПРЕИМЕНУВАНЕ - ALIAS
     as "Full name"
     employee e  ==  employee as e 
@@ -113,6 +129,25 @@ NULL
     SELECT year(e.HireDate), month(e.HireDate)
 
 
+
+MIN() / MAX()
+    SELECT MIN(Price)
+    FROM Products;
+
+
+SUM() Syntax
+    SELECT SUM(column_name)
+    FROM table_name
+
+
+COUNT() 
+    SELECT COUNT(ProductID)
+    FROM Products;
+
+
+AVG()
+    SELECT AVG(Price)
+    FROM Products;
 
 ===== ТЕОРИЯ =====
 

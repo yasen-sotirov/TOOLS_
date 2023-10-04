@@ -1,15 +1,16 @@
 from datetime import date
 from pydantic import BaseModel
+import mariadb
 
 class Product(BaseModel):
-    id: int | None
+    id: int | None = None
     name: str
     description: str
     price: float
 
 
 class Order(BaseModel):
-    id: int | None
+    id: int | None = None
     customer: str
     product_ids: list[int]
     delivery_date: date
