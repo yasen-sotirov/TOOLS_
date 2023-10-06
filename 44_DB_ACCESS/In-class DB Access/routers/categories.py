@@ -10,6 +10,7 @@ class CategoryResponseModel(BaseModel):
     products: list[Product]
 
 
+# alias на router-a в случая за категориите
 categories_router = APIRouter(prefix='/categories')
 
 
@@ -22,6 +23,7 @@ def get_categories():
         for category in category_service.all()]
 
 
+# път за взимане на категория по ID
 @categories_router.get('/{id}')
 def get_category_by_id(id: int):
     category = category_service.get_by_id(id)
@@ -34,6 +36,7 @@ def get_category_by_id(id: int):
             products=product_service.get_by_category(category.id))
 
 
+# път за създаване на категория
 @categories_router.post('/')
 def create_category(category: Category):
     created_category = category_service.create(category)

@@ -5,6 +5,13 @@
 КОМАНДИ
     cd <folder name> - change directory - влиза в директория
     cd .. - излиза от текущата директория
+    mkdir <folder name>     - създава директория
+    python -V
+
+в cmd as admin
+netstat -ano|findstr "PID :8000"    - вижда какви процеси има на порта
+taskkill /pid 15408 /f              - убива процес по PID
+
 
 
 # Type commands and press Enter to execute them.
