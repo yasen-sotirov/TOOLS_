@@ -8,9 +8,11 @@
     mkdir <folder name>     - създава директория
     python -V
 
-в cmd as admin
-netstat -ano|findstr "PID :8000"    - вижда какви процеси има на порта
-taskkill /pid 15408 /f              - убива процес по PID
+
+ПРЕКРАТЯВА ПРОЦЕСИ, ЧИСТИ ПОРТОВЕ
+    в cmd as admin
+    netstat -ano|findstr "PID :8000"    - вижда какви процеси има на порта
+    taskkill /pid 15408 /f              - убива процес по PID
 
 
 
@@ -21,6 +23,9 @@ vars()  # показва структурата (dictionary), която python 
         # показва нещата използвани във файла
 
 # "x" in vars()
+
+
+
 
 
 ИНСТАЛИРАНЕ

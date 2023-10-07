@@ -7,6 +7,31 @@
 СТАРТИРАНЕ НА СЪРВЪРА OT КОНЗОЛАТА - така reload-a работи
     C:\ ... \demo_folder>uvicorn <file_name>:app --reload
 
+    if __name__ == "__main__":
+        uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+
+
+
+END POINT
+    @app.get('/user/"me"')   първо specific endpoint
+    @app.get('/user/{id}')   после dynamic endpoint
+
+
+"КЛАС ENUM"  # дава падащ списък
+class FoodEnum(str, Enum):
+    fruit = "fruit"
+    vegetables = "vegetables"
+
+@app.get('/foods/{food_name}')
+def get_food_name(food_name: FoodEnum):
+    if food_name == FoodEnum.vegetables:
+        return {"Food name": food_name, "message": "You are healthy"}
+        # или друг запис
+    if food_name.value == "fruits":
+        return {"Food name": food_name, "message": "Sweet"}
+
+
+
 
 
 ТЕОРИЯ
@@ -14,6 +39,8 @@
     HTTP - протокол по който си говорят сървър клиента, не не пренася само текст а всякакъв вид инфо
     порт - канал, точка на достъп към сървъра
     async def ...  - дава възможност ако предната заявка се бави, сървъра да обработва и други заявки
+
+
 
 
 
@@ -32,6 +59,8 @@
 
 Path параметри - допъл парам указващи какво точно искаме да вземем от този
 Quiry параметри - може да се ползват за указване на доъплнителни параметри
+
+
 
 REQUEST МЕТОДИ
     GET     - вземаме ресурс, при няколко повторения ще създаде нови ресурси

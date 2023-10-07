@@ -237,7 +237,7 @@ names_ages = {"Ines": 27,
 
 
 "ВРЪЩА СПИСЪК С ТЮПЪЛИ"
-print(num_dict.items())
+# print(num_dict.items())
 
 
 "ЗАМЕНЯ ЕЛЕМЕНТИ "
@@ -295,6 +295,12 @@ print(num_dict.items())
 "ДАВА НАЙ-ГОЛЯМАТА СТОЙНОСТ"
 # print(max(num_dict_2.keys()))
 # print(max(num_dict_2.values()))
+
+
+"ДОБАВЯ ЕЛЕМЕНТ КЪМ РЕЧНИКА"
+# car = {"brand": "Ford", "model": "Mustang"}
+# car.update({"color": "White"})
+# print(car)
 
 
 "ОБЕДИНЯВА ДВА РЕЧНИКА"
