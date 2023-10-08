@@ -1,10 +1,24 @@
-from data.models import Order
+from data.models import Order, Product
 from data.in_memory import orders
 from services import product_service
+from data.database import *
 
 
 def all():
-    return orders
+    data = read_query(
+        '''SELECT id, name, description, price, category_id
+           FROM products''')
+
+    flatten = {}
+    for id, customer, delivery_date, delivery_address, product_id in data:
+        if id not in flatten:
+            flatten[id] = (id, customer, delivery_date, delivery_address, [])
+
+        if product_id is not None:
+            flatten[id][-1].append(product_id)
+
+    return (Order.from_query_result(*obj) for obj in flatten.values())
+
 
 
 def sort(lst: list[Order], reverse=False):
