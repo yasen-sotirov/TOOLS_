@@ -9,7 +9,7 @@ class DevLevelMaps:
 class Project(BaseModel):
     id: int | None
     name: constr(min_length=1)
-    status: constr(regex='^open|closed$')
+    status: constr(pattern='^open|closed$')
     limit: conint(ge=1)
     devs: list = []
 
@@ -26,7 +26,7 @@ class Project(BaseModel):
 class Dev(BaseModel):
     id: int | None
     name: constr(min_length=1)
-    level: constr(regex='^junior|mid|senior$')
+    level: constr(pattern='^junior|mid|senior$')
     projects: list = []
 
     @classmethod

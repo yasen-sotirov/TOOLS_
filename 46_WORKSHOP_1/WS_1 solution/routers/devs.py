@@ -21,8 +21,9 @@ def get_dev_by_id(id: int):
 
 
 @devs_router.post('/', status_code=201)
-def create_project(dev: Dev):
+def create_dev(dev: Dev):
     if devs_service.name_exists(dev.name):
-        return JSONResponse(status_code=409, content={'detail': 'Dev name must be unique'})
+        return JSONResponse(status_code=409,
+                            content={'detail': 'Dev name must be unique'})
 
     return devs_service.create(dev)

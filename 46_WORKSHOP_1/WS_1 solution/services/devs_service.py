@@ -33,11 +33,13 @@ def get_by_id(id: int):
 
 
 def name_exists(name: str):
-    return query_count('SELECT COUNT(*) from devs WHERE name = ?', (name,)) > 0
+    return query_count('SELECT COUNT(*) from devs WHERE name = ?',
+                       (name,)) > 0
 
 
 def id_exists(id: int):
-    return query_count('SELECT COUNT(*) from devs WHERE id = ?', (id,)) > 0
+    return query_count('SELECT COUNT(*) from devs WHERE id = ?',
+                       (id,)) > 0
 
 
 def create(dev: Dev):
