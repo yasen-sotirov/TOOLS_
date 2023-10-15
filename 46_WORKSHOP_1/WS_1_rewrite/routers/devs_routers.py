@@ -1,6 +1,5 @@
 from fastapi import APIRouter, Query, Response
 from fastapi.responses import JSONResponse
-from services import devs_service
 from data.models import Dev, Project, DEV_LEVEL
 from data.database import read_query, query_count, insert_query
 
@@ -66,6 +65,10 @@ def create_dev(dev: Dev):
 
 
 
-def exists_dev_by_id(id: int):
+def dev_id_exists(id: int):
     return query_count('SELECT COUNT(*) FROM devs WHERE id = ?',
-                       (id,))
+                       (id,)) > 0
+
+
+
+
