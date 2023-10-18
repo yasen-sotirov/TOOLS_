@@ -3,20 +3,24 @@
 
 
 
+"ДОК НА ВСИЧКИ ПИТОНСКИ ПАКЕТИ"
+# https://pypi.org/
+
+
 " === PYDANTIC ==="
 # https://docs.pydantic.dev/latest/api/types/#pydantic.types.constr--__tabbed_1_2
 from pydantic import BaseModel, constr, conint
 
+
+
+
 "ОГРАНИЧЕНИЯ CONstr CONint"
-
 class Project(BaseModel):
-    id: int | None = None       # str или None, по подразбиране None
-    name: constr(min_length=1)  # (^) започва с.  ($) няма нищо след
-    status: constr(pattern="^open | closed$")   # (ge=) = greater or equal
-    limit: conint(ge=1)
+    id: int | None = None                       # str или None, по подразбиране None
+    name: constr(min_length=1)                  # ограничава дължината
+    status: constr(pattern="^open | closed$")   # regex: (^) започва с.  ($) няма нищо след
+    limit: conint(ge=1)                         # (ge=) = greater or equal
     devs: list = []
-
-
 
 
 

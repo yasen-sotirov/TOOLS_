@@ -9,6 +9,8 @@
 # теория   https://www.tutorialaicsip.com/cs-xii-qna/working-with-functions-class-12/
 
 
+" (*, ...) СЛЕД НЕЯ ЗАДЪЛЖИТЕЛНО СЛЕДВАТ KEY-WORD ARGUMENTS"
+
 
 "ОПАКОВАНЕ В ЛИСТ *ARGS"        # поема неограничен брой аргументи и ги опакова в масив
 # def print_nums_funct(*args):
