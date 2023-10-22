@@ -62,8 +62,31 @@ HTTP AUTHENTICATION
          ключовата дума Basic се поставя преди тази кодирана стойност
 
 import basicAuth from 'basic-auth';
-
 '''
+
+
+"HTTP authentication methods"
+# https://blog.risingstack.com/web-authentication-methods-explained/
+
+
+
+"HASHLIB"
+# https://thepythoncode.com/article/hashing-functions-in-python-using-hashlib
+
+
+
+"ОГРАНИЧЕНИЕ ЗА ПАРОЛИ С REGEX"
+# user name и парола (login data) потребителя подава в body-то
+from pydantic import constr
+
+TUsername = constr(pattern='^\w{2,30}$')
+
+
+
+"HTTP EXCEPTION"
+from fastapi import HTTPException
+# raise чупи кода и хвърля съобщение навън, а не връща към метода
+# raise HTTPException(status_code=401)
 
 
 

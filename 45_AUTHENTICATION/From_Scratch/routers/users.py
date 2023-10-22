@@ -1,0 +1,75 @@
+from fastapi import APIRouter, Header
+from data.models import LoginData
+from services import users_service
+from services import order_service
+from common.responses import BadRequest
+from common.auth import get_user_or_raise_401
+
+
+users_router = APIRouter(prefix='/users')
+
+@users_router.post('/login')
+def login(data: LoginData):
+    user = users_service.try_login(data.username, data.password)
+
+    if user:
+        token = users_service.create_token(user)
+        return {'token': token}
+    else:
+        return BadRequest('Invalid Login Data')
+
+
+
+@users_router.get('/info')
+def user_info(x_token: str = Header()):
+    return get_user_or_raise_401(x_token)
+
+
+
+@users_router.get('/orders', response_model=list[Order])
+def user_info(x_token: str = Header()):
+    user = get_user_or_raise_401(x_token)
+
+    return order_service.get_user_orders(user)
+
+
+@users_router.post('/register')
+def register(data: LoginData):
+    user = users_service.create(data.username, data.password)
+
+    return user or BadRequest(f'Username {data.username} is taken.')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

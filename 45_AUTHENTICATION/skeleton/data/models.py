@@ -29,15 +29,13 @@ class Order(BaseModel):
     product_ids: list[int] = []
     delivery_date: date
     delivery_address: str | None
-    user_id: int | None
 
     @classmethod
-    def from_query_result(cls, id, delivery_date, delivery_address, user_id=None, product_ids=[]):
+    def from_query_result(cls, id, delivery_date, delivery_address, product_ids=[]):
         return cls(
             id=id,
             delivery_date=delivery_date,
             delivery_address=delivery_address,
-            user_id=user_id,
             product_ids=product_ids)
 
 
@@ -46,41 +44,18 @@ class OrderUpdate(BaseModel):
     delivery_address: str | None
 
 
-class Role:
-    CUSTOMER = 'customer'
-    ADMIN = 'admin'
-
-
-TUsername = constr(pattern='^\w{2,30}$')
+TUsername = constr(regex='^\w{2,30}$')
 
 
 class User(BaseModel):
     id: int | None
     username: TUsername
-    password: str
     role: str
+    orders: list[int] = []
 
     def is_admin(self):
-        return self.role == Role.ADMIN
-
-    @classmethod
-    def from_query_result(cls, id, username, password, role):
-        return cls(
-            id=id,
-            username=username,
-            password=password,
-            role=role)
+        return self.role == 'Admin'
 
 
 class LoginData(BaseModel):
     username: TUsername
-    password: str
-
-
-class OrderResponse(BaseModel):
-    id: int
-    customer: User
-    products: list[Product]
-    delivery_date: date
-    delivery_address: str | None
-    order_total: float
