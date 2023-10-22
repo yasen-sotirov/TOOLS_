@@ -1,5 +1,5 @@
-from fastapi import FastAPI
-import uvicorn
+from fastapi import FastAPI     # импортваме Framework-a
+import uvicorn                  # импортваме Сървъра
 from routers_ctrl.product_rut import product_router
 from routers_ctrl.categories_rut import category_router
 

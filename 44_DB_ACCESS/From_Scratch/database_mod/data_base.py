@@ -35,7 +35,28 @@ def insert_query(sql: str, sql_param=()) -> int:
         return cursor.lastrowid
 
 
+"""
+ВРЪЗКИ МЕЖДУ ТАБЛИЦИТЕ - REFERENCES
+    - one to one
+    
+    
+    - one to many
+    
+    
+    - many to many
+    
+    
+    - self referencing
+        e_id   name    m_id
+        1      John    null
+        2      Mark    1  
+        3      Steve   1
+        4      Lara    2
+        5      David   2
 
+
+
+"""
 
 
 
