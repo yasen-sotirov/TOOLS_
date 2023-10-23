@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from data.database import init_database
 from routers.profiles_ro import profile_router
 
-
 import uvicorn
 
 
