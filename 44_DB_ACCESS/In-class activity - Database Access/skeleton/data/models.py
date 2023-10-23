@@ -1,4 +1,10 @@
+from datetime import date
 from pydantic import BaseModel
+
+
+class Category(BaseModel):
+    id: int | None
+    name: str
 
 
 class Product(BaseModel):
@@ -9,7 +15,7 @@ class Product(BaseModel):
     category_id: int
 
     @classmethod
-    def parse_from_query(cls, id, name, description, price, category_id):
+    def from_query_result(cls, id, name, description, price, category_id):
         return cls(
             id=id,
             name=name,
@@ -18,7 +24,8 @@ class Product(BaseModel):
             category_id=category_id)
 
 
-
-class Category(BaseModel):
-    id: int
-    name: str
+class Order(BaseModel):
+    id: int | None
+    customer: str
+    product_ids: list[int]
+    delivery_date: date
