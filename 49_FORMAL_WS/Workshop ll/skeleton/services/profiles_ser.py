@@ -1,4 +1,4 @@
-from data.database import read_query
+from data.database import read_query, query_count
 from data.models import Profile
 
 
@@ -15,11 +15,17 @@ def all_profiles(country_code: str | None = None):
 
 
 
+def get_by_id(id: int):
+    profile_data = read_query('''SELECT id, ip_address, country_code
+                            FROM profiles
+                            WHERE id = ?''', (id,))
+    fav_categories_data = read_query('''SELECT''')
 
 
 
-
-
+def profile_exists(id: int):
+    return query_count('''SELECT COUNT(*) from profiles WHERE id = ?''',
+                       (id,)) > 0
 
 
 

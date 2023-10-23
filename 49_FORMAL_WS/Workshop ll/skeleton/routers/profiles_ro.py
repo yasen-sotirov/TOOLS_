@@ -1,5 +1,4 @@
 from fastapi import APIRouter
-from pydantic import BaseModel
 from services import profiles_ser
 
 
@@ -7,7 +6,7 @@ from services import profiles_ser
 profiles_router = APIRouter(prefix='/profiles')
 
 
-"1. Get all profiles"
+"01. Get all profiles"
 @profiles_router.get('/')
 def get_all_profiles(
         country_code: str | None=None):
@@ -17,7 +16,12 @@ def get_all_profiles(
 
 
 
+"02. Get profile by id"
+@profiles_router.get('/{id}')
+def get_profiles_by_id(id: int):
+    project = profiles_ser.get_by_id(id)
 
+    return project or Response(status_code=404)
 
 
 

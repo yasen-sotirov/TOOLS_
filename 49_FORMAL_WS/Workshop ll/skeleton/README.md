@@ -17,7 +17,7 @@ You are provided with a schema that stores information about Products, Profiles,
 - On application startup, the `init_database` function will create the database schema and will populate it with data.
 - You are allowed to change the data (obviously), but **DO NOT ALTER** the schema (no new tables or columns).
 - Schema:  
-    ![Alt text](images/ad_service_db.png)
+  ![Alt text](D:\Telerik\Telerik_course_python\49_FORMAL_WS\Workshop ll\images\ad_service_db.png)
 
 
 ### 4. Models
