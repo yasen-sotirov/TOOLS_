@@ -1,5 +1,5 @@
 from data.database import read_query, query_count
-from data.models import Profile
+from data.models import Profile, Category
 
 
 def all_profiles(country_code: str | None = None):
@@ -16,10 +16,10 @@ def all_profiles(country_code: str | None = None):
 
 
 def get_by_id(id: int):
-    profile_data = read_query('''SELECT id, ip_address, country_code
+    return read_query('''SELECT id, ip_address, country_code
                             FROM profiles
                             WHERE id = ?''', (id,))
-    fav_categories_data = read_query('''SELECT''')
+
 
 
 
@@ -28,5 +28,6 @@ def profile_exists(id: int):
                        (id,)) > 0
 
 
-
-
+def unique_country_codes():
+    data = read_query('''SELECT DISTINCT country_code FROM profiles''')
+    return (Profile.country_codes(*row) for row in data)

@@ -1,9 +1,7 @@
 from fastapi import APIRouter
 from fastapi.responses import JSONResponse
-from data.database import insert_query, update_query
 
 from services import products_ser
-from services import categories_ser
 from services import profiles_ser
 from services import interest_ser
 
@@ -20,7 +18,7 @@ products_router = APIRouter(prefix='/products')
 def view_product(product_id: int, profile_id:int):
     category_id = products_ser.get_product_category(product_id)
     primary_key = (category_id, profile_id)
-    category_name = categories_ser.get_category_name(category_id)
+    # category_name = categories_ser.get_category_name(category_id)
 
     if not products_ser.product_exists(product_id):
         return JSONResponse(status_code=404, content={'detail': f'No product with id {product_id}'})
@@ -28,9 +26,9 @@ def view_product(product_id: int, profile_id:int):
     if not profiles_ser.profile_exists(profile_id):
         return JSONResponse(status_code=404, content={'detail': f'No profile with id {profile_id}'})
 
-    if not interest_ser.have_interest(primary_key):
+    if not interest_ser.has_interest(category_id, profile_id):
         interest_ser.add_interest_on_category(category_id, profile_id)
-        return {"message": f"Profile {profile_id} has interest on category '{category_name}' for first time."}
+        return {"message": f"Profile {profile_id} has interest on category '{category_id}' for first time."}
 
 
     current_interest = interest_ser.interests_on_category(category_id, profile_id)
@@ -38,7 +36,7 @@ def view_product(product_id: int, profile_id:int):
     interest_ser.increase_interest(relevance, primary_key)
     new_interest = interest_ser.interests_on_category(category_id, profile_id)
 
-    return {"message": f"Profile {profile_id} has interest {new_interest} on category {category_name}"}
+    return {"message": f"Profile {profile_id} has interest {new_interest} on category {category_id}"}
 
 
 

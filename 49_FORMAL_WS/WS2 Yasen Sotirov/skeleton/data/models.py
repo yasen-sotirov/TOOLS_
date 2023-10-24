@@ -16,11 +16,20 @@ class Profile(BaseModel):
             country_code=country_code)
 
 
+    @classmethod
+    def country_codes(cls, code):
+        return cls(code=code)
+
 
 "=== CATEGORY ==="
 class Category(BaseModel):
     id: int
     name: str
+    relevance: int
+
+    @classmethod
+    def from_query(cls, id, name):
+        return cls(id=id, name=name)
 
 
 
