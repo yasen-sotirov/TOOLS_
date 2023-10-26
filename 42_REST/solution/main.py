@@ -117,7 +117,10 @@ def delete_order(id: int):
     return Response(status_code=204)
 
 
-# Utility Functions
+
+
+
+"UTILITY FUNCTIONS"
 
 
 def get_next_id(seq: list):
