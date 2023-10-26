@@ -4,13 +4,15 @@ import uvicorn
 
 # https://fastapi.tiangolo.com/tutorial/
 
-app = FastAPI(name="In-Class Activity", debug=True)
+app = FastAPI(title="In-Class Activity", debug=True)
 
-@app.get("/")
-async def root():
-    return {"message": "Hello"}
 
-@app.get('/products')
+@app.get("/", tags=["root"])
+def root():
+    return {"message": "Welcome screen"}
+
+
+@app.get('/products', tags=['search products'])
 def get_products(sort: str | None = None, search: str | None = None):
     result = products
 
@@ -24,7 +26,8 @@ def get_products(sort: str | None = None, search: str | None = None):
     return result
 
 
-@app.get('/products/{id}')
+
+@app.get('/products/{id}', tags=['view products by id'])
 def get_product_by_id(id: int):
     product = next((p for p in products if p.id == id), None)
 
@@ -35,8 +38,7 @@ def get_product_by_id(id: int):
 
 
 
-
-@app.put('/products/{id}')
+@app.put('/products/{id}', tags = ['update product by id'])
 def update_product_by_id(id: int):
     product = next((p for p in products if p.id == id), None)
 
@@ -48,8 +50,7 @@ def update_product_by_id(id: int):
 
 
 
-
-@app.delete('/products/{id}')
+@app.delete('/products/{id}', tags=['delete product by id'])
 def delete_product_by_id(id: int):
     product = next((p for p in products if p.id == id), None)
 
@@ -61,7 +62,7 @@ def delete_product_by_id(id: int):
 
 
 # връща зададен от нас код
-@app.post('/products', status_code=201)
+@app.post('/products', status_code=201, tags=['crete product'])
 def create_product(product: Product):
     # взима най-голямото id
     max_id = max(p.id for p in products)
@@ -72,7 +73,7 @@ def create_product(product: Product):
     return product
 
 
-@app.put('/products/{id}')
+@app.put('/products/{id}', tags=['update product'])
 def update_product(id: int, updated_product: Product):
     for current_product in products:
         if current_product.id == id:
@@ -88,11 +89,6 @@ def update_product(id: int, updated_product: Product):
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
-
-
-
-
-
 
 
 

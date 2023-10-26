@@ -38,19 +38,6 @@
 
 
 
-"TYPE HINTS / ANNOTATIONS"
-# var_1: int  - функцията изисква фиксиран тип данни
-# -> какво връща вункцията
-# def sub_num(a: int, b: int) -> int:
-#     return a / b
-#
-# print(sub_num(10, 5))
-# print(sub_num(10, 5.5))
-
-# def funct(a: int, b: int) -> list[str]:
-#     pass
-
-
 
 
 "**KVARGS"  # key-word args, поема неограничен бр наименувани елементи
@@ -90,22 +77,6 @@
 
 
 
-"РЕКУРСИЯ"
-""" Пример:
-Влизаш в папка и броиш колко папки има в нея,
-после влизаш в съб папката и броиш колко папки иам в нея.
-И така докато стигнеш дъното, където няма повече папки.
-Когато започваш, няма как да знаеш колко папки има надолу."""
-
-# def say_hello(n=5):
-#     if n == 0:
-#         return
-#     print("Hello")
-#     say_hello(n - 1)
-#
-# say_hello()
-
-
 
 "ОБЕДИНЯВА *ARGS"
 # def concatenate(*args):
@@ -122,30 +93,8 @@
 # print(example_func.__doc__)
 
 
-"LAMBDA"        # анонимна функция (не я декларираме с def) - ползва се само на едно място в кода
-                # синтаксис:    lambda променлива: израз
 
-# lam_func = lambda a, b : a * b
-# print(lam_func(5, 6))
 
-# name_year = {"ABCC": 4, "CABB": 7, "ABB": 3, "BB": 5, "AB": 2, "AABBB": 1, "BBC": 6}
-#
-# askii = sorted(name_year, key=lambda x: x)
-# print(f"нараства азбучно {askii}")
-# print(f"ascending ???   {sorted(name_year, key=lambda x: x[0])}")
-# print(f"ascending ???   {sorted(name_year, key=lambda x: x[1])}")
-# print(f"нараства азбучно и по дължина {sorted(name_year, key=lambda x: len(x))}")
-#
-# num_list = []
-# for el in askii:
-#     char_sum = 0
-#     for char in el:
-#         char_sum += ord(char)
-#     num_list.append(char_sum)
-#
-# print(num_list)
-
-# print(f"ascending by name length {sorted(name_year, key=lambda x: len(x))}")
 
 
 "БРОЙ ЕЛЕМЕНТИТЕ НА ФУНКЦИЯТА"

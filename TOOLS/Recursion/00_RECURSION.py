@@ -737,3 +737,20 @@ On the only output line you should print the result.
 # result = count_values_times_10(list(map(int, input().split(',')[int(input()):])))
 # print(str(result).lower())
 
+
+
+
+"РЕКУРСИЯ"
+""" Пример:
+Влизаш в папка и броиш колко папки има в нея,
+после влизаш в съб папката и броиш колко папки иам в нея.
+И така докато стигнеш дъното, където няма повече папки.
+Когато започваш, няма как да знаеш колко папки има надолу."""
+
+# def say_hello(n=5):
+#     if n == 0:
+#         return
+#     print("Hello")
+#     say_hello(n - 1)
+#
+# say_hello()

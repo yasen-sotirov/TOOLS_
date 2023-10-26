@@ -11,8 +11,8 @@ product_router = APIRouter(prefix='/products')
 def get_products(
     sort: str | None = None,
     sort_by: str | None = None,
-    search: str | None = None):
-
+    search: str | None = None
+):
     result = product_service.all(search)
 
     if sort and (sort == 'asc' or sort == 'desc'):
@@ -51,13 +51,3 @@ def update_product(id: int, product: Product):
         return Response(status_code=404)
     else:
         return product_service.update(existing_product, product)
-
-
-
-
-
-
-
-
-
-

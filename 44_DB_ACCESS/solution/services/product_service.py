@@ -16,7 +16,6 @@ def all(search: str = None):
     return (Product.from_query_result(*row) for row in data)
 
 
-
 def get_by_id(id: int):
     data = read_query(
         '''SELECT id, name, description, price, category_id
@@ -24,7 +23,6 @@ def get_by_id(id: int):
             WHERE id = ?''', (id,))
 
     return next((Product.from_query_result(*row) for row in data), None)
-
 
 
 def get_many(ids: list[int]):
@@ -35,7 +33,6 @@ def get_many(ids: list[int]):
             WHERE id IN ({ids_joined})''')
 
     return [Product.from_query_result(*row) for row in data]
-
 
 
 def get_by_category(category_id: int):

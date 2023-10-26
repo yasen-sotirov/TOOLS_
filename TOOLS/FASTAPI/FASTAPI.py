@@ -152,7 +152,8 @@ existing_products = next((генератор), None)
 
 
 
-смяна на порта: uvicorn main:app --port 8080
+СМЯНА НА ПОРТА
+    uvicorn main:app --port 8080
 
 
 
@@ -163,6 +164,16 @@ def funct(*, a, b):
 funct(a=1, b=2)
 # аргументите след звездата трябва да са описани
 # като key-word аргументи „а=“
+
+
+
+
+ОПЦИЯ QUERY PARAMETERS sort, search
+@app.get('/products')
+def get_products(
+    sort: str | None = None,
+    search: str | None = None):
+    result = products
 
 
 """

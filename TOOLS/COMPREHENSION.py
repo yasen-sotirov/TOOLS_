@@ -37,8 +37,9 @@ number_list_2 = [4, 8, 2, 6, 9]
 
 
 
-
-
+"ТЪРСИ ПО КЛЮЧОВА ДУМА"
+# if search:
+    # result = [p for p in result if (search.lower() in p.name.lower())]
 
 
 

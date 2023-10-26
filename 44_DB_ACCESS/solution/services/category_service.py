@@ -9,8 +9,7 @@ def all():
 
 
 def get_by_id(id: int):
-    data = read_query('select id, name '
-                      'from categories where id = ?', (id,))
+    data = read_query('select id, name from categories where id = ?', (id,))
 
     return next((Category(id=id, name=name) for id, name in data), None)
 

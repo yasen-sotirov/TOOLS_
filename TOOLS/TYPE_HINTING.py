@@ -45,6 +45,18 @@ class Project(BaseModel):
 
 
 
+"TYPE HINTS / ANNOTATIONS"
+# var_1: int  - функцията изисква фиксиран тип данни
+# -> какво връща вункцията
+# def sub_num(a: int, b: int) -> int:
+#     return a / b
+#
+# print(sub_num(10, 5))
+# print(sub_num(10, 5.5))
+
+# def funct(a: int, b: int) -> list[str]:
+#     pass
+
 
 
 
