@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Response
+from fastapi.responses import JSONResponse
 from data import Product
 from services import product_service
 from services import category_service
@@ -8,11 +9,12 @@ product_router = APIRouter(prefix='/products')
 
 
 @product_router.get('/')
+# optional query params
 def get_products(
     sort: str | None = None,
     sort_by: str | None = None,
-    search: str | None = None
-):
+    search: str | None = None):
+
     result = product_service.all(search)
 
     if sort and (sort == 'asc' or sort == 'desc'):
@@ -22,11 +24,12 @@ def get_products(
 
 
 @product_router.get('/{id}')
+# задължителен query параметър
 def get_product_by_id(id: int):
     product = product_service.get_by_id(id)
 
     if product is None:
-        return Response(status_code=404)
+        return Response(status_code=404, content="There is no such ID")
     else:
         return product
 

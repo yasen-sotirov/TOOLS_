@@ -5,8 +5,8 @@ from data.models import Order, OrderUpdate, Product
 def all():
     data = read_query('''SELECT id, customer, delivery_date, delivery_address, product_id 
                          FROM orders AS o 
-                           LEFT JOIN orders_products AS op 
-                             ON o.id = op.order_id''')
+                         LEFT JOIN orders_products AS o_p 
+                         ON o.id = o_p.order_id''')
 
     flattened = {}
     for id, customer, delivery_date, delivery_address, product_id in data:
@@ -73,12 +73,10 @@ def get_ordered_products(order_id: int) -> set[int]:
 
 
 def update(order_id: int, order: OrderUpdate):
-    result = update_query(
-        '''UPDATE orders SET
-           delivery_date = ?, delivery_address = ?
-           WHERE id = ? 
-        ''',
-        (order.delivery_date, order.delivery_address, order_id))
+    result = update_query('''UPDATE orders 
+                                SET delivery_date = ?, delivery_address = ?
+                                WHERE id = ?''',
+                          (order.delivery_date, order.delivery_address, order_id))
 
     return result
 

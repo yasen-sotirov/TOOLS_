@@ -32,6 +32,12 @@
         WHERE salary between 2000 and 3000          - инклузив
         WHERE Salary >= 20000 and salary <= 30000;
         WHERE Salary in (25000, 14000, 12500, 23600);
+        
+
+ПОДРЕЖДАНЕ, СОРТИРАНЕ ПО...
+    WHERE salary > 5000 ORDER BY salary         - възходящо или  asc;
+    WHERE salary > 5000 ORDER BY salary desc    - низходящо
+    
     
      
     ЛОГИЧЕСКИ ОПЕРАТОРИ
@@ -94,10 +100,6 @@ NULL
     SELECT round(salary, 2) as salary
 
 
-СОРТИРА
-    WHERE salary > 5000 ORDER BY salary         - възходящо или  asc;
-    WHERE salary > 5000 ORDER BY salary desc    - низходящо
-    
     
 ОБЕДИНЯВА КОЛОНИ В ЕДНА
     concat(first, " ", middle, " ", last)
@@ -172,7 +174,125 @@ WORKBENCH
 
 
 ===== ВСИКИ ПРИМЕРИ =====
-=========================
+
+    ========================================
+        ТАБЛИЦИ MANY-TO-MANY   -    ordering_api_db_v2
+        
+    ----- ВРЪЩА ИНФО 
+    SELECT o.id, o.delivery_date, p.name, p.price
+    FROM orders o
+    JOIN orders_products o_p   ON o.id = o_p.order_id
+    JOIN products p            ON p.id = o_p.product_id
+    
+    SELECT o.id as order_id, o.delivery_date,
+           p.id as product_id, p.name as product
+    FROM orders o, products p
+    WHERE o.id IN (SELECT order_id  FROM orders_products  WHERE product_id = p.id);
+     
+    
+    
+    ----- ВМЪКВАНЕ В ТАБЛИЦИ many-to-many
+    INSERT INTO orders_products (order_id, product_id)
+    VALUES (10, 7), (10, 9), (10, 10);
+    
+    
+    
+    ----- ВРЪЩА СТОЙНОСТТА НА ПОРЪЧКАТА
+    SELECT o.id AS order_id, 
+           SUM(p.price) AS "total price"
+    FROM orders o
+    JOIN orders_products op ON  o.id = op.order_id
+    JOIN products p ON          p.id = op.product_id
+    WHERE p.id IN (7, 10, 11);
+    
+    
+    
+    ----- ТРИЕ ОТ ТАБЛИЦИТЕ
+    DELETE FROM orders WHERE id = 13;
+    DELETE FROM orders_products WHERE order_id = 13;
+    ========================================
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------  
+    SELF RELATION
+    ОБЕДИНЯВА КОЛОНИ ОТ РАЗЛИЧНИ ТАБЛИЦИ
+  
+-- Write a SQL query to find all employees and their address.
+SELECT e.firstname, e.lastname, a.addresstext, t.name as "town name"
+FROM employees e, addresses a, towns t
+WHERE e.AddressID = a.AddressID and a.TownID = t.TownID;
+
+
+-- Write a SQL query to find all employees whose MiddleName 
+-- is the same as the first letter of their town.
+SELECT e.firstname, e.MiddleName, t.name as "town name"
+FROM employees as e  
+JOIN addresses as a 					-- към таблицата employee добвяме addresses
+	on e.AddressID = a.AddressID		-- ако id-та съвпадат
+JOIN towns t 							-- добавяме таблица town
+	on a.TownID = t.townID 				-- ако id-та съвпадат
+WHERE e.MiddleName = left(t.name, 1);	-- при условие, че..
+
+
+-- Write a SQL query to find all employees that have manager, along with their manager.
+SELECT concat_ws(' ', e.firstname, e.lastname) as "employee name", e.ManagerID,
+	   concat(m.firstname, " ", m.lastname) as "manager name",  m.ManagerID
+FROM employees e, employees m
+WHERE e.ManagerID = m.EmployeeID and m.ManagerID is not NULL;
+
+
+-- Write a SQL query to find all employees that have manager, along with their manager and their address.
+SELECT 
+	concat(e.firstname, " ", e.lastname) as "employee name", ea.AddressText,
+	concat(m.firstname, " ", m.lastname) as "manager name", ma.AddressText
+FROM 
+	employees e, 
+    employees m,
+    addresses ea,
+    addresses ma
+WHERE 
+	e.ManagerID = m.EmployeeID AND e.AddressID = ea.AddressID AND m.AddressID = ma.AddressID;
+
+-- V2 ===============
+SELECT 
+concat(e.firstname, " ", e.lastname) as "employee", ea.addresstext as "e address",
+concat(m.firstname, " ", m.lastname) as "manager",  ma.addresstext as "m address"
+
+FROM employees e
+JOIN employees m ON e.managerid = m.EmployeeID
+JOIN addresses ea ON ea.AddressID = e.AddressID
+JOIN addresses ma ON ma.AddressID = m.AddressID;
+
+
+
+-- Write a SQL query to find all the employees and the manager for each of them along with the employees that do not have manager.
+SELECT e.firstname, e.lastname, m.firstname, m.lastname
+FROM employees e, employees m
+WHERE e.ManagerID = m.EmployeeID
+UNION
+SELECT e.FirstName, e.LastName, NULL AS firstname, NULL as lastname
+FROM employees e
+WHERE e.ManagerID is NULL;
+
+---------------------------------------------
+
+
+    ПРОМЕНЯ ЗАПИС
+UPDATE orders
+SET delivery_address = 'V.Tarnovo'
+WHERE id = 13;
+
+
+    ТРИЕ ЗАПИС
+    
+    
 
     ТЪРСИ ПО ПРАЗНА КЛЕТКА
 -- Write a SQL query to find all employees that do not have manager.
@@ -186,7 +306,6 @@ SELECT salary FROM employees;
 
     ОБЕДИНЯВА КОЛОНИ В ЕДНА
 -- Write a SQL to find the full name of each employee.
-SELECT firstname, lastname FROM employees;
 SELECT concat(firstname, " ", coalesce(middlename, " "), " ", lastname) as "Full name" FROM employees;
 SELECT concat_ws(" ", firstname, coalesce(middlename, " "), lastname) as "Full name" FROM employees;
 SELECT IF(middlename is NULL, concat(firstname, " ", lastname), concat(firstname, " ", middlename, " ", lastname) as "Full name" from employees; 
@@ -258,49 +377,6 @@ SELECT concat(firstname, " ", lastname) as "employee name", salary FROM employee
 
 
 
-    ОБЕДИНЯВА КОЛОНИ ОТ РАЗЛИЧНИ ТАБЛИЦИ
--- Write a SQL query to find all employees and their address.
-SELECT e.firstname, e.lastname, a.addresstext, t.name as "town name"
-FROM employees e, addresses a, towns t
-WHERE e.AddressID = a.AddressID and a.TownID = t.TownID;
-
--- Write a SQL query to find all employees whose MiddleName 
--- is the same as the first letter of their town.
-SELECT e.firstname, e.MiddleName, t.name as "town name"
-FROM employees as e  
-JOIN addresses as a 					-- към таблицата employee добвяме addresses
-	on e.AddressID = a.AddressID		-- ако id-та съвпадат
-JOIN towns t 							-- добавяме таблица town
-	on a.TownID = t.townID 				-- ако id-та съвпадат
-WHERE e.MiddleName = left(t.name, 1);	-- при условие, че..
-
--- Write a SQL query to find all employees that have manager, along with their manager.
-SELECT concat_ws(' ', e.firstname, e.lastname) as "employee name", e.ManagerID,
-	   concat(m.firstname, " ", m.lastname) as "manager name",  m.ManagerID
-FROM employees e, employees m
-WHERE e.ManagerID = m.EmployeeID and m.ManagerID is not NULL;
-
--- Write a SQL query to find all employees that have manager, along with their manager and their address.
-SELECT 
-	concat(e.firstname, " ", e.lastname) as "employee name", ea.AddressText,
-	concat(m.firstname, " ", m.lastname) as "manager name", ma.AddressText
-FROM 
-	employees e, 
-    employees m,
-    addresses ea,
-    addresses ma
-WHERE 
-	e.ManagerID = m.EmployeeID AND e.AddressID = ea.AddressID AND m.AddressID = ma.AddressID;
-
--- ========= V2 ===============
-SELECT 
-concat(e.firstname, " ", e.lastname) as "employee", ea.addresstext as "e address",
-concat(m.firstname, " ", m.lastname) as "manager",  ma.addresstext as "m address"
-
-FROM employees e
-JOIN employees m ON e.managerid = m.EmployeeID
-JOIN addresses ea ON ea.AddressID = e.AddressID
-JOIN addresses ma ON ma.AddressID = m.AddressID;
 
     ОБЕДИНЯВА ДВЕ КОЛОНИ ЕДНА НАД ДРУГА
 -- Write a SQL query to find all departments and all town names as a single list.
@@ -308,36 +384,6 @@ SELECT name FROM departments
 UNION ALL
 SELECT name FROM towns;
 
-
-
--- Write a SQL query to find all the employees and the manager for each of them along with the employees that do not have manager.
-SELECT e.firstname, e.lastname, m.firstname, m.lastname
-FROM employees e, employees m
-WHERE e.ManagerID = m.EmployeeID
-UNION
-SELECT e.FirstName, e.LastName, NULL AS firstname, NULL as lastname
-FROM employees e
-WHERE e.ManagerID is NULL;
-
-
-
-
--- Write a SQL query to find the names of all employees from the departments "Sales" and "Finance" whose hire year is between 1995 and 2005.
-SELECT CONCAT(firstname, " ", lastname) as name, d.Name, year(e.HireDate)
-FROM employees e, departments d
-WHERE 
-	e.DepartmentID = d.DepartmentID AND 
-    d.Name in ("Sales", "Finance") AND
-	Year(e.hiredate) BETWEEN 1995 AND 2005;
-    
-    
--- === V2 ===
-SELECT CONCAT(firstname, " ", lastname) as name, d.Name, year(e.HireDate), month(e.Hiredate), day(e.HireDate)
-FROM employees e
-JOIN departments d on e.DepartmentID = d.DepartmentID
-WHERE 
-	d.name in ("Sales", "Finance") and 
-	year(e.hiredate) BETWEEN 1995 AND 2005;
 
 
 

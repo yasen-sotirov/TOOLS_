@@ -1,10 +1,26 @@
 from data.models import Order
 from data.in_memory import orders
 from services import product_service
+from data.database import read_query
 
 
 def all():
-    return orders
+    data = read_query('''SELECT id, customer, delivery_date, delivery_address, product_id 
+                         FROM orders AS o 
+                         LEFT JOIN orders_products AS o_p 
+                         ON o.id = o_p.order_id''')
+
+    flattened = {}
+    for id, customer, delivery_date, delivery_address, product_id in data:
+        if id not in data:
+            flattened[id] = (id, customer, delivery_date, delivery_address, [])
+
+        if product_id is not None:
+            flattened[id][-1].append(product_id)
+
+    return  (Order.from_query_result(*obj) for obj in flattened.values())
+
+
 
 
 def sort(lst: list[Order], reverse=False):
@@ -15,7 +31,13 @@ def sort(lst: list[Order], reverse=False):
 
 
 def get_by_id(id: int):
-    return next((o for o in orders if o.id == id), None)
+    order_data = read_query('''SELECT id, customer, delivery_date, delivery_address 
+                                FROM orders WHERE id = ?''',
+                            (id,))
+
+
+
+
 
 
 def create(order: Order):
