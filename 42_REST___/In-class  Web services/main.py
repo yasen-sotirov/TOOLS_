@@ -1,30 +1,51 @@
 from fastapi import FastAPI, Response
 from data import Product, products, Order, orders
+import uvicorn
+import pdb
+
+# import logging
+#
+# def main() -> None:
+#     logging.basicConfig(
+#         level=logging.DEBUG,
+#         filename='logging_file.log')
+#
+#     logging.debug("This is a  debug mess")
+#     logging.info('This is a info mess')
+#     logging.warning('This is a warning mess')
+#     logging.error('This is a error mess')
+#     logging.critical('This is a critical mess')
+#
+# if __name__ == '__main__':
+#     main()
+
 
 
 app = FastAPI(title='WEB services')
 
-
+# breakpoint()
 # опция query параметри sort search
 @app.get('/products')
 def get_products(
     sort: str | None = None,
     search: str | None = None):
     result = products
-
+    pdb.set_trace()
     if search:
         result = [p for p in result if (search.lower() in p.name.lower())]
 
     if sort and (sort == 'asc' or sort == 'desc'):
         result = sorted(result, key=lambda p: p.price, reverse=sort == 'desc')
-
+    # logging.info('get products {}'.format(result))
+    # print("get_products called with sort={}, search={}".format(sort, search))
+    # print("and the result is:", result)
     return result
 
 
 @app.get('/products/{id}')
 def get_product_by_id(id: int):
     product = next((p for p in products if p.id == id), None)
-
+    # logging.info('get products by id {}'.format(product))
     if product is None:
         return Response(status_code=404)
     else:
@@ -38,7 +59,8 @@ def create_product(product: Product):
 
     product.id = max_id + 1
     products.append(product)
-
+    # logging.info('post products')
+    # print("Product created:", product)
     return product
 
 
@@ -76,7 +98,7 @@ def get_order_by_id(id: int):
 
     if order is None:
         return Response(status_code=404)
-    return order
+    return create_order_response(order)
 
 
 @app.post('/orders', status_code=201, tags=['Create new order'])
@@ -84,13 +106,11 @@ def create_order(new_order: Order):
     if new_order.product_ids == []:
         return Response(status_code=400, content='Must contain at least one product')
 
-
-
     max_id = max(o.id for o in orders)
     new_order.id = max_id + 1
 
     orders.append(new_order)
-    return new_order
+    return create_order_response(new_order)
 
 
 @app.put('/orders/{id}', tags=['Update order'])
@@ -98,14 +118,16 @@ def update_order(id: int, order: Order):
     existing_order = next((o for o in orders if o.id == id), None)
 
     if not existing_order:
-        return Response(status_code=404)
+        return Response(status_code=404, content='Must contain at least one product')
 
-    else:
-        existing_order.customer = order.customer
-        existing_order.delivery_date = order.delivery_date
-        existing_order.product_ids = order.product_ids
+    if order.product_ids == []:
+        return Response(status_code=404, content='Must contain existing product')
 
-        return existing_order
+    existing_order.customer = order.customer
+    existing_order.delivery_date = order.delivery_date
+    existing_order.product_ids = order.product_ids
+
+    return create_order_response(order)
 
 
 @app.delete('/orders/{id}', tags=["Delete order"])
@@ -120,3 +142,36 @@ def delete_order_by_ide(id: int):
 
 
 
+
+from typing import TypeVar
+
+T_var = TypeVar("T_var", Product, Order)
+
+def first_or_none(id: id, items: list [T_var]) -> T_var:
+    return next((item for item in items if item.id == id), None)
+
+
+def create_order_response(order: Order):
+    free_shipping_limit = 125
+    shipping_fee = 1.05
+    order_products = [first_or_none(id, products) for id in order.product_ids]
+    order_total = sum(p.price for p in order_products)
+    if order_total > free_shipping_limit:
+        order_total *= shipping_fee
+
+    return {
+        'id': order.id,
+        'customer': order.customer,
+        'products': order_products,
+        'delivery_date': order.delivery_date,
+        'order_total': order_total}
+
+
+
+def has_missing_product_ids(ordered_product_ids: list[int]):
+    valid_product_ids = [p.id for p in products]
+    return any((id not in valid_product_ids) for id in ordered_product_ids)
+
+
+if __name__ == '__main__':
+    uvicorn.run('main:app', host='127.0.0.1', port=8000)
