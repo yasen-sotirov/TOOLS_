@@ -1,25 +1,52 @@
-
-# ПОСЛЕДНОТО
-# https://www.youtube.com/watch?v=tRZGeaHPoaw&ab_channel=KevinStratvert
-
-
+"GIT"  # https://www.youtube.com/watch?v=tRZGeaHPoaw&ab_channel=KevinStratvert
 
 """
-В GITBASH
+ЛОГВА ДРУГ ЧОВЕК
+        git config --global user.name "Yasen Sotirov"
+        git config --global user.email "ia.sotirov@gmail.com"
 
-# Help git config
-git config -h
 
-# Подробно инфо за дадена команда
-git help {command}
+ПРОВЕРЯВА СТАТУСА НА STAGING AREA -дали има нещо за commit
+        git status
 
-# Показва кой е логнат
+
+STAGING AREA
+    # качва всички промени в staging-а
+        git add .   
+    # качва конкретен файл
+        git add main.py
+    # сваля от staging-a
+        git restore --staged <file_name>        
+
+
+COMMIT TO REPO
+    # от staging area качва в самия гит
+        git commit -m <message>
+        
+        
+        
+ПРЕГЛЕД НА НАПРАВЕНИТЕ COMMIT
+    # отваря предишен commit или по име 
+        git checkout <commit name> 
+         
+    
+
+        Help git config
+    git config -h
+    
+        ПОДРОБНО ИНФО ЗА ДАДЕНА КОМАНДА
+    git help {command}
+    
+    # Прави ново Репозитори
+    git init
+
+
+    ЛОГВАНЕ
+    ПОКАЗВА КОЙ Е ЛОГНАТ
 git config --global user.name
 git config --global user.email
 
-# Логва друг човек
-git config --global user.name Yasen Sotirov
-git config --global user.email ia.sotirov@gmail.com
+
 
 # Създаване на default branch
 git config --global init.default branch main
@@ -30,20 +57,14 @@ clear
 # Премахва фаил/папка от репото и не я траква повече
 git rm -r --cached "folder_name"
 
-# Прави ново Репозитори
-git init
 
-# Проверка статус
-git status
+
+
 
 # Траква отново всички файлове
 git add --all
 
-# качва в staging-а
-git add .
 
-# сваля от staging-a
-git restore --staged file_name
 
 # Commit - snapshot на всички файлове към момента
 git commit -a -m "Message in quotes"
