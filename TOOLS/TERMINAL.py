@@ -10,6 +10,8 @@ vars()  # показва структурата (dictionary), която python 
 
 # "x" in vars()
 
+"СТАРТИРА -m МОДУЛ"
+    # py -m SET.py
 
 """
 pip freeze - pokazva koi библиотеки за инсталирани на това ниво

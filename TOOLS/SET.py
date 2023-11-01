@@ -27,7 +27,7 @@ set_5 = {"1", "2", "3", "4"}
 #     print(el, end=" ")
 
 
-"ДОБАВЯ ЕЛЕМЕНТИ"
+# "ДОБАВЯ ЕЛЕМЕНТИ"
 # print(set_1)
 # set_1.add(12)
 # print(set_1)
@@ -72,10 +72,10 @@ set_5 = {"1", "2", "3", "4"}
 
 
 "ДАВА ЕЛЕМЕНТИТЕ, КОИТО ГИ НЯМА ВЪВ ВТОРИЯ СЕТ"     # Difference
-# print(set_1)
-# print(set_2)
-# print(set_1 - set_2)
-# print(set_2 - set_1)
+print(set_1)
+print(set_2)
+print(set_1 - set_2)
+print(set_2 - set_1)
 
 
 "ДАВА ЕДНАКВИТЕ ЕЛЕМЕНТИ В ДВА СЕТА"        # Intersection

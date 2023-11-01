@@ -1,6 +1,7 @@
 "ДНИ И ЧАСОВЕ"   #
 
-
+import datetime
+from datetime import datetime
 
 "OT ЧАСОВЕ В МИНУТИ"
 # hour += minutes // 60
