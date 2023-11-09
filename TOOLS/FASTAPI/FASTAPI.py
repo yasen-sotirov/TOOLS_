@@ -3,6 +3,54 @@
 
 
 """
+
+В FastAPI параметрите `Path()`, `Header()`, и `Query()` се използват за да декларирате и извлечете стойности от съответните части на HTTP заявката. Ето как те работят:
+
+1. `Path()`: Този параметър се използва, за да извлечете стойности от пътната част на URL-а. Например, в URL-а "http://example.com/replies/42", `Path()` може да извлече стойността "42" от пътната част. Този параметър се използва, когато искате да извлечете информация от URL-а, като например идентификатор на ресурс.
+
+Пример:
+```python
+from fastapi import Path
+
+@reactions_router.put('/replies/{id_of_replies}', description='Add a reaction to a reply')
+async def add_reaction_to_reply(
+    id_of_replies: int = Path(..., description="ID of the reply to react to"),
+):
+    # Използва се id_of_replies, който е извлечен от пътя в URL-а.
+```
+
+2. `Header()`: Този параметър се използва, за да извлечете стойности от HTTP заглавките на заявката. Например, можете да извлечете токен за аутентикация от HTTP заглавката "Authorization". Този параметър се използва, когато информацията, която искате да извлечете, се намира в заглавките на HTTP заявката.
+
+Пример:
+```python
+from fastapi import Header
+
+@reactions_router.put('/replies', description='Add a reaction to a reply')
+async def add_reaction_to_reply(
+    x_token: str = Header(..., description="User's authentication token"),
+):
+    # Използва се x_token, който е извлечен от HTTP заглавката.
+```
+
+3. `Query()`: Този параметър се използва, за да извлечете стойности от Query параметрите на URL-а. Query параметрите се намират след знака "?" в URL-а и са обикновено използвани за предаване на опции и параметри към заявката.
+
+Пример:
+```python
+from fastapi import Query
+
+@reactions_router.put('/replies', description='Add a reaction to a reply')
+async def add_reaction_to_reply(
+    Upvote: int = Query(..., description="Upvote (1) or Downvote (-1)"),
+):
+    # Използва се Upvote, който е извлечен от Query параметъра в URL-а.
+```
+
+Тези параметри ви позволяват да извличате информация от различни части на HTTP заявката, като пътя, заглавките или Query параметрите и да я използвате във вашите FastAPI маршрути и функции.
+
+
+
+
+
 ОПЦИЯ QUERY PARAMETERS sort, search
 @app.get('/products')
 def get_products(
