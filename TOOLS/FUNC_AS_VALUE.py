@@ -57,12 +57,6 @@
 
 
 
-
-
-
-
-
-
 "HIGH ORDER FUNCTION"
 
 

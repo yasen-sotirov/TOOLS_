@@ -1,5 +1,10 @@
 """COMPREHENSION"""   # извадка
 
+#        Output       Collection           Condition
+sample = [x + 1    for x in range(5)     if x % 2 == 2]
+#        Do this   for this collection  in this situation
+
+
 
 number_list = [1, 4, 3, 8, 6, 2, 7, 6.59, 2.32]
 number_list_2 = [4, 8, 2, 6, 9]
@@ -12,8 +17,6 @@ number_list_2 = [4, 8, 2, 6, 9]
 # print(["even" if el % 2 == 0 else "odd" for el in number_list])
 
 # всеки път когато не три трябва резултата от компрехеншъна, най-вероятно ти трябва for loop
-
-
 
 
 

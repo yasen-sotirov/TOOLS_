@@ -19,7 +19,7 @@ class Books:
     num_of_books = 0
 
     # състояние
-    def __init__(self, title, author, price, type_book="paper book"):  # конструктор / initialiser
+    def __init__(self, title, author, price, type_book="paper book"):  # конструктор / initializer
         self.title = str(title)  # „атрибут/пропърти/variable“ - дефинира характеристиките на класа
         self.author: str = author  # атрибут на инстанцията, само тя си го ползва
         self.price = float(price)

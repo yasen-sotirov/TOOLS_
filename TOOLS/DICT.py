@@ -64,6 +64,21 @@ names_ages = {"Ines": 27,
 #     # key 1B, value ['Ivan', 'Maria']
 
 
+names = [{'id': 1, 'name': 'John'}, {'id': 2, 'name': 'Pol'}]
+id_list = []
+name_list = []
+
+for person in names:
+    id_list.append(person['id'])
+    name_list.append(person['name'])
+print("Списък с id:", id_list)
+print("Списък с имена:", name_list)
+
+
+
+
+
+
 "ВРЪЩА ЛИСТ С KEY, VALUE"
 # print(my_dict.items())
 # dict_items([('a', 25), ('b', 'Pesho'), (2, 33)])

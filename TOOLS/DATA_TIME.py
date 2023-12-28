@@ -3,12 +3,15 @@
 import datetime
 from datetime import datetime
 
+
+
 "OT ЧАСОВЕ В МИНУТИ"
 # hour += minutes // 60
 # minutes %= 60
 # if hour > 23:
 #     hour = 0
 # print(f'{hour}:{minutes:02d} ч')
+
 
 
 "ОТ МИНУТИ В ЧАСОВЕ"
@@ -19,8 +22,16 @@ from datetime import datetime
 
 
 
+"ОТ STR В ДАТА"
+# накрая се слага .date() иначе ще върне 2023-1-1 00:00:00
+# date = '2023-1-1'
+# print(datetime.strptime(date, "%Y-%m-%d").date())
+# print(datetime.strptime(date, "%Y-%m-%d"))
+
+
+
 "РАЗЛИКА В ДНИ МЕЖДУ ДВЕ ДАТИ"
-# from datetime import datetime
+from datetime import datetime
 #
 # str_dt1 = '20/10/2021 09:15'
 # str_dt2 = '20/02/2022 04:25'
@@ -30,14 +41,17 @@ from datetime import datetime
 #
 # delta = dt2 - dt1
 # print(f'Difference is {delta.days} days')
-#
 
 
-# ls - листва файловете в директ
 
-# ls -l  - листва файловете в лонг формат
+"ДОБАВЯ БРОЙ ДНИ КЪМ ДАТА"
+from datetime import datetime, timedelta
 
-# ls -la - показва файловете в лонг + скритите файлове
+current_date = datetime.now()
+new_date = current_date + timedelta(days=1)
+
+print("Текуща дата и час:", current_date)
+print("След добавяне на един ден:", new_date)
 
 
 

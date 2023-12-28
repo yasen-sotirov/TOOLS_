@@ -12,9 +12,11 @@ txt_5 = "123abc"
 txt_6 = "123 abc"
 
 
-
-"ПРЕВРЪЩА STR В ЛИСТ ОТ ЧИСЛА"
-# nums = [int(el) for el in input().split(', ')]
+"F STRING FORMATTING"
+# print(f"text 1"
+#       f"text 2")
+# print(f"text line 1 \n"
+#       f"text line 2")
 
 
 "РАЗДРОБЯВА СТРИНГ НА ЕЛЕМЕНТИ"     # връща лист
@@ -23,6 +25,8 @@ txt_6 = "123 abc"
 
 
 "ОТ STR ПРАВИ ЛИСТ ОТ ЧИСЛА"
+# nums = [int(el) for el in input().split(', ')]
+
 # list_of_ints = [int(x) for x in txt_3]
 # print(list_of_ints)
 
@@ -80,12 +84,19 @@ txt_6 = "123 abc"
 # print(f'Буквата е: {chr(100)}')
 
 
-"СЛАЙСИНГ"                # работи и за лист
+"SLICING - ЧЕТЕ ПО ИНДЕКС СЪС СТЪПКА"  # работи с LIST също            # работи и за лист
 # print(txt[2])           # показва кой символ е на индекс
 # print(txt[1:9:2])       # показва символи от индекс до индекс със стъпка
 
 # print(txt_3[::-1])
 # print(''.join(reversed(txt_3)))
+
+# mix_list = "123456789"
+# print(mix_list[2:5:2])      # 35
+# print(mix_list[-2])         # 8
+# print(mix_list[::-1])       # 987654321
+# print(mix_list[-1:])        # 9
+
 
 
 "ГЛАВНИ и МАЛКИ БУКВИ"
@@ -166,19 +177,11 @@ txt_6 = "123 abc"
 
 
 "ПОДРЕЖДА БУКВИТЕ В СТРИНГА"    # сортира по азбучен ред
-print("".join(sorted("teacher")))
-print("".join(sorted("heracte")))
-print("".join(sorted("heracte", reverse=True)))
+# print("".join(sorted("teacher")))
+# print("".join(sorted("heracte")))
+# print("".join(sorted("heracte", reverse=True)))
 
 
-
-"SLICING - ЧЕТЕ ПО ИНДЕКС СЪС СТЪПКА"  # работи с LIST също
-
-# mix_list = "123456789"
-# print(mix_list[2:5:2])      # 35
-# print(mix_list[-2])         # 8
-# print(mix_list[::-1])       # 987654321
-# print(mix_list[-1:])        # 9
 
 
 "РАЗОПАКОВА СТРИНГА"
@@ -188,5 +191,16 @@ print("".join(sorted("heracte", reverse=True)))
 # print(data)
 
 
+"STR FORMATTING"
+# https://www.datacamp.com/tutorial/python-string-format
+# first_name = 'Eric'
+# sentence = 'Hi {}'
+# print(sentence.format(first_name))
+
+
+
 "СЪЗДАВА АРТ БАНЕРИ"
 # https://manytools.org/hacker-tools/ascii-banner/
+
+
+

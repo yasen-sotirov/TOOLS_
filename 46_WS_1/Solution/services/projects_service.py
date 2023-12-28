@@ -60,11 +60,13 @@ def set_status(id: int, status: str):
 
 def assign_to_project(project_id: int, dev_id: int):
     if query_count('''SELECT COUNT(*) FROM devs_projects 
-                   WHERE dev_id = ? AND project_id = ?''', (dev_id, project_id)) > 0:
+                   WHERE dev_id = ? AND project_id = ?''',
+                   (dev_id, project_id)) > 0:
         return False, 'Dev already assigned to project.'
 
     limit, is_open = read_query('''SELECT team_limit, is_open
                                    FROM projects WHERE id = ?''', (project_id,))[0]
+
     project_devs_levels = read_query('''SELECT level FROM devs 
                                         JOIN devs_projects ON id = dev_id 
                                         WHERE project_id = ?''', (project_id,))

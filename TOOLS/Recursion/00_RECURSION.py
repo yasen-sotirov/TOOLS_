@@ -83,7 +83,7 @@ deliver_present(child)
 
 "STRING REVERSE"
 """
-ози код представлява функция, която обръща подаден низ използвайки рекурсия. Да разгледаме как работи по стъпки:
+този код представлява функция, която обръща подаден низ използвайки рекурсия. Да разгледаме как работи по стъпки:
 
     Функцията reverse_recursive(string) приема низ като входен аргумент.
     Първо проверява дали низът string е празен (дъно на рекурсията). Ако е празен, тя връща празен низ '', терминирайки изпълнението на рекурсията.
@@ -191,17 +191,17 @@ print(flatten(values))
 "FIBONACCI С ОПТИМИЗАЦИЯ"   # F(n) = F(n-1) + F(n-2)
 # създава кеш, където пази калкулираните стойности и когато
 # потрябват ги взема от там, а не ги смята отново
-# from functools import lru_cache
-#
-# @lru_cache(maxsize=None)
-# def fibo_opty(num):
-#     print("fibonacci recursive with n = ", num)
-#
-#     if num <= 2:
-#         return 1
-#     return fibo_opty(num-1) + fibo_opty(num-2)
-#
-# print("Result = ", fibo_opty(100))
+from functools import lru_cache
+
+@lru_cache(maxsize=None)
+def fibo_opty(num):
+    print("fibonacci recursive with n = ", num)
+
+    if num <= 2:
+        return 1
+    return fibo_opty(num-1) + fibo_opty(num-2)
+
+print("Result = ", fibo_opty(100))
 
 
 
@@ -268,13 +268,16 @@ Input
 
 120
 """
-# def factorial_rec(num):
-#     if num <= 1:
-#         return 1
-#     return num * factorial_rec(num - 1)
-#
-# num = int(input())
-# print(factorial_rec(num))
+def factorial_rec(num):
+    if num <= 1:
+        return 1
+    return num * factorial_rec(num - 1)
+
+num = int(input())
+print(factorial_rec(num))
+
+
+
 
 
 # === 2: Bunny Ears
@@ -362,17 +365,17 @@ We have triangle made of blocks. The topmost row has 1 block,
 the next row down has 2 blocks, the next row has 3 blocks, and so on. 
 Compute recursively (no loops or multiplication) the total number of 
 blocks in such a triangle with the given number of rows."""
-# def triangle_of_blocks(rows):
-#     if rows == 0:
-#         return 0
-#     if rows == 1:
-#         return 1
-#     # бр на блоковете == № на реда
-#     # на дъното към броя блокове на реда ще добави 0
-#     return rows + triangle_of_blocks(rows - 1)
-#
-# data = int(input())
-# print(triangle_of_blocks(data))
+def triangle_of_blocks(rows):
+    if rows == 0:
+        return 0
+    if rows == 1:
+        return 1
+    # бр на блоковете == № на реда
+    # на дъното към броя блокове на реда ще добави 0
+    return rows + triangle_of_blocks(rows - 1)
+
+data = int(input())
+print(triangle_of_blocks(data))
 # =================================================
 # def triangle(n):
 #     return n + triangle(n - 1) if n > 0 else 0

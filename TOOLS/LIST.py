@@ -171,7 +171,7 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 
 
 
-"ВМЪКВА (нещо) НА ТОЧЕН ИНДЕКС"
+"ВМЪКВА (нещо) НА КОНКРЕТЕН ИНДЕКС"
 # [1, 3, 2, 'a', 'b', 4, 88, 2, 2]
 # mix_list.insert(3, "Pesho")
 # [1, 3, 2, 'Pesho', 'a', 'b', 4, 88, 2, 2]
@@ -398,17 +398,6 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 # print(digit)
 
 # print([x * 2 for x in number_list if x % 2 == 0])
-
-
-"ВСИЧКИ ЛИ СА ЕДНАКВИ"              # връща дали всичк в листа са еднакви
-# # print(all(number_list_2))
-# print(all([isinstance(x, int) for x in number_list_2]))
-# print(all([isinstance(x, str) for x in letters_list]))
-# print(all([isinstance(x, str) for x in mix_list]))
-
-
-"САМО ЕДНО ДА Е ВЯРНО"
-# print(any([True, False, False]))
 
 
 "ВРЪЩА ЕЛЕМЕНТИ ЗАПОЧВАЩИ С (нещо)"

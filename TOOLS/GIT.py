@@ -1,10 +1,19 @@
 "GIT"  # https://www.youtube.com/watch?v=tRZGeaHPoaw&ab_channel=KevinStratvert
-# Working directory
-# Staging area
-# Repository
 
 
 """
+ЕТАПИ НА РАБОТА
+    Working directory 
+        работното IDE, със git commit качва в staging area
+    
+    Staging area
+        с git push записва промените в облака
+        
+    Repository
+        репото в облака
+
+
+
 LOGING
     # логва
         git config --global user.name "Yasen Sotirov"
@@ -15,7 +24,7 @@ LOGING
         
         
 REPOSITORY
-    # инициализиране на ново репо
+    # инициализиране на ново репо - git започва да следи текущата папка
         git init
     
     # показва адреса на репото на сървъра - има два адреса за fech  и за push
@@ -23,7 +32,7 @@ REPOSITORY
 
 
 STAGING AREA - track files
-    # проверява статуса на staging area -дали има нещо за commit
+    # проверява статуса на staging area -дали има нови неща за commit
         git status
     # качва всички промени в staging-а
         git add .   
@@ -35,22 +44,27 @@ STAGING AREA - track files
         git restore --staged <file_name>
         git reset   
         git reset path/fail_name
+    # undo всички последните след последния commit == Discard changes
+        git checkout --.
+        git checkout --<file name.py>
     # спиране следенето на файл (tracking)   
         git rm --cached <name>  
         
 
-COMMIT
+COMMIT == VERSION
     # от staging area качва в самия гит
         git commit -m "<message>"
-    # преименуване на последния commit
+    # редактиране на последния commit - файлове, иmе на commit-a
         git commit -m "<message>" --amend
     # преглед на commit
         git log
-    # преглед на commit + подробности
+    # преглед на всички commit + подробности
         git log
     # отваря предишен commit по име 
         git checkout <commit name> 
-         
+    # трие последния commit и връща на предходния, трябва да се push-не
+        git reset --hard HEAD^
+        git push --force         
 
 BRANCH
     # задаване на главния branch - за ново репо
@@ -61,6 +75,7 @@ BRANCH
         git switch -c <name>
     # създава нов бранч без да прехвърля на него
         git branch <name>
+    # създава нов бранч и се прехвърля на него
         git switch -c <name>
     # прехвърля на друг branch
         git switch <name>
@@ -68,11 +83,14 @@ BRANCH
         git checkout -git branch
     # трие branch - обикновено след merge
         git branch -d <name>
+    # качва branch в облака
+        git push -u origin <branch_name>
     # качва всички branch в облака
         git push --all
     # създаване на default branch
         git config --global init.default branch main
-        
+    # обединяване branch merge
+        git merge -m "<message>" <branch name>        
 
 ФАЙЛОВЕ
     # трие файл
@@ -83,8 +101,7 @@ BRANCH
         git mv "old_file_name" "new_file_name"
 
     
-ОБЕДИНЯВАНЕ MERGE
-        git merge -m "<message>" <branch name>
+
 
 
 КАЧВАНЕ ОТ ЛОКАЛНОТО РЕПО В ОБЛАКА  
@@ -111,6 +128,12 @@ BRANCH
     
 ПОДРОБНО ИНФО ЗА ДАДЕНА КОМАНДА
     git help <command>
+
+
+
+ПРОВЕРЯВА КОНФЛИКТИТЕ
+    git  checkout matches
+
 
 
 """

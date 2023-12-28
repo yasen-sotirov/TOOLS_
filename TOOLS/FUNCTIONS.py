@@ -192,3 +192,11 @@
 # expression = "(5+2*4)/2"
 # result = eval(expression)
 # print(result)
+
+
+"ИЗПИСВА return НА ДВА РЕДА"
+def second_line_return(line_1, line_2):
+    return f'str: {line_1}' \
+           f'str: {line_2}'
+
+print(second_line_return('text_1', 'text_2'))
