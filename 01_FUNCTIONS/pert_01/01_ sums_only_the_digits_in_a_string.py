@@ -5,13 +5,13 @@ x = sum_digits('abc') # x = 0"""
 
 
 def is_digit(data):
-    counter = 0
+    sum_nums = 0
     for el in data:
         if el.isdigit():
             el = int(el)
-            counter += el
-    return counter
+            sum_nums += el
+    return sum_nums
 
 
-input_data = input()
+input_data = input('tape nums: ')
 print(is_digit(input_data))

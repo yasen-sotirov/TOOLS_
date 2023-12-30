@@ -1,5 +1,4 @@
-"MATRIX"    # матрици
-            # най-важна библиотека за матрици NumPy
+"MATRIX"    # най-важна библиотека за матрици NumPy
 
 
 list_2d = [
@@ -7,6 +6,7 @@ list_2d = [
     [4, 5, 6],
     [7, 8, 9]
 ]
+
 
 "СЪЗДАВАНЕ НА МАТРИЦА"
 # rows = 3
@@ -57,9 +57,9 @@ list_2d = [
 
 
 "СЪЗДАВАНЕ НА ПРАЗНА МАТРИЦА С РАЗМЕР n"
-# n = int(input())
-# matrix = [[0] * n for _ in range(n)]
-# print(matrix)
+n = int(input('type num for matrix size: '))
+matrix = [[0] * n for _ in range(n)]
+print(matrix)
 
 # matrix = []
 # for _ in range(n):

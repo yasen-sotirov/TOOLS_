@@ -77,6 +77,19 @@ normal_line = ['eLepHANT', 'CucuMbeR']
 print(list(map(lambda word: word.capitalize(), normal_line)))
 
 
+
+
+"МАП"
+# def double_num(number):
+#     if number % 2 == 0:
+#         return number * 2
+#
+# num_list = [1, 2, 3, 4, 5, 6, 7, 8]
+# result = map(double_num, num_list)
+# print(list(result))
+
+
+
 "ЧЕТЕНЕ ОТ INPUT C MAP"
 # rows, cols = map(int, input().split())
 # print(type(rows))
