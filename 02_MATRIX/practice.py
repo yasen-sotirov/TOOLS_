@@ -10,7 +10,6 @@ print(empty_rectangular_matrix(rows, cols))
 
 
 
-
 "CREATE EMPTY SQUARE MATRIX"
 def square_matrix(size):
     matrix = [[0] * size for _ in range(size)]

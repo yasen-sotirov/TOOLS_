@@ -29,12 +29,12 @@
 # 2 3 4 5
 # 3 4 5 6
 
-rows, cols = input().split()     # meaning of underscore -> ignore the second element
-
-matrix = []
-for cols in range(int(rows)):
-    matrix.append(input().split())
-
-# will contain non-parsed numbers
-# you might need to parse them depending on the scenario
-print(matrix)
+# rows, cols = input().split()     # meaning of underscore -> ignore the second element
+#
+# matrix = []
+# for cols in range(int(rows)):
+#     matrix.append(input().split())
+#
+# # will contain non-parsed numbers
+# # you might need to parse them depending on the scenario
+# print(matrix)

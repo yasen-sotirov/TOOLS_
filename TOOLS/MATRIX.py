@@ -57,9 +57,9 @@ list_2d = [
 
 
 "СЪЗДАВАНЕ НА ПРАЗНА МАТРИЦА С РАЗМЕР n"
-n = int(input('type num for matrix size: '))
-matrix = [[0] * n for _ in range(n)]
-print(matrix)
+# n = int(input('type num for matrix size: '))
+# matrix = [[0] * n for _ in range(n)]
+# print(matrix)
 
 # matrix = []
 # for _ in range(n):
