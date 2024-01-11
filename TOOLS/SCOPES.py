@@ -1,43 +1,47 @@
-"OOP"   #
-
-
 "SCOPE"     # парчето код оформено от идентацията (tab-a навътре)
-# build-in scope - парчетата код вградени в самия python
-# global scope - кода в целият ни файл
-# encloseing scope - кода във функцяи съдържаща други функции
-# local scope - кодa във функцията, която ние съм написал def...
+'''
+LEGB
 
-x = "x = 15"
-def enclose_scope():
-    x = "x = 10"
-    print(x)
-    def local_scope():
-        x = "x = 5"
-        print(x)
-    return local_scope()
+Local       Променливите, дефинирани във функция
 
-print(x)
-enclose_scope()
+Enclosing   При вложени функции. 
+
+Global      Променливите, дефинирани извън която и да е функция или клас. 
+            Достъпни са в цялата програма.
+
+Build-in    Вградените функции и модули, които са налични в Python.
+'''
 
 
 
-
-
-
-"GLOBAL"        # ДА НЕ СЕ ПОЛЗВА! Чупи кода лошо
-# a = 100         # приравнява global scope към local scope
-# print(a)
-#
+"GLOBAL"    # с  statement Global правим променлива от local или
+            # enclosing scope достъпна в Global scope.
+            # а ако вече е дефинирана се пренаписва
+# a = 100
+# print("the variable before global: ", a)
 # def sum_nums():
 #     global a
-#     a = 5
+#     a = 50
 #     b = 10
 #     return a + b
 #
-# print(sum_nums())
-# print(a)
+# print("function result: ", sum_nums())
+# print("the variable after global: ", a)
 
 
-"NONLOCAL"
-# ако ползваме nonlocal върху променлива в local функция,
-# променливата се променя и в encloseing-a
+
+"NONLOCAL"  # с  statement nonlocal правим променлива от enclosing scope
+            # достъпна в local scope. Aко вече е дефинирана, се пренаписва
+
+# def local_scope():
+#     var = 200
+#     def enclosing():
+#         nonlocal var
+#         var = 300
+#
+#     enclosing()
+#     print(var)
+#
+# local_scope()
+# print(var)
+
