@@ -35,7 +35,7 @@ gold
 stop
 
 Output
-old -> 170
+gold -> 170
 silver -> 10
 copper -> 17
 """

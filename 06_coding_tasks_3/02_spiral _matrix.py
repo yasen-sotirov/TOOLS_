@@ -7,7 +7,7 @@ Input
     The input will always consist of a single line containing a single number - N.
 
 Output
-    Output a spiral matrix as described below.
+    Spiral matrix as described below.
 
 Constraints
     N will always be a valid integer number.

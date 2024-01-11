@@ -1,4 +1,5 @@
 "TUPLES () "    # IMmutable - НЕпроменлив
+                # пази реда на елементите
 
 t_1 = (5, 0, "Gosho", 2, 4)
 t_2 = (1,)                  # без "," питона го мисли за уравнение
@@ -77,6 +78,13 @@ t_4 = (("a", 5), ("b", 3), ("c", 1))
 #     print(f"{key} - {value}")
 
 
+"ДОБАВЯНЕ КЪМ TUPLE"
+# tup = (1, 2, 3)
+# tup += (3, 4, 5)
+# print(tup)
+# print(type(tup))
+
+
 "ДАЛИ Е SUBTUPLE OT ДРУГ TUPLE"
 # def contains_subtuple(sub_tuple, the_tuple):
 #     if len(sub_tuple) > len(the_tuple):
@@ -87,47 +95,5 @@ t_4 = (("a", 5), ("b", 3), ("c", 1))
 #                 return True
 #     return False
 #
-#
 # print(contains_subtuple((2, 3), (1, 2, 3)))     # True
 # print(contains_subtuple((1, 3), (1, 2, 3)))     # False
-
-
-"КАКВО Е KET WORD АРГУМЕНТ"
-
-"linear parameter"
-# параметъра става keyword = достига се само чрез равно
-# def func(*, x, y):      # прави следващия параметър linear parameter
-#     return x, y
-# print(func(x=5, y=6))
-
-
-# def func(x, /, y):      # прави един параметър преди него linear parameter
-#     return x, y
-# print(func(5, y=6))
-
-
-# k = {9: "wer"}
-
-
-# y = [1, 2, 3]
-# def fn():
-#     y.extend([3, 4, 5])
-# fn()
-# print(y)
-
-
-# tup = (1, 2, 3)
-# tup += (3, 4, 5)
-# print(tup)
-#
-# tup = (1)
-# print(type(tup))
-
-# a = {(1,): ['p', 2]}
-# print(a)
-
-
-# x = ["a", "b", "c"]
-# lst = ', '.join(x)
-
-# print(lst)

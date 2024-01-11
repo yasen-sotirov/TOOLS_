@@ -1,7 +1,7 @@
 """
 Longest Block in String
 A block in a string is a run of adjacent chars that are the same.
-Given a string, return the first substring that is with the lenght of the largest
+Given a string, return the first substring that is with the length of the largest
 "block" in the string.
 
 Input

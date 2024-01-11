@@ -16,15 +16,3 @@ result = dict(zip(country, capital))
 for key, value in result.items():
     print(f"{key} -> {value}")
 
-
-
-def func(a, b):
-    """
-
-    :param a:
-    :param b:
-    :return:
-    """
-    pass
-
-
