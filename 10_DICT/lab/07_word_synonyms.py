@@ -1,4 +1,4 @@
-"""" Write a program, which keeps a dictionary with synonyms.
+""" Write a program, which keeps a dictionary with synonyms.
 The key of the dictionary will be the word. The value will be a list
 of all the synonyms of that word. You will be given a number n – the count of the words.
 After each term, you will be given a synonym, so the count of lines you should read from

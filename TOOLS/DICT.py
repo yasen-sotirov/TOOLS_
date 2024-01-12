@@ -1,5 +1,5 @@
-"DICTIONARIES"      # values - mutable - променлив. може да се добавя променя ...
-                    # keys - immutable - ключовете са уникални
+"DICTIONARIES"      # keys - immutable - ключовете са уникални
+                    # values - mutable - променлив. може да се добавя променя ...
                     # референтен тип данни
                     # скоростта на търсене в речник е О1
 
@@ -18,141 +18,88 @@ names_ages = {"Ines": 27,
 
 
 "ДОБАВЯНЕ В РЕЧНИКА"
+# print(my_dict)
 # my_dict["eyes color"] = "green"
 # print(my_dict)
 
-# # при валю списък
-# # дава ни достъп до вложения лист
-# names = classes["1A"]
-# # както обикновен лист
-# names.append("appended name")
-#
-# for key in classes:
-#     classes[key].append("from the loop")
+# print(classes)
+# classes["1A"].append("New name")    # при валю списък
+# print(classes)
+
+
+# print(classes)
+# new_class = '1C'
+# new_student = 'Blagoi'
+# if new_class not in classes:
+#     classes[new_class] = []
+# classes[new_class].append(new_student)
 # print(classes)
 
 
 
 "ПРОМЯНА В РЕЧНИКА"
-# my_dict["eyes color"] = "green"
-# my_dict["b"] = 30
-#
-# # дава ни достъп до листа и работим с него
-# names = classes["1A"]
-# # както обикновен лист
-# names.append("appended name")
+# print(my_dict)
+# my_dict[2] = 66
+# print(my_dict)
+
 # print(classes)
-#
-# for key in classes:
-#     classes[key].append("from the loop")
+# classes['1A'][1] = "Yasen"
 # print(classes)
+
+
+
+"ПРЕМАХВА K-V ДВОЙКА"
+# print(my_dict)
+# del my_dict[2]
+# print(my_dict)
+
+# print(my_dict)
+# key = my_dict.pop("b")      # вади по ключ, или последната ако не запишем нищо в скобите
+# print(my_dict)
+# print('The key is: ', key)
+
+# print(my_dict)
+# kvpt = my_dict.popitem()     # трие последната двойка и пази като тюпъл
+# print(my_dict)
+# print(kvpt)
+# print(type(kvpt))
+
 
 
 "ОБХОЖДАНЕ НА РЕЧНИК"
 # for key in my_dict:
 #     print(key)
 #
-# for _ in my_dict.values():
-#     print(_)
+# for values in my_dict.values():
+#     print(values)
 #
 # for key, value in classes.items():
 #     print(f"key {key}, value {value}")
-#
+
 # for x in classes.items():
 #     print(f"key {x[0]}, value {x[1]}")
-#     # key 1A, value ['Ines', 'Pesho']
-#     # key 1B, value ['Ivan', 'Maria']
-
-
-names = [{'id': 1, 'name': 'John'}, {'id': 2, 'name': 'Pol'}]
-id_list = []
-name_list = []
-
-for person in names:
-    id_list.append(person['id'])
-    name_list.append(person['name'])
-print("Списък с id:", id_list)
-print("Списък с имена:", name_list)
 
 
 
-
-
-
-"ВРЪЩА ЛИСТ С KEY, VALUE"
+"ВРЪЩА ЛИСТ"
 # print(my_dict.items())
-# dict_items([('a', 25), ('b', 'Pesho'), (2, 33)])
-
-
-"ВРЪЩА ЛИСТ С KEY"
-# # {'1A': ['Ines', 'Pesho'], '1B': ['Ivan', 'Maria']}
 # print(classes.keys())
-# # dict_keys(['1A', '1B'])  <class 'dict_keys'>
-
-
-"ВРЪЩА ЛИСТ С VALUE"
-# # {'1A': ['Ines', 'Pesho'], '1B': ['Ivan', 'Maria']}
 # print(classes.values())
-# # dict_values([['Ines', 'Pesho'], ['Ivan', 'Maria']])
-# # <class 'dict_values'>
-
-
-"ИЗВИКВАНЕ VALUE ПО ИНДЕКС"
-# {'1A': ['Ines', 'Pesho'], '1B': ['Ivan', 'Maria']}
-# names = classes['1A']
-# print(names[0])         # Ines
-# print(names[0][0:2])    # In
 
 
 
-"ИЗВИКВАНЕ VALUE ПО КЛЮЧ"
-# # гърми ако ключа го няма!
-# print(my_dict["b"])
-#
-# # НЕ гарми ако ключа го няма
+
+"ИЗВИКВАНЕ VALUE ПО КЛЮЧ с GET"     # НЕ гарми ако ключа го няма
+# print(my_dict)
 # print(my_dict.get(2))
 # print(my_dict.get(3))
 # print(my_dict.get(3, "Този ключ не съществува"))
 
 
 
-"ИЗВИКВАНЕ VALUE OT ВЛОЖЕН РЕЧНИК"
-# # {'1A': ["Ines", "Pesho"],
-# # '1B': ["Ivan", "Maria"]}
-# print(classes['1A'][1])
-# # Pesho
-
-# print(models['№1']['name'])
-# Pesho
-
-
-
 "ВРЪЩА СПИСЪК СУМАТА НА VALUE"
 # print(sum(num_dict.values()))
 
-
-
-"ПРЕМАХВА K-V ДВОЙКА"
-# # {'a': 25, 'b': 'Pesho', 2: 33}
-# # трие по ключ
-# # {'a': 25, 'b': 'Pesho', 2: 33}
-# del my_dict['a']
-# # {'b': 'Pesho', 2: 33}
-#
-# # трие по ключ и пази
-# key = my_dict.pop("b")
-# # {'a': 25, 2: 33}
-# # Pesho
-#
-# # трие последната двойка и пази
-# # {'a': 25, 'b': 'Pesho', 2: 33}
-# a = my_dict.popitem()
-# print(my_dict)      # {'a': 25, 'b': 'Pesho'}
-# print(a)            # (2, 33)
-#
-# # трие цялата променлива
-# dictionary = my_dict
-# del dictionary
 
 
 "СОРТИРАНЕ"
@@ -252,7 +199,7 @@ print("Списък с имена:", name_list)
 
 
 "ВРЪЩА СПИСЪК С ТЮПЪЛИ"
-print(num_dict.items())
+# print(num_dict.items())
 
 
 "ЗАМЕНЯ ЕЛЕМЕНТИ "
