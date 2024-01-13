@@ -200,7 +200,7 @@ class User_Should(unittest.TestCase):
 
         # Assert
         self.assertTrue(fake_news, fake_vehicle.comments[0].content)
-        self.assertTrue(td.VALID_USERNAME, fake_vehicle.comments[0].author)
+        self.assertTrue(td.VALID_USERNAME, fake_vehicle.comments[0].publisher)
 
     def test_removecomment_removesComment_whenCorrectAuthor(self):
         # Arrange

@@ -1,11 +1,6 @@
 "CLASS and OBJECTS"  # Класът вдига инстанции на обект („инстанция“ поредна степен в йерархията на органи)
 
-
-# „Class“ - шаблона, който определя общите характеристики на обекта
-# като „типов етаж“ на сграда
-# По-сложен тип данни съдържащ характеристики, които ние задаваме
-# build-in класовете са с мали букви list(), set(), dict()
-# „self“ - грубо казано, поема стойноста на променливата („book_1“, „book_2“)
+# „Class“ - шаблонът, който определя общите характеристики на обекта
 # различните „self. ...“ се казват property
 # всичко което важи за функциите се отнася и за конструктура
 # __init__ конструктор на класа
@@ -20,41 +15,23 @@ class Books:
 
     # състояние
     def __init__(self, title, author, price, type_book="paper book"):  # конструктор / initializer
-        self.title = str(title)  # „атрибут/пропърти/variable“ - дефинира характеристиките на класа
-        self.author: str = author  # атрибут на инстанцията, само тя си го ползва
+        self.title = str(title)         # „атрибут/пропърти/variable“ - дефинира характеристиките на класа
+        self.author: str = author       # атрибут на инстанцията, само тя си го ползва
         self.price = float(price)
-        self.type = type_book  # default parameter
-        self.notes: list = []  # hint че очаква лист
+        self.type = type_book           # default parameter
+        self.notes: list = []           # hint че очаква лист
         self.is_rented: bool = False
-        Books.num_of_books += 1  # при всяко инстанциране (създаване) на обект ще добавя 1
+        Books.num_of_books += 1         # при всяко инстанциране (създаване) на обект ще добавя 1
 
     # поведение
     def change_price(self, new_price):  # „метод“ дефинира действията на
         self.price = new_price  # чрез self достъпваме property-та на класа
         # метод на класа, поведение на обекта
 
-    # работи само върху инстанцията
-    def __str__(self):  # директно принтира обекта
-        return f"заглавие: '{self.title}'\n" \
-               f"автор: '{self.author.first_name}'\n" \
-               f"цена: {self.price} лв\n" \
-               f"магазин: {Books.market}"
-
-    @staticmethod  # име на декоратора
-    # независима от класа функция
-    # не ползва класа или инстанцийте, може да живее сама
-    # вика се през името на класа
-    def clean():
-        return 'Cleaning books'
 
 
-    @classmethod  # class/factory метод - създава нова инстанция на класа и променя един или всички параметри
-    def promotion(cls, title, author, price, type_book="paper book"):  # зарежда всички атрибути на __init__
-        return cls(title, author, 10)
 
-    @classmethod
-    def all_from_pratchett(cls, title, author):
-        return cls(title, "T.Pratchett", 22)
+
 
 
 class Author:  # примерен клас използван в основния клас

@@ -14,7 +14,7 @@ class Comment_Should(unittest.TestCase):
 
         # Assert
         self.assertEqual(content, comment.content)
-        self.assertEqual(author, comment.author)
+        self.assertEqual(author, comment.publisher)
 
     def test_init_raisesError_contentTooShort(self):
         # Arrange

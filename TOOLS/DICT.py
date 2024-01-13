@@ -48,6 +48,27 @@ names_ages = {"Ines": 27,
 
 
 
+"ТЪРСЕНЕ В РЕЧНИК"
+# directions = {
+#     "left": (0, -1),
+#     "right": (0, 1),
+#     "up": (-1, 0),
+#     "down": (1, 0)}
+#
+# def get_direction(move):
+#     if move in directions:
+#         return directions[move]
+# print(get_direction("left"))
+#
+# # търси в ключа
+# print("a" in num_dict)  # True
+# print("f" in num_dict)  # False
+#
+# # търси в value
+# print(3 in num_dict.values())  # True
+
+
+
 "ПРЕМАХВА K-V ДВОЙКА"
 # print(my_dict)
 # del my_dict[2]
@@ -81,11 +102,13 @@ names_ages = {"Ines": 27,
 
 
 
-"ВРЪЩА ЛИСТ"
+"ВРЪЩА ЛИСТ ОТ KEYS или VALUES"
 # print(my_dict.items())
 # print(classes.keys())
 # print(classes.values())
 
+# print(dict.keys(my_dict))
+# print(dict.values(my_dict))
 
 
 
@@ -97,16 +120,17 @@ names_ages = {"Ines": 27,
 
 
 
+
+
 "ВРЪЩА СПИСЪК СУМАТА НА VALUE"
 # print(sum(num_dict.values()))
 
 
 
 "СОРТИРАНЕ"
-# # {'a': 1, 'b': 2, 'c': 3}
-# # връща лист със сортирани ключове
-# print(sorted(num_dict))
-# # ['a', 'b', 'c']
+# print(num_dict)
+# print(sorted(num_dict))     # връща лист със сортирани ключове
+# print(num_dict)
 
 
 
@@ -141,12 +165,12 @@ names_ages = {"Ines": 27,
 # # [('A', [5]), ('C', [2, 4]), ('B', [4, 3, 5])]
 
 
-"OT СПИСЪЦИ В РЕЧНИК"     #
+"OT LIST В РЕЧНИК"
 # keys = ['a', 'b', 'c', 'd']
 # values = [1, 2, 3]
 # print(dict(zip(keys, values)))
 # print(dict(zip(values, keys)))
-#
+
 # my_dict = {}
 # for index in range(len(keys)):
 #     my_dict[keys[index]] = values[index]
@@ -169,25 +193,6 @@ names_ages = {"Ines": 27,
 "ДАВА БРОЙКАТА НА KEY"
 # print(len(my_dict))
 
-
-"ТЪРСЕНЕ В РЕЧНИК"
-# directions = {
-#     "left": (0, -1),
-#     "right": (0, 1),
-#     "up": (-1, 0),
-#     "down": (1, 0)}
-#
-# def get_direction(move):
-#     if move in directions:
-#         return directions[move]
-# print(get_direction("left"))
-
-# # търси в ключа
-# print("a" in num_dict)  # True
-# print("f" in num_dict)  # False
-#
-# # търси в value
-# print(3 in num_dict.values())  # True
 
 
 "ИЗПРАЗВАНЕ НА РЕЧНИКА"
@@ -294,75 +299,38 @@ names_ages = {"Ines": 27,
 
 
 
-"ИЗОМОРФНИ СТРИНГОВЕ"
-# def are_isomorphic(str_1: str, str_2: str) -> bool:
-#     if len(str_1) != len(str_2):
-#         return False
-#
-#     dictionary = {}
-#     for i in range(len(str_1)):
-#         el_1, el_2 = str_1[i], str_2[i]
-#
-#         # Проверява дали ключа вече го има
-#         if el_1 in dictionary.keys():
-#
-#             # ако го има, проверява дали е равен на вече зададената стойност
-#             if dictionary[el_1] != el_2:
-#                 # ако не отговаря, значи преди сме въвели друга комбинация
-#                 return False
-#         else:
-#             # Проверяваме дали текущия символ от str_2 не е вече закачен към друг ключ
-#             if el_2 in dictionary.values():
-#                 return False
-#
-#             # ако и тук го няма, го създаваме
-#             dictionary[el_1] = el_2
-#     return True
+"ИЗОМОРФНИ СТРИНГОВЕ"       # пример: egg add
+                            # 'e' в Str1 съответства на 'a' в Str2
+                            # 'g' в Str1 съответства на 'd' в Str2
+def are_isomorphic(str_1: str, str_2: str) -> bool:
+    if len(str_1) != len(str_2):
+        return False
 
-# s1, s2 = 'theeyes', 'theysee'
+    dictionary = {}
+    for i in range(len(str_1)):
+        el_1, el_2 = str_1[i], str_2[i]
+
+        # Проверява дали ключа вече го има
+        if el_1 in dictionary.keys():
+
+            # ако го има, проверява дали е равен на вече зададената стойност
+            if dictionary[el_1] != el_2:
+                # ако не отговаря, значи преди сме въвели друга комбинация
+                return False
+        else:
+            # Проверяваме дали текущия символ от str_2 не е вече закачен към друг ключ
+            if el_2 in dictionary.values():
+                return False
+
+            # ако и тук го няма, го създаваме
+            dictionary[el_1] = el_2
+    return True
+
+s1, s2 = 'theeyes', 'theysee'
 # s1, s2 = 'theeyes', '1233435'
 # s1, s2 = 'theeyes', '1234533'
-# print(are_isomorphic(s1, s2))
+print(are_isomorphic(s1, s2))
 
 
 
 
-"DEMO"
-# # define a dict = { 'key': 'value' }
-# phonebook = {
-#     'Alice': '081231938',
-#     'Bob': '078712312',
-#     'Charlie': '081200912'
-# }
-#
-# # access value by key
-# print(phonebook['Alice'])
-# print(phonebook.get('Alice'))
-#
-# # Throws error if key does not exist
-# # print(phonebook['alice'])
-#
-# # check if key exists
-# print('Alice' in phonebook)
-#
-# # change existing value
-# phonebook['Alice'] = '033333123'
-#
-# # add new value
-# phonebook['Donn'] = '089787123'
-#
-# # get number of key:value pairs
-# print(len(phonebook))
-#
-# # get a collection of all keys in the dict
-# keys = phonebook.keys()  # also has .values()
-# for key in keys:
-#     print(key)
-#
-#
-#
-# # deletes a key:value pair
-# phonebook.pop('Alice') # will return 081231938
-# # del phonebook['Alice'] # returns nothing
-#
-# print(len(keys))  # the keys collection is also implicitly updated

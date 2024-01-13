@@ -16,19 +16,20 @@ class ForumPost():
     pass
 ```
 Import the class in the `main.py` file. Create two instances of the class and assign properties to them:
+
 ```py
 post1 = ForumPost()
-post1.author = "Steven"
+post1.publisher = "Steven"
 post1.text = "How to find use for every Microsoft product."
 post1.upvotes = 2
 
 post2 = ForumPost()
-post2.author = "Todor"
+post2.publisher = "Todor"
 post2.text = "Alfa Romeo for sale. Preowned by Italian grandma"
 post2.upvotes = 300
 
-print(f'{post1.text} / by {post1.author}, {post1.upvotes} votes.')
-print(f'{post2.text} / by {post2.author}, {post2.upvotes} votes.')
+print(f'{post1.text} / by {post1.publisher}, {post1.upvotes} votes.')
+print(f'{post2.text} / by {post2.publisher}, {post2.upvotes} votes.')
 ```
 
 If everything is allright, you should see the following output:
@@ -55,8 +56,8 @@ If everything is done correctly, pasting the following code inside your `main` f
 post1 = ForumPost("Steven", "How to find use for every Microsoft product.", 2)
 post2 = ForumPost("Todor", "Alfa Romeo for sale. Preowned by Italian grandma", 300)
 
-print(f'{post1.text} / by {post1.author}, {post1.upvotes} votes.')
-print(f'{post2.text} / by {post2.author}, {post2.upvotes} votes.')
+print(f'{post1.text} / by {post1.publisher}, {post1.upvotes} votes.')
+print(f'{post2.text} / by {post2.publisher}, {post2.upvotes} votes.')
 ```
 
 #### Expected output

@@ -48,6 +48,11 @@ txt_6 = "123 abc"
 # print(concatenate("Soft", "UNI", "Is", "Grate", "!", UNI="Uni", Grate="Great"))
 
 
+"МЕТОДИ STR и REPR"
+from datetime import datetime
+today = datetime.now()
+print(str(today))
+print(repr(today))
 
 "ПРЕМАХВА ЕЛЕМЕНТ n БРОЙ ПЪТИ"
 # text = "Hello$ Python3$"
