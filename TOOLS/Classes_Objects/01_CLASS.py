@@ -3,6 +3,8 @@
 class Books:
     book_list = []    # клас атрибут, достъпва се от класа и от инстанцията
     number_books = 0
+
+    # state - състоянието на обект. Описваме го чрез атрибутите.
     def __init__(self, title: str, publisher: str, price: float):   # конструктор / инициализатор
         self.title = title
         self.publisher = publisher  # атрибути / пропъртита на инстанцията
@@ -12,10 +14,8 @@ class Books:
         self.book_number = Books.number_books
 
 
+    # процедури - описват се чрез методи и с тях може да манипулираме стейта на обекта
     def change_price(self, new_price: float):      # метод na инстанцията
-        """
-        @param new_price: this new price will override old price
-        """
         self.price = new_price
 
 
@@ -79,5 +79,4 @@ book_3 = Books("Chemistry", "BAN", 12.80)
 
 
 "ИЗВИКВАНЕ НА ДОКУМЕНТАЦИЯ"     # ако има записана такава
-print(Books.change_price.__doc__)
 print(Books.clean_dust.__doc__)

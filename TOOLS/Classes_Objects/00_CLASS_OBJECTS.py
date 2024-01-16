@@ -13,7 +13,7 @@ class Books:
     min_price = 5  # достъпват се през името на класа, не през self
     num_of_books = 0
 
-    # състояние
+    # state - в атрибутите държим състоянието на обекта
     def __init__(self, title, author, price, type_book="paper book"):  # конструктор / initializer
         self.title = str(title)         # „атрибут/пропърти/variable“ - дефинира характеристиките на класа
         self.author: str = author       # атрибут на инстанцията, само тя си го ползва
@@ -23,7 +23,7 @@ class Books:
         self.is_rented: bool = False
         Books.num_of_books += 1         # при всяко инстанциране (създаване) на обект ще добавя 1
 
-    # поведение
+    # процедури - чрез методите извършваме процедури върху обекта
     def change_price(self, new_price):  # „метод“ дефинира действията на
         self.price = new_price  # чрез self достъпваме property-та на класа
         # метод на класа, поведение на обекта

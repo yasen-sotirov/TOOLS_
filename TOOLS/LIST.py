@@ -93,16 +93,14 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 
 
 "РАЗОПАКОВА ЛИСТА"      # вместо " ".join(), защото той работи само с str
-# num_list = [1, 4, 3]
-# print(*num_list)
-# # 1 4 3
-#
-# print(*num_list, sep=", ")
-# # 1, 4, 3
-#
-# first, *rest = num_list
-# print(first)
-# print(rest)
+num_list = [1, 2, 3, 4, 5]
+print(*num_list)
+print(*num_list, sep=", ")
+
+first, *rest, last = num_list
+print(first)
+print(rest)
+print(last)
 
 
 
@@ -200,6 +198,19 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 # for index, letter in enumerate(mix_list):
 #     print(index, letter, sep='-', end=', ')
 #     # 0 - 1, 1 - 3, 2 - 2, 3 - a, 4 - b, 5 - 4, 6 - 88, 7 - 2, 8 - 2,
+
+
+"КОМБИНИРА ДВА СПИСЪКА"
+# names = ['Piter Parker', 'Clark Kent']
+# heroes = ['Spiderman', 'Superman']
+# universes = ['Marvel', 'DC']
+#
+# for name, hero, universe in zip(names, heroes, universes):
+#     print(f'{name} is actually {hero} from {universe}')
+#
+# for index, name in enumerate(names):
+#     hero = heroes[index]
+#     print(f'{name} is actually {hero}')
 
 
 

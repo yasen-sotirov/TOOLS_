@@ -4,6 +4,12 @@ num_1, num_2, num_3 = 1, 2, 3
 num_4, num_5, num_6 = 10, 2.5, 123
 
 
+"ФОРМАТИРАНЕ"
+num = 1_234_567
+print(num)
+print(f'{num:,}')
+print(type(num))
+
 
 
 "ЦЕЛОЧИСЛЕНО ДЕЛЕНЕ"     # колко пъти делим без остатък
@@ -124,4 +130,7 @@ num_4, num_5, num_6 = 10, 2.5, 123
 # print(leftover)
 
 # rows, cols = map(int, input().split())
+
+
+
 
