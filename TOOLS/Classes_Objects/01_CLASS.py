@@ -1,17 +1,17 @@
 
 
 class Books:
-    book_list = []    # клас атрибут, достъпва се от класа и от инстанцията
-    number_books = 0
+    BOOK_LIST = []    # клас атрибут, достъпва се от класа и от инстанцията
+    NUMBER_BOOKS = 0
 
     # state - състоянието на обект. Описваме го чрез атрибутите.
     def __init__(self, title: str, publisher: str, price: float):   # конструктор / инициализатор
         self.title = title
         self.publisher = publisher  # атрибути / пропъртита на инстанцията
         self.price = price
-        Books.book_list.append(self.title)
-        Books.number_books += 1      # брояч на създадените инстанции
-        self.book_number = Books.number_books
+        Books.BOOK_LIST.append(self.title)
+        Books.NUMBER_BOOKS += 1      # брояч на създадените инстанции
+        self.book_number = Books.NUMBER_BOOKS
 
 
     # процедури - описват се чрез методи и с тях може да манипулираме стейта на обекта
@@ -21,7 +21,7 @@ class Books:
 
     @classmethod                # метод на класа
     def sort_book_list(cls):
-        Books.book_list.sort()
+        Books.BOOK_LIST.sort()
         return "The books list was sorted alphabetically"
 
 

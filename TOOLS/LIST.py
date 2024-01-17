@@ -202,7 +202,7 @@ print(last)
 
 "КОМБИНИРА ДВА СПИСЪКА"
 # names = ['Piter Parker', 'Clark Kent']
-# heroes = ['Spiderman', 'Superman']
+# heroes = ['Spider-Man', 'Superman']
 # universes = ['Marvel', 'DC']
 #
 # for name, hero, universe in zip(names, heroes, universes):

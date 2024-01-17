@@ -5,10 +5,10 @@ num_4, num_5, num_6 = 10, 2.5, 123
 
 
 "ФОРМАТИРАНЕ"
-num = 1_234_567
-print(num)
-print(f'{num:,}')
-print(type(num))
+# num = 1_234_567
+# print(num)
+# print(f'{num:,}')
+# print(type(num))
 
 
 
