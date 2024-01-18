@@ -23,7 +23,7 @@ class ChildCreditCard(CreditCard):
 
 
 class Library:
-    def __init__(self, name, address):
+    def __init__(self, name: str, address: str):
         self.name = name
         self.address = address
         self.employees = []
