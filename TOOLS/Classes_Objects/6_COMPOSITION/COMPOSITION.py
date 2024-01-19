@@ -12,37 +12,7 @@
 
 
 
-class Engine:
-    def start(self):
-        print("Engine started")
-
-    def stop(self):
-        print("Engine stopped")
-
-
-
-class Car:
-    def __init__(self):
-        self.engine = Engine()
-
-    def start(self):
-        print("Car is starting")
-        self.engine.start()
-
-    def stop(self):
-        print("Car is stopping")
-        self.engine.stop()
-
-
-
-
-# Използване на композиция
-my_car = Car()
-my_car.start()
-my_car.stop()
-
-
-
+"ВЛАГАНЕ НА ИНСТАНЦИИ КАТО СТОЙНОСТИ НА АТРИБУТИ"
 class Address:
     def __init__(self, street, number,city):
         self.street = street
@@ -80,5 +50,34 @@ print(employee.position)
 
 
 
+
+
+"ВЛАГАНЕ НА КЛАСОВЕТЕ КАТО АТРИБУТИ"
+# class Engine:
+#     # няма конструктор, защото ползваме само методите
+#     def engine_start(self):
+#         print("drive")
+#         return "дава газ"
+#
+# class Wheels:
+#     # няма конструктор, защото ползваме само методите
+#     def rotate(self):
+#         print("rotate")
+#         return "търкалят се"
+#
+# class Car:
+#     # няма нужда да се описват след self, директно вземат от класа
+#     def __init__(self):             # (self, wheels: Wheels, engine: Engine):
+#         self.wheels = Wheels()      # композиция на class Engine():
+#         self.engine = Engine()      # композиция на class Wheels():
+#
+#     def drive(self):
+#         self.engine.engine_start()
+#         self.wheels.rotate()
+#
+#
+# car_obj_1 = Car()
+# car_obj_1.drive()
+# car_obj_1.wheels.rotate()
 
 

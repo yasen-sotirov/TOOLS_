@@ -34,8 +34,9 @@ class CustomerSupport(Employee):
 
 
 class Manger(Employee):
-    def __init__(self, name, salary, department):       # не подавам нови атрибути
+    def __init__(self, name, salary, department, bonus: int):       # не подавам нови атрибути
         super().__init__(name, salary, department)
+        self.bonus = bonus
         self.employees_list = []
 
     def add_employee(self, new_employee):
@@ -43,9 +44,27 @@ class Manger(Employee):
 
 
 
-support = CustomerSupport("Jordan", 3000, "sales", "example@mail.com", 359888123456)
+support_1 = CustomerSupport("Jordan", 3000, "sales", "example@mail.com", 359888123456)
+# print(support_1.contacts())
 
-# print(support.contacts())
+# manager_1 = Manger("Todor", 4000, "managers", 300)
+# manager_1.add_employee(support_1.name)
+# print(manager_1.employees_list)
 
+
+"MIXIN"
+class CEO:
+    def fire_employee(self, employee):
+        return f"{employee.name} was fired."
+        del employee
+
+
+class TopManager(Manger, CEO):
+    def __init__(self, name, salary, department, bonus):
+        super().__init__(name, salary, department, bonus)
+
+ceo_1 = TopManager('Georgiev', 5000, 'managers', 500)
+ceo_1.fire_employee(support_1)
+print(support_1)
 
 
