@@ -10,6 +10,8 @@ number_list_3 = [1, 2, 3, 4, 5]
 letters_list = ["cat", "dog", "mouse", 'world']
 nested_list = [[1, 2, 3], [4, 5, 6]]
 
+
+
 "ДОБАВЯ НОВИ ЕЛЕМЕНТИ В ЛИСТА"
 # print(mix_list)
 # mix_list.append("new_var")
@@ -24,6 +26,7 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 # a = "012abv"
 # print(list(a))
 # ['0', '1', '2', 'a', 'b', 'v']
+
 
 "ДОБАВЯ ЕЛЕМЕНТИ КЪМ ЛИСТА"
 # lst = [1, 2, 3]
@@ -93,14 +96,14 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 
 
 "РАЗОПАКОВА ЛИСТА"      # вместо " ".join(), защото той работи само с str
-num_list = [1, 2, 3, 4, 5]
-print(*num_list)
-print(*num_list, sep=", ")
-
-first, *rest, last = num_list
-print(first)
-print(rest)
-print(last)
+# num_list = [1, 2, 3, 4, 5]
+# print(*num_list)
+# print(*num_list, sep=", ")
+#
+# first, *rest, last = num_list
+# print(first)
+# print(rest)
+# print(last)
 
 
 
@@ -181,6 +184,9 @@ print(last)
 # train = [0] * number_of_wagon
 # [0, 0, 0, 0, 0]
 
+# print([True * 2, False * 3, True])
+
+
 
 "НА КОЙ ИНДЕКС СЕ НАМИРА (нещо)"
 # number = mix_list.index('b')
@@ -252,7 +258,7 @@ print(last)
 # ['Monika', 'Marry', 'Teddy', 'John', 'Ali', 'Kim']
 
 
-"ОБРЪЩА ЛИСТА ОТЗАНД НАПРЕД"
+"ОБРЪЩА ЛИСТА ОТЗАД НАПРЕД"
 # mix_list.reverse()
 # print(mix_list)
 

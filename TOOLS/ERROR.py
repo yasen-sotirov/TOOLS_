@@ -68,24 +68,23 @@ TRY-EXCEPT БЛОК"
 
 
 "СОБСТВЕНИ ГРЕШКИ"
-class NoBeer(Exception):
-    '''No beer exception'''
-
-class TooLow(Exception):
-    def __init__(self, message = 'Много е малко!'):
-        super(). __init__(message)
-        self.message = message
-
-
-beer = int(input('Колко литри бира има? '))
-if beer == 0:
-    raise NoBeer("Няма бира!")
-
-elif beer < 2:
-    raise TooLow()
-
-else:
-    print("Всичко е наред!")
+# class NoBeer(Exception):
+#     '''No beer exception'''
+#
+# class TooLow(Exception):
+#     def __init__(self, amount):
+#         super(). __init__(f'{amount} л е твърде малко!')
+#
+#
+# beer_quantity = int(input('Колко литри бира има? '))
+# if beer_quantity == 0:
+#     raise NoBeer("Няма бира!")
+#
+# elif beer_quantity < 2:
+#     raise TooLow(beer_quantity)
+#
+# else:
+#     print("Всичко е наред!")
 
 
 
