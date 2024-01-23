@@ -1,21 +1,37 @@
-"FILE HANDLING"    # РАБОТА С ПАПКИ И ФАЙЛОВЕ
-# https://pynative.com/python-list-files-in-a-directory/
+"FILE HANDLING"     # РАБОТА С ПАПКИ И ФАЙЛОВЕ
+                    # https://pynative.com/python-list-files-in-a-directory/
+
+'''
+FILE АТРИБУТИ
+    - име
+    - съдържание
+    - размер
+    - тип: подразбира се от разширението .exe .txt .png '''
+    
+
 import os
 
-" === ПЪТЕКА === "
+" === ПЪТ ПЪТЕКА === "
+# disc / folders / file_name.py
 
-"АБСОЛЮТЕН и РЕЛАТИВЕН ПЪТ"
+"АБСОЛЮТЕН ПЪТ"
 # абсолютният започва от началото
 # path_abs = "D:\Telerik\Telerik_course_python"
 # print(os.path.isabs(path_abs))
 
-# релативният
-# path_rel = "TOOLS\Classes_Objects"
 
-
-"ОТ РЕЛАТИВЕН В АБСОЛЮТЕН"
-
-
+'''РЕЛАТИВЕН ПЪТ
+    при релативният път кой файл ще бъде достъпен се изменя на база на това
+    от къде сме стартирали програмата която достъпва файла.
+        
+    source                  source                  source
+        data                    file.txt                data
+            file.txt            main.py                     main.py
+        main.py                                     file.txt
+        
+    "data/file.txt"         "file.txt"              "../../file.txt
+        
+'''
 
 
 
@@ -107,36 +123,56 @@ import os
 # ===== РЕДАКТИРАНЕ НА .TXT =====
 # ===============================
 
-"ЗАТВАРЯНЕ НА ФАЙЛ СЛЕД РЕДАКЦИЯ"
-# блок, който затваря автоматично след края на кода
-# with open("text.txt") as file_2:
-#     print(file_2.read())
+''' OPEN - работи с релативни пътища, освен когато трябва да се
+    върнем директория назад. Тогава трябва да изчислим абсолютен път
+        x - създава файл, ако го има вдига грешка
+        a - допълва към текста, създава файл ако го няма
+        w - пренаписва текста, създава файл ако го няма
+        r - encoding="utf-8" чете кирилица  
+        
+    CLOSE - затваря файла. Ползва се когато програмата работи 
+    дълго време, файлът не се използва и може да се наложи 
+    файлът да бъде достъпен от друго място което може   '''
 
-# команда за затваряне в края на кода
+
+"ОТВАРЯ И ЧЕТЕ ПРИ РЕЛАТИВЕН ПЪТ"
+# path = 'ERROR.py'                                   # релативен път
+# file_1 = open(path, mode='r', encoding="utf-8")     # отваря файла и чете
+# content = file_1.read()
+# print(content)
 # file_1.close()
 
 
 
-"ПИШЕ ВЪВ ФАЙЛ"
-# "x" - създава файл, ако го има вдига грешка
-# "a" - допълва към текста, създава файл ако го няма
-# "w" - пренаписва текста, създава файл ако го няма
-# "r", encoding="utf-8" чете кирилица
-
-# file_1 = open("demo_folder/test/test_2/demo_file.txt", "x", encoding="utf-8")
-# file_1.writelines('I just REWRITE my first file!\n')
-# file_1.close()
-
-# друг синтаксис
-# file_path = "demo_folder/test/test_2/demo_file.txt"
-# text = "text proba \n"
-# file_1 = open(file_path, mode="a")
-# file_1.write(text)
-# file_1.close()
+"ОТВАРЯ И ЧЕТЕ ПРИ АБСОЛЮТЕН ПЪТ"
+# from os import path
+# cwd = path.dirname(__file__)        # cwd - current working directory
+# file_path = path.join(cwd, '../TOOLS/Classes_Objects/1_CLASS/CLASS.py')
+#
+# print(__file__)     # името на файла, от където стартираме кода
+# print(cwd)          # пътя на файла, от където стартираме кода
+# print(file_path)    # сголбеният абсолютен път
+#
+# file = open(file_path, mode='r', encoding='utf-8')
+# content = file.read()
+# print(content)
+# file.close()
 
 
+"WITH блок"     # след края на блока затваря файла
+# path = "ERROR.py"
+# with open(path, mode='r', encoding='utf-8') as file_to_read:
+#     content = file_to_read.read()
+#     print(content)
 
-"ЧЕТЕ НА ФАИЛ"
+
+''' ЧЕТЕ НА ФАИЛ
+    
+    STREAM - когато отворим един файл е добре да четем ред по ред от него,
+        а не да го зареждаме целя. Така пестим от рам паметта. 
+        Stream-а чете ред по ред от файл, без да го зарежда целия. 
+        Изтощава се след прочитане. '''
+
 # with open("demo_folder/test/test_2/test_file.txt", "r", encoding="utf-8") as file_2:
 #     print(file_2.read())            # връща string на целия текст от файла
 #     print(file_2.readline())        # връща само първия ред
@@ -147,6 +183,51 @@ import os
 # print(file_2.read(3))  # връща string с първите „n“ bytes
 # print(file_2.read(4))  # връща следващите „n“ bytes
 # print(file_2.read())    # връща „n“ bytes до края на текста
+
+
+
+"ЧЕТЕНЕ И ЗАПАЗВАНЕ НА ИНФОТО ОТ ФАЙЛ"
+settings = {}
+file_path = '../'
+with open(file_path, 'r') as settings_file:
+    for line in settings_file:
+        key, value = line.split()
+        settings[key] = value
+
+
+"ПРЕЗАПИСВАНЕ НА ФАЙЛ"
+new_volume = input('new volume level = ')
+settings['volume'] = new_volume
+
+with open(file_path, mode='w') as settings_file:
+    for key, value in settings.items():
+        settings_file.write(f'{key} {value}\n')
+
+
+
+"ПИШЕ ВЪВ ФАЙЛ"
+# my_file.write()     записва стринг
+# my_file.writelines()     записва много  елементи
+
+# file_1 = open("demo_folder/test/test_2/demo_file.txt", "x", encoding="utf-8")
+# file_1.writelines('I just REWRITE my first file!\n')
+# file_1.close()        # трябва да се затвори
+
+# друг синтаксис
+# file_path = "demo_folder/test/test_2/demo_file.txt"
+# text = "text proba \n"
+# file_1 = open(file_path, mode="a")
+# file_1.write(text)
+# file_1.close()
+
+
+"СЪЗДАВА ФАЙЛ"      #  създава файл, ако го има вдига грешка
+# open(file_path, 'x')
+
+
+"ТРИЕ ФАЙЛ"
+# from os import remove
+# remove(file_path)
 
 
 

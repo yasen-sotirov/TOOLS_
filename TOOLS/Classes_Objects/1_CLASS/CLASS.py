@@ -20,23 +20,11 @@ class Books:
 
     # процедури - описват се чрез методи и с тях може да манипулираме стейта на обекта
     def change_price(self, new_price: float):      # метод na инстанцията
+        '''
+        @param new_price:
+        @return: change the old price with the new price
+        '''
         self.price = new_price
-
-
-    @classmethod                # метод на класа. Работи с класа като цяло
-    def sort_book_list(cls):
-        Books.BOOK_LIST.sort()
-        return "The books list was sorted alphabetically"
-
-
-
-    @staticmethod           # обикновена функция вложена в класа по организационни причини
-    def clean_dust():       # метод които не ползва достъп до класа или инстанциите му
-        '''
-        @clean_dust: This static method is in the Book class for organizational purposes
-        @return: Conformational string
-        '''
-        return "The dust was cleaned"
 
 
 
@@ -51,9 +39,9 @@ class Books:
 
 
 "СЪЗДАВА ИНСТАНЦИЯ - НОВ ОБЕКТ"
-book_1 = Books("Math", "Prosveta", 20.00)
-book_2 = Books("Biology", "Anubis", 15.99, 12345)
-book_3 = Books("Chemistry", "BAN", 12.80, 12345, author = "G. Dimitrov", year = 2015)
+# book_1 = Books("Math", "Prosveta", 20.00)
+# book_2 = Books("Biology", "Anubis", 15.99, 12345)
+# book_3 = Books("Chemistry", "BAN", 12.80, 12345, author = "G. Dimitrov", year = 2015)
 
 
 "РЕПРЕЗЕНТАЦИЯ НА ИНСТАНЦИЯТА"      # връща __str__ метода, ако има такъв, иначе <__main__.Books object at 0x0000025D92BFE210>
@@ -71,20 +59,11 @@ book_3 = Books("Chemistry", "BAN", 12.80, 12345, author = "G. Dimitrov", year = 
 # print('number books', book_1.number_books)      # достъпване през инстанцията
 
 
-"ИЗВИКВАНЕ НА @CLASSMETHOD"
-# print(Books.book_list)
-# print(Books.sort_book_list())
-# print(Books.book_list)
-
-
-"ИЗВИКВАНЕ НА @STATICMETHOD"
-# print(Books.clean_dust)
-# print(book_3.sort_book_list())
-
 
 "ИЗВИКВАНЕ НА ДОКУМЕНТАЦИЯ"     # ако има записана такава
-# print(Books.clean_dust.__doc__)
+# print(Books.change_price().__doc__)
 
 
 "ИЗВИКВАНЕ НА KWARGS"
 # print(book_3.other)
+

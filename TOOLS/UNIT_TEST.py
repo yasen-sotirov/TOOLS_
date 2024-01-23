@@ -27,7 +27,7 @@ FRAMEWORK   "unittest"
     
     
 ИМЕНУВАНЕ
-    - класове CamelCase_Should
+    - класове FunctionOrModuleName_Should
     - методите test_whatTestReturn_onWhichConditions
     
     
@@ -49,11 +49,12 @@ ASSERT METHODS
 
 """
 
-
+" ===== ПРИМЕР 1 ===== "
 class Employee:
-    def __init__(self, name: str, salary: int):
+    def __init__(self, name: str, salary: int, department: str):
         self.name = name
         self.salary = salary
+        self.department = department
 
     @property
     def salary(self):
@@ -65,16 +66,45 @@ class Employee:
             raise ValueError('salary must be positive number')
         self._salary = money
 
-
-
-"===== TESTS ====="
+# --------------------------
 
 from unittest import TestCase
-class Employee_Should(TestCase):
 
-    def test_fail_with_value_error_negative_salary(self):
+class Constructor_Should(TestCase):
+    def test_constructor(self):
+        # Assert & Act
+        employee_1 = Employee("Ivan", 1000, 'manager')
+
+        # Assert
+        self.assertEqual('Ivan', employee_1.name)
+        self.assertEqual(1000, employee_1._salary)
+        self.assertEqual('manager', employee_1.department)
+
+
+
+class SalarySetter_Should(TestCase):
+
+    def test_failWithValueError_negativeSalary(self):
         with self.assertRaises(ValueError):
-            employee = Employee('John', -500)
+            employee = Employee('John', -500, 'manager')
+
+
+
+
+" ===== ПРИМЕР 2 ===== "
+def division(a, b):
+    a = isinstance(a, int)
+    b = isinstance(b, int)
+    if not a or not b:
+        raise ValueError
+
+    result = a / b
+
+
+
+
+
+
 
 
 
