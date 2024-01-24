@@ -12,6 +12,16 @@ txt_5 = "123abc"
 txt_6 = "123 abc"
 
 
+
+
+"МЕТОДИ STR и REPR"
+# from datetime import datetime
+# today = datetime.now()
+# print(str(today))
+# print(repr(today))
+
+
+
 "F STRING FORMATTING"
 # print(f"text 1"
 #       f"text 2")
@@ -22,6 +32,8 @@ txt_6 = "123 abc"
 "РАЗДРОБЯВА СТРИНГ НА ЕЛЕМЕНТИ"     # връща лист
 # print(txt_4.split())                # разделя по празно място
 # print(txt_4.split(" ", 2))          # разделя на първото съвпадение
+# print(str.split(txt_2, "_"))
+
 
 
 "ОТ STR ПРАВИ ЛИСТ ОТ ЧИСЛА"
@@ -48,11 +60,8 @@ txt_6 = "123 abc"
 # print(concatenate("Soft", "UNI", "Is", "Grate", "!", UNI="Uni", Grate="Great"))
 
 
-"МЕТОДИ STR и REPR"
-from datetime import datetime
-today = datetime.now()
-print(str(today))
-print(repr(today))
+
+
 
 "ПРЕМАХВА ЕЛЕМЕНТ n БРОЙ ПЪТИ"
 # text = "Hello$ Python3$"
@@ -63,8 +72,11 @@ print(repr(today))
 
 "ВРЪЩА ИНДЕКСА НА ПЪРВОТО ПОПАДЕНИЕ"
 # text = "a3{cd2{a}f}ef"
-# print(text.find("}"))       # дава -1, ако не намери нищо
-# print(text.index("}"))      # вдига грешка ако не открие
+# print(text.find("}"))             # дава -1, ако не намери нищо
+
+# print(text.index("}"))            # вдига грешка ако не открие
+# print(str.index(txt,"like"))      # започва от индекс 2
+# print(txt.index("like"))
 
 
 
@@ -107,14 +119,21 @@ print(repr(today))
 "ГЛАВНИ и МАЛКИ БУКВИ"
 # print(txt.lower())          # прави всички букви малки
 # print(txt.upper())          # прави всички букви главни
+# print(str.upper(txt))
 #
 # print(txt_6.islower())      # проверява, ако има букви дали са малки
 # print(txt.isupper())        # проверява, ако има букви дали са главни
 
 
+
 "ПРАВИ ПЪРВАТ БУКВА ГЛАВНА"
 # a = "само мали букви"
 # print(a.capitalize())
+
+
+
+" ВСЯКА ДУМА Е С ГЛАВНА БУКВА"
+# print(str.title(txt))
 
 
 "БУКВИ ЛИ СА ИЛИ ЧИСЛА"

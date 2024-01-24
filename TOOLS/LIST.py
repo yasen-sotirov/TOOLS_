@@ -83,6 +83,7 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 #
 # # [1, 4, 3, 8, 6, 2, 7, 6.59, 2.32]
 # print(", ".join([str(x) for x in number_list]))
+# print(', '.join(map(str, number_list)))
 # # ако са числа
 # # 1, 4, 3, 8, 6, 2, 7, 6.59, 2.32
 
