@@ -19,4 +19,4 @@ def my_filter(filtering_fn, collection):
 
 
 print('Plus one to [1, 2, 3]:', my_map(lambda x: x + 1, [1, 2, 3]))
-print('Only odd from [1, 2, 3]:', my_filter(lambda x: x % 2 == 1, [1, 2, 3]))
+# print('Only odd from [1, 2, 3]:', my_filter(lambda x: x % 2 == 1, [1, 2, 3]))

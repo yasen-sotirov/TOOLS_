@@ -100,6 +100,19 @@ print(f"row: {rows}, col: {cols}")
 
 
 
+"ПРИМЕР"
+def my_map(mapping_fn, collection):
+    result_list = []
+    for val in collection:
+        # the essence of map - transform the val by using the supplied mapping_fn
+        mapped_val = mapping_fn(val)
+        result_list.append(mapped_val)
+
+    return result_list
+
+# на mapping_fn подаваме lambda
+print('Plus one to [1, 2, 3]:', my_map(lambda x: x + 1, [1, 2, 3]))
+
 
 
 

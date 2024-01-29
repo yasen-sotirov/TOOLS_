@@ -24,8 +24,8 @@ SETTER - валидира нови инстанции и промени
 class Employee:
     company = "DSK"
     def __init__(self, name: str, family: str, password, salary: int):
-        self.name = name
-        self.family = family            # public instance attribute
+        self.name = name                # public instance attribute
+        self._family = family           # има _ за да мине през read-only @property-то
         self.__password = password      # protected instance attribute, няма setter и getter
         self.salary = salary            # property, защото има setter и няма подчертавка
                                         # при инициализиране подава на setter-a, който валидира
@@ -41,10 +41,15 @@ class Employee:
         self._salary = value
 
 
-    "READ-ONLY"     # няма си setter
+    "READ-ONLY"                         # няма си setter
+    @property
+    def family(self):
+        return self._family
+
     @property
     def full_name(self):                # зад property не е задължително за има атрибут
         return f'{self.name} {self.family}'
+
 
 
     "PROTECTED METHOD"
@@ -83,10 +88,10 @@ employee_1 = Employee("Ivan", "Petrov", "pass123", 1500)
 # print(employee_1._Employee__password)
 
 
-
 "READ-ONLY АТРИБУТИ"                    # само през getter и не може да се променя след инициализация
-# print("employee_1 name", employee_1.full_name)
-# employee_1.full_name = 'Todor'  # AttributeError: property 'name' of 'Employee' object has no setter
+# print('employee_1 family:', employee_1.family)
+# print("employee_1 full name", employee_1.full_name)
+# employee_1.full_name = 'Todor'          # AttributeError: property 'name' of 'Employee' object has no setter
 
 
 
