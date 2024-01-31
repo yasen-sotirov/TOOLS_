@@ -1,7 +1,10 @@
 
 def sum_range(range_end):
-    return 1 if range_end == 1 else range_end + sum_range(range_end - 1)
+    # return 1 if range_end == 1 else range_end + sum_range(range_end - 1)
+    if range_end == 1:
+        return 1
 
+    return range_end + sum_range(range_end - 1)
 
         # върни 5 + нещо
         # нещото е == 4 + нещо
