@@ -19,10 +19,7 @@ tree = TreeNode(1, [
     ])
 ])
 
-def dfs(root):
-    print(root.value)
-    for child in root.children:
-        dfs(child) 
+
 
 def bfs(root):
     q = Queue()
@@ -35,5 +32,5 @@ def bfs(root):
             q.put(child)
 
 
-dfs(tree)
+
 bfs(tree)

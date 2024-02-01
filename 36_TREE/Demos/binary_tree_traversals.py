@@ -1,21 +1,22 @@
 from queue import Queue
-from binary_tree_node import BinaryTreeNode
 
 
-binary_tree = BinaryTreeNode(
-    7,
-    left=BinaryTreeNode(
-        4,
-        left=BinaryTreeNode(2),
-        right=BinaryTreeNode(
-            5,
-            right=BinaryTreeNode(6))),
-    right=BinaryTreeNode(
-        11,
-        left=BinaryTreeNode(8),
-        right=BinaryTreeNode(
-            14,
-            right=BinaryTreeNode(18))))
+class BinaryTreeNode:
+    def __init__(self, value, left = None, right = None):
+        self.value = value
+        self.left = left
+        self.right = right
+
+
+binary_tree = BinaryTreeNode(7,
+                    left=BinaryTreeNode(4,
+                        left=BinaryTreeNode(2),
+                        right=BinaryTreeNode(5,
+                            right=BinaryTreeNode(6))),
+                    right=BinaryTreeNode(11,
+                        left=BinaryTreeNode(8),
+                        right=BinaryTreeNode(14,
+                            right=BinaryTreeNode(18))))
 
 
 def dfs_preorder(root):
@@ -41,7 +42,9 @@ def dfs_postorder(root):
     dfs_postorder(root.left)
     dfs_postorder(root.right)
     print(root.value)
-    
+
+
+
 def bfs(root):
     q = Queue()
     q.put(root)

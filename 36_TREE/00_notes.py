@@ -1,54 +1,55 @@
-
 "TREES"  # дървета - записки при Едо
 
-from __future__ import annotations
+
+# from __future__ import annotations
+# импортирам^ аки искам type hinting при child: list[Category]
 
 
 class Category:
-    # типизацията може само на едно място
-    def __init__(self, name: str, child_category: list[Category]):
-        self.name: str = name
-        self.child_category = child_category   # рекурсивно
+    def __init__(self, name: str, child):
+        self.name = name
+        self.child = child
 
 
-category = Category("Categories", [
-    Category("PC and laptops", [
-        Category("Desktops", []),
-        Category("Laptops", []),
-        Category("Peripheral", [
-            Category("Mouse", [
-                Category("Bluetooth", []),
-                Category("With cabal", [])
-            ]),
-            Category("Keyboard", []),
-            Category("Other",[])
-        ])
-    ]),
-    Category("TV's", [
-        Category("LCD", []),
-        Category("OLED", [])
-    ])
-])
+categories = Category("Categories", [
+                Category("PC and laptops", [
+                    Category("Desktops", []),
+                    Category("Laptops", []),
+                    Category("Peripheral", [
+                        Category("Mouse", [
+                            Category("Bluetooth", []),
+                            Category("With cabal", [])]),
+                        Category("Keyboard", []),
+                        Category("Other",[])])]),
+                Category("TV's", [
+                    Category("LCD", []),
+                    Category("OLED", [])])])
 
 
-def visualise(root_category: Category):
-    stack = [(root_category, 0)]
-    while stack:
-        last, indent = stack.pop()
-        print(" " * indent, last.name)
-        for child in reversed(last.child_category):
-            stack.append((child, indent + 2))
+"ОБХОЖДАНЕ ИТЕРАТИВНО"
+# def visual_iter(tree: Category):
+#     # тук ще трупаме подкатегориите
+#     stack = [(tree, 0)]
+#
+#     while stack:
+#         # вадим последния влязъл
+#         curr_category, indent = stack.pop()
+#         print(" " * indent, curr_category.name)
+#
+#         # прилагаме reversed иначе обръща подредбата
+#         for child in reversed(curr_category.child):
+#             # добавя децата към стека
+#             stack.append((child, indent + 2))
+#
+# visual_iter(categories)
 
 
-print(f"=== Stack iterative:")
-visualise(category)
 
-def visual_rec(root_category: Category, indent):
-    print(" " * indent, root_category.name)
-    for child in root_category.child_category:
-        visual_rec(child, indent + 2)
-
-
-print()
-print("=== Call stack rec:")
-visual_rec(category, 0)
+"ОБХОЖДАНЕ РЕКУРСИВНО"  # Preorder
+# def visual_rec(category: Category, indent=0):
+#     print(" " * indent, category.name)
+#
+#     for child in category.child:
+#         visual_rec(child, indent + 2)
+#
+# visual_rec(categories)

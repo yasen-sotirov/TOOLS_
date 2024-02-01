@@ -64,8 +64,8 @@ class Person:
 people = [Person('Petar', 35), Person('Ivan', 20), Person('Dimitar', 30)]
 ordered_people = sorted(people, key=lambda p: p.name)
 
-print(ordered_people)
-print(*ordered_people)
+# print(ordered_people)
+# print(*ordered_people, sep='\n')
 
 
 

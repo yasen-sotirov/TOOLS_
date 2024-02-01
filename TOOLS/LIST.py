@@ -259,11 +259,6 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 # ['Monika', 'Marry', 'Teddy', 'John', 'Ali', 'Kim']
 
 
-"ОБРЪЩА ЛИСТА ОТЗАД НАПРЕД"
-# mix_list.reverse()
-# print(mix_list)
-
-
 
 "ПРОМЕНЯ ЕЛЕМЕНТИ ВЪВ ВЛОЖЕНИЯ СПИСЪК"
 # [[1, 2, 3], [4, 5, 6]]
@@ -357,6 +352,7 @@ nested_list = [[1, 2, 3], [4, 5, 6]]
 
 # обръща оригиналната колекция
 # print(letters_list.reverse())
+
 
 
 "BOOLEAN с IN ОПЕРАТОРА"            # ако го има в листа връща True
