@@ -15,9 +15,8 @@
     
     
     LIKE
-        % - не се интересува колко елемента има преди/след него
-        WHERE FirstName like "SA%"  
-        
+        % - не се интересува колко елемента има преди/след него: WHERE FirstName like "SA%"  
+        _ - търси само един символ
     
     REGEXP
         WHERE FirstName regexp("^SA")  
@@ -60,20 +59,46 @@
 
 
 
+AGGREGATE FUNCTIONS
+    SELECT AGG_FUNC(column_name) 
+    FROM table
+    
+    MIN - минимална стойност
+    MAX - максимална  стойност
+    COUNT - брой по условие или ако не е null
+    AVG - средна стойност
+    SUM - сумира
+
+
+GROUP BY    https://learn.telerikacademy.com/mod/page/view.php?id=50348
+    
+    SELECT city, COUNT(*)
+    FROM Employees
+    WHERE Employees_id > 10
+    GROUP BY City
+    HAVING count > 10
+    ORDER BY count;
+
+
 
 ОБЕДИНЯВАНЕ НА ТАБЛИЦИ
-    JOIN (INNER JOIN) - ако не е NULL
-        SELECT firstname, lastname, o.customer_id   # префикс: при повтаряне на колоните се уточнява от коя таблица ги селектираме 
-        FROM orders as o JOIN customers as c        # обединява таблиците order и customers
-        ON o.customer_id = c.customer_id            # където id-то им съвпада
+    INNER:
+        JOIN (INNER JOIN) - връща сечение между двете таблици.
+        изпуска записа ако е NULL
+            SELECT firstname, lastname, o.customer_id   # префикс: при повтаряне на колоните се уточнява от коя таблица ги селектираме 
+            FROM orders as o JOIN customers as c        # обединява таблиците order и customers
+            ON o.customer_id = c.customer_id            # където id-то им съвпада
+    OUTER:
+        LEFT JOIN - връща всички стойности от лявата (№1) таблица, 
+        а липсващите стойности от дясната таблица (№2) ще запълни с NULL
+        
+        RIGHT JOIN - връща всички стойности от дясната таблица,
+        а липсващите стойности от лявата ще запълни с NULL
 
-    FULL JOIN - връща всички данни от двете таблици, дои тези с NULL
-    LEFT JOIN - връща всички от таблица 1 и тези от таблица 2 дето са без NULL
-    RIGHT JOIN - връща таблица 1 без тези с NULL и цялата таблица 2
 
 
 
-ОБЕДИНЯВА ТАБЛИЦИ В ЛИСТ
+ОБЕДИНЯВА КОЛОНИ В ЕДНА РЕЗУЛТАНТНА КОЛОНА
     UNION - връща само уникалните елементи
     UNION ALL - връща всички елементи
     
