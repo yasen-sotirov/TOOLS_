@@ -19,5 +19,5 @@
 
 
 "NOT"
-print(not(True))
-print(not(False))
+# print(not(True))
+# print(not(False))

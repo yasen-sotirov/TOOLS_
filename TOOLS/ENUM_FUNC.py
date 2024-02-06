@@ -6,7 +6,7 @@ class CheckLocation(Enum):
     VARNA = "VARNA"
 
 
-line = input().upper()
+line = input('Give me the location: ').upper()
 
 try:
     if CheckLocation(line):

@@ -54,14 +54,3 @@
 
 
 
-
-
-
-"HIGH ORDER FUNCTION"
-
-
-
-"СОЧИ НА ЕДНО И СЪЩО МЯСТО В ПАМЕТТА"
-# my_print = print
-# print(my_print)
-# print(print)

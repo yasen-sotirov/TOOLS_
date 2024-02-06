@@ -1,2 +1,0 @@
-class InvalidLocationError(Exception):
-    pass

@@ -10,19 +10,19 @@
 
 
 " (*, ...) СЛЕД НЕЯ ЗАДЪЛЖИТЕЛНО СЛЕДВАТ KEY-WORD ARGUMENTS"
-def funct1(a, *, b, c):
-    print(a, b, c)
-funct1(1, b=2, c=3)     # print без скоби
-
-def funct2(a, *, b, c):
-    return a, b, c
-print(funct2(1, b=2, c=3))      # print със скоби
+# def funct1(a, *, b, c):
+#     print(a, b, c)
+# funct1(1, b=2, c=3)     # print без скоби
+#
+# def funct2(a, *, b, c):
+#     return a, b, c
+# print(funct2(1, b=2, c=3))      # print със скоби
 
 
 " (..., /) ПРЕДИ НЕГО ЗАДЪЛЖИТЕЛНО ИМА KEY-WORD ARGUMENTS"
-def func(x, /, y):      # прави един параметър преди него linear parameter
-    return x, y
-print(func(5, 6))
+# def func(x, /, y):      # прави един параметър преди него linear parameter
+#     return x, y
+# print(func(5, 6))
 
 
 
