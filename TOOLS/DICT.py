@@ -18,6 +18,18 @@ names_ages = {"Ines": 27,
               "Maria": 52}      # така е по PEP стандарт
 
 
+"ТЪРСЕНЕ В РЕЧНИК"
+prices = {'burger':15, 'drink':3, 'salad':5, 'fries':4}
+
+def order_food(items: list[str]):
+    total = sum(prices[el] for el in items)
+    return total
+
+print(order_food(['burger', 'drink', 'salad']))
+print(order_food(['fries', 'drink', 'salad']))
+
+
+
 "ДОБАВЯНЕ В РЕЧНИКА"
 # print(my_dict)
 # my_dict["eyes color"] = "green"
@@ -300,37 +312,38 @@ names_ages = {"Ines": 27,
 
 
 
-"ИЗОМОРФНИ СТРИНГОВЕ"       # пример: egg add
-                            # 'e' в Str1 съответства на 'a' в Str2
-                            # 'g' в Str1 съответства на 'd' в Str2
-def are_isomorphic(str_1: str, str_2: str) -> bool:
-    if len(str_1) != len(str_2):
-        return False
-
-    dictionary = {}
-    for i in range(len(str_1)):
-        el_1, el_2 = str_1[i], str_2[i]
-
-        # Проверява дали ключа вече го има
-        if el_1 in dictionary.keys():
-
-            # ако го има, проверява дали е равен на вече зададената стойност
-            if dictionary[el_1] != el_2:
-                # ако не отговаря, значи преди сме въвели друга комбинация
-                return False
-        else:
-            # Проверяваме дали текущия символ от str_2 не е вече закачен към друг ключ
-            if el_2 in dictionary.values():
-                return False
-
-            # ако и тук го няма, го създаваме
-            dictionary[el_1] = el_2
-    return True
-
-s1, s2 = 'theeyes', 'theysee'
-# s1, s2 = 'theeyes', '1233435'
-# s1, s2 = 'theeyes', '1234533'
-print(are_isomorphic(s1, s2))
+"ИЗОМОРФНИ СТРИНГОВЕ"
+# пример: egg add
+# 'e' в Str1 съответства на 'a' в Str2
+# 'g' в Str1 съответства на 'd' в Str2
+# def are_isomorphic(str_1: str, str_2: str) -> bool:
+#     if len(str_1) != len(str_2):
+#         return False
+#
+#     dictionary = {}
+#     for i in range(len(str_1)):
+#         el_1, el_2 = str_1[i], str_2[i]
+#
+#         # Проверява дали ключа вече го има
+#         if el_1 in dictionary.keys():
+#
+#             # ако го има, проверява дали е равен на вече зададената стойност
+#             if dictionary[el_1] != el_2:
+#                 # ако не отговаря, значи преди сме въвели друга комбинация
+#                 return False
+#         else:
+#             # Проверяваме дали текущия символ от str_2 не е вече закачен към друг ключ
+#             if el_2 in dictionary.values():
+#                 return False
+#
+#             # ако и тук го няма, го създаваме
+#             dictionary[el_1] = el_2
+#     return True
+#
+# s1, s2 = 'theeyes', 'theysee'
+# # s1, s2 = 'theeyes', '1233435'
+# # s1, s2 = 'theeyes', '1234533'
+# print(are_isomorphic(s1, s2))
 
 
 

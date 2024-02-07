@@ -1,11 +1,12 @@
 
 
-class Books:
-    BOOK_LIST = []    # клас атрибут, достъпва се от класа и от инстанцията
+class Books:            # именуване в CamelCase
+    BOOK_LIST = []      # клас атрибут, достъпва се от класа и от инстанцията
     NUMBER_BOOKS = 0
 
     # state - състоянието на обект. Описваме го чрез атрибутите.
     def __init__(self, title: str, publisher: str, price: float, barcode: int = None, **kwargs):   # конструктор / инициализатор
+                        # параметри ^
         self.title = title
         self.publisher = publisher              # атрибути / пропъртита на инстанцията
         self.price = price
@@ -42,6 +43,7 @@ class Books:
 # book_1 = Books("Math", "Prosveta", 20.00)
 # book_2 = Books("Biology", "Anubis", 15.99, 12345)
 # book_3 = Books("Chemistry", "BAN", 12.80, 12345, author = "G. Dimitrov", year = 2015)
+            # аргументи ^
 
 
 "РЕПРЕЗЕНТАЦИЯ НА ИНСТАНЦИЯТА"      # връща __str__ метода, ако има такъв, иначе <__main__.Books object at 0x0000025D92BFE210>
