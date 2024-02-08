@@ -12,7 +12,7 @@ from database import Database
 
 # лесно подменяме начина на save - просто сменяме в контейнера,
 # без да пипаме Window класа
-storage = Database
+storage = Database      # без скоби!
 
 
 # създава инстанция

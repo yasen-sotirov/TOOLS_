@@ -37,7 +37,7 @@ import os
 
 
 "ОТ АБСОЛЮТЕН В РЕЛАТИВЕН"
-# path_absolut = "D:\Telerik\Telerik_course_python\TOOLS\Classes_Objects"
+# path_absolut = "D:\Telerik\Telerik_course_python\TOOLS\CLASS_OBJECT"
 # print(os.path.relpath(path_rel, "Telerik_course_python"))
 
 
@@ -50,7 +50,7 @@ import os
 
 "ДОБАВЯ КЪМ ПЪТЕКАТА"
 # path_1 = "D:\Telerik\Telerik_course_python"
-# path_2 = "TOOLS\Classes_Objects"
+# path_2 = "TOOLS\CLASS_OBJECT"
 # path = os.path.join(path_1, path_2)
 # print(os.listdir(path))
 
@@ -147,7 +147,7 @@ import os
 "ОТВАРЯ И ЧЕТЕ ПРИ АБСОЛЮТЕН ПЪТ"
 # from os import path
 # cwd = path.dirname(__file__)        # cwd - current working directory
-# file_path = path.join(cwd, '../TOOLS/Classes_Objects/1_CLASS/CLASS.py')
+# file_path = path.join(cwd, '../TOOLS/CLASS_OBJECT/1_CLASS/CLASS.py')
 #
 # print(__file__)     # името на файла, от където стартираме кода
 # print(cwd)          # пътя на файла, от където стартираме кода
@@ -187,21 +187,21 @@ import os
 
 
 "ЧЕТЕНЕ И ЗАПАЗВАНЕ НА ИНФОТО ОТ ФАЙЛ"
-settings = {}
-file_path = '../'
-with open(file_path, 'r') as settings_file:
-    for line in settings_file:
-        key, value = line.split()
-        settings[key] = value
+# settings = {}
+# file_path = '../'
+# with open(file_path, 'r') as settings_file:
+#     for line in settings_file:
+#         key, value = line.split()
+#         settings[key] = value
 
 
 "ПРЕЗАПИСВАНЕ НА ФАЙЛ"
-new_volume = input('new volume level = ')
-settings['volume'] = new_volume
-
-with open(file_path, mode='w') as settings_file:
-    for key, value in settings.items():
-        settings_file.write(f'{key} {value}\n')
+# new_volume = input('new volume level = ')
+# settings['volume'] = new_volume
+#
+# with open(file_path, mode='w') as settings_file:
+#     for key, value in settings.items():
+#         settings_file.write(f'{key} {value}\n')
 
 
 

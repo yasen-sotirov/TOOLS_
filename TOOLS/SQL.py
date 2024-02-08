@@ -81,7 +81,7 @@ GROUP BY    https://learn.telerikacademy.com/mod/page/view.php?id=50348
 
 
 
-ОБЕДИНЯВАНЕ НА ТАБЛИЦИ
+JOIN    https://joins.spathon.com/
     INNER:
         JOIN (INNER JOIN) - връща сечение между двете таблици.
         изпуска записа ако е NULL

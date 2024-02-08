@@ -33,6 +33,8 @@ txt_6 = "123 abc"
 # print(txt_4.split())                # разделя по празно място
 # print(txt_4.split(" ", 2))          # разделя на първото съвпадение
 # print(str.split(txt_2, "_"))
+# print(txt.split()[0])
+# print(txt.split()[1])
 
 
 
@@ -225,6 +227,8 @@ txt_6 = "123 abc"
 
 "СЪЗДАВА АРТ БАНЕРИ"
 # https://manytools.org/hacker-tools/ascii-banner/
+
+# pyfiglet - package
 
 
 
