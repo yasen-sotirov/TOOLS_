@@ -40,9 +40,9 @@ class Books:            # именуване в CamelCase
 
 
 "СЪЗДАВА ИНСТАНЦИЯ - НОВ ОБЕКТ"
-# book_1 = Books("Math", "Prosveta", 20.00)
-# book_2 = Books("Biology", "Anubis", 15.99, 12345)
-# book_3 = Books("Chemistry", "BAN", 12.80, 12345, author = "G. Dimitrov", year = 2015)
+book_1 = Books("Math", "Prosveta", 20.00)
+book_2 = Books("Biology", "Anubis", 15.99, 12345)
+book_3 = Books("Chemistry", "BAN", 12.80, 12345, author = "G. Dimitrov", year = 2015)
             # аргументи ^
 
 
@@ -78,3 +78,10 @@ class Books:            # именуване в CamelCase
 #
 # print(lst)
 # print(*lst, sep='\n')
+
+
+"СОРТИРАНЕ НА ОБЕКТИ С ЛАМБДА"
+# books_list = [book_1, book_2, book_3]
+# for book in sorted(books_list, key=lambda x: (x.title, -x.price)):
+# # ще сортира по име. Ако имената съвпадат, ще сортира по цена низходящо
+#     print(book)

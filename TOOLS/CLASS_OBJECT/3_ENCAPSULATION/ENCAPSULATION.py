@@ -30,7 +30,7 @@ class Employee:
         self.salary = salary            # property, защото има setter и няма подчертавка
                                         # при инициализиране подава на setter-a, който валидира
 
-    @property
+    @property                           # декоратор - функция, която се ползва като атрибут
     def salary(self):                   # property-то трябва да е със същото име както атрибута
         return self._salary             # добавя се _ за да не изпадне в рекурсия
 

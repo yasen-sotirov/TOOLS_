@@ -7,7 +7,7 @@
                 # Може да имаме Полиморфизъм в два класа, който нямат общ родител.
 
 
-# class Employee:         # базов клас
+# class Employee:         # super, parent, base class
 #     COMPANY = "DSK"
 #     def __init__(self, name: str, salary: int, department: str):
 #         self.name = name
@@ -24,8 +24,11 @@
 
 "НАСЛЕДЯВАНЕ НА КЛАС"   # НАСЛЕДЯВА ВСИЧКО КОЕТО НЕ Е ПРЕНАПИСАНО
 # class CustomerSupport(Employee):
+#     # sub, child, derived class
 #     def __init__(self, name, salary, department, email: str, phone_number: int):
-#         super().__init__(name, salary, department)   # наследява __init + атрибутите
+#         # разширяваме, като допълваме с параметри
+#         super().__init__(name, salary, department)
+#         # наследява init-a na супер класа
 #         self.email = email
 #         self.phone_number = phone_number
 #
@@ -46,11 +49,7 @@
 
 
 
-
-
-
-
-support_1 = CustomerSupport("Jordan", 3000, "sales", "example@mail.com", 359888123456)
+# support_1 = CustomerSupport("Jordan", 3000, "sales", "example@mail.com", 359888123456)
 # print(support_1.contacts())
 
 # manager_1 = Manger("Todor", 4000, "managers", 300)
@@ -59,6 +58,9 @@ support_1 = CustomerSupport("Jordan", 3000, "sales", "example@mail.com", 3598881
 
 
 "MIXIN"
+# клас който не може да работи самостоятелно
+# Използва се за да добави функционалност чрез множествено наследяване.
+
 # class CEO:
 #     def fire_employee(self, employee):
 #         return f"{employee.name} was fired."
@@ -77,43 +79,30 @@ support_1 = CustomerSupport("Jordan", 3000, "sales", "example@mail.com", 3598881
 
 
 
-"НАСЛЕДЯВАНЕ НА МЕТОД"
-# class StudentTaxes:
-#     def __init__(self, name, semester_tax, average_grade):
-#         self.name = name
-#         self.semester_tax = semester_tax
-#         self.average_grade = average_grade
+"МНОЖЕСТВЕНО НАСЛЕДЯВАНЕ НА  МЕТОДИ"
+# class Father:
+#     def skills(self):
+#         print('gardening')
 #
-#     def get_discount(self):
-#         if self.average_grade > 5:
-#             return self.semester_tax * 0.4
+# class Mother:
+#     def skills(self):
+#         print('cooking')
+#
+# class Child(Father, Mother):
+#     def skills(self):
+#         Father.skills(self)
+#         Mother.skills(self)
+#         print('sport')
 #
 #
-# class AdditionalDiscount(StudentTaxes):
-#     def get_discount(self):
-#         super().get_discount()        # наследява метода
-#         if 4 < self.average_grade <= 5:
-#             return self.semester_tax * 0.2
+# child = Child()
+# child.skills()
 
 
+nums = [1, 2, 3]
 
-"НАСЛЕДЯВАНЕ БЕЗ ПРЕНАПИСВАНЕ"
-class Toys:
-    def __init__(self, name, color):
-        self.name = name
-        self.color = color
-
-    def change_color(self, new_color):
-        self.color = new_color
-
-
-toy_1 = Toys("doll", "pink")
-print(toy_1.color)
-toy_1.change_color('red')
-print(toy_1.color)
-
-
-
-
+for el in nums:
+    square = el ** 2
+    print(el)
 
 

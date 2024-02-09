@@ -1,5 +1,11 @@
 "INTERFACE SEGREGATION"     # Разделяне на интерфейсите на малки парчета
 
+'''
+Разделяме бащините класове на малки парчета, 
+които после събираме в наследниците'''
+
+
+
 "Методите на този клас не се ползват от всички наследници"
 # class EntertainmentDevice:
 #     def connect_to_device_via_hdmi_cable(self, device): pass
