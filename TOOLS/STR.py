@@ -231,4 +231,18 @@ txt_6 = "123 abc"
 # pyfiglet - package
 
 
+'''
+СПЕЦИАЛНИ СИМВОЛИ
+    ☺   alt + 1
+    ♥   alt + 3
+    ♣   alt + 5
+    ☼   alt + 15
+    ↑   alt + 24
+    ↓   alt + 25
+    ½   alt + 171
+    »   alt + 175
+
+'''
+
+
 

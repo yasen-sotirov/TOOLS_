@@ -10,13 +10,13 @@
 
 
 " (*, ...) СЛЕД НЕЯ ЗАДЪЛЖИТЕЛНО СЛЕДВАТ KEY-WORD ARGUMENTS"
-# def funct1(a, *, b, c):
-#     print(a, b, c)
-# funct1(1, b=2, c=3)     # print без скоби
-#
-# def funct2(a, *, b, c):
-#     return a, b, c
-# print(funct2(1, b=2, c=3))      # print със скоби
+def funct1(a, *, b, c):
+    print(a, b, c)
+funct1(1, b=2, c=3)     # print без скоби
+
+def funct2(a, *, b, c):
+    return a, b, c
+print(funct2(1, b=2, c=3))      # print със скоби
 
 
 " (..., /) ПРЕДИ НЕГО ЗАДЪЛЖИТЕЛНО ИМА KEY-WORD ARGUMENTS"
@@ -27,8 +27,9 @@
 
 
 "ОПАКОВАНЕ В ЛИСТ *ARGS"
-# поема неограничен брой аргументи и ги опакова в лист
+# събира множество подадени аргументи в тюпъл и ги подава на функцията.
 # def print_nums_funct(*args):
+#     print(type(args))
 #     for el in args:
 #         print(el * 2)
 # nums_1, nums_2, nums_3 = 1, 2, 3
@@ -148,7 +149,7 @@
 
 
 
-"ФУНКЦИЯ ОТ СТРИНГ evaluation"
+"ФУНКЦИЯ ОТ СТРИНГ: evaluation"
 # expression = "(5+2*4)/2"
 # result = eval(expression)
 # print(result)

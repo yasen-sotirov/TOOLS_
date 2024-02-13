@@ -36,9 +36,9 @@ list_2d = [
 
 
 "ОБХОЖДА ЛИСТА"
-# for row in list_2d:     # обхожда по елементи
-#     for el in row:
-#         print(el, end=" ")
+for row in list_2d:     # обхожда по елементи
+    for el in row:
+        print(el, end=" ")
 #     print()
 
 # for row in range(len(list_2d)):         # обхожда по индекси

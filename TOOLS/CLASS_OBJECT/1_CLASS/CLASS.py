@@ -1,6 +1,7 @@
-
+"CLASS AND OBJECTS"  #
 
 class Books:            # именуване в CamelCase
+    '''This is book klas in a library'''
     BOOK_LIST = []      # клас атрибут, достъпва се от класа и от инстанцията
     NUMBER_BOOKS = 0
 
@@ -17,6 +18,7 @@ class Books:            # именуване в CamelCase
         Books.BOOK_LIST.append(self.title)      # пълни листа на класа
         Books.NUMBER_BOOKS += 1                 # брояч на създадените инстанции
         self.book_number = Books.NUMBER_BOOKS   # запазва поредния си номер
+
 
 
     # процедури - описват се чрез методи и с тях може да манипулираме стейта на обекта
@@ -47,7 +49,10 @@ book_3 = Books("Chemistry", "BAN", 12.80, 12345, author = "G. Dimitrov", year = 
 
 
 "РЕПРЕЗЕНТАЦИЯ НА ИНСТАНЦИЯТА"      # връща __str__ метода, ако има такъв, иначе <__main__.Books object at 0x0000025D92BFE210>
+# print(Books.__doc__)
 # print(book_2)
+# print(book_2.__dict__)
+# print(Books.change_price.__doc__)
 
 
 "ПОЛЗВАНЕ НА МЕТОДИТЕ НА КЛАСА"
@@ -59,11 +64,6 @@ book_3 = Books("Chemistry", "BAN", 12.80, 12345, author = "G. Dimitrov", year = 
 "ДОСТЪПВАНЕ НА КЛАС АТРИБУТИ"
 # print('number books', Books.number_books)       # достъпване през класа
 # print('number books', book_1.number_books)      # достъпване през инстанцията
-
-
-
-"ИЗВИКВАНЕ НА ДОКУМЕНТАЦИЯ"     # ако има записана такава
-# print(Books.change_price().__doc__)
 
 
 "ИЗВИКВАНЕ НА KWARGS"
