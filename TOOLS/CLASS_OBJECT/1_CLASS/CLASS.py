@@ -7,7 +7,7 @@ class Books:            # именуване в CamelCase
 
     # state - състоянието на обект. Описваме го чрез атрибутите.
     def __init__(self, title: str, publisher: str, price: float, barcode: int = None, **kwargs):   # конструктор / инициализатор
-                        # параметри ^
+                        # параметри ↑
         self.title = title
         self.publisher = publisher              # атрибути / пропъртита на инстанцията
         self.price = price

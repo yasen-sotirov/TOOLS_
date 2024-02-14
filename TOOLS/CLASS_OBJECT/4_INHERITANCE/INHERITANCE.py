@@ -1,16 +1,15 @@
-"INHERITANCE"   # наследяване
-                # наследява атрибути и методи
-                # може да дефинира нови атрибути и методи а съществуващите да бъдат променени
+"INHERITANCE"   # наследява атрибути и методи
+                # може да дефинира нови атрибути и методи, а съществуващите да бъдат променени
                 # полза: преизползване на код
                 # super - извиква атрибутите на базовия клас
                 # IS-A връзка: Мениджърът Е Служител
-                # Може да имаме Полиморфизъм в два класа, който нямат общ родител.
+                # ВАЖНО за SUPER()   https://realpython.com/python-super/
 
 
 class Employee:         # super, parent, base class
     COMPANY = "DSK"
+    #          параметри ↓
     def __init__(self, name: str, salary: int, department: str):
-        #       параметри ^
         self.name = name
         self.salary = salary                    # атрибути / пропъртита на инстанцията
         self.department = department

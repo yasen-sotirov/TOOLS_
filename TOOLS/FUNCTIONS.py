@@ -10,13 +10,13 @@
 
 
 " (*, ...) СЛЕД НЕЯ ЗАДЪЛЖИТЕЛНО СЛЕДВАТ KEY-WORD ARGUMENTS"
-def funct1(a, *, b, c):
-    print(a, b, c)
-funct1(1, b=2, c=3)     # print без скоби
-
-def funct2(a, *, b, c):
-    return a, b, c
-print(funct2(1, b=2, c=3))      # print със скоби
+# def funct1(a, *, b, c):
+#     print(a, b, c)
+# funct1(1, b=2, c=3)     # print без скоби
+#
+# def funct2(a, *, b, c):
+#     return a, b, c
+# print(funct2(1, b=2, c=3))      # print със скоби
 
 
 " (..., /) ПРЕДИ НЕГО ЗАДЪЛЖИТЕЛНО ИМА KEY-WORD ARGUMENTS"
@@ -88,11 +88,13 @@ print(funct2(1, b=2, c=3))      # print със скоби
 
 
 "ВРЪЩА ДОКУМЕНТАЦИЯТА НА ДАДЕНА ФУНКЦИЯ"
-# def example_func():
+# def example_function_for_documentation_preview_and_alias(text: str):
 #     """This function just say Hello"""
-#     return "Hello"
+#     return text
 #
-# print(example_func.__doc__)
+# func = example_function_for_documentation_preview_and_alias("Hello")
+# print(func)
+# print(func.__doc__)
 
 
 
