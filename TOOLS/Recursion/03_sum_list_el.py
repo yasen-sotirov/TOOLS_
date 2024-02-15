@@ -1,10 +1,12 @@
-
 def sum_list(num_list):
     if num_list == []:  # лист == 0, не се налага пресмятане
         return 0        # отговорът е известен
 
           # първия елемент + сумата на всички останали елементи
     return num_list[0] + sum_list(num_list[1:])
+
+nums = [1, 2, 3, 4, 5]
+print(sum_list(nums))
 
 
     # get_num = num_list[0]
@@ -29,8 +31,7 @@ def sum_list(num_list):
     # 1 + 14 = 15.
 
 
-nums = [1, 2, 3, 4, 5]
-print(sum_list(nums))
+
 
 
 

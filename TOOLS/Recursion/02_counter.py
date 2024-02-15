@@ -1,7 +1,7 @@
 
 def counter_func(number: int):
     if number <= 0:
-        return
+        return 0
 
     counter_func(number - 1)
     print(number)

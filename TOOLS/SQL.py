@@ -83,14 +83,14 @@ GROUP BY    https://learn.telerikacademy.com/mod/page/view.php?id=50348
 
 JOIN    https://joins.spathon.com/
     INNER:
-        JOIN (INNER JOIN) - връща сечение между двете таблици.
+        JOIN - връща сечение между двете таблици.
         изпуска записа ако е NULL
             SELECT firstname, lastname, o.customer_id   # префикс: при повтаряне на колоните се уточнява от коя таблица ги селектираме 
             FROM orders as o JOIN customers as c        # обединява таблиците order и customers
             ON o.customer_id = c.customer_id            # където id-то им съвпада
     OUTER:
         LEFT JOIN - връща всички стойности от лявата (№1) таблица, 
-        а липсващите стойности от дясната таблица (№2) ще запълни с NULL
+        а липсващите стойности от дясната таблица (№2) запълва с NULL
         
         RIGHT JOIN - връща всички стойности от дясната таблица,
         а липсващите стойности от лявата ще запълни с NULL
