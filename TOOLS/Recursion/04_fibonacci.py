@@ -4,13 +4,13 @@
 
 
 
-# def fibonacci_slow(num):
-#     if num <= 2:
-#         return 1
-#
-#     return fibonacci_slow(num - 1) + fibonacci_slow(num - 2)
-#
-# print(fibonacci_slow(8))    # връща 8то Фибоначи число
+def fibonacci_slow(num):
+    if num <= 2:
+        return 1
+
+    return fibonacci_slow(num - 1) + fibonacci_slow(num - 2)
+
+print(fibonacci_slow(8))    # връща 8то Фибоначи число
 
 
 
@@ -50,3 +50,4 @@ from functools import lru_cache
 #     return fibonacci(num - 1) + fibonacci(num - 2)
 #
 # print(fibonacci(8))
+

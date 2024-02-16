@@ -13,7 +13,7 @@
 # def funct1(a, *, b, c):
 #     print(a, b, c)
 # funct1(1, b=2, c=3)     # print без скоби
-#
+
 # def funct2(a, *, b, c):
 #     return a, b, c
 # print(funct2(1, b=2, c=3))      # print със скоби

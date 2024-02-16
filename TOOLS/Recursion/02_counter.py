@@ -1,12 +1,11 @@
-
 def counter_func(number: int):
-    if number <= 0:
+    if number == 0:
         return 0
 
     counter_func(number - 1)
     print(number)
 
-counter_func(int(input("type a number: ")))
+counter_func(int(5))
 
 '''
 = 5-1
