@@ -1,7 +1,24 @@
 "DATABASE MANAGEMENT SYSTEM"   # софтуера, с който работим. Изпълнява инструкции и връща резултат
-
+# https://www.youtube.com/watch?v=SpfIwlAYaKk&ab_channel=freeCodeCamp.org
+# https://www.youtube.com/watch?v=qw--VYLpxG4&t=94s&ab_channel=freeCodeCamp.org
+# https://www.youtube.com/@DatabaseStar/videos
 
 """
+КОНВЕНЦИЯ ЗА ИМЕНУВАНЕ
+    Таблици:
+        в множествено число
+        snake_case
+    Колони:
+        съществителни
+        единствено число
+        snake_case
+        избягваме ключови думи като:  key, int, date
+    Primary key:
+        използваме id или table_name_id
+    Foreign key:
+        използваме referenced_tabl_name_id
+
+
     INSERT (за създаване)
     SELECT (за четене)
     UPDATE (за актуализиране)
@@ -10,8 +27,9 @@
 ===== ФИЛТРИ / ОПЕРАТОРИ =====
 ==============================
 
-    IN ОПЕРАТОР
-        WHERE departments.Name in ("Sales", "Finance")
+    IN ОПЕРАТОР - връща всички записи съдържащи "Sales" 
+        WHERE departments IN ("Sales")
+        
     
     
     LIKE
@@ -44,9 +62,9 @@
         SELECT * FROM employees WHERE JobTitle = "Sales Representative";
         
     
-    ВРЪЩА УНИКАЛНИТЕ СТОЙНОСТИ
+    ВРЪЩА УНИКАЛНИТЕ ЗАПИСИ ОТ ПОСОЧЕНИТЕ КОЛОНИ
         -- Write a SQL query to find all different employee salaries.
-        SELECT distinct salary FROM employees;
+        SELECT DISTINCT salary FROM employees;
     
     
     ВРЪЩА ПРИ NULL    
@@ -56,7 +74,18 @@
     ЛИМИТ НА ПОЛУЧЕНИТЕ РЕЗУЛТАТИ
         ORDER BY Salary desc LIMIT 5;    
 
-
+    БРОЙ ЗАПИСИ
+        SELECT COUNT(*) FROM employee;
+        връща бройката на всички записи
+        
+        SELECT COUNT(department) FROM employee;
+        връща бройката на всички записи от колоната, дето не са NULL
+        
+        SELECT COUNT(DISTINCT department) FROM employee;
+        връща бройката на всички уникални записи от колоната, дето не са NULL
+        
+        SELECT COUNT(*) FROM table_name WHERE column_name IS NULL;
+        връща всички записи дето са NULL
 
 
 AGGREGATE FUNCTIONS
