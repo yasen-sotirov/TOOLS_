@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Title here</title>
+</head>
+
+<body>
+    <!-- HEADINGS -->
+    <h1>This is a Heading 1</h1>
+
+
+  <!-- BOLD  -->
+    <p><b>Text in bold old way</b></p>
+    <p><strong>Text in bold new way</strong></p>
+  
+
+  <!-- ITALICS -->
+    <p><i>Text in italics old way</i></p>
+    <p><em>Text in italics new way</em></p>
+
+
+  <!-- ORDERED LISTS -->
+  <h3>ORDERED LIST</h3>
+  <ol>
+    <li>first list item</li>
+    <li>second item</li>
+    <li>third item</li>
+  </ol>
+
+
+  <!-- BULET LIST -->
+  <h3>BULET LIST</h3>
+  <ul>
+    <li>first bulet</li>
+    <li>second bulet</li>
+    <li>third bulet</li>
+  </ul>
+
+
+  
+  <!-- PICTURE -->
+  <img src="https://i.pinimg.com/736x/fb/b7/24/fbb7242470f27c41d3d39d90e641d4dd.jpg" alt="missing file"> <br>
+
+
+
+<!-- ЛИНК КЪМ ДРУГА СТРАНИЦА - Anchor tag -->
+<!-- МОЖЕ ДА СЕ ПОЛЗВА И СНИМКА ВМЕСТО ТЕКСТ -->
+  <a href="another_page.html">Click me </a> <br>
+  <a href="https://www.abv.bg">abv link</a> <br>
+
+
+
+
+
+<!-- ФОРМУЛЯР - СЪБИРА ПОПЪЛНЕНИТЕ ДАННИ И ГИ ИЗПРАЩА -->
+  <form action="/submit_form.php" method="post">
+
+
+    
+<!-- РАДИО БУТОНИ -->
+    <label for="yes">Yes: </label>
+    <input id="yes" type="radio" name="answer" value="">
+
+
+
+<!-- за да свържем бутоните им даваме еднакви имена -->
+    <label for="no">No: </label>
+    <input id="no" type="radio" name="answer" value="">
+
+
+
+
+<!-- падащо меню -->
+  <h2>How was your service</h2>
+    <select name="stars">
+      <option value="3">great</option>
+      <option value="2">good</option>
+      <option value="1">bad</option>
+    </select>
+
+
+  </form>
+   
+  
+
+
+<!-- ТЕКС -->
+    <label for="first name">First name: </label>
+    <input id="first name" type="text" placeholder="First name" required>  <br>
+
+    <label for="second name">Second name: </label>
+    <input id="second name" type="text" placeholder="Last name" required>  <br>
+
+
+<!-- КУТИЯ ЗА ТЕКСТ -->
+    <textarea name="mytextarea" rows="8" cols="80"></textarea>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+
+
+
+<!-- ГРУПИРА ЕЛЕМЕНТИТЕ В КОНТЕЙНЕР -->
+<!-- за да се обработят като блок в CSS -->
+  <div id="container-1">  
+
+
+<!-- ПОЛЕТА ЗА ВЪВЕЖДАНЕ -->
+    <label for="eml">Email: </label>
+    <input id="eml" type="email" name="usermail" value="email@abv.bg">
+    <br>
+    <label for="pass">Password: </label>
+    <input id="pass" type="password" name="password" value="">
+    <br>
+    <label for="color">Choose color</label>
+    <input type="color" name="color" value="">  
+
+  </div>
+    
+
+
+<!-- БУТОНИ -->
+    <h3>Finish and submit</h3>
+    <input type="submit" name="" value="SUBMIT">
+
+
+
+  <p></p>
+
+
+  
+
+<!-- ТАБЛИЦИ -->
+<table border="1">
+
+
+<!-- ИМЕНА КОЛОНИ -->
+  <thead>
+    <th>Country name</th>
+    <th>Country flag</th>
+    <th>GDP</th>
+  </thead>
+
+
+<!-- ПЪРВИ РЕД -->
+  <tr>
+    <td>United States</td>
+    <td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/190px-Flag_of_the_United_States.svg.png" alt="flag"></td>
+    <td>18,561,930</td>
+  </tr>
+
+
+<!-- ВТОРИ РЕД -->
+  <tr>
+    <td>India</td>
+    <td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/150px-Flag_of_India.svg.png" alt="flag"></td>
+    <td>2,250,990</td>
+  </tr>
+
+</table>
+
+
+
+
+
+
+
+
+</body>
+</html>
