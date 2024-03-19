@@ -8,50 +8,58 @@
     <title>HTML ZA CSS</title>
     <link rel="stylesheet" href="HTML_CSS.css">
   </head>
+  
   <body>
+
+<!-- 1. ЗАГЛАВИЕ -->
     <h1>Welcome to Free Blog!</h1>
 
-    <div class="">
-      <p>Thanks so much for visiting this site!</p>
 
+    
+<!-- 2. КОНТЕЙНЕРИ -->
+    <div>
+      <p>first line</p>
+      <p>second line</p>
+      <p>thied line</p>
     </div>
 
-    <h2>What is this site for?</h2>
-    <p>This site can do three things:</p>
-    <ol>
-      <li id='itemone'>Take in text input</li>
-      <li>Take in Log In Information</li>
-      <li><a href="http://www.google.com">Take you to Google</a></li>
-    </ol>
 
-    <div class="blogtext">
-      <textarea name="name" id="textblock"></textarea>
-    </div>
 
-    <h2>Please log in to save your blog post</h2>
+<!-- 3. ID -->
+    <h2 id='id'>line with id</h2>
 
-    <form class="loginForm" method="get">
+
+
+<!-- 4. CLASS -->
+    <h2 class='class'>line with Class</h2>
+
+
+
+<!-- 5. ЛИНК -->
+    <h2><a href="http://www.google.com">google link</a></h2>
+    <br>
+
+
+      
+<!-- 6. ТЕКСТ ПОЛЕ -->
+    <textarea id="textblock"></textarea>
+
+
+
+<!-- 7. ФОРМА -->
+<!-- СЪБИРА ВЪВЕДЕНИТЕ ДАННИ И ГИ ПОДАВА ЧРЕЗ ЗАЯВКА -->
+
+    <form method="get">
+
       <label for="mail">Email: </label>
-      <input type="email" id="mail" value="">
-
+      <input type="email" id="mail" value="" placeholder="name@mail.com">
+      <br>
       <label for="pass">Password: </label>
       <input type="password" id="pass" value="">
-
+      <br>
       <input type="submit" name="" value="Log In">
 
-
     </form>
-
-    <div class="exit">
-
-
-
-    <p>Questions or Comments? Send us feedback here:</p>
-
-    <textarea name="name" rows="8" cols="80"></textarea>
-
-    </div>
-
 
 
   </body>
