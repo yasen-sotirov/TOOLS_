@@ -1,166 +1,279 @@
 <!-- ВСИЧКО ЗА HTML -->
+<!-- BroCode: https://www.youtube.com/watch?v=HGTJBPNC-Gw&ab_channel=BroCode -->
 <!-- https://codepen.io/ среда за писане в реално време -->
 
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width, initial-scale=1.0">
     <title>Title here</title>
-	<!-- ctrk + space  показва възможните опции -->
-	<link rel="stylesheet" href="../">
+
+	<!-- FAVICON -->
+	<link rel="icon" type="image/png" href="additionals/favicon.png">
 </head>
 
 <body>
-	<!-- HEADINGS -->
-	<h1>This is a Heading 1</h1>
+
+<!-- 
+01. TEXT EDITTING -->
+	<div>
+		<!-- HEADINGS -->
+		<h2>01. TEXT EDITTING: Heading 1</h2>
+
+		<!-- PARAGRAPH -->
+		<p>Lorem ipsum dolor sit amet.</p>
+
+
+		<!-- FORMATED PARAGRAPH -->
+		<pre>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+
+			Doloribus est vel exercitationem minima magnam eius alias atque dolorum eum nostrum dolore, 
+			repellat aut beatae debitis. 
+			
+			Quisquam, ipsum eum? Ad, modi!
+		</pre>
+
+
+		<p>This is normal text</p>
+
+		<p>This is <b>bold</b> text</p>
+		<p>This is <strong>bold</strong> text</p>
+
+		<p>This is <i>italik</i> text</p>
+		<p>This is <em>italik</em> text</p>
+
+		<p>This is <u>underline</u> text</p>
+
+		<p>This is <del>deleded</del> text</p>
+
+		<p>This is <big>big</big> text</p>
+		
+		<p>This is <small>small</small> text</p>
+
+		<p>This is <sub>subscript</sub> text</p>
+
+		<p>This is <sup>superscript</sup> text</p>
+		
+		<p>This is <tt>monospace</tt> text</p>
+		
+		<p>This is <mark style="background-color: rgb(228, 155, 29);">marked</mark>	 text</p>
+		
+	</div>	<br> <hr> <br>
 
 
 
-	<!-- BOLD  -->
-	<p><b>Text in bold old way</b></p>
-	<p><strong>Text in bold new way</strong></p>
+<!-- 
+02. LISTS -->
+	<h2>02. LISTS</h2>
+
+		<p>ORDERED LIST</p>
+		<ol type="a">			<!-- ctrk + space  показва възможните опции -->
+			<li>first list item</li>
+			<li>second item</li>
+			<li>third item</li>
+		</ol>	<br>
 
 
 
-	<!-- ITALICS -->
-	<p><i>Text in italics old way</i></p>
-	<p><em>Text in italics new way</em></p>
+		<p>BULET LIST</p>
+		<ul>
+			<li>first bulet</li>
+			<li>second bulet</li>
+			<li>third bulet</li>
+			<ul>
+				<li>item 1</li>
+				<li>item 2</li>
+				<li>item 3</li>
+			</ul>
+		</ul>	<br>
+		
 
+		<p>DESCRIPTION LIST</p>
+			<dl>
+				<dt>dragon</dt>
+				<dd>[ flying reptile ]</dd>
+				
+				<dt>phonix</dt>
+				<dd>[ fire bird ]</dd>
+				
+				<dt>vampire</dt>
+				<dd>[ big annoing mosquito ]</dd>
+			</dl>
 
-
-    <!-- ORDERED LISTS -->
-    <h3>ORDERED LIST</h3>
-    <ol type="a">			<!-- ctrk + space  показва възможните опции -->
-        <li>first list item</li>
-        <li>second item</li>
-        <li>third item</li>
-    </ol>
-
-
-
-    <!-- BULET LIST -->
-    <h3>BULET LIST</h3>
-    <ul>
-        <li>first bulet</li>
-        <li>second bulet</li>
-        <li>third bulet</li>
-    </ul>
-
-
-
-	<!-- PICTURE -->
-	<img width="200" height="200" src="https://i.pinimg.com/736x/fb/b7/24/fbb7242470f27c41d3d39d90e641d4dd.jpg" alt="missing file"> <br>
-
-
-
-	<!-- ЛИНК - Anchor tag -->
-	<!-- МОЖЕ ДА СЕ ПОЛЗВА И СНИМКА ВМЕСТО ТЕКСТ -->
-	<a href="another_page.html">Click me </a> <br>
-	<a href="https://www.abv.bg">abv link</a> <br>
-
-
-
-
-
-	<!-- ФОРМУЛЯР - СЪБИРА ПОПЪЛНЕНИТЕ ДАННИ И ГИ ИЗПРАЩА -->
-  	<form action="/submit_form.php" method="post">
-
-
-
-	<!-- РАДИО БУТОНИ -->
-    <label for="yes">Yes: </label>
-    <input id="yes" type="radio" name="answer" value="">
-
-
-
-	<!-- за да свържем бутоните им даваме еднакви имена -->
-    <label for="no">No: </label>
-    <input id="no" type="radio" name="answer" value="">
-
-
-
-
-	<!-- ПАДАЩО МЕНЮ -->
-  	<h2>How was your service</h2>
-    <select name="stars">
-		<option value="3">great</option>
-		<option value="2">good</option>
-		<option value="1">bad</option>
-    </select>
-
-
-  	</form>
-
-
-
-
-	<!-- ТЕКСT -->
-    <label for="first name">First name: </label>
-    <input id="first name" type="text" placeholder="First name" required>  <br>
-
-    <label for="second name">Second name: </label>
-    <input id="second name" type="text" placeholder="Last name" required>  <br>
-
-
-	<!-- КУТИЯ ЗА ТЕКСТ -->
-    <textarea name="mytextarea" rows="8" cols="80"></textarea>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
+	<br> <hr> <br>
 
 
 
 
-	<!-- БУТОНИ -->
-    <h3>Finish and submit</h3>
-    <input type="submit" name="" value="SUBMIT">
+<!-- 
+03. ЛИНК - Anchor tag -->
+	<h2>03. LINKS</h2>
+
+		<!-- КЪМ ДРУГ HTML ФАЙЛ -->
+		<a href="HTML_CSS.html">link to another internal page</a> <br>
+		
+
+		<!-- ЕКСТРИ:
+			target="_blank"		отваря в нов прозорец
+			title="Goes to...	подсказка къде води линка -->
+		<a href="https://www.abv.bg"
+		target="_blank" 
+		title="Goes to Abv mail">
+			abv link
+		</a> <br>
+
+
+		<!-- LINK: MAIL TO -->
+		<a href="mailto: y.sotirov@abv.bg">send me email</a> 	<br><br>
+
+
+		<!-- СНИМКА КАТО ЛИНК -->
+		<a href="https://en.wikipedia.org/">
+			<img src="https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png" 
+			alt="image link to Wikipedia"
+			height="50"
+			target="_blank"
+			title="Goes to wikipedia">
+		</a>
+	<br> <hr> <br>
 
 
 
-  	<p></p>
+<!-- 
+04. ФОРМУЛЯР - СЪБИРА ПОПЪЛНЕНИТЕ ДАННИ И ГИ ИЗПРАЩА -->
+  	<h2>04. FORMS</h2>
+	<form action="/submit_form.php" method="post">
 
 
-	<!-- ТАБЛИЦИ -->
+
+		<!-- РАДИО БУТОНИ -->
+		<label for="yes">Yes: </label>
+		<input id="yes" type="radio" name="answer" value="">
+
+
+
+		<!-- за да свържем бутоните им даваме еднакви имена -->
+		<label for="no">No: </label>
+		<input id="no" type="radio" name="answer" value="">
+
+
+
+
+		<!-- ПАДАЩО МЕНЮ -->
+		<h2>How was your service</h2>
+		<select name="stars">
+			<option value="3">great</option>
+			<option value="2">good</option>
+			<option value="1">bad</option>
+		</select>
+
+
+  	</form> 
+	<br> <hr> <br>
+
+
+
+
+	<!-- TEXT BOX -->
+	<H2>05. TEXT BOXES</H2>
+		<label for="first name">First name: </label>
+		<input id="first name" type="text" placeholder="First name" required>  <br>
+
+		<label for="second name">Second name: </label>
+		<input id="second name" type="text" placeholder="Last name" required>  <br>
+
+
+		<!-- КУТИЯ ЗА ТЕКСТ -->
+		<textarea name="mytextarea" rows="8" cols="80"></textarea>
+
+	<br> <br> <br> <hr> <br> 
+
+
+
+<!-- 
+06. БУТОНИ -->
+	<h2>06. BUTTONS</h2>
+	
+	
+		<!-- НЕ!ПРЕЗАРЕЖДА СТРАНИЦАТА-->
+		<a href="https://www.google.com/" target="_blank" title="go to google!">
+			<button type="button"
+			style="background-color: aqua;
+				font-size: 20px;
+				color: rgb(79, 6, 6);
+				border-radius: 5px;">
+			Button to Google</button>	
+		</a>  <br> <br>
+			
+
+		<!-- ПРЕЗАРЕЖДА СТРАНИЦАТА-->
+		<input type="submit" value="SUBMIT">Submit</input>	
+
+
+		<!-- ВЛОЖЕНА JS ФУНКЦИЯ -->
+		<p>JS function for alert</p>
+		<button type="button" onclick="funcAlert()">Click for Alert</button>
+		<script>
+			function funcAlert(){
+				alert("Alert!")
+			}
+		</script>
+
+	<br> <br> <br> <hr> <br> 
+
+
+
+<!-- 
+07. ТАБЛИЦИ -->
+	<h2>07. TABLES</h2>
+	
 	<table border="1">
 
 
 		<!-- ИМЕНА КОЛОНИ -->
-		<thead>
-			<th>Country name</th>
-			<th>Country flag</th>
-			<th>GDP</th>
+		<thead style="background-color: rgb(119, 223, 223);">
+			<th width="120" height="30">Country name</th>
+			<th width="120">Country flag</th>
+			<th width="90">GDP</th>
 		</thead>
 
 
 
-		<!-- ПЪРВИ РЕД -->
-		<tr>
+		<!-- ПЪРВИ РЕД: table row-->
+		<tr align="center" height="80">
 			<td>United States</td>
-			<td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/190px-Flag_of_the_United_States.svg.png" alt="flag"></td>
+			<td><img width="100" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/190px-Flag_of_the_United_States.svg.png" alt="flag"></td>
 			<td>18,561,930</td>
 		</tr>
 
 
 
 		<!-- ВТОРИ РЕД -->
-		<tr>
+		<tr align="center" height="80">
 			<td>India</td>
-			<td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/150px-Flag_of_India.svg.png" alt="flag"></td>
+			<td><img width="100" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/150px-Flag_of_India.svg.png" alt="flag"></td>
 			<td>2,250,990</td>
 		</tr>
 
-	</table>
+	</table> 
+	<br> <hr> <br>
+	
 
 
+<!-- 
+08. КОНТЕЙНЕРИ:   https://www.w3schools.com/html/html5_semantic_elements.asp -->
+	<h2>08. CONTAINERS</h2>
+		
+		<!-- NON-SEMANTIC ELEMENTS 
+		<div>	хваща целия блок от край до край 
+		<span> 	хваща само линията на елемента -->
 
-	<!-- ВИДОВЕ КОНТЕЙНЕРИ:   https://www.w3schools.com/html/html5_semantic_elements.asp
-		NON-SEMANTIC ELEMENTS 
-			<div>
-			<span> 
+			<div style="background-color: steelblue;"><p>Paragraph text with div</p></div>
+
+			<span style="font-family: 'Arial Narrow';"><p>Paragraph text with span</p></span>
+			<span style="color: rgb(181, 65, 44);"><p>Paragraph text with span</p></span>
 			
-		SEMANTIC ELEMENTS
+			
+		<!--SEMANTIC ELEMENTS
 			<article>
 			<aside>
 			<details>
@@ -174,6 +287,9 @@
 			<section>
 			<summary>
 			<time>-->
+
+
+		<br> <hr> <br>
 
 	<!-- DIV -->
 	<div id="container-1">
@@ -189,6 +305,39 @@
 		<input type="color" name="color" value="">
 
   	</div>
+	<hr> <br>
+
+
+
+
+<!-- 
+09. MULTIMEDIA -->
+	<h2>09. MULTIMEDIA</h2>
+
+		<!-- PICTURE -->
+		<p>PICTURES</p>
+		<img src="additionals/tree.jpg"
+		height="150" 
+		alt="missing picture">	<!-- ще бъде прочетен от screen reader-->
+		<br>
+
+
+		<!-- SOUND: autoplay, muted, loop	-->
+		<p>SOUND</p>
+		<audio controls loop>
+			<!-- бекъп: ако браузъра не може да плейне,
+			ще пусне втория сорс  -->
+			<source src="additionals/duck.mp3" type="audio/mp3">
+			<source src="additionals/duck.webm" type="audio/webm">
+		</audio>	<br>
+
+
+		<!-- VIDEO .mp4 .webm .ogg 
+			autoplay, muted, loop -->
+		<video src="additionals/clap.mp4"
+		controls
+		width="100"></video>
+
 
 
 
