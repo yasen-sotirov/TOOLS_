@@ -10,7 +10,23 @@
 	<link rel="icon" type="image/png" href="additionals/favicon.png">
 </head>
 
+
 <body>
+<!-- 
+01. HEADER - контейнер-->
+	<header>
+		<h1>HTML TOOLS BOX</h1>
+		<a href="">Home</a>
+		<a href="">About</a>
+		<a href="">Contact</a>
+		<hr>	<!-- horizontal rule -->
+	</header>
+
+
+	
+	<!-- ЗА ОРГАНИЗАЦИЯ НА ЕЛЕМЕНТИТЕ -->
+	<main>	
+
 
 <!-- 
 01. TEXT EDITTING -->
@@ -139,62 +155,103 @@
 
 
 <!-- 
-04. ФОРМУЛЯР - СЪБИРА ПОПЪЛНЕНИТЕ ДАННИ И ГИ ИЗПРАЩА -->
+04. ФОРМУЛЯР 
+	action 		- kъде изпраща попълнените данни (backend)
+	method
+		GET		- за общо инфо 
+		POST	- за поверително инфо: пароли username -->
   	<h2>04. FORMS</h2>
-	<form action="/submit_form.php" method="post">
+	<form action="/submit_form.php" method="post"
+	enctype="multipart/form-data">	
+	<!-- добавка, ако се качват големи количества дата: снимки и де-->
 
+		
+		<!-- TEXT BOX -->
+			<!-- TEXT -->
+			<label for="first name">First name: </label>
+			<input type="text" 
+				id="first name" 
+				placeholder="First name" 
+				required
+				minlength="6"
+				maxlength="15">  <br> <br>
+
+			<!-- PASSWORD -->
+			<label for="password">password: </label>
+			<input type="password" id="password" minlength="6"> <br> <br>
+
+			<!-- EMAIL ще изизсква @-->
+			<label for="email">email: </label>
+			<input type="email" id="email" placeholder="example@mail.com"> <br> <br>
+
+			<!-- PHONE -->
+			<label for="phone">phone: </label>
+			<input type="tel" id="phone">	<br> <br>
+			<!-- pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}"  -->
+			
+			<!-- DATE -->
+			<label for="bday">birthday: </label>
+			<input type="date" id="bday"> 
+			<input type="time"><br> <br>
+
+			<!-- ЧИСЛА -->
+			<label for="years">years: </label>
+			<input type="number" id="years" min="0" max="99">		<br> <br>
 
 
 		<!-- РАДИО БУТОНИ -->
-		<label for="yes">Yes: </label>
-		<input id="yes" type="radio" name="answer" value="">
+		<label for="mr">Mr. </label> 
+		<input id="mr" type="radio" name="title"> <br>
 
-
-
-		<!-- за да свържем бутоните им даваме еднакви имена -->
-		<label for="no">No: </label>
-		<input id="no" type="radio" name="answer" value="">
-
+		<!-- за да ги свържем, даваме еднакви name='' -->
+		<label for="ms">Ms. </label> 
+		<input id="ms" type="radio" name="title"> <br> <br>
 
 
 
 		<!-- ПАДАЩО МЕНЮ -->
-		<h2>How was your service</h2>
-		<select name="stars">
-			<option value="3">great</option>
-			<option value="2">good</option>
-			<option value="1">bad</option>
-		</select>
+		<label for="paymant">Payment method:</label> <br> 
+		<select id="paymant">
+			<option value="Visa">Visa</option>
+			<option value="MasterCard">MasterCard</option>
+			<option value="PayPal">PayPal</option>
+		</select>	
+		<br> <br>
 
 
-  	</form> 
-	<br> <hr> <br>
+		<!-- UPLOAD A FILE -->
+		<label for="file">upload a PDF: </label>
+		<input type="file" id="file"
+		accept="image/png" accept="image/jpg">
 
 
 
-
-	<!-- TEXT BOX -->
-	<H2>05. TEXT BOXES</H2>
-		<label for="first name">First name: </label>
-		<input id="first name" type="text" placeholder="First name" required>  <br>
-
-		<label for="second name">Second name: </label>
-		<input id="second name" type="text" placeholder="Last name" required>  <br>
+		<!-- CHECK BOX -->
+		<label for="subscribe">subscribe</label>
+		<input type="checkbox" id="subscribe"> <br> <br>
 
 
 		<!-- КУТИЯ ЗА ТЕКСТ -->
-		<textarea name="mytextarea" rows="8" cols="80"></textarea>
+		<textarea name="mytextarea" 
+			rows="8" cols="80"
+			placeholder="share something"></textarea> <br> <br>
 
+
+		<!-- БУТОНИ -->
+		<input type="submit" value="SUBMIT"> :Submit</input> <br> <br>
+		<input type="reset" value="RESET">
+
+	</form> 
 	<br> <br> <br> <hr> <br> 
 
 
 
 <!-- 
-06. БУТОНИ -->
-	<h2>06. BUTTONS</h2>
+05. БУТОНИ -->
+	<h2>05. BUTTONS</h2>
 	
 	
-		<!-- НЕ!ПРЕЗАРЕЖДА СТРАНИЦАТА-->
+		<!-- НЕ ПРЕЗАРЕЖДА СТРАНИЦАТА-->
 		<a href="https://www.google.com/" target="_blank" title="go to google!">
 			<button type="button"
 			style="background-color: aqua;
@@ -223,8 +280,8 @@
 
 
 <!-- 
-07. ТАБЛИЦИ -->
-	<h2>07. TABLES</h2>
+06. ТАБЛИЦИ -->
+	<h2>06. TABLES</h2>
 	
 	<table border="1">
 
@@ -260,8 +317,8 @@
 
 
 <!-- 
-08. КОНТЕЙНЕРИ:   https://www.w3schools.com/html/html5_semantic_elements.asp -->
-	<h2>08. CONTAINERS</h2>
+07. КОНТЕЙНЕРИ:   https://www.w3schools.com/html/html5_semantic_elements.asp -->
+	<h2>07. CONTAINERS</h2>
 		
 		<!-- NON-SEMANTIC ELEMENTS 
 		<div>	хваща целия блок от край до край 
@@ -311,8 +368,8 @@
 
 
 <!-- 
-09. MULTIMEDIA -->
-	<h2>09. MULTIMEDIA</h2>
+08. MULTIMEDIA -->
+	<h2>08. MULTIMEDIA</h2>
 
 		<!-- PICTURE -->
 		<p>PICTURES</p>
@@ -340,6 +397,15 @@
 
 
 
+	</main>
+		
+	
+	<footer>
+		<hr>
+		author	<br>
+		&copy; Yasen	<br>
+		&reg; Yasen
+	</footer>
 
 </body>
 </html>

@@ -1,0 +1,163 @@
+/* ВСИЧКО ЗА CSS
+   BroCode  https://www.youtube.com/watch?v=HGTJBPNC-Gw&t=5032s&ab_channel=BroCode */
+h3{font-family: Helvetica, sans-serif;}
+
+/*
+01. ВИДОВЕ СSS property
+    inline      - вписват се в тага: h2 style="color:...
+    internal    - вписва се в head-a в <style></style>
+    external    - в отделен файл с линк към него <link rel="stylesheet" 
+
+
+02. СЕЛЕКТОРИ
+    .class
+    #id
+    
+
+03. ШРИФТОВЕ
+    font-family: Verdana, Geneva,.. ако браузъра не поддържа първия шригт, ще се включи вторият
+        serif       - малките завартулки на буквите
+        sans serif  - без малките завъртулки
+        slab serif  - четвъртити завъртулки
+        monospace   - всяка буква е на равни растояния от другите
+    font-size: 1em=100%, 1.3=130%
+    font-wight: bold
+    font-style: italic  - разновидност на шрифта в курсив
+                oblique - обикновеният шрифт е наклонен изкуствено
+
+
+    text-align: left|right|center|justify|initial|inherit;
+
+
+ ШРИФТ ОТ ФАЙЛОВЕТЕ */
+@font-face {
+    font-family: TiltNeon;
+    src: url(elements/TiltNeon.ttf)
+}
+h1{
+    font-family: TiltNeon;
+    font-size: 1.5em;
+}
+
+
+/* 
+03. BORDERS - РАМКИ */
+#border{
+    /* border-style: dashed; */
+    /* border-style: dotted; */
+    /* border-style: double; */
+    /* border-style: groove; */
+    /* border-style: ridge; */
+    /* border-style: outset; */
+    /* border-style: inset; */
+
+    border-bottom: solid 5px rgb(190, 149, 13);
+    border-top: solid 5px rgb(190, 48, 13);
+    border-radius: 10px;
+}
+
+
+/* 
+04. SHADOW   - hor ofset, vert ofset, blur, color*/
+#shadow{
+    font-family: TiltNeon;
+    text-shadow: 3px 3px 5px rgb(248, 13, 13), -3px -3px 5px rgb(25, 128, 255);
+}
+
+#boxShadow {
+    width: 150px;
+    height: 50px;
+    background-color: rgb(215, 215, 215);
+    box-shadow: 3px 3px 5px tomato;
+}
+
+
+/* 
+05. MARGINES */
+.boxMargin{
+    border: 3px solid grey;
+    background-color: rgb(231, 51, 51);
+    margin-left: auto;      /* залепва за десния край на браузъра */
+    margin: 30px;
+    padding: 20px;          /* разстоянието отвътре на рамката*/   
+}
+
+
+/* 
+06. FLOAT IMAGE IN TEXT */
+#floatDiv{
+    border: 1px solid gray;
+    margin: 10px; 
+    display: flow-root; /* спира картинките да не излизат извън рамката */
+    width: 350px;
+}
+
+#floatImg{
+    float: left;
+    margin: 10px;
+}
+
+
+/* 
+07. OVERFLOW - когато нещата излизат извън рамката */
+#overflow{
+    border: 2px solid;
+    height: 75px;
+    overflow: visible;          /* елементитее са видими*/
+    overflow: hidden;           /* елементите са скрити, но може да достигнем текста */
+    overflow: clip;
+    overflow-clip-margin: 15px; /* oказва с колко да излезне от кутията */
+    overflow: scroll;           /* scrollbar винаги */
+    overflow: auto;             /* scrollbar при нужда */
+    min-height: 10vh;           /* min 10% от viewport height */
+}
+
+
+
+/* 
+08. DISPLAY - определя как се показва елемент */
+#divDisplay{                        /* работи като блок елемент */
+    background-color: tomato;
+    /* display: inline;    сега ще рабори като inline */
+}
+#spanDisplay{
+    background-color: plum;
+    /* display: block;          ще работи като блок */
+    /* display: none;           елемента не съществува и не заема място */
+    /* visibility: hidden;      скрива елемента, но заема*/
+}
+
+
+/* 
+09. POSITION */
+#relative{
+    width: 100px;
+    height: 100px;
+    background-color: goldenrod;
+        position: relative;     /* където е по default */
+        top: 10px;              /* има 10px над def място */ 
+        left: 150px;            /* избутан е с 150px отляво */
+
+        /* position: fixed;        остава на същото място при скролване */
+    }
+
+#absolute{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(177, 112, 212);
+        position: relative;     
+        top: 25px;            
+        left: 25px;             
+        position: absolute;     /* на разстояние от друг елемент в контейнера */
+    }
+
+
+body{
+    /* background-image: url(elements/background.jpg); */
+    background-repeat: no-repeat;   /* да не се повтаря */
+    background-position: center;
+    background-attachment: fixed;   /* при скролване не се мести */
+    background-size: cover;         /* покрива целия фон */
+}
+
+
