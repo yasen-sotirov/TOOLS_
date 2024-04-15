@@ -99,12 +99,147 @@
     <div id="relative">
         <div id="absolute"></div>
     </div>
+    <br><hr><br> 
+
 
 <!-- 
 10. BACKGROUND -->
 
 <!-- 
-11. COMBINATORS 2:24  -->
+11. COMBINATORS - обяснява връзката между листове и селектори 
+        " " = descendents       - за всички потомци
+        ">" = child             - за всички деца
+        "~" = general sibling 
+        "+" = adjacent sibling -->
+<h3>11. COMBINATORS</h3>
+    <div id="childComb">
+        <p>This is #1</p>
+        <p>This is #2</p>
+        <div>
+            <p>This is #3</p>
+        </div>
+    </div>
+
+    <p>This is #4</p>
+    <p>This is #5</p>
+    <p>This is #6</p>
+
+    <div>
+        <p>This is #7</p>
+        <p>This is #8</p>
+    </div> <br> <hr><br>
+
+
+<!-- 
+12. PSEUDO CLASSES - подклас определящ действието на елемента при опр. обстоятелства -->
+    <h3>12. PSEUDO CLASSES</h3>
+    <!-- BUTTON -->
+        <div id="pseudo">
+            <button type="button" >click me</button>
+        </div> <br>
+    
+    <!-- LINK -->
+        <div id="pseudoLink">
+            <a href="https://www.google.com/" target="_blank">Google.com</a>
+        </div>
+
+    <!-- UNORDERED LIST -->
+        <div id="pseudoUl1">
+            <ul>
+                <li>This is #1</li>
+                <li>This is #2</li>
+                <li>This is #3</li>
+                <li>This is #4</li>
+            </ul>
+        </div>
+        
+        <div id="pseudoUl2">
+            <ul>
+                <li>This is #1</li>
+                <li>This is #2</li>
+                <li>This is #3</li>
+                <li>This is #4</li>
+                <li>This is #5</li>
+                <li>This is #6</li>
+            </ul>
+        </div>
+
+    <!-- BLOCK ELEMENT -->
+        <div id="greetings">Hover here
+            <p>Hello</p>            
+        </div>
+        
+        <br><hr><br>     
+
+
+
+
+<!-- 
+13. PSEUDO ELEMENTS - ключова дума след селектор, 
+която използваме за стила на специфична част на елемента -->
+    <div id="pElement">
+        <h3>13. PSEUDO ELEMENTS</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sint possimus cum aliquam veniam incidunt adipisci consequuntur illum. Ex culpa non quasi ut natus laborum velit quaerat iusto atque eligendi!</p>
+        <ul id="fruits">
+            <li id="apple">apple</li>
+            <li id="orange">orange</li>
+            <li id="banana">banana</li>
+        </ul>
+    </div> <br> <hr><br> 
+
+
+
+<!-- 
+14. PAGINATION -  -->
+    <h3>13. PAGINATION</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero excepturi repudiandae, blanditiis sint, possimus nihil dolores iure dolorum quos itaque perferendis maxime soluta fuga corporis, laborum ab deserunt praesentium modi!</p>
+
+        <div class="pagination">
+            <a href=""><</a>
+            <a href="" class="active">1</a> <!-- трябва да се добави функционалност -->
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a>
+            <a href="">></a>
+        </div>
+        <br> <hr> <br>
+
+
+<!-- 
+15. DROPDOWN MENU  -->
+    <h3>15. DROPDOWN</h3>
+        <div class="dropdown">
+            <button>Food</button>
+            <div class="content">
+               <a href="">Apple</a> 
+               <a href="">Orange</a> 
+               <a href="">Banana</a> 
+            </div>
+        </div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint incidunt aliquid delectus ducimus laudantium commodi quia nobis non, nemo itaque ipsa aperiam quam veniam officia cum, dolor nesciunt, vitae reiciendis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint incidunt aliquid delectus ducimus laudantium commodi quia nobis non, nemo itaque ipsa aperiam quam veniam officia cum, dolor nesciunt, vitae reiciendis.</p>
+        <br><hr><br>
+
+
+
+<!-- 
+16. NAVBAR -->
+    <h3>16. NAVBAR</h3>
+    <nav class="navbar">
+        <ul>
+            <li><a href="">about</a></li>
+            <li><a href="">experience</a></li>
+            <li><a href="">projects</a></li>
+            <li><a href="">contacts</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>about</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eligendi eveniet obcaecati quod atque similique facere ipsa possimus consequuntur aperiam nihil totam, molestiae saepe. Culpa nisi cupiditate labore recusandae iure.</p>
+    </main>
 
 </body>
 </html>
