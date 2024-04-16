@@ -30,6 +30,7 @@ h3{font-family: Helvetica, sans-serif;}
 
 
     ШРИФТ ОТ ФАЙЛОВЕТЕ */
+
     @font-face {
         font-family: TiltNeon;
         src: url(elements/TiltNeon.ttf)
@@ -41,7 +42,7 @@ h3{font-family: Helvetica, sans-serif;}
 
 
 /* 
-03. BORDERS - РАМКИ */
+04. BORDERS - РАМКИ */
     #border{
         /* border-style: dashed; */
         /* border-style: dotted; */
@@ -58,7 +59,7 @@ h3{font-family: Helvetica, sans-serif;}
 
 
 /* 
-04. SHADOW   - hor ofset, vert ofset, blur, color*/
+05. SHADOW   - hor ofset, vert ofset, blur, color*/
     #shadow{
         font-family: TiltNeon;
         text-shadow: 3px 3px 5px rgb(248, 13, 13), -3px -3px 5px rgb(25, 128, 255);
@@ -73,7 +74,7 @@ h3{font-family: Helvetica, sans-serif;}
 
 
 /* 
-05. MARGINES */
+06. MARGINES */
     .boxMargin{
         border: 3px solid grey;
         background-color: rgb(231, 51, 51);
@@ -84,7 +85,7 @@ h3{font-family: Helvetica, sans-serif;}
 
 
 /* 
-06. FLOAT IMAGE IN TEXT */
+07. FLOAT IMAGE IN TEXT */
     #floatDiv{
         border: 1px solid gray;
         margin: 10px; 
@@ -99,7 +100,7 @@ h3{font-family: Helvetica, sans-serif;}
 
 
 /* 
-07. OVERFLOW - когато нещата излизат извън рамката */
+08. OVERFLOW - когато нещата излизат извън рамката */
     #overflow{
         border: 2px solid;
         height: 75px;
@@ -115,7 +116,7 @@ h3{font-family: Helvetica, sans-serif;}
 
 
 /* 
-08. DISPLAY - определя как се показва елемент */
+09. DISPLAY - определя как се показва елемент */
     #divDisplay{                        /* работи като блок елемент */
         background-color: tomato;
         /* display: inline;    сега ще рабори като inline */
@@ -129,7 +130,7 @@ h3{font-family: Helvetica, sans-serif;}
 
 
 /* 
-09. POSITION */
+10. POSITION */
     #relative{
         width: 100px;
         height: 100px;
@@ -345,6 +346,196 @@ h3{font-family: Helvetica, sans-serif;}
 
 /* 
 16. NAVBAR */
+    /* body{
+        margin: 0px;
+    } */
+    main{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
     .navbar ul{
-        list-style-type: none;
-    } 3:02
+        list-style-type: none;      /* мажа булетите*/
+        background-color: rgb(175, 175, 175);
+        padding: 0px;               /* изравнява до полето наляво */
+        margin: 0px;
+        overflow: hidden;
+    }
+    .navbar a{
+        color: black;
+        text-decoration: none;
+        padding: 15px;
+        display: block;
+        text-align: center;
+    }
+    .navbar a:hover{
+        background-color: rgb(213, 213, 213);
+    }
+    .navbar li{
+        float: left;
+    }
+
+
+
+/* 
+17. GALLERY */
+    .gallery{
+        display: inline-block;  /* блокове ама един до друг*/
+        border: 1px solid hsl(0, 0%, 65%);
+        margin: 5px;
+        width: 200px;
+    }
+    .gallery .description{      /* селектира клас description, който се намира в клас gallery */
+        padding: 10px;
+        text-align: center;
+    }
+    .gallery:hover{
+        border: 2px solid black;
+    }
+    .gallery img{
+        width: 100%;
+        height: auto;
+    }
+
+
+
+/* 
+18. ICONS */
+    .icons{
+        text-align: center;
+        color: aquamarine;
+    }
+    /* маха подчертавката на линковете */
+    .icons a{   
+        text-decoration: none;
+        margin: 20px;
+    }
+
+
+    /* корекция на цвета - копирам целия клас и слагам . вместо шпация*/
+    .fa-solid.fa-house.fa-3x{
+        color: hsl(0, 0%, 50%);
+    }
+    .fa-solid.fa-house.fa-3x:hover{
+        color: hsl(0, 0%, 60%);
+    }
+
+
+    .fa-brands.fa-youtube.fa-3x{
+        color: hsl(0, 98%, 50%);
+    }
+    .fa-brands.fa-youtube.fa-3x:hover{
+        color: hsl(0, 98%, 60%);
+    }
+
+
+    .fa-brands.fa-facebook.fa-3x{
+        color: hsl(228, 92%, 50%);
+    }
+    .fa-brands.fa-facebook.fa-3x:hover{
+        color: hsl(228, 92%, 60%);
+    }
+
+
+/* 
+19. FLEXBOX  https://www.youtube.com/watch?v=HGTJBPNC-Gw&t=5032s&ab_channel=BroCode  */
+    /* FLEX DIRECTION */
+    /* .flexbox{
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        flex-direction: row;
+        flex-direction: row-reverse;
+    } */
+
+    /*  хоризонтално подравняване */
+    .flexbox{
+        display: flex;
+        border: 5px black solid;
+        height: 30vh;
+
+    /*  хоризонтално подравняване */
+        /* justify-content: flex-start; */
+        /* justify-content: flex-end; */
+        /* justify-content: center; */
+        /* justify-content: space-between; */
+        /* justify-content: space-around;  */
+        /* justify-content: space-evenly;  */
+        
+    /* вертикално подравняване */
+        /* align-items: flex-start; */
+        /* align-items: flex-end; */
+        /* align-items: center; */
+        /* align-items: center; */
+        /* align-items: baseline; */
+
+    /* сбутва на един ред или ги прехвърля на следващия */
+        flex-wrap: wrap;
+        align-content: flex-start;
+        /* flex-wrap: wrap-reverse; */
+
+    /* пространство между елементите */
+        column-gap: 1em;
+        row-gap: 1em;
+    }
+
+
+    .box{
+        width: 70px;
+        height: 70px;
+        font-size: 2.5em;
+        text-align: center;
+        border-radius: 5px;
+    }
+    #box1{
+        background-color: rgb(255, 48, 48);
+        font-size: 1em;
+    }
+    #box2{
+        background-color: rgb(253, 243, 51);
+        font-size: 2em;
+    }
+    #box3{
+        background-color: rgb(75, 255, 66);
+        font-size: 3em;
+    }
+    #box4{
+        background-color: rgb(48, 114, 255);
+        font-size: 4em;
+        /* промяна на */
+        order: -1;
+    }
+
+
+/* 
+20. TRANSFORM - може да се добавяет множество промени на един ред
+    може да се прилага на класове, снимки и т.н.*/
+    #transBox1{
+        width: 60px;
+        height: 60px;
+        border: 4px solid;
+        font-size: 3em;
+        text-align: center;
+        background-color: hsl(193, 100%, 71%);
+
+        /* TRANLATE - изместване по X и Y */
+        /* transform: translate(10px, 30px); */
+        /* transform: translateY(10px); */
+
+        /* ROTATION - завърта */
+        /* transform: rotate(45deg); */
+        /* transform: rotateY(45deg); */
+        /* transform: rotateX(180deg); */
+
+        /* SCALE */
+        /* transform: scale(1.2, 1.3); */
+        /* transform: scaleX(0.8em); */
+
+        /* SKEW - накланяне на ромб */
+        transform: skewX(40deg);
+        transform: skewY(30deg);
+    }
+
+
+
+/* 
+21. ANIMATIONS */
