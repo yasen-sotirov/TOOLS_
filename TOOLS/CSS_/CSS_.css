@@ -15,31 +15,33 @@ h3{font-family: Helvetica, sans-serif;}
     
 
 03. ШРИФТОВЕ
-    font-family: Verdana, Geneva,.. ако браузъра не поддържа първия шригт, ще се включи вторият
-        serif       - малките завартулки на буквите
-        sans serif  - без малките завъртулки
-        slab serif  - четвъртити завъртулки
-        monospace   - всяка буква е на равни растояния от другите
-    font-size: 1em=100%, 1.3=130%
-    font-wight: bold
-    font-style: italic  - разновидност на шрифта в курсив
-                oblique - обикновеният шрифт е наклонен изкуствено
+        font-family: Verdana, Geneva,.. ако браузъра не поддържа първия шригт, ще се включи вторият
+            serif       - малките завартулки на буквите
+            sans serif  - без малките завъртулки
+            slab serif  - четвъртити завъртулки
+            monospace   - всяка буква е на равни растояния от другите
+        font-size: 1em=100%, 1.3=130%
+        font-wight: bold
+        font-style: italic  - разновидност на шрифта в курсив
+                    oblique - обикновеният шрифт е наклонен изкуствено
 
 
-    text-align: left|right|center|justify|initial|inherit;
+        text-align: left|right|center|justify|initial|inherit;
 
 
     ШРИФТ ОТ ФАЙЛОВЕТЕ */
+        @font-face {
+            font-family: TiltNeon;
+            src: url(elements/TiltNeon.ttf)
+        }
+        h1{
+            font-family: TiltNeon;
+            font-size: 1.5em;
+        }
 
-    @font-face {
-        font-family: TiltNeon;
-        src: url(elements/TiltNeon.ttf)
-    }
-    h1{
-        font-family: TiltNeon;
-        font-size: 1.5em;
-    }
-
+        .right{
+            text-align: right;
+        }
 
 /* 
 04. BORDERS - РАМКИ */
@@ -119,10 +121,12 @@ h3{font-family: Helvetica, sans-serif;}
 09. DISPLAY - определя как се показва елемент */
     #divDisplay{                        /* работи като блок елемент */
         background-color: tomato;
-        /* display: inline;    сега ще рабори като inline */
+        /* сега ще рабори като inline */
+        display: inline;
     }
+
     #spanDisplay{
-        background-color: plum;
+        background-color: rgb(233, 140, 233);
         /* display: block;          ще работи като блок */
         /* display: none;           елемента не съществува и не заема място */
         /* visibility: hidden;      скрива елемента, но заема*/
@@ -152,7 +156,8 @@ h3{font-family: Helvetica, sans-serif;}
             position: absolute;     /* на разстояние от друг елемент в контейнера */
         }
 
-
+/* 
+11. BACKGROUND IMAGE*/
     body{
         /* background-image: url(elements/background.jpg); */
         background-repeat: no-repeat;   /* да не се повтаря */
@@ -162,8 +167,10 @@ h3{font-family: Helvetica, sans-serif;}
     }
 
 
+
+
 /* 
-11. COMBINATORS */
+12. COMBINATORS */
     #childComb{border: 2px solid;}
 
     /* DESCENDENT - елементи и вложени елементи в контейнера */
@@ -189,7 +196,7 @@ h3{font-family: Helvetica, sans-serif;}
 
 
 /* 
-12. PSEUDO CLASSES - описанията ще се предадат на следващите псудо класове */
+13. PSEUDO CLASSES - описанията ще се предадат на следващите псудо класове */
     /* BUTTON */
         #pseudo button:hover{
             font-size: 1.1em;
@@ -248,7 +255,7 @@ h3{font-family: Helvetica, sans-serif;}
 
 
 /* 
-13. PSEUDO ELEMENT 
+14. PSEUDO ELEMENT 
 първа буква */
     #pElement h3::first-letter{
         font-size: 2em;
@@ -285,7 +292,7 @@ h3{font-family: Helvetica, sans-serif;}
 
 
 /* 
-14. PAGINATION */
+15. PAGINATION */
     .pagination{
         text-align: center;
     }
@@ -308,7 +315,7 @@ h3{font-family: Helvetica, sans-serif;}
 
 
 /* 
-15. DROPDOWN */
+16. DROPDOWN */
     .dropdown{
         display: inline-block;
     }
@@ -345,7 +352,7 @@ h3{font-family: Helvetica, sans-serif;}
 
 
 /* 
-16. NAVBAR */
+17. NAVBAR */
     /* body{
         margin: 0px;
     } */
@@ -377,7 +384,7 @@ h3{font-family: Helvetica, sans-serif;}
 
 
 /* 
-17. GALLERY */
+18. GALLERY */
     .gallery{
         display: inline-block;  /* блокове ама един до друг*/
         border: 1px solid hsl(0, 0%, 65%);
@@ -399,7 +406,7 @@ h3{font-family: Helvetica, sans-serif;}
 
 
 /* 
-18. ICONS */
+19. ICONS */
     .icons{
         text-align: center;
         color: aquamarine;
@@ -437,7 +444,7 @@ h3{font-family: Helvetica, sans-serif;}
 
 
 /* 
-19. FLEXBOX  https://www.youtube.com/watch?v=HGTJBPNC-Gw&t=5032s&ab_channel=BroCode  */
+20. FLEXBOX  https://www.youtube.com/watch?v=HGTJBPNC-Gw&t=5032s&ab_channel=BroCode  */
     /* FLEX DIRECTION */
     /* .flexbox{
         display: flex;
@@ -507,7 +514,7 @@ h3{font-family: Helvetica, sans-serif;}
 
 
 /* 
-20. TRANSFORM - може да се добавяет множество промени на един ред
+21. TRANSFORM - може да се добавяет множество промени на един ред
     може да се прилага на класове, снимки и т.н.*/
     #transBox1{
         width: 60px;
@@ -538,4 +545,19 @@ h3{font-family: Helvetica, sans-serif;}
 
 
 /* 
-21. ANIMATIONS */
+22. ANIMATIONS */
+
+
+/* 
+23. test */
+
+#p{
+    display: inline;
+}
+#bar {
+    height: 20px;
+    width: 180px;
+    background-color: hsl(0, 70%, 77%);
+    border-radius: 3px;
+}
+
