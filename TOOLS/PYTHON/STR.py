@@ -236,6 +236,8 @@ txt_6 = "123 abc"
     ☺   alt + 1
     ♥   alt + 3
     ♣   alt + 5
+    •   alt + 7
+    ○   alt + 9
     ☼   alt + 15
     ↑   alt + 24
     ↓   alt + 25

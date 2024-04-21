@@ -1,5 +1,7 @@
-<!-- ВСИЧКО ЗА CSS -->
-<!-- BroCode  https://www.youtube.com/watch?v=HGTJBPNC-Gw&t=5032s&ab_channel=BroCode -->
+<!-- 
+ВСИЧКО ЗА CSS 
+    
+    BroCode  https://www.youtube.com/watch?v=HGTJBPNC-Gw&t=5032s&ab_channel=BroCode -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,100 +10,386 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS TOOLS</title>
 
-    <!-- връзка към външен файл със стилове -->
+    <!-- EXTERNAL: връзка към външен файл със стилове -->
     <link rel="stylesheet" href="CSS_.css"> <!-- link -->
-
+    
+    <!-- INTERNAL: секция за CSS код -->
+    <style type="text/css">
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
 </head>
 
 
 <body>
-    <h1>CSS TOOLS</h1>
-    <a target="_blank" href="https://www.youtube.com/watch?v=HGTJBPNC-Gw&t=13649s&ab_channel=BroCode">BroCode: HTML & CSS Full Course</a>
-    
+    <h1 style="color: #20209d; font-size: 2em; font-weight: 800;">CSS TOOLS</h1>
+    <a target="_blank" href="https://www.youtube.com/watch?v=HGTJBPNC-Gw&t=13649s&ab_channel=BroCode">BroCode</a><br>
+    <a target="_blank" href="https://tutorials.bg/kursove/html-css-uroci/Vavedenie-v-CSS3-5">tutorials.bg</a>
+    <br><br><hr><br>
+
+
+
 <!-- 
-01. ВИДОВЕ СSS property
-    inline      - вписват се в тага: h2 style="color:...
-    internal    - вписва се в head-a в <style></style>
-    external    - в отделен файл с линк към него <link rel="stylesheet" 
+01. МЕРНИ ЕДИНИЦИ -->
+    <h3>01. МЕРНИ ЕДИНИЦИ</h3>
+    <ul>
+        <li>pixel</li>
+        <li>%   - за текстове: процент от базово определения елемент</li>
+        <li>em  - за мобилни устройства: същата логика като %</li>
+        <li>rem - root em: процент от базово зададения размер</li>
+        <li>vh  - viewport height</li>
+    </ul>
+
+    <br><hr><br>
 
 
-02. СЕЛЕКТОРИ
-    .class
-    #id          
 
+<!-- 
+02. ПРЕОРИТЕТИ -->
+    <h3 >02. ПРЕОРИТЕТИ</h3>  
+    <ol>
+        <li>inline</li>
+        <li>id</li>
+        <li>class</li>
+        <li>tag selector</li>
+    </ol>  
+    <br><hr><br>
+    
+    
+
+<!--
 03. ШРИФТОВЕ    -->
-    <H3>03. ШРИФТОВЕ</H3>
+    <h3>03. ШРИФТОВЕ</х3>
 
-        <!-- връзка към външни шрифтове -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-    
-    <p id="right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas necessitatibus esse porro repellat dignissimos tempore commodi laudantium tempora nam. Iure maxime officiis ut nisi porro! Consequuntur voluptatum nobis reprehenderit! Quis?</p>
+    <br><br><hr><br>
+
 
 <!-- 
-04. BORDERS -->
-    <h3>04. BORDERS</h3>
-    <p id="border">03. BORDERS</p>
+04. ALIGN    -->
+    <h3>04. ALIGN - подравняване на текста</h3>
+    <p class="right">right: Lorem ipsum, dolor sit amet?</p>
+    <p class="left">left: Lorem ipsum, dolor sit amet?</p>
+    <p class="center">center: Lorem ipsum, dolor sit amet?</p>
+    <p class="justify">justify: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, eligendi dolores. Earum sequi tempora, error deleniti laborum neque voluptatem enim iusto. Suscipit repellat porro, modi debitis velit provident iste dolor.</p>
+
+
+    <br><hr><br>
+
+
+<!-- 
+05. BORDERS - РАМКИ -->
+    <h3>05. BORDERS - РАМКИ</h3>
+    <p id="border">Some text here</p>
     <br> <hr> <br>
     
 
 <!-- 
-05. SHADOW -->
-    <h3>05. SHADOW</h3>
+06. PADDING - отстоянието между рамката и съдържанието -->
+    <h3>06. PADDING</h3>
+    <span id="padding">span text</span>
+
+    <br><br> <br><hr> <br>
+
+
+
+<!-- 
+07. MARGINS - разстоянието между бордера и следващия елементите 
+    там не може да съществува никакъв елемент 
+    
+    MARGINE COLAPS - два съседни марджина се препокриват => по-големият е водещ     
+    - отнася се за горния и долния марджин. Левия и деснип се събират, а не се колапсват -->
+    <h3 style="margin-bottom: 0; border-bottom: solid black;">
+        07. MARGINS
+    </h3>
+    <span id="margin1">span 1</span>
+    <span id="margin2">span 2</span>
+    <p id="margin3">p element 3</p>
+    <div id="marginDiv">
+        margin auto = center; центрира блока в средата на екрана
+    </div>
+    <br>
+    <a target="_blank" href="https://tutorials.bg/kursove/html-css-uroci/Vavedenie-v-CSS3-5/margin-collapse">margin COLAPS</a>
+    <br><br> <hr> <br>
+
+
+
+<!-- 
+08. BOX MODEL - определя как ще се разполагат елементите по страницата -->
+    <h3>08. BOX MODEL</h3>
+    <p>събира:</p>
+    <ul>
+        <li>размерите на елемента</li>
+        <li>+ размерите на падинга около елемента</li>
+        <li>+ размерите на рамката около падинга</li>
+        <li>+ размерите на мърджина около рамката</li>
+    </ul>
+    <p>готовите кутиики браузърът ги реди от горе надолу и от ляво надясно</p>
+    <br> <hr> <br>
+
+
+
+
+<!-- 
+09. SHADOW -->
+    <h3>09. SHADOW</h3>
     <div id="boxShadow">
         <h1 id="shadow">SHADOW</h1>
     </div>
     <br> <hr>
 
 
-<!-- 
-06. MARGINS - пространството около елементите -->
-    <h3>06. MARGINS</h3>
-    <div class="boxMargin">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde delectus officiis harum tempora, molestias nisi culpa cupiditate ex aut, deleniti laboriosam, esse nobis vel ipsam voluptate architecto consequatur quam incidunt.</p>
-    </div>
-    <br> <hr> <br>
 
 
 <!-- 
-07. FLOAT IMAGE IN TEXT - снимка обиколена от текст -->
-    <h3>07. FLOAT IMAGE IN TEXT</h3>
+10. FLOATING IMAGE IN TEXT - снимка обиколена от текст -->
+    <h3>10. FLOATING IMAGE IN TEXT</h3>
     <div id="floatDiv">
         <img src="elements/pokeball.png" id="floatImg" alt="pokevall image" height="80">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus rem sapiente labore recusandae nobis tempora. Eius assumenda explicabo nihil dolores, totam iure tempore sapiente ab necessitatibus laboriosam doloribus maiores magni.</p>
     </div>
 
 
+
 <!-- 
-08. OVERFLOW - когато нещата излизат извън рамката -->
-    <h3>08. OVERFLOW </h3>
+11. OVERFLOW - когато нещата излизат извън рамката -->
+    <h3>11. OVERFLOW - когато нещата излизат извън рамката</h3>
     <div id="overflow"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore impedit blanditiis pariatur itaque? Repellendus amet aliquid optio ratione quibusdam neque, explicabo temporibus illo est, mollitia laudantium? Ducimus officiis laborum totam!</p></div>    
     <br> <hr><br>
 
+
+
 <!-- 
-09. DISPLAY - определя как се показва елемент
-    block level - започват на нов ред и заемат цялата дължина на екрана
-        h1, div, p, form, header, footer
+12. DISPLAY
+    - определя как се показва елемент
+    - по-добре да се използват html елементите с характеристиките, 
+      които ни трябват, вместо да ги пренаписваме в CSS -->
+    <h3>12. DISPLAY</h3>
 
-    inline - не започват на нов ред и заемат от екрана колкото им трява 
-        span, a, img 
+<!-- 
+    12.1 DISPLAY: block  - започват на нов ред и заемат цялата дължина на екрана -->      
+ 
+    <h4>12.1 DISPLAY: block</h4>
+        <div class="block">
+            h1, div, p, form, header, footer
+        </div> <br> <br>
+
+
+<!--  
+    12.2 DISPLAY: inline 
+    - не започват на нов ред и заемат от екрана колкото им трява 
+    - игнорира:
+        • margin-top/bottom
+        • padding-top/bottom
+        • height widt           -->
+        
+    <h4>12.2 DISPLAY: inline</h4>
+        <span class="inline">
+            span, a, img
+        </span> <br> <br>
+
+
+<!--  
+    12.3 DISPLAY: inline-block
+    - елементите заемат само необходимото им място,
+      но margin-top/bottom и padding-top/bottom вече работят -->
+
+      <h4>12.3 DISPLAY: inline-block</h4>
+      <div class="inline-block">
+          span, a, img
+      </div> <br> <br>
+
+      
+<!--  
+    12.4 DISPLAY: flex 
+        свободно подреждане     -->
+      <h4>12.4 DISPLAY: flex</h4>
+      <p>Елементите не се подреждат един над друг. 
+        Въвежда се main axces която по подразбиране е хоризонтална
+        и на дясно, но може да ѝ сменям посоката и направлението.
+      </p>
+
+      <div class="display-flex">
+        <div class="box"><h1>h1</h1></div>
+        <div class="box"><h2>h2</h2></div>
+        <div class="box"><h3>h3</h3></div>
+      </div> <br> <br>
+
+
+<!--  
+    12.5 DISPLAY: flex, justify-content  
+        хоризонтално подравняване       -->
+      <h4>12.5 DISPLAY: flex, justify-content</h4>
+      <p>
+        След като елементите не са фиксирани, може да се подравнят
+        в контейнера, както се подравнява текст.
+      </p>
+
+      <div class="justify-content">
+        <div class="box"><h1>h1</h1></div>
+        <div class="box"><h2>h2</h2></div>
+        <div class="box"><h3>h3</h3></div>
+      </div> <br> <br>
+
+
+
+<!--  
+    12.6 DISPLAY: flex-direction, align-items  
+        вертикално подравняване       -->
+      <h4>12.6 DISPLAY: flex, flex-direction, align-items</h4>
+      <p>Елементите може да се подравняват и вертикално.</p>
+
+      <span class="align-items1">
+        <div class="box"><h1>h1</h1></div>
+        <div class="box"><h2>h2</h2></div>
+        <div class="box"><h3>h3</h3></div>
+      </span> <br> <br>
+
+      <span class="align-items2">
+        <div class="box"><h1>h1</h1></div>
+        <div class="box"><h2>h2</h2></div>
+        <div class="box"><h3>h3</h3></div>
+      </span> <br> <br>
+
+
+
+<!--  
+    12.7.1 DISPLAY: flex, flex-wrap  
+        сбутва на един ред или ги прехвърля на следващия       -->
+      <h4>12.7.1 DISPLAY: flex, flex-wrap</h4>
+      <p>Сбутва на един ред или ги прехвърля на следващия.</p>
+
+      <div class="flex-wrap">
+        <div class="box"><h1>h1</h1></div>
+        <div class="box"><h2>h2</h2></div>
+        <div class="box"><h3>h3</h3></div>
+        <div class="box"><h3>h3</h3></div>
+        <div class="box"><h3>h3</h3></div>
+        <div class="box"><h3>h3</h3></div>
+      </div> <br> <br>
+
+
+
+<!--  
+    12.7.2 DISPLAY: flex, flex-wrap, align-content  
+        вертикално подравняване       -->
+      <h4>12.7.2 DISPLAY: flex, flex-wrap, align-content</h4>
+      <p>Подреждане на сбутаните елементи.</p>
+
+      <div class="wrap-align-content">
+        <div class="box"><h1>h1</h1></div>
+        <div class="box"><h2>h2</h2></div>
+        <div class="box"><h3>h3</h3></div>
+        <div class="box"><h3>h3</h3></div>
+        <div class="box"><h3>h3</h3></div>
+        <div class="box"><h3>h3</h3></div>
+      </div> <br> <br>
+
+
+
+<!--  
+    12.8 DISPLAY: flex-grow  
+        вертикално подравняване       -->
+      <h4>12.8 DISPLAY: flex, flex-grow</h4>
+      <p>Подреждане на сбутаните елементи.</p>
+
+      <div class="border-wrap">
+        <div class="box"><h1>h1</h1></div>
+        <div class="box" id="flex-grow"><h2>h2</h2></div>
+        <div class="box"><h3>h3</h3></div>
+      </div> <br> <br>
+
+
+<!--  
+    12.9 DISPLAY: flex-, align-self  
+        индивидуално подравняване       -->
+      <h4>12.9 DISPLAY: flex, align-self</h4>
+      <p>индивидуално подравняване.</p>
+
+      <div class="border-wrap">
+        <div class="box"><h1>h1</h1></div>
+        <div class="box" id="align-self"><h2>h2</h2></div>
+        <div class="box"><h3>h3</h3></div>
+      </div> <br> <br>
+
+
+<!--  
+    12.10 DISPLAY: flex, order  
+        индивидуално подравняване       -->
+      <h4>12.10 DISPLAY: flex, order</h4>
+      <p>индивидуално подравняване.</p>
+
+      <div class="border-wrap">
+        <div class="box"><h1>h1</h1></div>
+        <div class="box"><h2>h2</h2></div>
+        <div class="box" id="order"><h3>h3</h3></div>
+      </div> <br> <br>
+
+
+
+<!-- 
     
-    inline blok     -->
+    NONE
+    - снимката е заредена, но не заема място.  
+    - после с JS се зарежда като block или inline-block,
+      но не и като inline element
 
-    <h3>09. DISPLAY</h3>
-    <div id="divDisplay">divDisplay</div>
-    <span id="spanDisplay">spanDisplay</span>
+
+    VISIBILITY - visible / none
+    - none: снимката заема мястото си и е заредена,
+      просто не е видима -->
+    
+
+
+        <br> <br> <hr><br>
+
+
+
+
+
+    
+
+<!--  
+13. WIDTH & HEIDHT
+    - определя на какво място ще се покаже елемента, 
+      а не какво място ще заеме на екрана 
+        • block елементите пак ще заемат цял ред
+        • inline елментите, освен img, игнорират width & height  -->
+
+    <h3>13. WIDTH & HEIDHT</h3>
+    <p id="pWidth">p element</p>
+
+    <span id="spanWidth">span el</span>
+    <span id="spanWidth">span el</span>
+    <span id="spanWidth">span el</span>
+    <br>
+
+    <span id="inlinBlockWidth">span el</span>
+    <span id="inlinBlockWidth">span el</span>
+    <span id="inlinBlockWidth">span el</span>
+
     <br> <br><hr><br>
 
+
 <!-- 
-10. POSITION
-    relative    - където е по принцип
-    fixed       - остава на същото място при скролване
-    absolute    - на разстояние от друг елемент в контейнера
-    sticky      - подобно на fixed
-    static      - за по-натам -->
-    <h3>10. POSITION</h3>
+14. POSITION - определя как html елементите са позиционирани
+    в контейнерите или целия сайт
+
+    relative
+        - където е по принцип,може да мърда малко 
+        от мястото си, но др. рлементи остават на място
+    
+    fixed
+        - остава на същото място при скролване
+        
+    absolute
+        - мести се наазависимо във всички посоки в контейнета
+        - на разстояние от друг елемент в контейнера
+    
+    sticky
+        - в даден момент залепва за топа при скролване -->
+
+    <h3>14. POSITION</h3>
     <div id="relative">
         <div id="absolute"></div>
     </div>
@@ -109,15 +397,18 @@
 
 
 <!-- 
-11. BACKGROUND -->
+15. BACKGROUND IMAGE-->
+<h3>15. BACKGROUND IMAGE</h3>
+
+
 
 <!-- 
-12. COMBINATORS - обяснява връзката между листове и селектори 
+16. COMBINATORS - обяснява връзката между листове и селектори 
         " " = descendents       - за всички потомци
         ">" = child             - за всички деца
         "~" = general sibling 
         "+" = adjacent sibling -->
-<h3>12. COMBINATORS</h3>
+<h3>16. COMBINATORS</h3>
     <div id="childComb">
         <p>This is #1</p>
         <p>This is #2</p>
@@ -136,9 +427,10 @@
     </div> <br> <hr><br>
 
 
+
 <!-- 
-13. PSEUDO CLASSES - подклас определящ действието на елемента при опр. обстоятелства -->
-    <h3>13. PSEUDO CLASSES</h3>
+17. PSEUDO CLASSES - подклас определящ действието на елемента при опр. обстоятелства -->
+    <h3>17. PSEUDO CLASSES</h3>
     <!-- BUTTON -->
         <div id="pseudo">
             <button type="button" >click me</button>
@@ -181,10 +473,10 @@
 
 
 <!-- 
-14. PSEUDO ELEMENTS - ключова дума след селектор, 
+18. PSEUDO ELEMENTS - ключова дума след селектор, 
 която използваме за стила на специфична част на елемента -->
     <div id="pElement">
-        <h3>14. PSEUDO ELEMENTS</h3>
+        <h3>18. PSEUDO ELEMENTS</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sint possimus cum aliquam veniam incidunt adipisci consequuntur illum. Ex culpa non quasi ut natus laborum velit quaerat iusto atque eligendi!</p>
         <ul id="fruits">
             <li id="apple">apple</li>
@@ -196,8 +488,8 @@
 
 
 <!-- 
-15. PAGINATION -  -->
-    <h3>15. PAGINATION</h3>
+19. PAGINATION -  -->
+    <h3>19. PAGINATION</h3>
         <p> 02:42:46 </p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero excepturi repudiandae, blanditiis sint, possimus nihil dolores iure dolorum quos itaque perferendis maxime soluta fuga corporis, laborum ab deserunt praesentium modi!</p>
 
@@ -213,9 +505,10 @@
         <br> <hr> <br>
 
 
+
 <!-- 
-16. DROPDOWN MENU  -->
-    <h3>16. DROPDOWN</h3>
+20. DROPDOWN MENU  -->
+    <h3>20. DROPDOWN</h3>
         <div class="dropdown">
             <button>Food</button>
             <div class="content">
@@ -232,8 +525,8 @@
 
 
 <!-- 
-17. NAVBAR -->
-    <h3>17. NAVBAR</h3>
+21. NAVBAR -->
+    <h3>21. NAVBAR</h3>
     <nav class="navbar">
         <ul>
             <li><a href="">about</a></li>
@@ -247,8 +540,8 @@
     
 
 <!-- 
-18. GALLERY -->
-    <h3>18. GALLERY</h3>
+22. GALLERY -->
+    <h3>22. GALLERY</h3>
     
     <div class="gallery">
         <a href="elements/salad.jpg" target="_blank">
@@ -275,9 +568,9 @@
 
 
 <!-- 
-19. ICONS 
+23. ICONS 
 https://fontawesome.com/     -->
-    <h3>19. ICONS</h3>
+    <h3>23. ICONS</h3>
     <!-- kit -->
     <script src="https://kit.fontawesome.com/f2f63fec08.js" crossorigin="anonymous"></script>
     
@@ -298,34 +591,18 @@ https://fontawesome.com/     -->
 
 
 
-<!-- 
-20. FLEXBOX  -->
-    <H3>20. FLEXBOX</H3>
-    <div class="flexbox">
-        <div class="box" id="box1">1</div>
-        <div class="box" id="box2">2</div>
-        <div class="box" id="box3">3</div>
-        <div class="box" id="box4">4</div>
-        <div class="box" id="box1">1</div>
-        <div class="box" id="box2">2</div>
-        <div class="box" id="box3">3</div>
-        <div class="box" id="box4">4</div>
-    </div>
-    <br><hr><br>
-
-
 
 <!-- 
-21. TRANSFORM ELEMENT   -->
-    <h3>21. TRANSFORM ELEMENT</h3>
+24. TRANSFORM ELEMENT   -->
+    <h3>24. TRANSFORM ELEMENT</h3>
     <div id="transBox1">Hi</div>
     <br><br><hr><br>
 
 
 
 <!-- 
-22. ANIMATIONS -->
-    <H3>22. ANIMATIONS</H3>
+25. ANIMATIONS -->
+    <H3>25. ANIMATIONS</H3>
     <a href="https://www.youtube.com/watch?v=HGTJBPNC-Gw&t=5032s&ab_channel=BroCode" target="_blank">
         <strong>link for 3:47:30</strong>        
     </a>
@@ -334,8 +611,8 @@ https://fontawesome.com/     -->
 
 
 <!-- 
-23 test  -->
-    <h3>23. test</h3>
+25. test  -->
+    <h3>test</h3>
 
     <div id="p">
         HTML

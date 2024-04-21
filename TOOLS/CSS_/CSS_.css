@@ -1,18 +1,31 @@
-/* ВСИЧКО ЗА CSS
-   BroCode  https://www.youtube.com/watch?v=HGTJBPNC-Gw&t=5032s&ab_channel=BroCode */
-h3{font-family: Helvetica, sans-serif;}
+/* 
+
+ВСИЧКО ЗА CSS
+   
+    BroCode  https://www.youtube.com/watch?v=HGTJBPNC-Gw&t=5032s&ab_channel=BroCode */
+
+h2,
+h3,
+h4,
+p {
+  font-family: Helvetica, sans-serif;
+}
 
 /*
-01. ВИДОВЕ СSS property
-    inline      - вписват се в тага: h2 style="color:...
-    internal    - вписва се в head-a в <style></style>
-    external    - в отделен файл с линк към него <link rel="stylesheet" 
+01. МЕРНИ ЕДИНИЦИ
 
 
-02. СЕЛЕКТОРИ
-    .class
-    #id
+
+
+02. ПРЕОРИТЕТИ
+    1. inline
+    2. id
+    3. class
+    4. tag selector
+   
     
+
+
 
 03. ШРИФТОВЕ
         font-family: Verdana, Geneva,.. ако браузъра не поддържа първия шригт, ще се включи вторият
@@ -28,536 +41,670 @@ h3{font-family: Helvetica, sans-serif;}
 
         text-align: left|right|center|justify|initial|inherit;
 
+        linr-height: 20px   - разстоянието между редовете
 
     ШРИФТ ОТ ФАЙЛОВЕТЕ */
-        @font-face {
-            font-family: TiltNeon;
-            src: url(elements/TiltNeon.ttf)
-        }
-        h1{
-            font-family: TiltNeon;
-            font-size: 1.5em;
-        }
-
-        .right{
-            text-align: right;
-        }
+@font-face {
+  font-family: TiltNeon;
+  src: url(elements/TiltNeon.ttf);
+}
+h1 {
+  font-family: TiltNeon;
+  font-size: 1.5em;
+}
 
 /* 
-04. BORDERS - РАМКИ */
-    #border{
-        /* border-style: dashed; */
-        /* border-style: dotted; */
-        /* border-style: double; */
-        /* border-style: groove; */
-        /* border-style: ridge; */
-        /* border-style: outset; */
-        /* border-style: inset; */
-
-        border-bottom: solid 5px rgb(190, 149, 13);
-        border-top: solid 5px rgb(190, 48, 13);
-        border-radius: 10px;
-    }
 
 
-/* 
-05. SHADOW   - hor ofset, vert ofset, blur, color*/
-    #shadow{
-        font-family: TiltNeon;
-        text-shadow: 3px 3px 5px rgb(248, 13, 13), -3px -3px 5px rgb(25, 128, 255);
-    }
 
-    #boxShadow {
-        width: 150px;
-        height: 50px;
-        background-color: rgb(215, 215, 215);
-        box-shadow: 3px 3px 5px tomato;
-    }
-
+04. ALIGN */
+.right {
+  text-align: right;
+}
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.justify {
+  text-align: justify;
+}
 
 /* 
-06. MARGINES */
-    .boxMargin{
-        border: 3px solid grey;
-        background-color: rgb(231, 51, 51);
-        margin-left: auto;      /* залепва за десния край на браузъра */
-        margin: 30px;
-        padding: 20px;          /* разстоянието отвътре на рамката*/   
-    }
 
 
-/* 
-07. FLOAT IMAGE IN TEXT */
-    #floatDiv{
-        border: 1px solid gray;
-        margin: 10px; 
-        display: flow-root; /* спира картинките да не излизат извън рамката */
-        width: 350px;
-    }
 
-    #floatImg{
-        float: left;
-        margin: 10px;
-    }
+05. BORDERS - РАМКИ */
+#border {
+  /* border-style: dashed; */
+  /* border-style: dotted; */
+  /* border-style: double; */
+  /* border-style: groove; */
+  /* border-style: ridge; */
+  /* border-style: outset; */
+  /* border-style: inset; */
 
+  border-bottom: solid 5px rgb(190, 149, 13);
+  border-top: solid 5px rgb(190, 48, 13);
+  border-radius: 10px;
+}
 
-/* 
-08. OVERFLOW - когато нещата излизат извън рамката */
-    #overflow{
-        border: 2px solid;
-        height: 75px;
-        overflow: visible;          /* елементитее са видими*/
-        overflow: hidden;           /* елементите са скрити, но може да достигнем текста */
-        overflow: clip;
-        overflow-clip-margin: 15px; /* oказва с колко да излезне от кутията */
-        overflow: scroll;           /* scrollbar винаги */
-        overflow: auto;             /* scrollbar при нужда */
-        min-height: 10vh;           /* min 10% от viewport height */
-    }
+/*
 
 
+
+06. PADDING - отстоянието между рамката и съдържанието */
+#padding {
+  border: 2px solid red;
+  padding: 10px 20px; /* хоризонтални и вертикалнки */
+  padding: 30%; /* процент от размера на елемента*/
+  padding: 40px 30px 20px 10px; /* от 4 страни */
+}
 
 /* 
-09. DISPLAY - определя как се показва елемент */
-    #divDisplay{                        /* работи като блок елемент */
-        background-color: tomato;
-        /* сега ще рабори като inline */
-        display: inline;
-    }
 
-    #spanDisplay{
-        background-color: rgb(233, 140, 233);
-        /* display: block;          ще работи като блок */
-        /* display: none;           елемента не съществува и не заема място */
-        /* visibility: hidden;      скрива елемента, но заема*/
-    }
 
+
+
+07. MARGINES */
+#margin1 {
+  border: 3px solid grey;
+  margin: 0 20px 20px 60px;
+}
+
+#margin3 {
+  border: 3px solid grey;
+  /* пренаписва долния марджин на горния елемент 
+        не сумира горния + долния марджин*/
+  margin: 30px 300px 10px 20px;
+}
+#marginDiv {
+  width: 200px;
+  height: 100px;
+  background-color: tomato;
+  margin: auto;
+}
 
 /* 
+
+
+
+
+08. BOX MODEL */
+
+/* 
+
+
+
+
+09. SHADOW   - hor ofset, vert ofset, blur, color*/
+#shadow {
+  font-family: TiltNeon;
+  text-shadow: 3px 3px 5px rgb(248, 13, 13), -3px -3px 5px rgb(25, 128, 255);
+}
+
+#boxShadow {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(215, 215, 215);
+  box-shadow: 3px 3px 5px tomato;
+}
+
+/* 
+
+
+
+
+10. FLOATING IMAGE IN TEXT */
+#floatDiv {
+  border: 1px solid gray;
+  margin: 10px;
+  display: flow-root; /* спира картинките да не излизат извън рамката */
+  width: 350px;
+}
+
+#floatImg {
+  float: left;
+  margin: 10px;
+}
+
+/* 
+
+
+
+
+11. OVERFLOW - когато нещата излизат извън рамката */
+#overflow {
+  border: 2px solid;
+  height: 75px;
+  overflow: visible; /* елементитее са видими*/
+  overflow: hidden; /* елементите са скрити, но може да достигнем текста */
+  overflow: clip;
+  overflow-clip-margin: 15px; /* oказва с колко да излезне от кутията */
+  overflow: scroll; /* scrollbar винаги */
+  overflow: auto; /* scrollbar при нужда */
+  min-height: 10vh; /* min 10% от viewport height */
+}
+
+/* 
+
+
+
+
+12. DISPLAY - определя как се показва елемент
+    display: block;           ще работи като блок
+    display: inlin;           ще работи като inline
+    display: inlin-block;     ще работи като inline-block
+    display: none;            елемента не съществува и не заема място
+    visibility: hidden;       скрива елемента, но заема */
+
+.box {
+  background-color: rgb(179, 116, 239);
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+/* 12.1 DISPLAY: block */
+.block {
+  background-color: tomato;
+}
+
+/* 12.2 DISPLAY: inline*/
+.inline {
+  background-color: rgb(233, 140, 233);
+  margin: 50px;
+}
+
+/* 12.3 DISPLAY: inline-block */
+.inline-block {
+  background-color: rgb(162, 233, 140);
+  display: inline-block;
+  margin: 50px;
+}
+
+/* 
+https://www.youtube.com/watch?v=phWxA89Dy94&ab_channel=SlayingTheDragon
+
+12.4 DISPLAY: flex 
+  Елементите не се подреждат един над друг. 
+  Въвежда се main axces която по подразбиране е хоризонтална
+  и на дясно, но може да ѝ сменям посоката и направлението. */
+.display-flex {
+  border: 3px solid grey;
+  display: flex;
+  /* flex-direction: column; */
+  flex-direction: column-reverse;
+  /* flex-direction: row; */
+  /* flex-direction: row-reverse; */
+}
+
+/*  
+
+12.5 DISPLAY: flex, justify-content
+  хоризонтално подравняване */
+.justify-content {
+  border: 3px solid tomato;
+  display: flex;
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  justify-content: center;
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly;  */
+}
+
+/* 
+12.6 DISPLAY: flex, align-items  
+        вертикално подравняване */
+.align-items1 {
+  border: 3px solid rgb(71, 132, 255);
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  align-items: center;
+  /* подравнява по текста */
+  /* align-items: baseline; */
+  row-gap: 10px;
+}
+
+.align-items2 {
+  border: 3px solid rgb(71, 132, 255);
+  display: flex;
+  /* flex-direction: column; */
+  align-items: flex-start;
+  /* align-items: flex-end; */
+  /* align-items: center; */
+  /* align-items: baseline; */
+  column-gap: 5px;
+}
+
+/* 
+12.7.1 DISPLAY: flex, flex-wrap  
+        сбутва на един ред или ги прехвърля на следващия */
+.flex-wrap {
+  border: 3px solid rgb(255, 71, 166);
+  width: 200px;
+  height: 200px;
+  display: flex;
+
+  flex-wrap: wrap;
+  /* flex-wrap: wrap-reverse; */
+}
+
+/* 
+12.7.2 DISPLAY: flex, flex-wrap, align-content
+        Подреждане на сбутаните елементи. 
+        ! Само при flex-wrap: wrap */
+.wrap-align-content {
+  border: 3px solid rgb(255, 71, 166);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  /* align-content: flex-start; */
+  /* align-content: center; */
+  /* align-content: flex-end; */
+  /* align-content: flex-end; */
+  /* align-content: space-around; */
+  align-content: space-evenly;
+}
+
+/* 
+12.8 DISPLAY: flex-grow 
+    посоченият елемент нараства докато изпълни пространството
+    или се смачква по-бързо от другите при събиране на екрана 
+    https://www.youtube.com/watch?v=phWxA89Dy94&ab_channel=SlayingTheDragon   */
+.border-wrap {
+  border: 3px solid rgb(255, 71, 166);
+  width: 200px;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#flex-grow {
+  border: 2px black solid;
+  display: flex;
+  /* посоченият елемент нараства докато изпълни пространството */
+  /* flex-grow: 1; */
+  /*  или се смачква по-бързо от другите при събиране на екрана  */
+  /* flex-shrink: 5; */
+  /* flex-basis: auto; */
+  /* съкратено записване на горните три. Приема 3 параметъра */
+  flex: auto;
+}
+
+/* 
+12.9 DISPLAY: flex, align-self  
+    индивидуално подравняване*/
+#align-self {
+  align-self: center;
+  /* align-self: flex-end; */
+  /* align-self: flex-start; */
+}
+
+/* 
+12.10 DISPLAY: flex, order  
+    индивидуално подравняване */
+#order {
+  color: rgb(52, 43, 226);
+  order: -1;
+}
+
+/* 
+
+
 10. POSITION */
-    #relative{
-        width: 100px;
-        height: 100px;
-        background-color: goldenrod;
-            position: relative;     /* където е по default */
-            top: 10px;              /* има 10px над def място */ 
-            left: 150px;            /* избутан е с 150px отляво */
+#relative {
+  width: 100px;
+  height: 100px;
+  background-color: goldenrod;
+  position: relative; /* където е по default */
+  top: 10px; /* има 10px над def място */
+  left: 150px; /* избутан е с 150px отляво */
 
-            /* position: fixed;        остава на същото място при скролване */
-        }
+  /* position: fixed;        остава на същото място при скролване */
+}
 
-    #absolute{
-        width: 50px;
-        height: 50px;
-        background-color: rgb(177, 112, 212);
-            position: relative;     
-            top: 25px;            
-            left: 25px;             
-            position: absolute;     /* на разстояние от друг елемент в контейнера */
-        }
+#absolute {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(177, 112, 212);
+  position: relative;
+  top: 25px;
+  left: 25px;
+  position: absolute; /* на разстояние от друг елемент в контейнера */
+}
+
+/* 
+12. WIDTH & HEIDHT */
+#pWidth {
+  border: 2px solid tomato;
+  width: 300px;
+}
+#spanWidth {
+  border: 2px solid tomato;
+  /* width: 600px;    игнорират width & height
+        height: 200px; */
+}
+#inlinBlockWidth {
+  display: inline-block;
+  border: 2px solid tomato;
+  width: 200px;
+}
 
 /* 
 11. BACKGROUND IMAGE*/
-    body{
-        /* background-image: url(elements/background.jpg); */
-        background-repeat: no-repeat;   /* да не се повтаря */
-        background-position: center;
-        background-attachment: fixed;   /* при скролване не се мести */
-        background-size: cover;         /* покрива целия фон */
-    }
-
-
-
+body {
+  /* background-image: url(elements/background.jpg); */
+  background-repeat: no-repeat; /* да не се повтаря */
+  background-position: center;
+  background-attachment: fixed; /* при скролване не се мести */
+  background-size: cover; /* покрива целия фон */
+}
 
 /* 
 12. COMBINATORS */
-    #childComb{border: 2px solid;}
+#childComb {
+  border: 2px solid;
+}
 
-    /* DESCENDENT - елементи и вложени елементи в контейнера */
-    #childComb p{
-        background-color: yellowgreen;
-    }
+/* DESCENDENT - елементи и вложени елементи в контейнера */
+#childComb p {
+  background-color: yellowgreen;
+}
 
-    /* CHILD - всички деца в контейнера */
-    #childComb > p{
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-    }
+/* CHILD - всички деца в контейнера */
+#childComb > p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
 
-    /* GENERAL SIBLINGS - всички братя и сестри на това ID в общото (извън контейнерите) */
-    /* #childComb ~ p{
+/* GENERAL SIBLINGS - всички братя и сестри на това ID в общото (извън контейнерите) */
+/* #childComb ~ p{
         background-color: rgb(232, 91, 91);
     } */
 
-    /* ADJACENT SIBLINGS - първият директен братя/сестри на това ID в общото (извън контейнерите) */
-    #childComb + p{
-        background-color: rgb(135, 95, 51);
-    }
-
+/* ADJACENT SIBLINGS - първият директен братя/сестри на това ID в общото (извън контейнерите) */
+#childComb + p {
+  background-color: rgb(135, 95, 51);
+}
 
 /* 
-13. PSEUDO CLASSES - описанията ще се предадат на следващите псудо класове */
-    /* BUTTON */
-        #pseudo button:hover{
-            font-size: 1.1em;
-            background-color: aqua;
-            border-radius: 0.8em;
-        }
-        #pseudo button:active{
-            background-color: rgb(255, 225, 0);
-        } 
+13. PSEUDO CLASSES - псевдо клас, активира се при събитие */
+/* BUTTON */
+#pseudo button:hover {
+  font-size: 1.1em;
+  background-color: aqua;
+  border-radius: 0.8em;
+}
+#pseudo button:active {
+  background-color: rgb(255, 225, 0);
+}
 
-
-    /* LINK */
-        #pseudoLink a:link{
-            color: rgb(83, 83, 240);
-        }
-        #pseudoLink a:hover{
-            color: rgb(13, 13, 247);
-            font-size: 1.1em;
-        }
-        #pseudoLink a:active{
-            color: rgb(240, 83, 143);
-            font-size: 1.2em;
-        }
-        /* #pseudoLink a:visited{
+/* LINK */
+#pseudoLink a:link {
+  color: rgb(83, 83, 240);
+}
+#pseudoLink a:hover {
+  color: rgb(13, 13, 247);
+  font-size: 1.1em;
+}
+#pseudoLink a:active {
+  color: rgb(240, 83, 143);
+  font-size: 1.2em;
+}
+/* #pseudoLink a:visited{
             color: rgb(119, 119, 119);
         } */
 
+/* UNORDERED LIST */
+#pseudoUl1 li:hover {
+  background-color: rgb(247, 247, 73);
+}
+#pseudoUl1 li:not(:hover) {
+  background-color: rgb(247, 163, 73);
+}
 
-    /* UNORDERED LIST */
-        #pseudoUl1 li:hover{
-            background-color: rgb(247, 247, 73);
-        }
-        #pseudoUl1 li:not(:hover){
-            background-color: rgb(247, 163, 73);
-        }
+#pseudoUl2 li:nth-child(6) {
+  background-color: rgb(247, 163, 73);
+}
 
-        #pseudoUl2 li:nth-child(6){
-            background-color: rgb(247, 163, 73);
-        }
+#pseudoUl2 li:nth-child(odd) {
+  color: brown;
+}
 
-        #pseudoUl2 li:nth-child(odd){
-            color: brown;
-        }
-
-    /* CONTAINER */
-        #greetings p{
-            background-color: rgb(165, 198, 255);
-            padding: 10px;
-            display: none;
-        }
-        #greetings:hover p{
-            display: block;
-        }
-
-
-
+/* CONTAINER */
+#greetings p {
+  background-color: rgb(165, 198, 255);
+  padding: 10px;
+  display: none;
+}
+#greetings:hover p {
+  display: block;
+}
 
 /* 
 14. PSEUDO ELEMENT 
 първа буква */
-    #pElement h3::first-letter{
-        font-size: 2em;
-        font-style: italic;
-        background-color: aquamarine;
-    }
+#pElement h3::first-letter {
+  font-size: 2em;
+  font-style: italic;
+  background-color: aquamarine;
+}
 
-    /* първа линия */
-    #pElement p::first-line{
-        background-color: rgb(244, 208, 154);
-    }
+/* първа линия */
+#pElement p::first-line {
+  background-color: rgb(244, 208, 154);
+}
 
-    /* селектиран текст */
-    #pElement p::selection{                 
-        color: rgba(0, 255, 0, 0.916);
-        background-color: rgb(106, 106, 106);
-    }
+/* селектиран текст */
+#pElement p::selection {
+  color: rgba(0, 255, 0, 0.916);
+  background-color: rgb(106, 106, 106);
+}
 
-    /* before after psudo eelement */
-    #fruits li::marker{
-        content: "✔";
-        color: green;
-        font-size: 1.2em;
-    }
-    #apple::after{
-        content: "🍎";
-    }
-    #orange::after{
-        content: "🍊";
-    }
-    #banana::after{
-        content: "🍌";
-    }
-
+/* before after psudo eelement */
+#fruits li::marker {
+  content: "✔";
+  color: green;
+  font-size: 1.2em;
+}
+#apple::after {
+  content: "🍎";
+}
+#orange::after {
+  content: "🍊";
+}
+#banana::after {
+  content: "🍌";
+}
 
 /* 
 15. PAGINATION */
-    .pagination{
-        text-align: center;
-    }
-    .pagination a{
-        color: black;
-        text-decoration: none;  /* маха подчертавката на линка */
-        padding: 8px 15px;
-        display: inline-block;
-    }
-    .pagination a.active{
-        background-color: greenyellow;
-        font-weight: bold;
-        border-radius: 6px;
-    }
-    .pagination a:hover:not(.active){
-        background-color: rgb(211, 239, 169);
-        border-radius: 6px;
-    }
-
-
+.pagination {
+  text-align: center;
+}
+.pagination a {
+  color: black;
+  text-decoration: none; /* маха подчертавката на линка */
+  padding: 8px 15px;
+  display: inline-block;
+}
+.pagination a.active {
+  background-color: greenyellow;
+  font-weight: bold;
+  border-radius: 6px;
+}
+.pagination a:hover:not(.active) {
+  background-color: rgb(211, 239, 169);
+  border-radius: 6px;
+}
 
 /* 
 16. DROPDOWN */
-    .dropdown{
-        display: inline-block;
-    }
-    .dropdown button{
-        background-color: hsl(0, 0%, 80%);
-        color: white;
-        padding: 10px 15px;
-        border: none;
-        cursor: pointer;
-    }
-    .dropdown a{
-        display: block;
-        color: black;
-        text-decoration: none;
-        padding: 10px 15px;
-    }
-    .dropdown .content{
-        display: none;
-        position: absolute;
-        background-color: hsl(0, 0%, 95%);
-        min-width: 100px;
-        box-shadow: 2px 2px 5px hsl(0, 0%, 67%);
-    }
-    .dropdown:hover .content{
-        display: block;
-    }
-    .dropdown:hover button{
-        background-color: hsla(0, 0%, 60%);
-    }
-    .dropdown a:hover{
-        background-color: hsl(0, 0%, 90%);
-    }
-
-
+.dropdown {
+  display: inline-block;
+}
+.dropdown button {
+  background-color: hsl(0, 0%, 80%);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+.dropdown .content {
+  display: none;
+  position: absolute;
+  background-color: hsl(0, 0%, 95%);
+  min-width: 100px;
+  box-shadow: 2px 2px 5px hsl(0, 0%, 67%);
+}
+.dropdown:hover .content {
+  display: block;
+}
+.dropdown:hover button {
+  background-color: hsla(0, 0%, 60%);
+}
+.dropdown a:hover {
+  background-color: hsl(0, 0%, 90%);
+}
 
 /* 
 17. NAVBAR */
-    /* body{
+/* body{
         margin: 0px;
     } */
-    main{
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    .navbar ul{
-        list-style-type: none;      /* мажа булетите*/
-        background-color: rgb(175, 175, 175);
-        padding: 0px;               /* изравнява до полето наляво */
-        margin: 0px;
-        overflow: hidden;
-    }
-    .navbar a{
-        color: black;
-        text-decoration: none;
-        padding: 15px;
-        display: block;
-        text-align: center;
-    }
-    .navbar a:hover{
-        background-color: rgb(213, 213, 213);
-    }
-    .navbar li{
-        float: left;
-    }
-
-
+main {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.navbar ul {
+  list-style-type: none; /* мажа булетите*/
+  background-color: rgb(175, 175, 175);
+  padding: 0px; /* изравнява до полето наляво */
+  margin: 0px;
+  overflow: hidden;
+}
+.navbar a {
+  color: black;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+.navbar a:hover {
+  background-color: rgb(213, 213, 213);
+}
+.navbar li {
+  float: left;
+}
 
 /* 
 18. GALLERY */
-    .gallery{
-        display: inline-block;  /* блокове ама един до друг*/
-        border: 1px solid hsl(0, 0%, 65%);
-        margin: 5px;
-        width: 200px;
-    }
-    .gallery .description{      /* селектира клас description, който се намира в клас gallery */
-        padding: 10px;
-        text-align: center;
-    }
-    .gallery:hover{
-        border: 2px solid black;
-    }
-    .gallery img{
-        width: 100%;
-        height: auto;
-    }
-
-
+.gallery {
+  display: inline-block; /* блокове ама един до друг*/
+  border: 1px solid hsl(0, 0%, 65%);
+  margin: 5px;
+  width: 200px;
+}
+.gallery .description {
+  /* селектира клас description, който се намира в клас gallery */
+  padding: 10px;
+  text-align: center;
+}
+.gallery:hover {
+  border: 2px solid black;
+}
+.gallery img {
+  width: 100%;
+  height: auto;
+}
 
 /* 
 19. ICONS */
-    .icons{
-        text-align: center;
-        color: aquamarine;
-    }
-    /* маха подчертавката на линковете */
-    .icons a{   
-        text-decoration: none;
-        margin: 20px;
-    }
+.icons {
+  text-align: center;
+  color: aquamarine;
+}
+/* маха подчертавката на линковете */
+.icons a {
+  text-decoration: none;
+  margin: 20px;
+}
 
+/* корекция на цвета - копирам целия клас и слагам . вместо шпация*/
+.fa-solid.fa-house.fa-3x {
+  color: hsl(0, 0%, 50%);
+}
+.fa-solid.fa-house.fa-3x:hover {
+  color: hsl(0, 0%, 60%);
+}
 
-    /* корекция на цвета - копирам целия клас и слагам . вместо шпация*/
-    .fa-solid.fa-house.fa-3x{
-        color: hsl(0, 0%, 50%);
-    }
-    .fa-solid.fa-house.fa-3x:hover{
-        color: hsl(0, 0%, 60%);
-    }
+.fa-brands.fa-youtube.fa-3x {
+  color: hsl(0, 98%, 50%);
+}
+.fa-brands.fa-youtube.fa-3x:hover {
+  color: hsl(0, 98%, 60%);
+}
 
-
-    .fa-brands.fa-youtube.fa-3x{
-        color: hsl(0, 98%, 50%);
-    }
-    .fa-brands.fa-youtube.fa-3x:hover{
-        color: hsl(0, 98%, 60%);
-    }
-
-
-    .fa-brands.fa-facebook.fa-3x{
-        color: hsl(228, 92%, 50%);
-    }
-    .fa-brands.fa-facebook.fa-3x:hover{
-        color: hsl(228, 92%, 60%);
-    }
-
-
-/* 
-20. FLEXBOX  https://www.youtube.com/watch?v=HGTJBPNC-Gw&t=5032s&ab_channel=BroCode  */
-    /* FLEX DIRECTION */
-    /* .flexbox{
-        display: flex;
-        flex-direction: column;
-        flex-direction: column-reverse;
-        flex-direction: row;
-        flex-direction: row-reverse;
-    } */
-
-    /*  хоризонтално подравняване */
-    .flexbox{
-        display: flex;
-        border: 5px black solid;
-        height: 30vh;
-
-    /*  хоризонтално подравняване */
-        /* justify-content: flex-start; */
-        /* justify-content: flex-end; */
-        /* justify-content: center; */
-        /* justify-content: space-between; */
-        /* justify-content: space-around;  */
-        /* justify-content: space-evenly;  */
-        
-    /* вертикално подравняване */
-        /* align-items: flex-start; */
-        /* align-items: flex-end; */
-        /* align-items: center; */
-        /* align-items: center; */
-        /* align-items: baseline; */
-
-    /* сбутва на един ред или ги прехвърля на следващия */
-        flex-wrap: wrap;
-        align-content: flex-start;
-        /* flex-wrap: wrap-reverse; */
-
-    /* пространство между елементите */
-        column-gap: 1em;
-        row-gap: 1em;
-    }
-
-
-    .box{
-        width: 70px;
-        height: 70px;
-        font-size: 2.5em;
-        text-align: center;
-        border-radius: 5px;
-    }
-    #box1{
-        background-color: rgb(255, 48, 48);
-        font-size: 1em;
-    }
-    #box2{
-        background-color: rgb(253, 243, 51);
-        font-size: 2em;
-    }
-    #box3{
-        background-color: rgb(75, 255, 66);
-        font-size: 3em;
-    }
-    #box4{
-        background-color: rgb(48, 114, 255);
-        font-size: 4em;
-        /* промяна на */
-        order: -1;
-    }
-
+.fa-brands.fa-facebook.fa-3x {
+  color: hsl(228, 92%, 50%);
+}
+.fa-brands.fa-facebook.fa-3x:hover {
+  color: hsl(228, 92%, 60%);
+}
 
 /* 
 21. TRANSFORM - може да се добавяет множество промени на един ред
     може да се прилага на класове, снимки и т.н.*/
-    #transBox1{
-        width: 60px;
-        height: 60px;
-        border: 4px solid;
-        font-size: 3em;
-        text-align: center;
-        background-color: hsl(193, 100%, 71%);
+#transBox1 {
+  width: 60px;
+  height: 60px;
+  border: 4px solid;
+  font-size: 3em;
+  text-align: center;
+  background-color: hsl(193, 100%, 71%);
 
-        /* TRANLATE - изместване по X и Y */
-        /* transform: translate(10px, 30px); */
-        /* transform: translateY(10px); */
+  /* TRANLATE - изместване по X и Y */
+  /* transform: translate(10px, 30px); */
+  /* transform: translateY(10px); */
 
-        /* ROTATION - завърта */
-        /* transform: rotate(45deg); */
-        /* transform: rotateY(45deg); */
-        /* transform: rotateX(180deg); */
+  /* ROTATION - завърта */
+  /* transform: rotate(45deg); */
+  /* transform: rotateY(45deg); */
+  /* transform: rotateX(180deg); */
 
-        /* SCALE */
-        /* transform: scale(1.2, 1.3); */
-        /* transform: scaleX(0.8em); */
+  /* SCALE */
+  /* transform: scale(1.2, 1.3); */
+  /* transform: scaleX(0.8em); */
 
-        /* SKEW - накланяне на ромб */
-        transform: skewX(40deg);
-        transform: skewY(30deg);
-    }
-
-
+  /* SKEW - накланяне на ромб */
+  transform: skewX(40deg);
+  transform: skewY(30deg);
+}
 
 /* 
 22. ANIMATIONS */
 
-
 /* 
 23. test */
 
-#p{
-    display: inline;
+#p {
+  display: inline;
 }
 #bar {
-    height: 20px;
-    width: 180px;
-    background-color: hsl(0, 70%, 77%);
-    border-radius: 3px;
+  height: 20px;
+  width: 180px;
+  background-color: hsl(0, 70%, 77%);
+  border-radius: 3px;
 }
-
