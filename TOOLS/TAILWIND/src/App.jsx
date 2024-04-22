@@ -46,7 +46,32 @@ const App = () => (
     <section className="bg-black padding-x padding-t pb-8">
       <Footer />
     </section>
+
+    <div class="bg-grey-50 mx-auto max-w-md overflow-hidden rounded-xl">
+      <div class="md:flex">
+        <div class="md:shrink-0">
+          <span class="bg-orange-300 h-52 w-full object-cover md:h-full md:w-48" ></span>
+
+          </div>
+        </div>
+        <div p-8>
+          <a href="#" class="mt-1 block text-lg font-bold leading-tight text-gray-800">My awesome card</a>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique incidunt odio, consequatur tempore distinctio ad corrupti, suscipit deserunt eos odit facilis culpa debitis quas ipsa. Alias accusamus modi consectetur eum?</p>
+        </div>
+    </div>
+
+
+
+
+
   </main>
+
+
+
+
+
+
+
 );
 
 export default App;

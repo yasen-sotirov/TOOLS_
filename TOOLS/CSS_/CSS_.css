@@ -61,12 +61,15 @@ h1 {
 .right {
   text-align: right;
 }
+
 .left {
   text-align: left;
 }
+
 .center {
   text-align: center;
 }
+
 .justify {
   text-align: justify;
 }
@@ -357,7 +360,30 @@ https://www.youtube.com/watch?v=phWxA89Dy94&ab_channel=SlayingTheDragon
 /* 
 
 
-10. POSITION */
+
+
+13. WIDTH & HEIDHT */
+#pWidth {
+  border: 2px solid tomato;
+  width: 300px;
+}
+#spanWidth {
+  border: 2px solid tomato;
+  /* width: 600px;    игнорират width & height
+        height: 200px; */
+}
+#inlinBlockWidth {
+  display: inline-block;
+  border: 2px solid tomato;
+  width: 200px;
+}
+
+/* 
+
+
+
+
+14. POSITION */
 #relative {
   width: 100px;
   height: 100px;
@@ -380,24 +406,12 @@ https://www.youtube.com/watch?v=phWxA89Dy94&ab_channel=SlayingTheDragon
 }
 
 /* 
-12. WIDTH & HEIDHT */
-#pWidth {
-  border: 2px solid tomato;
-  width: 300px;
-}
-#spanWidth {
-  border: 2px solid tomato;
-  /* width: 600px;    игнорират width & height
-        height: 200px; */
-}
-#inlinBlockWidth {
-  display: inline-block;
-  border: 2px solid tomato;
-  width: 200px;
-}
 
-/* 
-11. BACKGROUND IMAGE*/
+
+
+
+
+15. BACKGROUND IMAGE*/
 body {
   /* background-image: url(elements/background.jpg); */
   background-repeat: no-repeat; /* да не се повтаря */
@@ -407,7 +421,12 @@ body {
 }
 
 /* 
-12. COMBINATORS */
+
+
+
+
+
+16. COMBINATORS */
 #childComb {
   border: 2px solid;
 }
@@ -433,8 +452,14 @@ body {
   background-color: rgb(135, 95, 51);
 }
 
-/* 
-13. PSEUDO CLASSES - псевдо клас, активира се при събитие */
+/*
+
+
+
+
+
+
+17. PSEUDO CLASSES - псевдо клас, активира се при събитие */
 /* BUTTON */
 #pseudo button:hover {
   font-size: 1.1em;
@@ -488,7 +513,14 @@ body {
 }
 
 /* 
-14. PSEUDO ELEMENT 
+
+
+
+
+
+
+
+18. PSEUDO ELEMENT 
 първа буква */
 #pElement h3::first-letter {
   font-size: 2em;
@@ -524,7 +556,13 @@ body {
 }
 
 /* 
-15. PAGINATION */
+
+
+
+
+
+
+19. PAGINATION */
 .pagination {
   text-align: center;
 }
@@ -545,7 +583,13 @@ body {
 }
 
 /* 
-16. DROPDOWN */
+
+
+
+
+
+
+20. DROPDOWN */
 .dropdown {
   display: inline-block;
 }
@@ -580,10 +624,12 @@ body {
 }
 
 /* 
-17. NAVBAR */
-/* body{
-        margin: 0px;
-    } */
+
+
+
+
+
+21. NAVBAR */
 main {
   margin-left: 20px;
   margin-right: 20px;
@@ -609,8 +655,13 @@ main {
   float: left;
 }
 
-/* 
-18. GALLERY */
+/*
+
+
+
+
+
+22. GALLERY */
 .gallery {
   display: inline-block; /* блокове ама един до друг*/
   border: 1px solid hsl(0, 0%, 65%);
@@ -631,7 +682,11 @@ main {
 }
 
 /* 
-19. ICONS */
+
+
+
+
+23. ICONS */
 .icons {
   text-align: center;
   color: aquamarine;
@@ -665,7 +720,12 @@ main {
 }
 
 /* 
-21. TRANSFORM - може да се добавяет множество промени на един ред
+
+
+
+
+
+24. TRANSFORM - може да се добавяет множество промени на един ред
     може да се прилага на класове, снимки и т.н.*/
 #transBox1 {
   width: 60px;
@@ -694,17 +754,28 @@ main {
 }
 
 /* 
-22. ANIMATIONS */
 
-/* 
-23. test */
 
-#p {
-  display: inline;
+
+
+25. RESPONSIVE   
+    видове медия: screen, print, speech, all
+    - max-width: 500px  
+      • активира се ско слезем под тази резолюция  
+      • прилага се при Descktop-first сайтове
+    
+    - min-width: 500px
+      • активира се ако се качим над тази рез
+    
+      */
+@media (max-width: 500px) {
+  h3 {
+    color: red;
+  }
 }
-#bar {
-  height: 20px;
-  width: 180px;
-  background-color: hsl(0, 70%, 77%);
-  border-radius: 3px;
+
+@media (min-width: 800px) {
+  h3 {
+    color: aquamarine;
+  }
 }
