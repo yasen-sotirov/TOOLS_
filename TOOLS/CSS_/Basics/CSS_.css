@@ -57,7 +57,7 @@ h1 {
 
 
 
-04. ALIGN */
+04. ALIGN - подравняване на текста */
 .right {
   text-align: right;
 }
@@ -246,21 +246,21 @@ https://www.youtube.com/watch?v=phWxA89Dy94&ab_channel=SlayingTheDragon
 /*  
 
 12.5 DISPLAY: flex, justify-content
-  хоризонтално подравняване */
+  хоризонтално подравняване на елемент */
 .justify-content {
   border: 3px solid tomato;
   display: flex;
   /* justify-content: flex-start; */
   /* justify-content: flex-end; */
   justify-content: center;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   /* justify-content: space-around; */
   /* justify-content: space-evenly;  */
 }
 
 /* 
 12.6 DISPLAY: flex, align-items  
-        вертикално подравняване */
+        вертикално подравняване, по височина */
 .align-items1 {
   border: 3px solid rgb(71, 132, 255);
   display: flex;
@@ -776,6 +776,5 @@ main {
 
 @media (min-width: 800px) {
   h3 {
-    color: aquamarine;
   }
 }

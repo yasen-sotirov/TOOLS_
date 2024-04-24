@@ -608,7 +608,67 @@ https://fontawesome.com/     -->
 
 
 
+<!-- 
+26. FLEXBOX
+Flexbox (Flexible Box Layout) е модел за организация на елементи в контейнер във веб дизайна с помощта на CSS. Той позволява на разработчиците да създават сложни и респонсивни дизайни с лесно управление на разположението, насочването и размерите на елементите, дори когато тези елементи имат различни размери или динамично се променят.
 
+Ето някои основни свойства и понятия в контекста на Flexbox:
+
+1. **Flex Container**: Елементът, който съдържа флексибилните елементи. За да декларирате елемент като flex контейнер, използвате свойството `display` със стойност `flex` или `inline-flex`.
+
+   ```css
+   .flex-container {
+     display: flex; /* или display: inline-flex; */
+   }
+   ```
+
+2. **Flex Items**: Елементите, които се подреждат вътре във flex контейнера.
+
+   ```css
+   .flex-item {
+     flex: <grow> <shrink> <basis>;
+   }
+   ```
+
+   - `<grow>`: Определя как бързо елементът трябва да расте спрямо останалите елементи.
+   - `<shrink>`: Определя как бързо елементът трябва да намалява, ако има нужда от това.
+   - `<basis>`: Определя началния размер на елемента преди разпределянето на останалото пространство.
+
+3. **Flex Direction**: Определя посоката, в която се подреждат flex елементите. Възможни стойности са `row`, `row-reverse`, `column` и `column-reverse`.
+
+   ```css
+   .flex-container {
+     flex-direction: row; /* или column, row-reverse, column-reverse */
+   }
+   ```
+
+4. **Justify Content**: Управлява разпределението на свободното пространство между flex елементите по основната ос.
+
+   ```css
+   .flex-container {
+     justify-content: flex-start; /* или flex-end, center, space-between, space-around */
+   }
+   ```
+
+5. **Align Items и Align Content**: Управляват вертикалното разпределение на flex елементите в контейнера.
+
+   ```css
+   .flex-container {
+     align-items: stretch; /* или flex-start, flex-end, center, baseline */
+     align-content: stretch; /* или flex-start, flex-end, center, space-between, space-around */
+   }
+   ```
+
+6. **Flex Wrap**: Определя дали flex елементите трябва да се пренареждат на нов ред или колона, ако няма достатъчно пространство.
+
+   ```css
+   .flex-container {
+     flex-wrap: nowrap; /* или wrap или wrap-reverse */
+   }
+   ```
+
+Flexbox е мощен инструмент за създаване на респонсивни и динамични дизайни и често се използва в комбинация с други CSS техники за постигане на сложни визуални ефекти и структури на уебсайтове.
+ -->
 </body>
 </html>
 
