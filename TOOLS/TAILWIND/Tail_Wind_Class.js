@@ -53,6 +53,7 @@ https://tailwindcss.com/docs/responsive-design
     object-cover    - стил за покриване на съдържанието
     md:h-full       - за екрани medium и по-големи, височината е пълна височина 
     md:w-48         - за екрани medium и по-големи, широчината е 48 пиксела 
+    object-cover:fit  вмества снимката в контейнера, като изрязва излишното от нея. не я мачка
 
 
 ТЕКСТ
@@ -85,10 +86,6 @@ Incredible accommodation for your team</a>
 <p class="mt-2 text-slate-500">Looking to take your team ...</p>
     mt-2            - отстъп от 2 пиксела 
     text-slate-500  - сив цвят на текста
-
-
-
-
 
 
 
