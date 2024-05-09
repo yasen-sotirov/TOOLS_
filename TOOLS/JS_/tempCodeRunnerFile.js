@@ -1,4 +1,8 @@
-let linkA = document.querySelector('a');
-linkContent = linkA.getAttribute('href');          // в случая: "https://www.google.com/"
-console.log(linkA);
-console.log(linkContent);
+let zero = 0;
+let height;
+console.log(Boolean(0));
+console.log(Boolean(zero));
+console.log(Boolean(undefined));
+console.log(Boolean(height));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
