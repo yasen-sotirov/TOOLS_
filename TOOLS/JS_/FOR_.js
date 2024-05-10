@@ -15,7 +15,7 @@ for(let i=0; i<=20; i++){
 
 
 
-var word = "ABCDEFGHI"
+let word = "ABCDEFGHI"
 
 for (let i = 0; i < word.length; i++) {
     console.log(word[i]);

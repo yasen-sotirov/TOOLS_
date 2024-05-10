@@ -4,10 +4,16 @@
     дето ще се съхраняват в променливата   
     
     
+
+
+
 ДЕКЛАРИРАНЕ - ако не са декларирани JS ще създаде global scope променлива
   let       - променливи, които ще бъдат прпменяни в бъдеще,  block scope
   const     - не се променят, не може да бъдат undefined
   var       - старият начин, да не се използва вече           functional scope  */
+
+
+
 
 // VARIABLE TYPES
 let w;              // undefined, после ще присъединим стойност към нея
@@ -16,23 +22,60 @@ let y = 5;          // number, not int
 let z = true;       // 
 z = "John";         // reassign, mutation
 
+
+
+
+
 // ctrl + alt + n
 console.log(typeof x);
 console.log(typeof y);
 console.log(typeof z);
 
 
-/* ОПЕРАТОРИ */
-// MATH + - * /
-// ред на операторите
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence
+
+
+/* ===  ОПЕРАТОРИ  === 
+
+  AND = &&
+          t       f
+  t     TRUE    FALSE
+  f     FALSE   FALSE
+
+
+  OR = ||
+          t       f
+  t     TRUE    TRUE
+  f     TRUE    FALSE      
+  
+  
+  NOT = !
+  f == !true
+  t == !false         */
+
+
+
+console.log(18=='18')     // свободно равенство, ползва TYPE COERCION 
+
+// ВИНАГИ СЕ ПОЛЗВА ===
+console.log(18==='18')    // строго равенство, сравнява и типа 
+console.log(18===18)
+
+
+
+
+/* MATH + - * /
+  ред на операторите  - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence   */
 
 let num = 4 + 6;
 console.log(num + 10, num **2);
 
 
 
-// BOLEAN
+
+
+
+
+/* ===  BOLEAN === */
 // FALSY VALUES - при конвертиране ще станат на false
 // 0, "", undefined, null, NaN 
 

@@ -3,9 +3,15 @@
 // приема всякакъв тип обекти
 
 let carInfo = { make: "Toyota", year: 2010, codes: [21, 33, 15] };
+let family = { name: ''}
+
+family.codes = [1]
+family['foo'] = [2]
+console.log(family)
 
 // ИЗВИКВАНЕ - с кавички
 console.log(carInfo["make"]);
+console.log(carInfo.make)
 console.log(carInfo["codes"][1]);
 
 console.log(carInfo.make);

@@ -2,14 +2,12 @@
 
 
 // Alert Pop-up
-alert("hello world")
+alert("hello world");
 
-
-// Output to console
-console.log("Hello world")
 
 
 // Accept Prompt Inputs
-var age = prompt("How old are you?")
+let age = prompt("How old are you?");
+console.log(`You are ${age} years old.`);
 
 
