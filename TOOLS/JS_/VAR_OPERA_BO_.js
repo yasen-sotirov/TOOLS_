@@ -87,3 +87,11 @@ console.log(Boolean(undefined));
 console.log(Boolean(height));
 console.log(Boolean(null));
 console.log(Boolean(NaN));
+
+
+
+
+
+// EXPRESION - израз, произвежда стойност
+
+// STATEMANT - твърдение, цели изречения, които се изпълняват
