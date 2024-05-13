@@ -1,7 +1,7 @@
+let dice;
 
-const yearUntilRetirement = (birthYear, firstName) => {
-	const age = 2024 - birthYear;
-	const retirement = 65 - age;
-	return `${firstName} retires in ${retirement} years.`; 
+while (dice !== 6) {
+    console.log(`dice result ${dice}`)
+    dice = Math.trunc(Math.random() * 6) +1;
 }
-console.log(yearUntilRetirement(1986, 'Yasen'))
+

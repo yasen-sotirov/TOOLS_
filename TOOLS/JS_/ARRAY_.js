@@ -8,28 +8,57 @@ let numArray = new Array(1, 2, 3, 4, 5);
 
 
 // ДОБАВЯНЕ
-array1.push('four', 'five');    // добавя накрая
-array1[6] = 'seven';            // добавя накрая + празен слот
-array1.unshift('zero');         // добавя в началото
+array1 = ['one', 'two', 'three'];
+console.log('преди: ', array1);
+
+array1.push('four', 'five');        // добавя накрая
+array1[12] = 'seven';               // добавя na индекс + празени слотове ако масива не е толкова пълен
+
+array1.unshift('zero');             // добавя в началото
+array1.shift('zero');               // добавя в началото
+console.log('след: ', array1)
+
+
+
+
+// EXPRESSION - изрази в масива
+let firstName = "Stamat";
+let age = 1986;
+let numbesrs = new Array(1, 2, 3);
+let description = new Array(firstName, 2024-age, numbesrs);
+console.log(description)
 
 
 
 
 // ПРЕМАХВАНЕ
-console.log(array1.pop());       // премахва последния и го пази
-array1.shift();                  // премахва първия елемент
+array1 = ['one', 'two', 'three'];
+console.log(array1)
+console.log('подледен елемент: ', array1.pop());       // премахва последния и го пази
+console.log('първи елемент: ', array1.shift());     // премахва първия елемент и го пази
+console.log('в масива остана ', array1)
+
 
 
 
 // ВРЪЩА ДЪЛЖИНАТА НА МАСИВА
+array1 = ['one', 'two', 'three'];
 console.log("дължина:", array1.length);
 
 
 
-// ПОКАЗВА НА ИНДЕКС
-console.log("елемент на индекс 1:", array1[1]);
-console.log("индекс на елемент 'three':", array1.indexOf("three"));
 
+// ПОКАЗВА НА ИНДЕКС
+array1 = ['one', 'two', 'three'];
+console.log("елемент на индекс 1: ", array1[1]);
+console.log("индекс на елемент 'three': ", array1.indexOf("three"));    // -1 ако го няма
+console.log('елемент на последен индекс', array1[array1.length-1])
+
+
+
+// ИМА ЛИ ГО В МАСИВА
+array1 = ['one', 'two', 'three'];
+console.log('има ли four: ', array1.includes('four'))
 
 
 

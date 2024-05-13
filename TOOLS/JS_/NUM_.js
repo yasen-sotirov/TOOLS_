@@ -41,10 +41,10 @@ console.log(num.toFixed(2));
 // let a = Math.round(10.5)
 // let b = Math.floor(10.3)
 // let c = Math.ceil(10.3)
-// let d = Math.trunc(10.3)    // премахва след запетаята
-// let e = Math.pow(5, 2)      // степенува
+// let d = Math.trunc(10.33652)   // премахва всичко след запетаята
+// let e = Math.pow(5, 2)         // степенува
 // let f = Math.sqrt(81)
-// let g = Math.log(2)         // логаритъм
+// let g = Math.log(2)            // логаритъм
 // let h = Math.sin(1)
 // let i = Math.cos(1)
 // let j = Math.tan(1)
@@ -58,6 +58,11 @@ console.log(num.toFixed(2));
 
 
 // RANDOM
+let dice = Math.trunc(Math.random() * 6) +1;
+console.log(dice)
+
+
+// RANDOM old
 let rand;
 const min = 5;
 const max = 10;
