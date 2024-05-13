@@ -3,7 +3,7 @@
 
 
 let array1 = ['one', 'two', 'three'];
-let numArray = [1, 2, 3, 4, 5];
+let numArray = new Array(1, 2, 3, 4, 5);
 
 
 
@@ -32,6 +32,7 @@ console.log("индекс на елемент 'three':", array1.indexOf("three")
 
 
 
+
 // ОБХОЖДАНЕ НА МАСИВ
 // let array1 = ['one', 'two', 'three'];
 
@@ -54,9 +55,13 @@ for (let i = array1.length -1; i >= 0; i--) {
 
 
 
+
+
 // СОРТИРАНЕ
 console.log(array1.sort());
 console.log(array1.sort().reverse());
+
+
 
 
 
