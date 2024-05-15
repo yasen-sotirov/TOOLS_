@@ -1,15 +1,18 @@
-/* 
-
-ВСИЧКО ЗА CSS
+/*  ВСИЧКО ЗА CSS
    
     BroCode  https://www.youtube.com/watch?v=HGTJBPNC-Gw&t=5032s&ab_channel=BroCode */
-h1,
-h2,
-h3,
-h4,
-p {
+
+/* ЗАНУЛЯВАНЕ НА ВСИЧКИ МАРДЖИНИ И ПАДИНГИ */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;   /* вади падинга от размера на бокса */
+}
+
+h1, h2, h3, h4, p {
   font-family: Helvetica, sans-serif;
 }
+
 
 /*
     01. МЕРНИ ЕДИНИЦИ

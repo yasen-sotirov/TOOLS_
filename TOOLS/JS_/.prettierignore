@@ -1,0 +1,15 @@
+# Ignore specific files:
+
+ARRAY_.js
+CHAINING_.js
+DOM_.js
+FUNCTION_.js
+IF_TERNARY_SWITCH_.js
+LOOP_.js
+METHOD_.js
+NUM_.js
+OBJECT_.js
+STR_.js
+TERNARY_.js
+VAR_OPERA_BO_.js
+

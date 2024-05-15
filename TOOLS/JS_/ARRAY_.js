@@ -20,7 +20,6 @@ console.log('след: ', array1)
 
 
 
-
 // EXPRESSION - изрази в масива
 let firstName = "Stamat";
 let age = 1986;
@@ -135,3 +134,4 @@ console.log(strArray.join("-"));
     // РАЗОПАКОВА
     let strArray2 = ['a', 'b', 'c', 'd', 'e'];
     console.log(...strArray2);
+    console.log(strArray2);

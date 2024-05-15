@@ -18,5 +18,8 @@ alert("hello world");
 // Accept Prompt Inputs
 let age = prompt("How old are you?");
 console.log(`You are ${age} years old.`);
+console.warn(`You are ${age} years old.`);
+console.error(`You are ${age} years old.`);
+
 
 

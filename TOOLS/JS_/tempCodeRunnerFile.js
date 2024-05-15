@@ -1,7 +1,4 @@
-let dice;
-
-while (dice !== 6) {
-    console.log(`dice result ${dice}`)
-    dice = Math.trunc(Math.random() * 6) +1;
-}
-
+    // РАЗОПАКОВА
+    let strArray2 = ['a', 'b', 'c', 'd', 'e'];
+    console.log(...strArray2);
+    console.log(strArray2);
