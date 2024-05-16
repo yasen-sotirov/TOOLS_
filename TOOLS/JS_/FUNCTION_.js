@@ -35,7 +35,7 @@ console.log(calcAge(1986))
 	- не могат да ползват This     */
 
 const calcAge2 = birthYear => 2024 - birthYear;
-console.log(calcAge2(1984))
+console.log(calcAge2(1984));
 
 
 const yearUntilRetirement = (birthYear, firstName) => {
