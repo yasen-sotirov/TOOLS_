@@ -51,30 +51,10 @@ console.log(yearUntilRetirement(1986, 'Yasen'))
 
 
 
-// HOISTING - извикване на декларирана функцията преди да е декларирана в кода
-one()
-two()
-three()
-
-function one(){
-	let one = 1;
-	console.log(one)
-}
-
-function two(){
-	let two = 2;
-	console.log(two)
-}
-
-function three(){
-	let three = 3;
-	console.log(three)
-}
 
 
 
-
-// ...SPRED - REST PARAMETER  (args)
+// ...SPREAD - REST PARAMETER  (args)
 const food1 = "eggs";
 const food2 = "meat";
 const food3 = "bread";

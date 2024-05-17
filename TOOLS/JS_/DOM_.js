@@ -82,3 +82,44 @@ headOne.addEventListener('mouseout', function(){
 document.querySelector('.check').addEventListener('click', function () {
   console.log(document.querySelector('.guess').value);
 });
+
+
+
+
+// MODAL    Jonas: 06-Modal
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const btnCloseModal = document.querySelector('.close-modal');
+const btnOpenModal = document.querySelectorAll('.show-modal');
+
+
+
+// functions
+const closeModal = function () {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
+
+const openModal = function () {
+  // премахване на CSS класове
+  // точка се ползва само при селекторите
+  modal.classList.remove('hidden');
+  // открива блъра
+  overlay.classList.remove('hidden');
+
+  // close button
+  btnCloseModal.addEventListener('click', closeModal);
+};
+
+// logic
+for (let i = 0; i < btnOpenModal.length; i++) {
+  btnOpenModal[i].addEventListener('click', openModal);
+}
+overlay.addEventListener('click', closeModal);
+
+// event - дава достъп до данните на event listener-a
+document.addEventListener('keydown', function (event) {
+  console.log(event.key);
+  if (event.key === 'Escape' && !modal.classList.contains('hidden'))
+    closeModal();
+});
