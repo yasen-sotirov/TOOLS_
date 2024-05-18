@@ -142,7 +142,7 @@ SCOPE в JS - scope-а има достъп до всички по-горни sco
 
 HOISTING 
   - https://www.youtube.com/watch?v=4wtCUiaq3-g&list=PLOmL3sL-afbRVTvedkIrQcDwg2UY0JGTF&index=87
-  - прави някои променливи достъпни, преди да бъдат декларирани
+  - прави декларираните (обикновените) функции достъпни, преди да бъдат декларирани
       зад сцената:
       - преди изпълнение, кодът е сканиран за декларирани променливи
       - за всяка променлива се прави property в variable environment object
@@ -151,25 +151,51 @@ HOISTING
     - частта от функцията, където променливата все още не е декларирана
     - тя ще бъде декларирана, но по-надолу
 
+  - не става за:
+    - променливи 
+    - функции декларирани като променливи, arrow functions
 
-*/
+  - ЗА ДА СЕ ИЗБЕГНЕ HOISTING:
+    - масово се употревява const, по изключение let;
+    - никога не се ползва var;
+    - функциите и променливите се декларират в началото на кода
+    - var прави property в global window object
 
-one()
-two()
-three()
 
-function one(){
-	let one = 1;
-	console.log(one)
-}
 
-function two(){
-	let two = 2;
-	console.log(two)
-}
 
-function three(){
-	let three = 3;
-	console.log(three)
-}
+https://www.youtube.com/watch?v=1tuIGYX5T64&list=PLOmL3sL-afbRVTvedkIrQcDwg2UY0JGTF&index=92
+
+PRIMITIVES  -   OBJECTS
+call stack      heap
+
+numbers     -   object literal
+strings     -   arrays
+boolean     -   functions
+undefined   -   other
+null
+symbol 
+bigint /
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    */
+
+
 

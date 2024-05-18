@@ -1,7 +1,8 @@
 /* FUNCTIONS 
 	- invoking, calling, running - извикване на функцията
 	- parameters - параметрите, с които е дефинирана функцията
-	- arguments - стойностите дето подаваме на фунцията, за да работи   */
+	- arguments - стойностите дето подаваме на фунцията, за да работи
+	  self = this */
 
 
 
@@ -29,7 +30,7 @@ console.log(calcAge(1986))
 
 
 
-/* ARROW FRUNCTION 
+/* ARROW FUNCTION 
 	- съкратено записване на Function expression - подходяща е за един ред
 	- return е косвен (implicit)		
 	- не могат да ползват This     */
@@ -67,6 +68,7 @@ function makeSandwich(...args){
 makeSandwich(food1, food2, food3, food4);
 
 
+
 // пример 2
 function sumNums(...numbers){
 	let result = 0;
@@ -79,3 +81,22 @@ function sumNums(...numbers){
 const totalSum = sumNums(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
 console.log(`The total is: ${totalSum}`);
+
+
+
+
+// ARGUMENTS - не се ползва в последно време
+const addExpr = function (a, b) {
+	console.log(arguments);
+	return a + b;
+};
+
+addExpr(2, 5);
+addExpr(2, 5, 6, 8, 7);
+console.log(addExpr(2, 5));
+
+
+
+
+
+
