@@ -1,7 +1,4 @@
-// ARGUMENTS
-const addExpr = function (a, b) {
-	console.log(arguments);
-	return a + b;
-};
 
-addExpr(2, 5);
+const arr = [2, 3, 4];
+const [x, y, z] = arr;
+console.log(x, y, z);

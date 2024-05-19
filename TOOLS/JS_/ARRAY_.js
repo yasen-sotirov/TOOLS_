@@ -23,8 +23,8 @@ console.log('след: ', array1)
 // EXPRESSION - изрази в масива
 let firstName = "Stamat";
 let age = 1986;
-let numbesrs = new Array(1, 2, 3);
-let description = new Array(firstName, 2024-age, numbesrs);
+let numbers = new Array(1, 2, 3);
+let description = new Array(firstName, 2024-age, numbers);
 console.log(description)
 
 
@@ -55,9 +55,11 @@ console.log('елемент на последен индекс', array1[array1.l
 
 
 
+
 // ИМА ЛИ ГО В МАСИВА
 array1 = ['one', 'two', 'three'];
 console.log('има ли four: ', array1.includes('four'))
+
 
 
 
@@ -90,6 +92,12 @@ console.log(array1.sort());
 console.log(array1.sort().reverse());
 
 
+
+
+// ДЕКОНСТРОИРАНЕ
+const arr = [2, 3, 4];
+const [x, y, z] = arr;
+console.log(x, y, z);
 
 
 
