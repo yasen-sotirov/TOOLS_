@@ -1,7 +1,7 @@
 // NUMS
 
 
-
+// Вижте повече в [NUM_.js](NUM_.js#L20)
 
 // TYPE CONVERSION    - ръчно конвертиране
 // NaN  - не е число

@@ -12,11 +12,10 @@ for (let rep = 1; rep <=10; rep++) {
 
 
 // ОБХОЖДАНЕ НА STRING и ARRAY
-let word = "ABCDEFGHI"
+const word = "ABCDEFGHI"
 
-for (let i = 0; i < word.length; i++) {
-    console.log(word[i]); 
-}
+for (let i = 0; i < word.length; i++) console.log(word[i]); 
+
 
 
 const birthYear = [1963, 1984, 1985, 1986]
@@ -41,8 +40,14 @@ for (i=0; i<nums.length; i++) {
 
 
 
+// FOR-OF LOOP
+for (const el of word) console.log(el);
 
 
+
+// ENTRIES == ENUMERATE    
+const menu = ['a', 'b', 'c', 'd', 'e'];
+for (const el of menu.entries()) console.log(el);
 
 
 /////////////////////////////////////////////////////

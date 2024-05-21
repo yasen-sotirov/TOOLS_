@@ -35,7 +35,7 @@ console.log(testStr.trimStart())
 
 
 
-// ГЛАВНИ И ИМАЛКИ БУКВИ
+// ГЛАВНИ И И МАЛКИ БУКВИ
 let textCase = "abCDefj";
 console.log(textCase.toLowerCase());
 console.log(textCase.toUpperCase());
@@ -82,7 +82,7 @@ console.log("last name: ", fullName.slice(fullName.indexOf(" ") + 1));
 
 
 
-// РАЗОПАКОВАНЕ - SPRED OPERATOR
+// РАЗОПАКОВАНЕ - SPREAD OPERATOR
 let string1 = "Bro Code";
 let letters = [...string1];
 console.log(letters);
