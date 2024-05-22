@@ -87,9 +87,16 @@ console.dir(person);
 
 
 
+
+
 // КЛОНИРАНЕ НА ОБЕКТ
 Object.assign({}, person)
 
+
+
+
+// ОТ ОБЕКТ В МАП
+console.log('в мап', new Map(Object.entries(person)));
 
 
 
