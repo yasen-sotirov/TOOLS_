@@ -1,4 +1,4 @@
-// TERNARY OPERATOR
+"TERNARY OPERATOR"
 
 
 let num = 5;

@@ -47,7 +47,7 @@ console.log('values in array', [...rest.values()]);
 
 
 
-// ИЗТРИВАНЕ
+// ИЗТРИВАНЕ ПО КЛЮЧ
 rest.delete(2)
 
 

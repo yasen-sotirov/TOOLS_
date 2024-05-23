@@ -1,46 +1,51 @@
-/* SET
-  - работи с iterable елементи: array, str,  
-  - няма индекси       */
+"SET"
+/*  - работи с iterable елементи: array, str,  
+    - няма индекси       */
 
 
 
-// СЪЗДАВАНЕ
-const orderSet = new Set(["pizza", "pasta", "risotto"]);
-
-console.log(orderSet);
-
-
-// СТРИНГОВЕ
-console.log(new Set("pasta"));
-console.log(new Set("pasta").size);
+"СЪЗДАВАНЕ"
+// const orderSet = new Set(["pizza", "pasta", "risotto"]);
+// console.log(orderSet);
 
 
 
-// РАЗМЕТ, ДЪЛЖИНА
-console.log(orderSet.size);
+"РАЗЦЕПВАНЕ НА СТРИНГОВЕ"
+// console.log(new Set("pasta"));
+// console.log(new Set("pasta").size);
 
 
-// ПРОВЕРКА ЗА НАЛИЧИЕ
-console.log(orderSet.has("pizza"));
-console.log(orderSet.has("bread"));
+
+"РАЗМЕТ, ДЪЛЖИНА"
+// console.log(orderSet.size);
 
 
-// ДОБАВЯНЕ
-orderSet.add("garlic bread");
+
+"ПРОВЕРКА ЗА НАЛИЧИЕ"
+// console.log(orderSet.has("pizza"));
+// console.log(orderSet.has("bread"));
 
 
-// ИЗТРИВАНЕ ПРЕМАХВАНЕ
-orderSet.delete("pasta");
+
+"ДОБАВЯНЕ"
+// orderSet.add("garlic bread");
 
 
-// ИЗПРАЗВАНЕ НА ЦЕЛИЯ СЕТ 
+
+"ИЗТРИВАНЕ ПРЕМАХВАНЕ"
+// orderSet.delete("pasta");
+
+
+
+"ИЗПРАЗВАНЕ НА ЦЕЛИЯ СЕТ "
 // orderSet.clear();
 
 
-// ПРЕВРЪЩАНЕ В ARRAY И ОБРАТНО
-const numArr = [1, 2, 3, 5, 2, 1, 3, 6, 4, 5, 4, 7];
-const numSet = new Set(numArr);
-console.log('arr -> set: ', numSet);
 
-const numUnique = [...numSet];
-console.log('set -> arr', numUnique);
+"ПРЕВРЪЩАНЕ В ARRAY И ОБРАТНО"
+// const numArr = [1, 2, 3, 5, 2, 1, 3, 6, 4, 5, 4, 7];
+// const numSet = new Set(numArr);
+// console.log('arr -> set: ', numSet);
+
+// const numUnique = [...numSet];
+// console.log('set -> arr', numUnique);
