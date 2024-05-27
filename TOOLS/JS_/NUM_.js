@@ -47,7 +47,7 @@
 // let h = Math.sin(1)
 // let i = Math.cos(1)
 // let j = Math.tan(1)
-// let k = Math.abs(-10)
+// let k = Math.abs(-10)          // маха минуса
 // let l = Math.sign(-10)
 // let m = Math.min(1, 5,10)
 // console.log(d)

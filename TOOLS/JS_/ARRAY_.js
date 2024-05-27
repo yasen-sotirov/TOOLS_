@@ -1,196 +1,273 @@
-// ARRAY
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+"ARRAY"   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 
-let array1 = ['one', 'two', 'three'];
+// let array1 = ['one', 'two', 'three'];
 let numArray = new Array(1, 2, 3, 4, 5);
 
 
 
-// ДОБАВЯНЕ
-array1 = ['one', 'two', 'three'];
-console.log('преди: ', array1);
+"ДОБАВЯНЕ"
+// let array = [1, 2, 3, 4, 5];
 
-array1.push('four', 'five');        // добавя накрая
-array1[12] = 'seven';               // добавя na индекс + празени слотове ако масива не е толкова пълен
+// array.push(6);                    // добавя накрая
+// array[9] = 7;                     // добавя na индекс + празени слотове ако масива не е толкова пълен
+// console.log(array);
 
-array1.unshift('zero');             // добавя в началото
-array1.shift('zero');               // добавя в началото
-console.log('след: ', array1)
+// array.unshift(0);                  // добавя в началото
+// console.log(array)
 
 
 
-// EXPRESSION - изрази в масива
-let firstName = "Stamat";
-let age = 1986;
-let numbers = new Array(1, 2, 3);
-let description = new Array(firstName, 2024-age, numbers);
-console.log(description)
 
 
+"ПРЕМАХВАНЕ"
+// let array = [1, 2, 3, 4, 5];
 
+// console.log(array)
+// console.log('последен елемент: ', array.pop());   // премахва последния и го пази, не приема параметри
+// console.log(array);
 
-// ПРЕМАХВАНЕ
-array1 = ['one', 'two', 'three'];
-console.log(array1)
-console.log('подледен елемент: ', array1.pop());       // премахва последния и го пази
-console.log('първи елемент: ', array1.shift());     // премахва първия елемент и го пази
-console.log('в масива остана ', array1)
+// console.log(array);
+// console.log('първи елемент: ', array.shift());    // премахва първия елемент и го пази, не приема параметри
+// console.log(array);
 
 
 
 
-// ВРЪЩА ДЪЛЖИНАТА НА МАСИВА
-array1 = ['one', 'two', 'three'];
-console.log("дължина:", array1.length);
+"SLICE"     // НЕ мутира стария масив
+// let array = [1, 2, 3, 4, 5];
+// console.log("от инд 3 нататък", array.slice(2));
+// console.log("от инд 2 до 4", array.slice(2, 4));
+// console.log("от -2 до края", array.slice(-2));
+// console.log("последен ел", array.slice(-1));
+// console.log("от -4 до -2", array.slice(-4, -2));
 
 
 
 
-// ПОКАЗВА НА ИНДЕКС
-array1 = ['one', 'two', 'three'];
-console.log("елемент на индекс 1: ", array1[1]);
-console.log("индекс на елемент 'three': ", array1.indexOf("three"));    // -1 ако го няма
-console.log('елемент на последен индекс', array1[array1.length-1])
+"SPLICE"     /* 
+  - мутира стария масив 
+  - същите методи са валидни
+  - интересува ни резултатът в стария масив   */ 
+// let array = [1, 2, 3, 4, 5];
 
+// array.splice(4);
+// console.log(array);
 
+// array.splice(2, 4)
+// console.log(array);
 
+// array.splice(-2)
+// console.log(array);
 
-// ИМА ЛИ ГО В МАСИВА
-array1 = ['one', 'two', 'three'];
-console.log('има ли four: ', array1.includes('four'))
 
 
 
+"EXPRESSION"     // може да сложим всякакви изрази в масива
+// let firstName = "Stamat";
+// let age = 1986;
+// let numbers = new Array(1, 2, 3);
+// let description = new Array(firstName, 2024-age, numbers);
+// console.log(description)
 
-// ОБХОЖДАНЕ НА МАСИВ
-// let array1 = ['one', 'two', 'three'];
 
-console.log("обхождане 1");
-for (let i = 0; i < array1.length; i++) {
-	console.log(array1[i]);
-};
 
 
-console.log("обхождане 2");
-for (let el of array1) {
-	console.log(el);
-};
+"ВРЪЩА ДЪЛЖИНАТА НА МАСИВА"
+// array1 = ['one', 'two', 'three'];
+// console.log("дължина:", array1.length);
 
 
-console.log("oбратно обхождане");
-for (let i = array1.length -1; i >= 0; i--) {
-	console.log(array1[i]);
-};
 
+"КОПИЕ"   // лък и меч
+// let array = [1, 2, 3, 4];
+// let arr2 = [...array];
 
 
 
 
-// СОРТИРАНЕ
-console.log(array1.sort());
-console.log(array1.sort().reverse());
+"ПОКАЗВА НА ИНДЕКС"
+// array1 = ['one', 'two', 'three'];
 
+// console.log("елемент на индекс 1: ", array1[1]);
+// console.log("индекс на елемент 'three': ", array1.indexOf("three"));    // -1 ако го няма
+// console.log('елемент на последен индекс', array1[array1.length-1])      // или арр[-1]
 
 
 
-// ПРИСВОЯВАНЕ НА ЕЛЕМЕНТИ ОТ МАСИВА - ДЕКОНСТРОИРАНЕ
-const arr = [2, 3, ['a', 'b'], 5, 6];
-const [x, y, z] = arr;
-console.log(x, y, z);               // поредни елементи
 
-const [a, , [b, c]] = arr;          // вложени масиви
-console.log(a, b, c);
+"ЕЛЕМЕНТ @"   // позволява method chaining
+// array = ['one', 'two', 'three'];
+// console.log(array.at(1));
 
 
-let [first, , , last] = arr;        // прескача елементи
-console.log(first, last);
 
-[first, last] = [last, first];      // сменя им местата
-console.log(first, last);
 
+"ИМА ЛИ ГО В МАСИВА"
+// array1 = ['one', 'two', 'three'];
+// console.log('има ли four: ', array1.includes('four'))
 
 
-// ОБРЪЩА РЕДА
-console.log(array1.reverse());
 
 
+"СОРТИРАНЕ"
+// console.log(array1.sort());
+// console.log(array1.sort().reverse());
 
-// ENTRIES == ENUMERATE    
-const menu = ['a', 'b', 'c', 'd', 'e'];
-for (const el of menu.entries()) console.log(el);
 
-for (const el of menu.entries()) console.log(`№ ${el[0]}: ${el[1]}`);
 
-for (const [i, el] of menu.entries()) console.log(`№ ${i}: ${el}`);
 
+"ДЕКОНСТРУКЦИЯ"   // присвояване на елементи от масива
+// const arr = [2, 3, ['a', 'b'], 5, 6];
 
+// const [x, y, z] = arr;
+// console.log(x, y, z);               // присвоява първите три елемента към променливите x, y, z
 
+// const [a, , [b, c]] = arr;          // изпуска елемент и достъпва вложения списък
+// console.log(a, b, c);
 
+// [first, last] = [last, first];      // сменя им местата
+// console.log(first, last);
 
 
-// JOIN - ОБЕДИНЯВА ЕЛЕМЕНТИТЕ НА МАСИВА В СТРИНГ
-let strArray = ['a', 'b', 'c', 'd'];
-console.log(strArray.join());
-console.log(strArray.join("-"));
 
 
 
+"ОБРЪЩА РЕДА"     // мутира обекта
+// let array = [1, 2, 3, 4];
+// array.reverse()
+// console.log(array);
 
-// -----------------------------
-// ...SPREAD - разопакова масива
 
-	let strArray2 = ['a', 'b', 'c', 'd', 'e'];
-	console.log(strArray2);
-	console.log(...strArray2);
 
 
-	// обединяване на два масива - разопаковани са и сложени в нов масив  
-	let array1 = ['one', 'two', 'three'];
-	let combine = [...array1, ...strArray2, "eggs"];
-	console.log("обединява", combine);
 
+"ENTRIES == ENUMERATE  "  
+// const menu = ['a', 'b', 'c', 'd', 'e'];
+// for (const el of menu.entries()) console.log(el);
 
+// for (const el of menu.entries()) console.log(`№ ${el[0]}: ${el[1]}`);
 
-	// Подаване на много променливи във функция - args
-	const addNums = function (...nums) {
-		let sum = 0;
-		for (let i = 0; i<nums.length; i++)
-			sum += nums[i];
-		console.log(sum);
-		}
+// for (const [i, el] of menu.entries()) console.log(`№ ${i}: ${el}`);
+
+
+
+
+
+"JOIN"  // обединява елементите на масива в стринг
+// let strArray = ['a', 'b', 'c', 'd'];
+// console.log(strArray.join());
+// console.log(strArray.join("-"));
+
+
+
+
+"ОБЕДИНЯВАНЕ"   
+// const arr1 = [1, 2, 3]
+// const arr2 = [4, 5, 6]
+// const arr12 = arr1.concat(arr2);
+// console.log(arr12);
+
+
+
+
+
+"...SPREAD"   // разопакова масива
+
+	// let strArray2 = ['a', 'b', 'c', 'd', 'e'];
+	// console.log(strArray2);
+	// console.log(...strArray2);
+
+
+	"обединяване на два масива"   // разопаковани са и сложени в нов масив  
+	// let array1 = ['one', 'two', 'three'];
+	// let combine = [...array1, ...strArray2, "eggs"];
+	// console.log("обединява", combine);
+
+
+	"Подаване на много променливи във функция - args"
+	// const addNums = function (...nums) {
+	// 	let sum = 0;
+	// 	for (let i = 0; i<nums.length; i++)
+	// 		sum += nums[i];
+	// 	console.log(sum);
+	// 	}
 	
-	const n1 = 4;
-	const n2 = 5;
-	const n3 = 6;
-	addNums(n1, n2, n3)
+	// const n1 = 4;
+	// const n2 = 5;
+	// const n3 = 6;
+	// addNums(n1, n2, n3)
 
-	const n = [1, 2, 3];
-	addNums(...n)
-
-
-	// Нацепване на iterables, раздробява стрингове 
-	const stringName = 'Jonas';
-	console.log(...stringName, '', 'S' );
+	// const n = [1, 2, 3];
+	// addNums(...n)
 
 
-	// Разопаковане в обект
-	const objPerson = {
-		firstName: 'Yasen',
-		lastName: 'Sotirov'
-	}
-
-	const objPersonExtend = {
-		...objPerson,
-		email: 'mail@gmail.com',
-		number: 123456,
-	}
-	console.log(objPersonExtend);
+	"Нацепване на iterables, раздробява стрингове "
+	// const stringName = 'Jonas';
+	// console.log(...stringName, '', 'S' );
 
 
+	"Разопаковане в обект"
+	// const objPerson = {
+	// 	firstName: 'Yasen',
+	// 	lastName: 'Sotirov'
+	// }
+
+	// const objPersonExtend = {
+	// 	...objPerson,
+	// 	email: 'mail@gmail.com',
+	// 	number: 123456,
+	// }
+	// console.log(objPersonExtend);
 
 
-// -------- Coding Challenge #1
+
+"MAP"  // създава нов масив, прилага действие към всеки елемент
+// const arrayBGN = [2.50, 3.40, 4.80, 5.20];
+
+// const toEuro1 = arrayBGN.map(el => el * 1.95);
+// const toEuro2 = arrayBGN.map((el, i) => `${i+1}: ${el * 1.95}`);
+
+// 'или като функция'
+// const convertEuro = arrayBGN.map(function (el) {
+//   return el * 1.95
+// });
+
+// console.log(toEuro1);
+// console.log(toEuro2);
+
+
+
+
+"FILTER"    // създава нов списък от елементи отговарящи на условие
+// const movements = [-100, 20, 50, -30, 40];
+// const positive = movements.filter(el => el > 0)
+// console.log(positive);
+
+
+
+
+"REDUCE"    /* редуцира елементите до един
+  - accu - събирателна
+  - current     - текущ елемент на итерацията
+  - i           - индекс на елемента
+  - arr         - целия списък
+  - }, 0)       - начална точна на натрупването      */
+
+const movements = [10, 20, 30, 40, 50];
+
+// const balance = movements.reduce((acc, current, i, array) => acc + current, 0)
+// console.log(`result: ${balance}`);
+
+// const max = movements.reduce((acc, curr) => {
+//   if (acc > curr) return acc;
+//   else return curr;
+// }, movements[0]);
+// console.log(max);
+
+
+
+" --= Coding Challenge =-- "
 
 /* 
 We're building a football betting app!
@@ -224,86 +301,86 @@ TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Th
 GOOD LUCK 😀
 */
 
-const game = {
-  team1: "Bayern Munich",
-  team2: "Borrussia Dortmund",
-  players: [
-    [
-      "Neuer",
-      "Pavard",
-      "Martinez",
-      "Alaba",
-      "Davies",
-      "Kimmich",
-      "Goretzka",
-      "Coman",
-      "Muller",
-      "Gnarby",
-      "Lewandowski",
-    ],
-    [
-      "Burki",
-      "Schulz",
-      "Hummels",
-      "Akanji",
-      "Hakimi",
-      "Weigl",
-      "Witsel",
-      "Hazard",
-      "Brandt",
-      "Sancho",
-      "Gotze",
-    ],
-  ],
-  score: "4:0",
-  scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
-  date: "Nov 9th, 2037",
-  odds: {
-    team1: 1.33,
-    x: 3.25,
-    team2: 6.5,
-  },
-};
+// const game = {
+//   team1: "Bayern Munich",
+//   team2: "Borrussia Dortmund",
+//   players: [
+//     [
+//       "Neuer",
+//       "Pavard",
+//       "Martinez",
+//       "Alaba",
+//       "Davies",
+//       "Kimmich",
+//       "Goretzka",
+//       "Coman",
+//       "Muller",
+//       "Gnarby",
+//       "Lewandowski",
+//     ],
+//     [
+//       "Burki",
+//       "Schulz",
+//       "Hummels",
+//       "Akanji",
+//       "Hakimi",
+//       "Weigl",
+//       "Witsel",
+//       "Hazard",
+//       "Brandt",
+//       "Sancho",
+//       "Gotze",
+//     ],
+//   ],
+//   score: "4:0",
+//   scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+//   date: "Nov 9th, 2037",
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
 
-// 1.
-console.log("--- 1 ---");
-const [players1, players2] = game.players;
-console.log(players1, players2);
+// // 1.
+// console.log("--- 1 ---");
+// const [players1, players2] = game.players;
+// console.log(players1, players2);
 
-// 2.
-console.log("--- 2 ---");
-const [gk, ...fieldPlayers] = players1;
+// // 2.
+// console.log("--- 2 ---");
+// const [gk, ...fieldPlayers] = players1;
 
-// 3.
-console.log("--- 3 ---");
-const allPlayers = [...game.players[0], ...game.players[1]];
-console.log("3. all players: ", "\n", allPlayers, "\n");
+// // 3.
+// console.log("--- 3 ---");
+// const allPlayers = [...game.players[0], ...game.players[1]];
+// console.log("3. all players: ", "\n", allPlayers, "\n");
 
-// 4. Players1Final
-console.log("--- 4 ---");
-const players1Final = [...game.players[0], "Thiago", "Coutinho", "Perisic"];
-console.log("Players 1 final:", "\n", players1Final, "\n");
+// // 4. Players1Final
+// console.log("--- 4 ---");
+// const players1Final = [...game.players[0], "Thiago", "Coutinho", "Perisic"];
+// console.log("Players 1 final:", "\n", players1Final, "\n");
 
-// 5.
-console.log("--- 5 ---");
-const {
-  odds: { team1, x: draw, team2 },
-} = game;
-console.log("team 1: ", team1, "draw", draw, "team 2:", team2, "\n");
+// // 5.
+// console.log("--- 5 ---");
+// const {
+//   odds: { team1, x: draw, team2 },
+// } = game;
+// console.log("team 1: ", team1, "draw", draw, "team 2:", team2, "\n");
 
-//      това пак става, но не е по задание
-//      const { team1, x, team2 } = game.odds;
-//      console.log("team 1:", team1, "\n", "draw;", x, "\n", "team 2:", team2, "\n");
+// //      това пак става, но не е по задание
+// //      const { team1, x, team2 } = game.odds;
+// //      console.log("team 1:", team1, "\n", "draw;", x, "\n", "team 2:", team2, "\n");
 
-// 6.
-console.log("--- 6 ---");
-function printGoals(...players) {
-  console.log(`${players.length} goals was scored.`, "\n");
-}
-printGoals("Lewandowski", "Gnarby", "Lewandowski", "Hummels");
-printGoals(...game.scored);
+// // 6.
+// console.log("--- 6 ---");
+// function printGoals(...players) {
+//   console.log(`${players.length} goals was scored.`, "\n");
+// }
+// printGoals("Lewandowski", "Gnarby", "Lewandowski", "Hummels");
+// printGoals(...game.scored);
 
-// 7.
-console.log("--- 7 ---");
-team1 < team2 && console.log("Team 1 is more likely to win.");
-team1 > team2 && console.log("Team 2 is more likely to win.");
+// // 7.
+// console.log("--- 7 ---");
+// team1 < team2 && console.log("Team 1 is more likely to win.");
+// team1 > team2 && console.log("Team 2 is more likely to win.");

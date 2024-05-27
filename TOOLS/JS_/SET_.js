@@ -16,7 +16,7 @@
 
 
 
-"РАЗМЕТ, ДЪЛЖИНА"
+"РАЗМЕР, ДЪЛЖИНА"
 // console.log(orderSet.size);
 
 
@@ -49,3 +49,7 @@
 
 // const numUnique = [...numSet];
 // console.log('set -> arr', numUnique);
+
+
+
+"FOR EACH"

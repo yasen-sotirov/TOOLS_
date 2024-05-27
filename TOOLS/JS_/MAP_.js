@@ -5,21 +5,21 @@
   - итерабъл       */
 
 
-// СЪЗДАВАНЕ - пълни се с вложен списък матрица
-const rest = new Map([
-  ['name', 'Classico Italiano'], 
-  [1, 'Sofia'],
-  [2, 'Plovdiv'],
-]);
+"СЪЗДАВАНЕ"     // пълни се с вложен списък / матрица
+// const rest = new Map([
+//   ['name', 'Classico Italiano'], 
+//   [1, 'Sofia'],
+//   [2, 'Plovdiv'],
+// ]);
 
 
 
-// ПЪЛНЕНЕН СЪС СТОЙНОСТИ + CHAINING
-rest
-  .set(true, 'we are open')
-  .set(false, 'we are closed')
-  .set('open', 11)
-  .set('closed', 23);
+"ПЪЛНЕНЕ СЪС СТОЙНОСТИ + CHAINING"
+// rest
+//   .set(true, 'we are open')
+//   .set(false, 'we are closed')
+//   .set('open', 11)
+//   .set('closed', 23);
 
 // console.log(rest);
 
@@ -27,53 +27,63 @@ rest
 
 
 
-// ИЗВИКВАНЕ ПО КЛЮЧ
-console.log(rest.get('name'));
+"ИЗВИКВАНЕ ПО КЛЮЧ"
+// console.log(rest.get('name'));
 
-const time = 21;
-//                   21          open=>11        21       closed=>23
-console.log(rest.get(time > rest.get('open') && time < rest.get('closed')));
-
-
-
-
-// ДОСТЪПВАНЕ НА ВСИЧКИ КЛЮЧОВЕ, СТОЙНОСТИ
-console.log('entries', rest.entries());
-console.log('keys', rest.keys());
-console.log('values', rest.values());
-console.log('values in array', [...rest.values()]);
+// const time = 21;
+// //                   21          open=>11        21       closed=>23
+// console.log(rest.get(time > rest.get('open') && time < rest.get('closed')));
 
 
 
 
-
-// ИЗТРИВАНЕ ПО КЛЮЧ
-rest.delete(2)
-
-
-
-// ИМА ЛИ ГО В МАП-А
-console.log('има ли го', rest.has(2));
+"ДОСТЪПВАНЕ НА ВСИЧКИ КЛЮЧОВЕ, СТОЙНОСТИ"
+// console.log('entries', rest.entries());
+// console.log('keys', rest.keys());
+// console.log('values', rest.values());
+// console.log('values in array', [...rest.values()]);
 
 
 
-// РАЗМЕР
-console.log(rest.size);
+"FOR EACH"
+// const currencies = new Map([
+//   ['USD', 'United States dollar'],
+//   ['EUR', 'Euro'],
+//   ['GBP', 'Pound sterling'],
+// ]);
+
+// currencies.forEach(function(value, key, map) {
+//   console.log(`${key}: ${value}`);
+// })
 
 
 
-// ИТЕРИРАНЕ ПРЕЗ МАП
-const quiz = new Map([
-  ['question', 'What is the best programming language in the world? C / Java / JavaScript'],
-  [1, 'C'],
-  [2, 'Java'],
-  [3, 'JavaScript'],
-  ['correct', 3],
-  [true, 'Correct 🎉'],
-  [false, 'Try again!'],
-]);
+"ИЗТРИВАНЕ ПО КЛЮЧ"
+// rest.delete(2)
 
-// QUIZ APP
+
+
+"ИМА ЛИ ГО В МАП-А"
+// console.log('има ли го', rest.has(2));
+
+
+
+"РАЗМЕР"
+// console.log(rest.size);
+
+
+
+"ИТЕРИРАНЕ ПРЕЗ МАП"
+// const quiz = new Map([
+//   ['question', 'What is the best programming language in the world? C / Java / JavaScript'],
+//   [1, 'C'],
+//   [2, 'Java'],
+//   [3, 'JavaScript'],
+//   ['correct', 3],
+//   [true, 'Correct 🎉'],
+//   [false, 'Try again!'],
+// ]);
+
 // console.log(quiz.get('question'));
 // for (const [key, value] of quiz) {
 //   if (typeof key === 'number') console.log(`Answer ${key} : ${value}`);
@@ -84,10 +94,10 @@ const quiz = new Map([
 
 
 
-// MAP В ARRAY
-console.log([...quiz]);
+"ОТ MAP В ARRAY"
+// console.log([...quiz]);
 
 
 
-// ИЗПРАЗВАНЕ НА КОЛЕКЦИЯТА
-console.log('има ли нещо в обекта:', rest.clear());
+"ИЗПРАЗВАНЕ НА КОЛЕКЦИЯТА"
+// console.log('има ли нещо в обекта:', rest.clear());

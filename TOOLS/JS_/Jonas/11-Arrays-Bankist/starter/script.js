@@ -61,16 +61,45 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-// LECTURES
+const displayMovements = function (movements) {
+  // зачиства същ. html
+  containerMovements.innerHTML = '';
 
-const currencies = new Map([
-  ['USD', 'United States dollar'],
-  ['EUR', 'Euro'],
-  ['GBP', 'Pound sterling'],
-]);
+  // итерира през всеки елемент
+  movements.forEach(function (mov, i) {
+    const type = mov > 0 ? 'deposit' : 'withdraw';
+    const html = `
+      <div class="movements__row">
+        <div class="movements__type movements__type--${type}">
+        ${i + 1} ${type}</div>
+        <div class="movements__value">${mov}</div>
+      </div>
+    `;
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+    // влага променения html в кода        в прав ред
+    containerMovements.insertAdjacentHTML('afterbegin', html);
+  });
+};
 
-/////////////////////////////////////////////////
+displayMovements(account1.movements);
+
+createUsername(accounts);
+
+// calc balance
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, curr) => acc + curr, 0);
+  labelBalance.textContent = balance;
+};
+calcDisplayBalance(account1.movements);
+
+// create username
+const createUsername = function (accs) {
+  accs.forEach(function (acc) {
+    // добавя username към обекта
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
+  });
+};
