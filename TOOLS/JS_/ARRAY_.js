@@ -1,7 +1,7 @@
 "ARRAY"   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-
-// let array1 = ['one', 'two', 'three'];
+"СЪЗДАВАНЕ"
+// console.log(new Array(5));			// прави масив с 5 празни слота
 let numArray = new Array(1, 2, 3, 4, 5);
 
 
@@ -18,8 +18,6 @@ let numArray = new Array(1, 2, 3, 4, 5);
 
 
 
-
-
 "ПРЕМАХВАНЕ"
 // let array = [1, 2, 3, 4, 5];
 
@@ -33,7 +31,6 @@ let numArray = new Array(1, 2, 3, 4, 5);
 
 
 
-
 "SLICE"     // НЕ мутира стария масив
 // let array = [1, 2, 3, 4, 5];
 // console.log("от инд 3 нататък", array.slice(2));
@@ -41,7 +38,6 @@ let numArray = new Array(1, 2, 3, 4, 5);
 // console.log("от -2 до края", array.slice(-2));
 // console.log("последен ел", array.slice(-1));
 // console.log("от -4 до -2", array.slice(-4, -2));
-
 
 
 
@@ -62,14 +58,12 @@ let numArray = new Array(1, 2, 3, 4, 5);
 
 
 
-
 "EXPRESSION"     // може да сложим всякакви изрази в масива
 // let firstName = "Stamat";
 // let age = 1986;
 // let numbers = new Array(1, 2, 3);
 // let description = new Array(firstName, 2024-age, numbers);
 // console.log(description)
-
 
 
 
@@ -85,14 +79,13 @@ let numArray = new Array(1, 2, 3, 4, 5);
 
 
 
-
 "ПОКАЗВА НА ИНДЕКС"
 // array1 = ['one', 'two', 'three'];
 
 // console.log("елемент на индекс 1: ", array1[1]);
 // console.log("индекс на елемент 'three': ", array1.indexOf("three"));    // -1 ако го няма
-// console.log('елемент на последен индекс', array1[array1.length-1])      // или арр[-1]
-
+// console.log('findIndex', array1.findIndex(i => i.length == 5));					// връща първото попадение, работи само с функции
+// console.log('ел на последен индекс:', array1[array1.length-1])      		// или арр[-1]
 
 
 
@@ -102,18 +95,79 @@ let numArray = new Array(1, 2, 3, 4, 5);
 
 
 
-
-"ИМА ЛИ ГО В МАСИВА"
+"ИМА ЛИ ГО В МАСИВА"							// работи с равенство
 // array1 = ['one', 'two', 'three'];
 // console.log('има ли four: ', array1.includes('four'))
 
 
 
+"ИМА ЛИ ЕЛ ОТГОВАРЯЩ НА УСЛОВИЕ"		// работи с условие
+// const array = [1, 2, 3, -5, -6, 0, -3];
+// console.log(array.some(arr => arr > 0 && arr < 3));
 
-"СОРТИРАНЕ"
-// console.log(array1.sort());
-// console.log(array1.sort().reverse());
 
+
+"ИЗРАВНЯВАНЕ"		
+// const arrDeep = [[1, 2, [3, 4, [5, 6]]]];
+// console.log(arrDeep.flat());
+// console.log(arrDeep.flat(3));
+
+
+
+"FLATMAP"		// изравнява само на едно ниво
+
+
+
+"СОРТИРАНЕ"		/* 
+	- мутира обекта
+	- конвертира в стринг и тогава сортира			*/
+
+'по азбучен ред'
+// const array = [5, 3, 2, -1, 1, 4, -2];
+// console.log(array.sort());				
+
+'по големина'
+const array2 = [5, 3, 2, -1, 1, 4, -2];
+// return < 0, A, B (keep order)
+// return > 0, B, A (switch order)
+
+'ascending order'
+// дълго записване
+// array2.sort((a, b) =>{		
+// 	if (a > b) return 1;
+// 	if (a < b) return -1;
+// })
+
+//съкратено записване
+// array2.sort((a, b) => a - b);
+// console.log(array2);
+
+'descending order'
+// дълго записване
+// array2.sort((a, b) =>{		
+// 	if (a > b) return -1;
+// 	if (a < b) return 1;
+// })
+
+//съкратено записване
+// array2.sort((a, b) => b - a);
+// console.log(array2);
+
+
+
+"FROM METHOD"
+// const numArr = Array.from({length: 7} , (_, i) => i+2);
+// console.log(numArr);
+
+
+
+
+"ПЪЛНИ С ЕДНАКВИ ЕЛ"
+// let array = [2, 3, 4, 5, 6]
+// console.log(array.fill('a'));				// пълни с 'a'
+
+// let array = [2, 3, 4, 5, 6]
+// console.log(array.fill('а', 1, 3));				// пълни с 'a' от 1 до 3
 
 
 
@@ -131,14 +185,10 @@ let numArray = new Array(1, 2, 3, 4, 5);
 
 
 
-
-
 "ОБРЪЩА РЕДА"     // мутира обекта
 // let array = [1, 2, 3, 4];
 // array.reverse()
 // console.log(array);
-
-
 
 
 
@@ -152,13 +202,10 @@ let numArray = new Array(1, 2, 3, 4, 5);
 
 
 
-
-
 "JOIN"  // обединява елементите на масива в стринг
 // let strArray = ['a', 'b', 'c', 'd'];
 // console.log(strArray.join());
 // console.log(strArray.join("-"));
-
 
 
 
@@ -167,8 +214,6 @@ let numArray = new Array(1, 2, 3, 4, 5);
 // const arr2 = [4, 5, 6]
 // const arr12 = arr1.concat(arr2);
 // console.log(arr12);
-
-
 
 
 
@@ -238,12 +283,10 @@ let numArray = new Array(1, 2, 3, 4, 5);
 
 
 
-
 "FILTER"    // създава нов списък от елементи отговарящи на условие
 // const movements = [-100, 20, 50, -30, 40];
 // const positive = movements.filter(el => el > 0)
 // console.log(positive);
-
 
 
 
@@ -254,7 +297,7 @@ let numArray = new Array(1, 2, 3, 4, 5);
   - arr         - целия списък
   - }, 0)       - начална точна на натрупването      */
 
-const movements = [10, 20, 30, 40, 50];
+// const movements = [10, 20, 30, 40, 50];
 
 // const balance = movements.reduce((acc, current, i, array) => acc + current, 0)
 // console.log(`result: ${balance}`);
@@ -264,6 +307,29 @@ const movements = [10, 20, 30, 40, 50];
 //   else return curr;
 // }, movements[0]);
 // console.log(max);
+
+
+
+"FIND" 		// връща първото попадение. Особено полезно при списък с обекти
+// const result = numArray.find(el => el === 4);
+// console.log(result);
+
+
+
+"FOR EACH"
+// const dogs = [
+//   { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
+//   { weight: 8, curFood: 200, owners: ['Matilda'] },
+//   { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
+//   { weight: 32, curFood: 340, owners: ['Michael'] }
+// ];
+
+// dogs.forEach(dog => dog.recFood = Math.trunc(dog.weight ** 0.75 * 28))
+// console.log(dogs);
+
+
+
+
 
 
 

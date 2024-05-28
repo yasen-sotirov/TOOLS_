@@ -35,6 +35,7 @@ const account4 = {
 
 const accounts = [account1, account2, account3, account4];
 
+
 // Elements
 const labelWelcome = document.querySelector('.welcome');
 const labelDate = document.querySelector('.date');
@@ -61,6 +62,9 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+
+
+// DISPLAY MOVEMENT
 const displayMovements = function (movements) {
   // зачиства същ. html
   containerMovements.innerHTML = '';
@@ -72,7 +76,7 @@ const displayMovements = function (movements) {
       <div class="movements__row">
         <div class="movements__type movements__type--${type}">
         ${i + 1} ${type}</div>
-        <div class="movements__value">${mov}</div>
+        <div class="movements__value">${mov} €</div>
       </div>
     `;
 
@@ -81,18 +85,42 @@ const displayMovements = function (movements) {
   });
 };
 
-displayMovements(account1.movements);
 
-createUsername(accounts);
 
-// calc balance
-const calcDisplayBalance = function (movements) {
-  const balance = movements.reduce((acc, curr) => acc + curr, 0);
-  labelBalance.textContent = balance;
+// CALC BALANCE
+const calcDisplayBalance = function (acc) {
+  const balance = acc.movements.reduce((acc, curr) => acc + curr, 0);
+  acc.balance = balance;
+  labelBalance.textContent = `${balance}€`;
 };
-calcDisplayBalance(account1.movements);
 
-// create username
+
+
+// CALC SUMMARY
+const calcDisplaySummary = function (acc) {
+  const incomes = acc.movements
+    .filter(mov => mov > 0)
+    .reduce((accu, curr) => accu + curr, 0);
+  labelSumIn.textContent = `${incomes}€`;
+
+  // CALC OUTGOING
+  const out = acc.movements
+    .filter(mov => mov < 0)
+    .reduce((acc, curr) => acc + curr);
+  labelSumOut.textContent = `${Math.abs(out)}€`;
+
+  // CALC DEPOSIT INTEREST
+  const interest = acc.movements
+    .filter(mov => mov > 0)
+    .map(deposit => (deposit * acc.interestRate) / 100)
+    .filter(int => int >= 1)
+    .reduce((accu, curr) => accu + curr);
+  labelSumInterest.textContent = `${interest}€`;
+};
+
+
+
+// CREATE USERNAME
 const createUsername = function (accs) {
   accs.forEach(function (acc) {
     // добавя username към обекта
@@ -103,3 +131,79 @@ const createUsername = function (accs) {
       .join('');
   });
 };
+createUsername(accounts);
+
+
+
+const updateUI = function (acc) {
+      // Display movements
+      displayMovements(acc.movements);
+      // Display balance
+      calcDisplayBalance(acc);
+      // Display summary
+      calcDisplaySummary(acc);
+};
+
+
+// CONVERT EURO TO USD
+// const euroToUsd = 1.1;
+// const totalDepositUSD = movements
+//   .filter(mov => mov > 0)
+//   .map(mov => mov * euroToUsd)
+//   .reduce((accu, curr) => accu + curr, 0);
+
+// console.log(totalDepositUSD);
+
+
+// Event handler
+let currentAccount;
+
+
+btnLogin.addEventListener('click', function (event) {
+  // prevent default form to submitting
+  event.preventDefault();
+
+  currentAccount = accounts.find(
+    acc => acc.username === inputLoginUsername.value
+  );
+  console.log(currentAccount);
+
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    // Display UI and message
+    labelWelcome.textContent = `Welcome back ${
+      currentAccount.owner.split(' ')[0]
+    }`;
+    containerApp.style.opacity = 100;
+
+    // clear input field from pin and username
+    inputLoginUsername.value = inputLoginPin.value = '';
+    // маха мигащия курсор от полето
+    inputLoginPin.blur();
+
+    // Update UI
+    updateUI(currentAccount);
+  }
+});
+
+
+// TRANSFER MONEY TO ANOTHER ACCOUNT
+btnTransfer.addEventListener('click', function (event) {
+  // спира формата да презареди страницата
+  event.preventDefault();
+  const amount = Number(inputTransferAmount.value);
+  const receiverAcc = accounts.find(
+    acc => acc.username === inputTransferTo.value);
+
+  inputTransferAmount = inputTransferTo = '';
+    
+  if(amount > 0 &&
+    receiverAcc && 
+    currentAccount.balance >= amount && 
+    currentAccount.username !== receiverAcc.username
+  ) {
+    currentAccount.movements.push(-amount);
+    receiverAcc.movements.push(amount);
+    
+    updateUI(currentAccount)
+  } 
+})

@@ -24,11 +24,11 @@ let person = {
   },
 };
 
-console.log(person.summary())
+// console.log(person.summary())
 
 
-const midName = person.midName || 'St.'
-console.log(midName);
+// const midName = person.midName || 'St.'
+// console.log(midName);
 
 
 
@@ -68,7 +68,6 @@ console.log(midName);
 
 
 
-
 "ПРОМЯНА"
 // console.log(person.years += 2);
 // console.log(person.location = 'Madrid')
@@ -86,11 +85,8 @@ console.log(midName);
 
 
 
-
-
 "КЛОНИРАНЕ НА ОБЕКТ"
 // Object.assign({}, person)
-
 
 
 
@@ -100,6 +96,19 @@ console.log(midName);
 
 
 "ДОБАВЯНЕ НА PROPERTY КЪМ ОБЕКТ"  //нужно е само да се запише променливата
+'1.'
+// const dogs = [
+//   { weight: 22, curFood: 250},
+//   { weight: 8, curFood: 200 },
+//   { weight: 13, curFood: 275},
+//   { weight: 32, curFood: 340}
+// ];
+
+// // 1.
+// dogs.forEach(dog => dog.recFood = Math.trunc(dog.weight ** 0.75 * 28));
+// console.log(dogs);
+
+'2.'
 // const workHours = {
 //   mon: {
 //     open: 9,
@@ -183,25 +192,25 @@ console.log(midName);
 "CALL, APPLY, BIND METHOD"    // преизползване на метод от обект
 
 // _____air 1_____
-const lufthansa = {          
-  airline: 'Lufthansa',
-  code: 'LH',
-  bookings: [],
-  book(flight, name) {
-    const book = `${name} booked a seat on ${this.airline}, flight ${this.code}${flight}`;
-    this.bookings.push(book);
-  }};
+// const lufthansa = {          
+//   airline: 'Lufthansa',
+//   code: 'LH',
+//   bookings: [],
+//   book(flight, name) {
+//     const book = `${name} booked a seat on ${this.airline}, flight ${this.code}${flight}`;
+//     this.bookings.push(book);
+//   }};
 
 
 // _____air 2_____
-const euroWings = {
-  airline: 'Euro Wings',
-  code: 'EW',
-  bookings: [],
-}
+// const euroWings = {
+//   airline: 'Euro Wings',
+//   code: 'EW',
+//   bookings: [],
+// }
 
 "извежда метода отвън"
-const book = lufthansa.book;        
+// const book = lufthansa.book;        
 
 
     "CALL METHOD"     // ползвам метода отвън, но казвам към кой обект да се закачи
@@ -220,15 +229,15 @@ const book = lufthansa.book;
     // console.log(lufthansa.bookings);
 
 
-    "BIND METHOD"     // метода остав вързан за конкретния обект
-    const bookEW = book.bind(euroWings);          // връзва по един параметър
-    bookEW(901, "Miro ot bind")
+    "BIND METHOD"     // метода остава вързан за конкретния обект
+    // const bookEW = book.bind(euroWings);          // връзва по един параметър
+    // bookEW(901, "Miro ot bind")
 
-    const bookLH44 = book.bind(lufthansa, 44);    // връзва по два параметър
-    bookLH44('Spas ot LH44')                      // partial application - частично са прилоожено
+    // const bookLH44 = book.bind(lufthansa, 44);    // връзва по два параметър
+    // bookLH44('Spas ot LH44')                      // partial application - частично са прилоожено
 
-    console.log(euroWings.bookings);
-    console.log(lufthansa.bookings);
+    // console.log(euroWings.bookings);
+    // console.log(lufthansa.bookings);
 
 
     // #125 @ 7:50 min
