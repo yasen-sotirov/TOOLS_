@@ -1,2 +1,1 @@
-const midName = person.midName || 'St.'
-// console.log(midName);
+console.log(10.9.toFixed(2)); 
