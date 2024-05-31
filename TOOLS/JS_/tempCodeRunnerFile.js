@@ -1,1 +1,2 @@
-console.log(10.9.toFixed(2)); 
+// хваща всичко от:
+console.log(document.documentElement);

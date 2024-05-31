@@ -152,3 +152,47 @@
 // console.log(123_456_789);
 // console.log('length in mm: ', 15_2);
 // console.log('price in cents: ', 15_99);
+
+
+"BIG INTS"    // над това число обикновените числа губят точност
+'int'
+  // console.log(Number.MAX_SAFE_INTEGER);
+  // console.log(2 ** 53 - 1);
+'big int'
+  // console.log('23156648978451321548789');
+  // console.log(23156648978451321548789n);
+  // console.log(BigInt(2315664897828789));    // само до 16 цифри 
+  'операции'
+  // console.log(23154875643147n + 1251548512n);
+  
+  // const num = 23;
+  // const bigint = 5451245451512558332525n;
+  // console.log(bigint * BigInt(num));    // bigInt не се мешат с обикновени числа
+  'изключения'
+  // console.log(20n === 20);    // false
+  // console.log(10n / 3n);      // реже след запетаята
+
+
+
+"МЕЖДУНАРОДНО ФОРМАТИРАНЕ"    // кодове: http://www.lingoes.net/en/translator/langcode.htm
+// const num = 3126529.33;
+
+// const options = {
+//   style: 'currency',    // unit, percent, currency
+//   unit: 'celsius',       // mile-per-hour
+//   currency: 'EUR'       // записва се ръчно, защото не се определя от браузъра
+// }
+
+// console.log('BG: ', new Intl.NumberFormat('bg', options).format(num));
+// console.log('US: ', new Intl.NumberFormat('en-US', options).format(num));
+// console.log('DE: ', new Intl.NumberFormat('de-DE', options).format(num));
+
+
+
+
+
+
+
+
+
+

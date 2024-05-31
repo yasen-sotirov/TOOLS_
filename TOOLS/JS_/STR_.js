@@ -14,16 +14,16 @@
 
 
 "SPLIT"
-console.log('a+very+nice+string'.split('+'));
+// console.log('a+very+nice+string'.split('+'));
 
-const paragraph = `This is a
-  simple, multiline 
-  text on JavaScript`
-console.log(paragraph.split('\n'));
+// const paragraph = `This is a
+//   simple, multiline 
+//   text on JavaScript`
+// console.log(paragraph.split('\n'));
 
 
-[first, last] = 'John Smit'.split(" ");
-console.log(first, last);
+// [first, last] = 'John Smit'.split(" ");
+// console.log(first, last);
 
 
 
@@ -111,6 +111,14 @@ console.log('sunny weather '.repeat(3), '\n');
 
 
 
+"ДОБАВЯ ЕЛЕМЕНТИ В НАЧАЛОТО / КРАЯ"    // до достигане на зададената стойност  
+// console.log('a'.padStart(4, 0));
+// console.log('ab'.padStart(4, 0));
+// console.log('abc'.padStart(4, 0));
+
+// console.log('a'.padEnd(4, 'Z'));
+
+
 
 "СЪДЪРЖА ЛИ"
 // console.log("съдържа ли @", "mail@abv.bg".includes("@"));
@@ -159,6 +167,8 @@ console.log('sunny weather '.repeat(3), '\n');
 "КЪМ МАЛКИ И ГЛАВНИ БУКВИ"
 // console.log('TO LOWER CASE'.toLowerCase());
 // console.log('to upper case'.toUpperCase());
+
+
 
 
 
