@@ -1,4 +1,20 @@
-/* TAILWIND CLASSES
+"TAILWIND"
+
+
+
+"ИНСТАЛИРАНЕ"
+/* https://tailwindcss.com/docs/installation
+npm install -D tailwindcss
+npx tailwindcss init
+
+
+*/
+
+
+
+
+"CLASSES"
+/* 
 
 RESPONSIVE DESIGN:
     активира се при минимум:
