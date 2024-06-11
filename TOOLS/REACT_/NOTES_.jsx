@@ -78,3 +78,72 @@ npm start
 
 
 */
+
+"PROPS КОМПОНЕНТ В КОМПОНЕНТ";
+// const Person = (props) => {
+//   return (
+//     <>
+//       <h1>Name: {props.name}</h1>
+//       <h2>Last name: {props.lastName}</h2>
+//       <h2>age: 30</h2>
+//     </>
+//   );
+// };
+
+// const App = () => {
+//   return (
+//     <div className="App">
+//       <Person name="Ivan" lastName={"Todorov"} />
+//       <Person name="Yasen" lastName={"Sotirov"} />
+//       <Person name="Toshko" lastName={"Petrov"} />
+//     </div>
+//   );
+// };
+
+"HOOK STATE";
+// import { useState, useEffect } from "react"; // Hook
+
+// const App = () => {
+//   // елемент setElement
+//   const [counter, setCounter] = useState(0);
+
+//   //                какво се случва  кога се случва
+//   useEffect(() => {
+//     setCounter(100);
+//   }, []);
+
+//   return (
+//     <div className="App">
+//       <button onClick={() => setCounter((prevCounter) => prevCounter + 1)}>
+//         +
+//       </button>
+//       <h1>{counter}</h1>
+//       <button onClick={() => setCounter((prevCounter) => prevCounter - 1)}>
+//         -
+//       </button>
+//     </div>
+//   );
+// };
+
+"SRC FOLDER"; /*
+  index.js
+    import React from "react";
+    import ReactDOM from "react-dom";
+    import App from "./App";
+
+    // вкарва App в root
+    ReactDOM.render(<App />, document.getElementById("root"));
+
+
+  App.js
+    import React from "react";
+
+    // main functional component
+    const App = () => {
+      return <h1>App</h1>;
+    };
+
+    export default App;
+
+
+ */
