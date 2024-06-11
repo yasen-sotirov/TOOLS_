@@ -68,7 +68,13 @@ STATE
 - mutable -променят се
  */
 
-"MASTERS REACT APP";
-"СЪЗДАВАНЕ НА АПП";
-//npx create-react-app ./         // в същата директория
-// npm start
+"PORTFOLIO REACT APP";
+
+"СЪЗДАВАНЕ НА АПП"; /* https://www.youtube.com/watch?v=hYv6BM2fWd8&ab_channel=webdecoded
+npx create-react-app ./         // в същата директория
+npm i react-bootstrap bootstrap
+npm start
+
+
+
+*/
