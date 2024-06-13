@@ -13,7 +13,7 @@ function App() {
   }, []);
 
   const fetchContacts = async () => {
-    const response = await fetch("http://127.0.0.1:3000/contacts"); //изпраща request и чака за response
+    const response = await fetch("http://127.0.0.1:5000/contacts"); //изпраща request и чака за response
     const data = await response.json();
     setContacts(data.contacts);
   };
@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       <ContactList contacts={contacts} />
-      <ContactForm />
+      <ContactForm onSuccess={fetchContacts} />
     </>
   );
 }

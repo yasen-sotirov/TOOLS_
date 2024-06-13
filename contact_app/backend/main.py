@@ -8,7 +8,7 @@ from models import Contact
 
 
 # ALL CONTACTS
-@app.route("/contacts")     # decorator     изпуснат метод get
+@app.get("/contacts")     # decorator     изпуснат метод get
 def get_contacts():
     contacts = Contact.query.all()          # ORМ взема всички контакти
     json_contacts = list(map(lambda x: x.to_json(), contacts))    # вместо for loop итерира през всички контакти и подава на to_json
@@ -17,11 +17,13 @@ def get_contacts():
 
 
 # CREATE CONTACT
-@app.route("/create_contact")
+@app.post("/create_contact")
 def create_contact():
+    print("hello")
     first_name = request.json.get("firstName")      # get проверява дали го има
     last_name = request.json.get("lastName")        
-    email = request.json.get("email")               
+    email = request.json.get("email")
+    print(first_name, last_name, email)               
 
     if not first_name or not last_name or not email:
         return jsonify({"message" : "You must include first name, last name and email"}, 400)   # 400= bad request

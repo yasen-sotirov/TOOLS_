@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ContactForm = ({}) => {
+const ContactForm = ({ onSuccess }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -11,7 +11,7 @@ const ContactForm = ({}) => {
 
     // DEFINING DATA
     const data = { firstName, lastName, email };
-    const url = "http://127.0.0.1:3000/create_contact";
+    const url = "http://127.0.0.1:5000/create_contact";
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -25,6 +25,7 @@ const ContactForm = ({}) => {
       alert(data.message);
     } else {
       // successful
+      onSuccess();
     }
   };
 
