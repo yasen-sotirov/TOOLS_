@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- prettier-ignore -->
+    <!-- наследява заглавието -->
+    <title>{% block title %}Default value{% endblock %}</title>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <a href="https://yasensotirov.dev/">https://yasensotirov.dev/</a>
+      <p>nav here</p>
+      <hr />
+    </nav>
+
+    {% block content %}
+
+    <!-- DYNAMIC URL -->
+    <a href="{{ url_for('dynamic_url') }}">dynamicUrl</a>
+
+    {% endblock %}
+
+    <footer>
+      <hr />
+      <p>Footer here</p>
+    </footer>
+  </body>
+</html>

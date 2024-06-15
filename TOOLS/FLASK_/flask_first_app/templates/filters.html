@@ -1,0 +1,22 @@
+<!-- prettier-ignore -->
+<!-- WHAT TO EXTEND -->
+{% extends "base.html" %}
+
+<!-- TITLE -->
+{% block title %}Filter page{% endblock %}
+
+<!-- CODE BLOCK -->
+{% block content %}
+<p>{{ text|upper }} :upper</p>
+<p>{{ text|lower }} :lower</p>
+<p>{{ text|title }} :title</p>
+<p>{{ text|replace("l", "L") }} :replace</p>
+<br />
+
+<p>Custom filters</p>
+<hr />
+<p>{{ text|custom_filter}} :custom filter</p>
+<p>{{ text|repeat_filter}} :repeat filter</p>
+<p>{{ text|repeat_filter(5)}} :repeat filter</p>
+
+{% endblock %}
