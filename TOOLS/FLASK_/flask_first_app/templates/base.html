@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/style.css" >
 
-    <!-- prettier-ignore -->
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+
     <!-- наследява заглавието -->
     <title>{% block title %}Default value{% endblock %}</title>
   </head>
@@ -18,15 +21,15 @@
     </nav>
 
     {% block content %}
-
-    <!-- DYNAMIC URL -->
-    <a href="{{ url_for('dynamic_url') }}">dynamicUrl</a>
-
+    <!-- слагат се само блокове -->
     {% endblock %}
 
     <footer>
       <hr />
       <p>Footer here</p>
     </footer>
+
+    <!-- bootstrap script js, 'инсталирано' от зип файла-->
+    <script src="/static/js/bootstrap.js"></script>
   </body>
 </html>

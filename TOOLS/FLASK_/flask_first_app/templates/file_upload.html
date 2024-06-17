@@ -1,0 +1,22 @@
+{% extends "base.html" %} 
+{% block title %}Filter page{% endblock %}
+
+{% block content %}
+
+<h2>FILE UPLOAD</h2>
+<form
+  action="{{ url_for('file_upload')}}"
+  method="POST"
+  enctype="multipart/form-data"> <br>
+  
+  <input type="file" 
+    name="file" 
+    accept="audio/*, video/*, image/*, text/*" />
+
+  <input type="submit" value="upload file">
+</form>
+
+{% endblock %}
+
+<!-- name се ползва като key за key-value pair към json-a за подаване към backend-а -->
+<!-- http://127.0.0.1:5000/file_upload -->

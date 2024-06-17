@@ -46,11 +46,13 @@
 "IMPORTS"
 from flask import Flask
 from flask import request
+from flask import jsonify
+from flask import session
 from flask import make_response
 from flask import render_template
+import pandas
 
-
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__, template_folder='templates', static_folder='static', static_url_path='/static')
 
 
 
@@ -73,6 +75,33 @@ def sum(num1, num2):
     # http://127.0.0.1:5000/sum/1/2
 
 
+
+
+"JSON JS OBJECT"
+@app.route('/json_js', methods=['POST', 'GET'])
+def json_js():
+    if request.method == 'GET':
+        return render_template('json_js.html')
+    
+    elif request.method == 'POST':
+        greetings = request.json['greetings']
+        name = request.json['name']
+
+        with open('file_json_js.txt', 'w') as f:
+            f.write(f'{greetings}, {name}')
+        
+        return jsonify({'message': 'successfully written'})
+        # http://127.0.0.1:5000/json_js
+
+
+
+
+"STATIC FILES"
+@app.route('/static_files')
+# app = Flask(__name__, template_folder='templates', static_folder='static', static_url_path='/static')
+def static_files():
+    return render_template('static_files.html')
+    # http://127.0.0.1:5000/static_files
 
 
 
@@ -116,8 +145,77 @@ def hello():
 def template():
     res = [10, 20, 30, 40, 50]
     text = "Lorem ipsum"
-    return render_template('index.html', nums = res, paragraph = text)
+    return render_template('template.html', nums = res, paragraph = text)
     # http://127.0.0.1:5000/template
+
+
+
+
+"FORM INFO EXTRACTION"     # връща инфо от формата
+@app.route('/forminfo', methods=['GET', 'POST'])
+def forminfo():
+    if request.method == 'GET':
+        return render_template('forminfo.html')
+    
+    elif request.method == 'POST':
+        if "some key" in request .form.keys():          # проверка дали е включено във формата
+            username = request.form.get('username')     # изваждане на подадените във формата данни
+            password = request.form['password']
+        else:
+            return 'This query is not included in form!!!'
+
+        if username == 'Yaskata' and password == '123':
+            return 'Login success!'
+        else:
+            return 'Incorrect username or password'
+        # http://127.0.0.1:5000/forminfo
+        # https://youtu.be/nP23R37lMxc?list=PL7yh-TELLS1EyAye_UMnlsTGKxg8uatkM&t=467
+
+
+
+
+"FILE UPLOAD"  
+@app.route('/file_upload', methods=['POST', 'GET'])
+def file_upload():
+
+    if request.method == 'GET':
+        return render_template('file_upload.html')
+    elif request.method == 'POST':
+        file = request.files['file']        # input type="file" name="file" 
+
+        if file.content_type == 'text/plain':
+            return file.read().decode()
+        else:
+            return 'file type is not txt'
+
+    # https://youtu.be/nP23R37lMxc?list=PL7yh-TELLS1EyAye_UMnlsTGKxg8uatkM&t=909
+    # http://127.0.0.1:5000/file_upload
+
+
+
+
+
+"EXCEL FILE"  
+# pip3 install pandas
+# import pandas as pd
+@app.route('/excel_render', methods=['POST', 'GET'])
+def excel_render():
+
+    if request.method == 'GET':
+        return render_template('excel_render.html')
+    
+    elif request.method == 'POST':
+        file = request.files['file']        # input type="file" name="file" 
+
+        if file.content_type == 'text/plain':
+            return file.read().decode()
+        elif file.content_type == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' or file.content_type == 'application/vnd.ms-excel':
+            data_frame = pandas.read_excel(file)
+            return data_frame.to_html      
+        
+        # https://youtu.be/nP23R37lMxc?list=PL7yh-TELLS1EyAye_UMnlsTGKxg8uatkM&t=902
+        # http://127.0.0.1:5000/excel_render    
+
 
 
 
@@ -131,6 +229,7 @@ def filters():
 
 
 
+
 "CUSTOM FILTER"
 @app.template_filter('custom_filter')
 def custom_filter(string):
@@ -139,6 +238,42 @@ def custom_filter(string):
 @app.template_filter('repeat_filter')
 def repeat_filter(string, times=2):
     return string * times
+    # няма линк - това да настройките на филтрите
+
+
+
+
+"COOKIES"   # съхраняват се на клиента
+# from flask import session
+app.secret_key = 'very secure key'
+@app.route('/cookies')
+def cookies():
+    return render_template('cookies.html', message='cookies .....')
+
+@app.route('/set_data')
+def set_data():
+    # сигурна информация съхранявана на сървъра
+    session['name'] = 'agent name ***'
+    session['password'] = 'secret ****'
+    return render_template('cookies.html', message='Session data set.')
+
+@app.route('/get_data')
+def get_data():
+
+    if 'name' in session.keys() and 'password' in session.keys():
+        name = session['name']
+        password = session['password']
+        return render_template('cookies.html', message=f'Name: {name}, password: {password}')
+    else:
+        return render_template('cookies.html', message='No session found!!!')
+    
+@app.route('/clear_session')
+def clear_session():
+    session.clear()
+    # session.pop('name')       - маха само част от датата
+    return render_template('/cookies.html', message='Session cleared.')
+    # http://127.0.0.1:5000/cookies
+
 
 
 
@@ -146,7 +281,15 @@ def repeat_filter(string, times=2):
 @app.route('/-------')
 def dynamic_url():
     return render_template('filters.html')
+    # https://www.youtube.com/watch?v=w6Ui_DVxluc&list=PL7yh-TELLS1EyAye_UMnlsTGKxg8uatkM&index=6&ab_channel=NeuralNine
     # http://127.0.0.1:5000/template
+
+
+
+
+
+
+
 
 
 
@@ -173,3 +316,4 @@ if __name__ == "__main__":
 
 "ФАЙЛ С ИЗПОЛЗВАНИТЕ ПАКЕТИ"
     # pip3 freeze > requirements.txt
+

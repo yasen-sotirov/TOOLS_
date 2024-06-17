@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block title %}forminfo{% endblock %}
+
+<!-- FORMINFO -->
+{% block content %}
+
+<h1>FORMS INFO</h1>
+<form method="POST" action="{{ url_for('forminfo') }}">
+  <input type="text" 
+    name="username" 
+    placeholder="Username: Yaskata" 
+    required="required" /><br />
+  
+  <input 
+    type="text" 
+    name="password" 
+    placeholder="Password: 123" 
+    required="required" /><br />
+  
+    <input 
+      type="submit" 
+      value="Login" />
+</form>
+
+
+{% endblock %}
+
+<!-- name се ползва като key за key-value pair към json-a за подаване към backend-а -->
+<!-- http://127.0.0.1:5000/forminfo -->
