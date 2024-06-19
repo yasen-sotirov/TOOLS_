@@ -2,18 +2,18 @@
 
 "В ТЕРМИНАЛА"   '''
     - mkdir app_name
-    - python3 -m venv venv
+    - python3 -m venv .venv
         - python3   командата за стартиране на Python3.x. интерпретатора, версия 3.x. 
         - m         флаг указващ на интерпретатора да изпълни посочения модул като скрипт
         - venv      модул в библиотеката на Python за създаване на виртуални среди.
         - venv      името на директорията  . за да е скрита   
 
-    създаване на venv:
+    защо venv:
         - съдържа библиотеките необходими за този конкретен проект
         - позволява да се направи requirement.txt
         - и още много други важни, но неизвестни за мен неща!
 
-    - source venv/bin/activate    - активира виртуалната среда
+    - source .venv/bin/activate    - активира виртуалната среда
         - source                    - изпълнява даден скрипт в текущата сесия на терминала
 
     - pip3 install flask           - става и с pip3
@@ -44,7 +44,7 @@
 
 
 "IMPORTS"
-from flask import Flask.......................
+from flask import Flask
 from flask import request
 from flask import jsonify
 from flask import session
@@ -243,7 +243,10 @@ def repeat_filter(string, times=2):
 
 
 
-"COOKIES"   # съхраняват се на клиента
+"COOKIES"   
+# https://youtu.be/8jOgqA7nlLo?list=PL7yh-TELLS1EyAye_UMnlsTGKxg8uatkM&t=397
+# съхраняват се на клиента
+# инструктираме сървъра да създаде бисквити на клиентската страна
 # from flask import session
 app.secret_key = 'very secure key'
 @app.route('/cookies')
