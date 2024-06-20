@@ -6,7 +6,7 @@
         - python3   командата за стартиране на Python3.x. интерпретатора, версия 3.x. 
         - m         флаг указващ на интерпретатора да изпълни посочения модул като скрипт
         - venv      модул в библиотеката на Python за създаване на виртуални среди.
-        - venv      името на директорията  . за да е скрита   
+        - .venv     името на директорията  . за да е скрита   
 
     защо venv:
         - съдържа библиотеките необходими за този конкретен проект
@@ -286,11 +286,6 @@ def dynamic_url():
     return render_template('filters.html')
     # https://www.youtube.com/watch?v=w6Ui_DVxluc&list=PL7yh-TELLS1EyAye_UMnlsTGKxg8uatkM&index=6&ab_channel=NeuralNine
     # http://127.0.0.1:5000/template
-
-
-
-
-
 
 
 
