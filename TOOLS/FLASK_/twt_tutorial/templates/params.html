@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home page</title>
+    </head>
+
+    <!-- http://127.0.0.1:5000/params/yass123 -->
+    <body>
+        <h1 >home page</h1>
+
+        <!-- приема подадените от бакенда параметри -->
+        <p>{{ content }}</p>
+        
+        <!-- приема питонски код -->
+        {% for name in lst %}
+        <p>{{ name }}</p>
+        {% endfor %}
+    </body>
+</html>
+
