@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <title>{% block title %}Homepage{% endblock %}</title>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a href="{{ url_for('home') }}" class="active">about</a>
+      <a href="{{ url_for('projects') }}">projects</a>
+      <a href="experience.html">experience</a>
+      <a href="contacts.html">contacts</a>
+    </nav>
+
+    {% block content %} {% endblock %}
+
+    <footer>v2.0</footer>
+  </body>
+</html>

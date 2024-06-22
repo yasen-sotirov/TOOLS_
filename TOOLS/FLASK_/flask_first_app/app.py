@@ -145,6 +145,9 @@ def hello():
 def template():
     res = [10, 20, 30, 40, 50]
     text = "Lorem ipsum"
+
+    "РЕНДВАМЕ TEMPLATE, НЕ BASE"
+    
     return render_template('template.html', nums = res, paragraph = text)
     # http://127.0.0.1:5000/template
 

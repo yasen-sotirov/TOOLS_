@@ -1,0 +1,65 @@
+{% extends "base.html" %} 
+{% block content %}
+
+    <header>
+      <h1>PROJECTS</h1>
+    </header>
+
+    <main>
+      <ul class="skill-list">
+        {% for tech, details in technologies.items() %}
+          <li class="skill">
+            <div class="skill-name">{{ tech }}</div>
+              <ul class="skill-description">
+                {% for detail in details %}
+                  <li>{{ detail }}</li>
+                {% endfor %}
+              </ul>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div class="section-container">
+
+        <div class="title-with-date">
+          {% for project in projects %}
+          <h3>{{ project["name"]}}</h3>
+          <div class="date">
+            {% _, month, year = project['start date'].split('-') %}
+            {% endfor %}
+            <time datetime="{{ project['start date']}}">{{ month }}-{{ year}}</time>
+            -
+            {% _, month, year = project['end date'].split("-") %}
+            {% endfor %}
+            <time datetime="{{ project['end date']}}">{{ month }}-{{ year}}</time>
+          </div>
+        </div>
+
+        <p>{{ project['description']}}</p>
+        <ul class="ul-bullet">
+          <li>technologies: {{ project['technologies'] }}.</li>
+          <li>
+            <a
+              target="_blank"
+              href="{{ project['source code']}}"
+              >source code</a
+            ><i class="fa-brands fa-github"> </i>
+          </li>
+        </ul>
+      </div>
+ 
+
+
+
+    </main>
+    {% endblock %}
+
+    <footer>
+      <p>v1.1</p>
+    </footer>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/f2f63fec08.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
