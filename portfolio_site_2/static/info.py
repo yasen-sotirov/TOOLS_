@@ -35,232 +35,111 @@ projects = [
     {  
     "name": "Weather App",
     "start date": "2024-06-04",
+    "start month": "06",
+    "start year": "2024",
     "end date": "2024-06-05",
+    "end month": "06",
+    "end year": "2024",
     "description": "Weather App: Check the weather, humidity, and wind speed for any city worldwide. Data is provided by www.openweathermap.org",
-    "technologies": "JavaScript, HTML, CSS.",
+    "technologies": ["JavaScript", "HTML", "CSS."],
     "source code": "https://github.com/yasen-sotirov/personal_projects/tree/main/weather_app",
     },
     {
-    "name": "",
-    "start date": "",
-    "end date": "",
-    "description": "",
-    "technologies": "",
-    "source code": "",
+    "name": "Dice game",
+    "start date": "2024-05-16",
+    "start month": "05",
+    "start year": "2024",
+    "end date": "2024-05-17",
+    "end month": "05",
+    "end year": "2024",
+    "description": '''Roll the dice and add each roll to your total. 
+        Stop anytime to bank your points, because if you roll a 1,
+        you loos your points, and the next player goes. First to reach 100
+        points wins.''',
+    "technologies": ["JavaScript", "HTML", "CSS."],
+    "source code": "https://github.com/yasen-sotirov/personal_projects/tree/main/dice_game",
     },
+    {
+    "name": "Guess the number",
+    "start date": "2024-05-15",
+    "start month": "05",
+    "start year": "2024",
+    "end date": "2024-05-16",
+    "end month": "05",
+    "end year": "2024",
+    "description": "Uncover the secret number (1-100) within 10 attempts.",
+    "technologies": ["JavaScript", "HTML", "CSS."],
+    "source code": "https://github.com/yasen-sotirov/personal_projects/tree/main/guess_gam",
+    },
+    {
+    "name": "Personal website 1.0",
+    "start date": "2024-03-011",
+    "start month": "03",
+    "start year": "2024",
+    "end date": "2024-03-20",
+    "end month": "03",
+    "end year": "2024",
+    "description": "Static portfolio website with four pages",
+    "technologies": ["HTML", "CSS."],
+    "source code": "https://github.com/yasen-sotirov/yasensotirov.github.io",
+    },
+    {
+    "name": "Match Score",
+    "start date": "2023-11-02",
+    "start month": "11",
+    "start year": "2023",
+    "end date": "2023-11-20",
+    "end month": "11",
+    "end year": "2023",
+    "description": "Solution that streamline the organization and management of sport events. Implemented features for one-on-one matches and tournaments. Intensive work in a group of three with a horizontal hierarchy.",
+    "technologies": ["Python", "FastAPI", "MariaDB", "Pydantic"],
+    "source code": "https://github.com/yasen-sotirov/Y_projects/tree/main/match_score",
+    },
+    {
+    "name": "Forum app",
+    "start date": "2023-10-07",
+    "start month": "10",
+    "start year": "2023",
+    "end date": "2023-10-20",
+    "end month": "10",
+    "end year": "2023",
+    "description": "Design and implementation of a forum system. Providing a RESTfull API for use by various clients.",
+    "technologies": ["Python", "FastAPI", "Pydantic"],
+    "source code": "https://github.com/yasen-sotirov/personal_projects/tree/main/forum_app",
+    },
+    {
+    "name": "Logistics fleet app",
+    "start date": "2023-09-06",
+    "start month": "09",
+    "start year": "2023",
+    "end date": "2023-09-18",
+    "end month": "09",
+    "end year": "2023",
+    "description": "Designed and implemented a logistics console application for efficient management of package deliveries between hubs located in various cities. Intensive work in a group of three with a horizontal hierarchy",
+    "technologies": ["Python", "FastAPI", "Pydantic"],
+    "source code": "https://github.com/yasen-sotirov/Y_projects/tree/main/logistic_fleet",
+    },
+]
 
-      
+experience = [
+{
+    "title": "Architect",
+    "start date": "2016-08-01",
+    "start month": "08",
+    "start year": "2016",
+    "end date": "2023-06-01",
+    "end month": "06",
+    "end year": "2023",
+    "description": "Architectural design and building renovation. Experienced with public procurement and collaborating with clients, engineers, and construction teams.",
+    "bullets": [
+    "Leading a team of 5 engineers.",
+    "Fully completed projects - 43.",
+    "Mentoring 3 interns.",
+    "Weekly communication with clients.",
+    "Contribution: Implementing automated systems and processes reducing time by up to 70%.",
+    ]
+},
 
 ]
 
-
-'''
-
-      <!-- Dice game -->
-      <div class="section-container">
-        <div class="title-with-date">
-          <h3>Rolling dice</h3>
-          <div class="date">
-            <time datetime="2024-05-16">05/2023</time>
-            -
-            <time datetime="2024-05-17">05/2023</time>
-          </div>
-        </div>
-
-        <p>
-          Roll the dice and add each roll to your total. 
-          Stop anytime to bank your points, because if you roll a 1,
-          you loos your points, and the next player goes. First to reach 100
-          points wins.
-        </p>
-        <ul class="ul-bullet">
-          <li>technologies: JavaScript, HTML, CSS.</li>
-          <li>
-            <a
-              target="_blank"
-              href="https://github.com/yasen-sotirov/personal_projects/tree/main/dice_game"
-              >source code</a
-            ><i class="fa-brands fa-github"> </i>
-          </li>
-        </ul>
-      </div>
- 
-      <!-- Guess the number -->
-      <div class="section-container">
-        <div class="title-with-date">
-          <h3>Guess the number</h3>
-          <div class="date">
-            <time datetime="2024-05-15">05/2023</time>
-            -
-            <time datetime="2024-05-16">05/2023</time>
-          </div>
-        </div>
-
-        <p>
-          Uncover the secret number (1-100) within 10 attempts.
-        </p>
-        <ul class="ul-bullet">
-          <li>technologies: JavaScript, HTML, CSS.</li>
-          <li>
-            <a
-              target="_blank"
-              href="https://github.com/yasen-sotirov/personal_projects/tree/main/guess_game"
-              >source code</a
-            ><i class="fa-brands fa-github"> </i>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Food delivery -->
-      <!-- <div class="section-container">
-        <div class="title-with-date">
-          <h3>Website - frontend</h3>
-          <div class="date">
-            <time datetime="2024-05-01">05/2023</time>
-            -
-            <time datetime="2024-05-05">05/2023</time>
-          </div>
-        </div>
-
-        <p>
-          First steps with Next.js and Tailwindcss. This is simple training
-          project about Food delivery responsive website.
-        </p>
-        <ul class="ul-bullet">
-          <li>technologies: Next.js, Tailwindcss.</li>
-          <li>
-            <a
-              target="_blank"
-              href="https://github.com/yasen-sotirov/zing7-task-2.1-food-delivery"
-              >source code</a
-            ><i class="fa-brands fa-github"> </i>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://zing7-task-2-1-food-delivery.vercel.app/"
-              >preview</a
-            >
-            <img src="assets/vercel.png" alt="vercel" width="14px" />
-          </li>
-        </ul>
-      </div> -->
-
-      <!-- Personal website -->
-      <div class="section-container">
-        <div class="title-with-date">
-          <h3>Personal website</h3>
-          <div class="date">
-            <time datetime="2024-03-01">10/2023</time>
-            -
-            <time datetime="2024-03-20">10/2023</time>
-          </div>
-        </div>
-
-        <p>Portfolio website with four pages.</p>
-        <ul class="ul-bullet">
-          <li>technologies: HTML, CSS.</li>
-          <li>
-            <a
-              target="_blank"
-              href="https://github.com/yasen-sotirov/yasensotirov.github.io"
-              >source code</a
-            ><i class="fa-brands fa-github"> </i>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Match Score -->
-      <div class="section-container">
-        <div class="title-with-date">
-          <h3>Match Score</h3>
-          <div class="date">
-            <time datetime="2023-11-01">11/2023</time>
-            -
-            <time datetime="2023-11-20">11/2023</time>
-          </div>
-        </div>
-
-        <p>
-          Solution that streamline the organization and management of sport
-          events. Implemented features for one-on-one matches and tournaments.
-        </p>
-        <ul class="ul-bullet">
-          <li>
-            Intensive work in a group of three with a horizontal hierarchy.
-          </li>
-          <li>technologies: Python, FastAPI, MariaDB, Pydantic.</li>
-          <li>
-            <a
-              target="_blank"
-              href="https://github.com/yasen-sotirov/Y_projects/tree/main/match_score"
-              >source code</a
-            ><i class="fa-brands fa-github"> </i>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Forum -->
-      <div class="section-container">
-        <div class="title-with-date">
-          <h3>Forum</h3>
-          <!-- <span>10/2023 - 10/2023</span> -->
-          <div class="date">
-            <time datetime="2023-10-01">10/2023</time>
-            -
-            <time datetime="2023-10-20">10/2023</time>
-          </div>
-        </div>
-
-        <p>
-          Design and implementation of a forum system. Providing a RESTfull API
-          for use by various clients.
-        </p>
-        <ul class="ul-bullet">
-          <li>
-            Intensive work in a group of three with a horizontal hierarchy.
-          </li>
-          <li>technologies: Python, FastAPI, Pydantic.</li>
-          <li>
-            <a
-              target="_blank"
-              href="https://github.com/yasen-sotirov/personal_projects/tree/main/forum_app"
-              >source code</a
-            ><i class="fa-brands fa-github"> </i>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Logistics app -->
-      <div class="section-container">
-        <div class="title-with-date">
-          <h3>Logistics app</h3>
-          <div class="date">
-            <time datetime="2023-09-01">09/2023</time>
-            -
-            <time datetime="2023-09-20">09/2023</time>
-          </div>
-        </div>
-
-        <p>
-          Designed and implemented a logistics console application for efficient
-          management of package deliveries between hubs located in various
-          cities.
-        </p>
-        <ul class="ul-bullet">
-          <li>
-            Intensive work in a group of three with a horizontal hierarchy.
-          </li>
-          <li>technologies: Python.</li>
-          <li>
-            <a
-              target="_blank"
-              href="https://github.com/yasen-sotirov/Y_projects/tree/main/logistic_fleet"
-              >source code</a
-            ><i class="fa-brands fa-github"> </i>
-            <!-- icons from https://fontawesome.com/icons -->
-          </li>
-        </ul>
-      </div>
-
-'''
+exceptions = ["Linux", "PostgreSQL", ]

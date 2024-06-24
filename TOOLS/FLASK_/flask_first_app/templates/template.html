@@ -25,8 +25,22 @@
       {% endfor %}
     </ul>
 
+
+
     <!-- DYNAMIC URL -->
     <a href="{{ url_for('dynamic_url') }}">dynamic Url to filters</a>
     
+
+    <!-- BUTTON ONCLICK -->
+    <h3>Click the button to call a Python function</h3> 
+    
+    <form method="POST" action="/process"> 
+        <button type="submit">Call Function</button> 
+    </form> 
+    <p>{{ result }}</p>
+
+
+
+
 {% endblock %}
 

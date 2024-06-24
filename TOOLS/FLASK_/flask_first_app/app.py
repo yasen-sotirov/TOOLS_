@@ -50,7 +50,7 @@ from flask import jsonify
 from flask import session
 from flask import make_response
 from flask import render_template
-import pandas
+
 
 app = Flask(__name__, template_folder='templates', static_folder='static', static_url_path='/static')
 
@@ -201,20 +201,20 @@ def file_upload():
 "EXCEL FILE"  
 # pip3 install pandas
 # import pandas as pd
-@app.route('/excel_render', methods=['POST', 'GET'])
-def excel_render():
+# @app.route('/excel_render', methods=['POST', 'GET'])
+# def excel_render():
 
-    if request.method == 'GET':
-        return render_template('excel_render.html')
+#     if request.method == 'GET':
+#         return render_template('excel_render.html')
     
-    elif request.method == 'POST':
-        file = request.files['file']        # input type="file" name="file" 
+#     elif request.method == 'POST':
+#         file = request.files['file']        # input type="file" name="file" 
 
-        if file.content_type == 'text/plain':
-            return file.read().decode()
-        elif file.content_type == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' or file.content_type == 'application/vnd.ms-excel':
-            data_frame = pandas.read_excel(file)
-            return data_frame.to_html      
+#         if file.content_type == 'text/plain':
+#             return file.read().decode()
+#         elif file.content_type == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' or file.content_type == 'application/vnd.ms-excel':
+#             data_frame = pandas.read_excel(file)
+#             return data_frame.to_html      
         
         # https://youtu.be/nP23R37lMxc?list=PL7yh-TELLS1EyAye_UMnlsTGKxg8uatkM&t=902
         # http://127.0.0.1:5000/excel_render    
@@ -290,6 +290,13 @@ def dynamic_url():
     # https://www.youtube.com/watch?v=w6Ui_DVxluc&list=PL7yh-TELLS1EyAye_UMnlsTGKxg8uatkM&index=6&ab_channel=NeuralNine
     # http://127.0.0.1:5000/template
 
+
+
+"BUTTON ON CLICK" 
+@app.route('/process', methods=['POST']) 
+def process(): 
+    return render_template('/template.html', result='button is clicked') 
+    # http://127.0.0.1:5000/template
 
 
 

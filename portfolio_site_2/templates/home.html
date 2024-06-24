@@ -29,7 +29,7 @@
 
       <!-- TECHNOLOGIES -->
       <ul class="skill-list">
-        {% for tech, details in technologies.items() %}
+        {% for tech, details in data.items() %}
         <li class="skill">
           <div class="skill-name">{{ tech }}</div>
             <ul class="skill-description">
@@ -39,6 +39,7 @@
             </ul>
         </li>
         {% endfor %}
+
       </ul>
     </div>
 
