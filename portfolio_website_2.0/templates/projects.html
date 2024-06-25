@@ -33,7 +33,12 @@
 
     <p>{{ project['description']}}</p>
     <ul class="ul-bullet">
-      <li>technologies: {{ project['technologies'] }}.</li>
+      <li>
+        <span>technologies:</span>
+        {% for tech in project['technologies'] %}
+        <span>{{ tech }}</span>
+        {% endfor %}
+      </li>
       <li>
         <a target="_blank" href="{{ project['source code'] }}">source code</a
         ><i class="fa-brands fa-github"> </i>

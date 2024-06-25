@@ -32,6 +32,18 @@ technologies = {
 
 
 projects = [
+    {
+    "name": "Portfolio website 2.0",
+    "start date": "2024-06-22",
+    "start month": "05",
+    "start year": "2024",
+    "end date": "2024-06-25",
+    "end month": "06",
+    "end year": "2024",
+    "description": "Dynamic portfolio website with four pages",
+    "technologies": ["Python", "Flask", "HTML", "TailwindCSS"],
+    "source code": "https://github.com/yasen-sotirov/personal_projects/tree/main/portfolio_website_1.0",  
+    },
     {  
     "name": "Weather App",
     "start date": "2024-06-04",
@@ -41,7 +53,7 @@ projects = [
     "end month": "06",
     "end year": "2024",
     "description": "Weather App: Check the weather, humidity, and wind speed for any city worldwide. Data is provided by www.openweathermap.org",
-    "technologies": ["JavaScript", "HTML", "CSS."],
+    "technologies": ["JavaScript", "HTML", "CSS"],
     "source code": "https://github.com/yasen-sotirov/personal_projects/tree/main/weather_app",
     },
     {
@@ -56,7 +68,7 @@ projects = [
         Stop anytime to bank your points, because if you roll a 1,
         you loos your points, and the next player goes. First to reach 100
         points wins.''',
-    "technologies": ["JavaScript", "HTML", "CSS."],
+    "technologies": ["JavaScript", "HTML", "CSS"],
     "source code": "https://github.com/yasen-sotirov/personal_projects/tree/main/dice_game",
     },
     {
@@ -68,11 +80,11 @@ projects = [
     "end month": "05",
     "end year": "2024",
     "description": "Uncover the secret number (1-100) within 10 attempts.",
-    "technologies": ["JavaScript", "HTML", "CSS."],
+    "technologies": ["JavaScript", "HTML", "CSS"],
     "source code": "https://github.com/yasen-sotirov/personal_projects/tree/main/guess_gam",
     },
     {
-    "name": "Personal website 1.0",
+    "name": "Portfolio website 1.0",
     "start date": "2024-03-011",
     "start month": "03",
     "start year": "2024",
@@ -80,8 +92,8 @@ projects = [
     "end month": "03",
     "end year": "2024",
     "description": "Static portfolio website with four pages",
-    "technologies": ["HTML", "CSS."],
-    "source code": "https://github.com/yasen-sotirov/yasensotirov.github.io",
+    "technologies": ["HTML", "CSS"],
+    "source code": "https://github.com/yasen-sotirov/personal_projects/tree/main/portfolio_website_1.0",
     },
     {
     "name": "Match Score",
@@ -118,7 +130,7 @@ projects = [
     "description": "Designed and implemented a logistics console application for efficient management of package deliveries between hubs located in various cities. Intensive work in a group of three with a horizontal hierarchy",
     "technologies": ["Python", "FastAPI", "Pydantic"],
     "source code": "https://github.com/yasen-sotirov/Y_projects/tree/main/logistic_fleet",
-    },
+    }
 ]
 
 experience = [
