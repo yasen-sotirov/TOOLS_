@@ -1,19 +1,38 @@
-"TAILWIND"
+"TAILWIND";
 
+"CDN script";
+// <script src="https://cdn.tailwindcss.com"></script>
 
-
-"ИНСТАЛИРАНЕ"
-/* https://tailwindcss.com/docs/installation
+("ИНСТАЛИРАНЕ");
+/* ''https://tailwindcss.com/docs/installation
 npm install -D tailwindcss
-npx tailwindcss init
+npx tailwindcss init            */
+
+("ИНСТАЛАЦИЯ БЕЗ NODE.JS"); /*
+    https://tailwindcss.com/blog/standalone-cli
+
+    сваляне: 
+        https://github.com/tailwindlabs/tailwindcss/releases/tag/v3.4.4
+    
+    направа на изпълним файл
+        chmod +x tailwindcss-...
+
+    преместване на файла в работната директория
+        first_app/tailwindcss
+    
+    Create a tailwind.config.js file
+        ./tailwindcss init
+
+    Start a watcher
+        ./tailwindcss -i input.css -o output.css --watch
+
+    Compile and minify your CSS for production
+        ./tailwindcss -i input.css -o output.css --minify
 
 
 */
 
-
-
-
-"CLASSES"
+("CLASSES");
 /* 
 
 RESPONSIVE DESIGN:

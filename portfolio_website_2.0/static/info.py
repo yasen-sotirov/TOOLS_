@@ -42,7 +42,7 @@ projects = [
     "end year": "2024",
     "description": "Dynamic portfolio website with four pages",
     "technologies": ["Python", "Flask", "HTML", "TailwindCSS"],
-    "source code": "https://github.com/yasen-sotirov/personal_projects/tree/main/portfolio_website_1.0",  
+    "source code": "https://github.com/yasen-sotirov/personal_projects/tree/main/portfolio_website_2.0",  
     },
     {  
     "name": "Weather App",
