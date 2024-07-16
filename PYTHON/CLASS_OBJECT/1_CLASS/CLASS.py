@@ -1,7 +1,7 @@
 "CLASS AND OBJECTS"  #
 
 class Books:            # именуване в CamelCase
-    '''This is book klas in a library'''
+    '''This is book class in a library'''
     BOOK_LIST = []      # клас атрибут, достъпва се от класа и от инстанцията
     NUMBER_BOOKS = 0
 
@@ -75,7 +75,7 @@ book_3 = Books("Chemistry", "BAN", 12.80, 12345, author = "G. Dimitrov", year = 
 #     Books("История", "Анубис", 20),
 #     Books("География", "Анубис", 20),
 #     Books("Биология", "Анубис", 20)]
-#
+
 # print(lst)
 # print(*lst, sep='\n')
 
