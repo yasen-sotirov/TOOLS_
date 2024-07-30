@@ -165,7 +165,7 @@ def forminfo():
         return render_template('forminfo.html')
     
     elif request.method == 'POST':
-        if "some key" in request .form.keys():          # проверка дали е включено във формата
+        if "some key" in request.form.keys():          # проверка дали е включено във формата
             username = request.form.get('username')     # изваждане на подадените във формата данни
             password = request.form['password']
         else:
@@ -324,7 +324,7 @@ def process():
         - след деплоиване   '''
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5500, debug=True)
 
 # python app.py     - стартиране от терминала
 
