@@ -1,0 +1,63 @@
+    ____    _                       
+   / __ \  (_)___ _____  ____ _____ 
+  / / / / / / __ `/ __ \/ __ `/ __ \
+ / /_/ / / / /_/ / / / / /_/ / /_/ /
+/_____/_/ /\__,_/_/ /_/\__, /\____/ 
+     /___/            /____/        
+
+
+
+INSTALL
+    python -m pip install Django
+
+
+START PROJECT
+    django-admin startproject django_project
+
+
+START SERVER  
+    python manage.py runserver (8000==сървъра)
+
+
+УКАЗВАНЕ НА TEMPLATE FOLDER
+    project_name > TEMPLATES > 'DIRS': ['templates'],
+
+
+IMPORT CSS FILE
+    project_name > settings > import os
+    STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static')]  - под static_url
+
+
+CREATE NEW APP IN DJANGO PROJECT
+    python manage.py startapp posts
+
+    добавяне на новия ап
+        project_name > settings > INSTALLED_APPS =[app_name,]
+
+    създаване на файл urls.py с импортите
+
+
+MIGRATIONS ===
+
+ Миграциите са механизъм, чрез който се създават, променят и премахват таблици и полета в базата данни, за да отразяват промените в моделите на приложението.
+
+Конкретно, командата makemigrations прави следното:
+
+Генериране на миграции: Командата анализира моделите (models) в Django приложението и проверява за промени в структурата им.
+Създаване на файлове с миграции: Ако има промени в моделите, командата генерира нови файлове с миграции в директорията migrations на съответното приложение. Тези файлове съдържат инструкции за това как да се приложат промените в базата данни.
+Примерен сценарий:
+
+Ако добавите ново поле към някой от моделите си, командата makemigrations ще генерира нов файл с миграции, който описва добавянето на това поле в съответната таблица в базата данни.
+След като сте създали миграции с makemigrations, трябва да изпълните командата python manage.py migrate, за да приложите тези миграции и действително да направите промените в базата данни.
+
+Примерна последователност от команди:
+
+bash
+Copy code
+python manage.py makemigrations
+python manage.py migrate
+Това ще гарантира, че базата данни е синхронизирана с текущото състояние на моделите в Django приложението.
+
+APPLY MIGRATIONS
+    python manage.py migrate            - прилага вградените
+    python manage.py makemigrations     - прилага за другите апове
