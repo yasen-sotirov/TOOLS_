@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <title>{% block title %}Main website{% endblock title %}</title>
+</head>
+
+<nav>
+  <p>nav bar</p>
+  <hr>
+</nav>
+
+<body>
+  <p>from base template: {{ var_base }}</p>
+  {% block content %}
+
+  {% endblock content %}
+</body>
+
+<footer>
+  <hr>
+</footer>
+</html>

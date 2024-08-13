@@ -1,0 +1,15 @@
+{% extends "main/base.html" %}
+
+{% block title %}list page{% endblock title %}
+
+{% block content %}
+	<h1 style="color: red;">list page</h1>
+
+		<h2>{{ lst_obj.name }}</h2>
+		<ul>
+			{% for el in lst_obj.item_set.all %}
+				<li>{{ el.text }}</li>
+			{% endfor %}
+		</ul>
+	
+{% endblock content %}
