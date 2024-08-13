@@ -25,3 +25,7 @@ def notify_users(huddle, user):
 def remove_old_huddles():
     twenty_four_hours_ago = timezone.now() - timedelta(hours=24)
     old_items = Item.objects.filter(created_at__gt = twenty_four_hours_ago)
+
+    if old_items.count() == 0:
+        huddle = old_items.first().huddle
+        huddle.delete()
