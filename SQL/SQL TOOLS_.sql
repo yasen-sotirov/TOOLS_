@@ -5,6 +5,55 @@
 -- 	/____/\___\_\/_____/    /_/  \____/\____/_____/____/  
 
 -- 	Ultimate DA Bootcamp: https://www.youtube.com/watch?v=wQQR60KtnFY                                                       
+--  примерите са обвързани с схемата parks_and_recreation
+
+
+-- ===== ТЕОРИЯ =====
+
+-- ВИДОВЕ БАЗИ ДАННИ 
+--     NoSQL - не работи с SQL езика, съвсем различна бира
+--     Relational - съхранява инфото в таблици с връзки (релации) между тях
+--     работят с езика SQL - Structured Query Language
+
+
+-- ПРЕДИМСТВА
+--     – организирани, структурирани
+--     - в една таблица да държим всичко необходимо за едно приложение
+--     - данните не трябва да се повтарят (нормализиране)
+--     - интегритет - подсигурява на няколко нива че данните са правилни
+
+
+-- ЕЛЕМЕНТИ НА БД
+--     - база данни -  дава голяма стая с много място, където се разполагат схемите
+--     - схема групира и организира таблиците
+--     - таблиците организират информацията ни. Таблицата може да я оприличим 
+--       на Клас, атрибутите са колоните, редовете са инстанциите
+
+
+-- WORKBENCH
+--     - дава визуална представ как изграждаме схемите. 
+--       може и през конзолата, но е по трудно
+
+
+-- ЕЛЕМЕНТИ НА КОЛОНАТА     MySQL Workbench
+
+--     PK - PRIMARY KEY, еднозначо идентифицира (ID) точно тази
+--     NN - NOT NUL (None)ЗАДЪЛЖИТЕЛНО ИЗИСКВА ДА БЪДЕ ПОПЪЛНЕНО
+--     UQ - UNIQUE
+--     ZF - ZERO FILlL - ПОПЪЛВА АВТОАМАТИЧНО 0 АКО Е ПРАЗНО
+--     AI - auto increment - АВТОМАТИЧНО ПОПЪЛВА КЛЮЧОВЕТ
+--     Foreign key - слага се на подчинената таблица. Една компания има много служители. Служителите има FK
+
+--     varchar(100) - стринг с определена дължина
+
+
+-- ОПЕРАЦИИ
+--     reverse engineering     - от SQL в таблица   
+--     forward engineering     - от таблица в my SQL
+--     indexes - индексиране   - осигурява по-бърз достъп до
+--     Drop Table              - трие таблицата
+--     Trunkate Table          - трие информацията в таблицата
+
 
 
 -- КОНВЕНЦИЯ ЗА ИМЕНУВАНЕ
@@ -30,10 +79,11 @@
     
 
 -- --------------------------------------------
-##	DISTINCT	- филтрира и връща уникалните записи в посочената колона
+##	DISTINCT	-  връща уникалните (неповтарящи) се записи 
 
 -- SELECT distinct gender
 -- FROM parks_and_recreation.employee_demographics;
+
 
 
 -- --------------------------------------------
@@ -69,6 +119,7 @@
 -- WHERE first_name LIKE "A__";   
 
 
+
 -- --------------------------------------------
 ##	GROUP BY	+ AVG  MIN  MAX
 -- групира редовете според еднa или повече колони 
@@ -79,12 +130,35 @@
 -- FROM parks_and_recreation.employee_demographics
 -- GROUP BY gender;
 
--- SELECT count(age), gender, AVG(age), MIN(age), MAX(age)
+
+
+
+
+
+
+-- --------------------------------------------
+##	COUNT()	
+
+#1
+-- SELECT COUNT(distinct salary)		-- брой уникалните, неповтарящи се записи
+-- FROM parks_and_recreation.employee_salary;
+
+#2
+-- SELECT count(age), gender
 -- FROM parks_and_recreation.employee_demographics
 -- GROUP BY gender;
 
+
+
 -- --------------------------------------------
-##	AGGREGATE FUNCTIONS		MIN, MAX, , COUNT, AVG, SUM
+## 	ROUND
+
+-- SELECT round(avg(age), -0) AS 'средни години', gender
+-- FROM parks_and_recreation.employee_demographics
+-- GROUP BY gender;
+
+
+
 
 
 
@@ -103,12 +177,12 @@
 
 
 -- --------------------------------------------
-##	HAVING		- Показва резултатите имащи дадено условие. Работи с агрегатни функции след group by. 
+##	HAVING		-- Показва резултатите имащи дадено условие. Работи с агрегатни функции след group by. 
 
--- # 1
+# 1		-- office manager avg 5500
 -- SELECT occupation, AVG(salary)
 -- FROM parks_and_recreation.employee_salary
--- GROUP BY occupation;		-- office manager avg 5500
+-- GROUP BY occupation;		
 
 -- #2
 -- SELECT occupation, AVG(salary)
@@ -149,6 +223,40 @@
 -- FROM parks_and_recreation.employee_demographics
 -- GROUP BY gender
 -- HAVING avg_age > 40;
+
+
+
+
+-- --------------------------------------------
+## SELF RELATION		-- обединява колони от различни таблици
+
+#1	-- обединява колони от трите таблици
+-- SELECT demo.first_name, demo.age, sala.salary, dept.department_name
+-- FROM employee_demographics AS demo, employee_salary AS sala, parks_departments AS dept
+-- WHERE demo.employee_id = sala.employee_id AND sala.dept_id = department_id;
+
+#2
+-- Write an SQL query to find all employees whose salary is bigger 
+-- than their manager's.
+-- SELECT 
+-- 	concat(e.firstname, " ", e.lastname) as "employee name", 
+-- 	e.salary as "employee salary", 
+-- 	concat(m.firstname, " ", m.lastname) as "manager name", 
+-- 	m.Salary as "manager salary"
+-- FROM employees as e, employees as m
+-- WHERE m.EmployeeID = e.managerID  and e.salary > m.salary;  -- относно мениджъра на конкретния служител
+
+	
+
+
+
+
+-- --------------------------------------------
+##	ISNULL		-- търси празна клетка в колоната dept_id
+
+SELECT first_name, last_name 
+FROM parks_and_recreation.employee_salary 
+WHERE isnull(dept_id);
 
 
 
@@ -461,6 +569,31 @@
 
 
 
+-- --------------------------------------------
+## 	ВМЪКВАНЕ В ТАБЛИЦАТА
+
+-- INSERT INTO parks_and_recreation.employee_demographics (employee_id, first_name, last_name)
+-- VALUES (employee_id, first_name, last_name);
+
+
+
+-- --------------------------------------------
+#	ПРОМЕНЯ СЪЩЕСТВУВАЩ ЗАПИС
+
+-- UPDATE parks_and_recreation.employee_salary 
+-- SET salary = 50000
+-- WHERE  salary = 55000;
+
+
+
+
+-- --------------------------------------------
+## 	ИЗТРИВАНЕ
+
+-- DELETE
+-- FROM employee_salary
+-- WHERE employee_id = 13;
+
 
 -- --------------------------------------------
 ## ADVANCED SQL TUTORIAL	2:20:10
@@ -469,9 +602,9 @@
 
 -- --------------------------------------------
 ## CTE - Common Tabale Expression	
-		-- временен резултат от заявка, който се дефинира в рамките на една SQL 
+		-- временен резултат от заявка, който се дефинира в рамките на една SQL сесия 
 		-- инструкция и може да бъде използван многократно в главната заявка, като ламбда функция
-		-- използва се веднага след като е написана
+		-- използва се прости манипулации
         -- по-четими са от subquery
 
 
@@ -491,7 +624,7 @@
 #2                                    
 -- WITH CTE_Example (Gender, Avg_sal, Max_sal, Min_sal)AS
 -- 	(
---     SELECT gender, AVG(salary), MAX(salary), MIN(salary) 
+--     SELECT gender, round(AVG(salary), 0), MAX(salary), MIN(salary) 
 --     FROM parks_and_recreation.employee_demographics AS dem
 --     JOIN parks_and_recreation.employee_salary AS sal
 -- 		ON dem.employee_id = sal.employee_id
@@ -503,8 +636,134 @@
 
 
 
+
 -- --------------------------------------------
-## TEMPORARY TABLES	2:30:44
+## TEMPORARY TABLES	2:30:44		-- създава временна таблица, за сложни 
+
+-- CREATE TEMPORARY TABLE salary_over_60k
+-- SELECT *
+-- FROM parks_and_recreation.employee_salary
+-- WHERE salary >= 60000;
+
+-- SELECT *
+-- FROM salary_over_60k 
+
+
+
+
+-- --------------------------------------------
+-- STORED PROCEDURES 	2:38:20 
+		-- съхранява кода и може да се преизползва многократно
+        -- или се създава с десен бутон от SCHEMAS > stored procedures 
+
+-- #1      
+-- DELIMITER $$
+-- CREATE PROCEDURE large_salaty2()
+-- BEGIN
+-- 	SELECT *
+-- 	FROM parks_and_recreation.employee_salary
+-- 	WHERE salary > 60000;
+--     
+-- 	SELECT *
+-- 	FROM parks_and_recreation.employee_salary
+-- 	WHERE salary > 10000;
+-- END $$
+-- DELIMITER ;
+      
+-- CALL large_salaty2()
+      
+      
+-- # 2      
+-- DELIMITER $$
+-- CREATE PROCEDURE get_salary_by_id(employee_id_param INT)		-- задава параметър
+-- BEGIN
+-- 	SELECT salary
+-- 	FROM parks_and_recreation.employee_salary
+-- 	WHERE employee_id = employee_id_param;    
+-- END $$
+-- DELIMITER ;   
+--       
+-- CALL get_salary_by_id(1);		-- извиква функцията с аргумент 1
+
+
+
+
+
+-- --------------------------------------------
+## TRIGGERS	2:51:00		-- прави нещо при събитие
+
+-- DELIMITER $$
+-- CREATE TRIGGER employee_insert_into_salary
+-- 	AFTER INSERT ON employee_salary
+--     FOR EACH ROW
+-- BEGIN
+-- 	INSERT INTO employee_demographics (employee_id, first_name, last_name)
+--     VALUES (NEW.employee_id, NEW.first_name, NEW.last_name);
+-- END $$
+-- DELIMITER ;
+
+
+-- INSERT INTO employee_salary (employee_id, first_name, last_name, occupation, salary, dept_id)
+-- VALUE (13, 'Jean', 'Separstein', 'Entertainment', 80000, NULL);
+
+-- DELETE
+-- FROM employee_salary
+-- WHERE employee_id = 13;
+
+
+
+
+-- --------------------------------------------
+## EVENTS	3:01:01	-- случва се по график и прави нещо
+
+-- DELIMITER $$
+-- CREATE EVENT delete_id_13
+-- ON SCHEDULE EVERY 30 SECOND
+-- DO
+-- BEGIN
+-- 	DELETE
+--     FROM employee_salary
+--     WHERE employee_id = 13;
+-- END $$
+-- DELIMITER ;
+
+
+# ПРОВЕРКА ПРОМЕНЛИВИ
+-- SHOW VARIABLES LIKE 'event%'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
