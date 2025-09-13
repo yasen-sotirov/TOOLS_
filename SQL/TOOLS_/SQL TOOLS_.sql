@@ -8,14 +8,6 @@
 --  примерите са обвързани с схемата parks_and_recreation
 
 
-
--- ===== SHORTCUTS =====
-
--- Ctrl + Enter				изпълява селектираната заявка
--- Ctrl + Shift + Enter		изпълнява всичко
-
-
-
 -- ===== ТЕОРИЯ =====
 
 -- ВИДОВЕ БАЗИ ДАННИ 
@@ -397,11 +389,6 @@ WHERE isnull(dept_id);
 -- SELECT trim('  sky  ') AS 'чиста дума';
 
 
-#	TRAILING	- премахва конкретно нещо
--- SELECT country, TRIM(TRAILING '.' FROM country)
-
-
-
 #	LEFT TRIM	- премахва преди думата
 -- SELECT ltrim('  sky         ') AS 'чиста дума';
 
@@ -614,10 +601,8 @@ WHERE isnull(dept_id);
 
 
 -- --------------------------------------------
-## CTE - Common Tabale Expression		като Lambda функция
-		-- временен резултат от заявка, който се  SQL сесия 
-        -- временно именуван резултат. дефинира в рамките на една заявка и съществува в рамките ѝ.
-        -- може да се използва многократно в нея.
+## CTE - Common Tabale Expression	
+		-- временен резултат от заявка, който се дефинира в рамките на една SQL сесия 
 		-- инструкция и може да бъде използван многократно в главната заявка, като ламбда функция
 		-- използва се прости манипулации
         -- по-четими са от subquery
@@ -748,16 +733,7 @@ WHERE isnull(dept_id);
 
 
 
-##	КОПИРАНЕ НА ТАБЛИЦА (колоните)
 
-CREATE TABLE parks_and_recreation.employee_demographics_copy
-LIKE parks_and_recreation.employee_demographics;
-
-##	КОПИРАНЕ НА ЗАПИСИТЕ ОТ ТАБЛИЦА
-
-INSERT parks_and_recreation.employee_demographics_copy
-SELECT *
-FROM parks_and_recreation.employee_demographics;
 
 
 
